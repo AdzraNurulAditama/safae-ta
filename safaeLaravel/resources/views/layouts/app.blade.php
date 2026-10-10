@@ -384,8 +384,9 @@
         <i class="fa-solid fa-chart-line"></i> Dashboard
     </a>
 
-    <a href="{{ url('/tulis-buku') }}">
-        <i class="fa-solid fa-pen-nib"></i> Tulis Buku
+    <!-- DIGANTI KE STUDIO PENULIS (NOVEL PER CHAPTER) -->
+    <a href="{{ route('writer.books.index') }}" class="{{ request()->is('penulis*') ? 'active' : '' }}">
+        <i class="fa-solid fa-feather-pointed"></i> Studio Penulis
     </a>
 
 <a href="{{ route('premium.index') }}"

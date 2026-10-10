@@ -235,16 +235,16 @@
 
     /* ================= RESPONSIVE ================= */
     @media(max-width: 1400px) {
-        .book-grid { grid-template-columns: repeat(4, 1fr); } /* 4 kolom untuk layar laptop sedang */
+        .book-grid { grid-template-columns: repeat(4, 1fr); }
     }
 
     @media(max-width: 1100px) {
-        .book-grid { grid-template-columns: repeat(3, 1fr); } /* 3 kolom untuk tablet landscape */
+        .book-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media(max-width: 768px) {
         .book-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet portrait/HP besar */
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
 
@@ -256,7 +256,7 @@
     }
 
     @media(max-width: 480px) {
-        .book-grid { grid-template-columns: repeat(1, 1fr); } /* 1 kolom untuk HP kecil agar tetap jelas terbaca */
+        .book-grid { grid-template-columns: repeat(1, 1fr); }
     }
 </style>
 
@@ -295,9 +295,21 @@
             <div class="book-card">
                 
                 <div class="card-img-wrapper">
-                    <img src="{{ $book->image_path ? asset($book->image_path) : 'https://via.placeholder.com/300x400?text=No+Cover' }}"
-                         class="book-cover"
-                         alt="{{ $book->title }}">
+                    @php
+                        // Memberihkan path jika tersimpan dengan awalan 'public/' atau 'storage/'
+                        $coverPath = $book->image_path ? str_replace(['public/', 'storage/'], '', $book->image_path) : null;
+                    @endphp
+
+                    @if($coverPath)
+                        <img src="{{ asset('storage/' . $coverPath) }}"
+                             class="book-cover"
+                             alt="{{ $book->title }}"
+                             onerror="this.onerror=null; this.src='{{ asset($book->image_path) }}';">
+                    @else
+                        <img src="https://via.placeholder.com/300x400?text=No+Cover"
+                             class="book-cover"
+                             alt="No Cover Available">
+                    @endif
                 </div>
 
                 <div class="book-content">
