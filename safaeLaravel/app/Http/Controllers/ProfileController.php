@@ -25,13 +25,18 @@ class ProfileController extends Controller
 
     public function update(Request $request)
     {
+        // 1. Validasi diperbarui: jurusan dan semester diubah jadi string karena inputnya textarea
         $request->validate([
-            'username'    => 'required',
-            'social_media'=> 'nullable',
-            'bio'         => 'nullable',
-            'foto_profil' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'username'     => 'required|string',
+            'social_media' => 'nullable|string',
+            'bio'          => 'nullable|string',
+            'foto_profil'  => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'jurusan'      => 'nullable|string',
+            'semester'     => 'nullable|string',
         ]);
-        //buat nyimpen path foto lama milik user yang sedang login dari database, supaya kalau user tidak meng-update foto profil, data foto lamanya tetap dipakai dan tidak ke-reset.
+
+        // buat nyimpen path foto lama milik user yang sedang login dari database, 
+        // supaya kalau user tidak meng-update foto profil, data foto lamanya tetap dipakai dan tidak ke-reset.
         $fotoPath = Auth::user()->foto_profil;
 
         // upload foto profil
@@ -46,18 +51,20 @@ class ProfileController extends Controller
             $name = time() . '.' . $file->getClientOriginalExtension();
             $file->move(public_path('storage/foto_profil'), $name);
 
-            //ngeganti dengan foto baru yg dmn fotonya itu diambil dr folder foto_profil
+            // ngeganti dengan foto baru yg dmn fotonya itu diambil dr folder foto_profil
             $fotoPath = 'foto_profil/' . $name;
         }
 
+        // 2. Tambahkan kolom jurusan dan semester di sini agar tersimpan
         User::where('id', Auth::id())->update([
             'username'     => $request->username,
             'social_media' => $request->social_media,
             'bio'          => $request->bio,
             'foto_profil'  => $fotoPath,
+            'jurusan'      => $request->jurusan,  // ditambahkan
+            'semester'     => $request->semester, // ditambahkan
         ]);
 
         return redirect('/profile')->with('success', 'Profil berhasil diperbarui');
     }
-
 }

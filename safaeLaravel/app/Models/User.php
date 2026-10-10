@@ -1,16 +1,16 @@
 <?php
 
 namespace App\Models;
+
 use App\Models\ReadingProgress;
 use App\Models\PointHistory;
 use App\Models\FavoriteBook;
-
+use App\Models\Book; 
+use App\Models\PremiumRequest; 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Models\BukuFavorit;
 use Laravel\Sanctum\HasApiTokens;
-
 
 class User extends Authenticatable
 {
@@ -25,6 +25,12 @@ class User extends Authenticatable
         'password',
         'points',
         'role',
+        'jurusan',
+        'semester',
+        // Tambahan agar kolom ini bisa diupdate:
+        'social_media',
+        'bio',
+        'foto_profil',
     ];
 
     protected $hidden = [
@@ -44,34 +50,30 @@ class User extends Authenticatable
        RELATION
        ===================== */
 
-    // relasi ke reading_progress
     public function readingProgress()
     {
         return $this->hasMany(ReadingProgress::class);
     }
 
-    // relasi ke point_histories
     public function pointHistories()
     {
         return $this->hasMany(PointHistory::class);
     }
 
-    // relasi ke favorite_books
-    
     public function favoriteBooks()
     {
-        return $this->hasMany(favoriteBook::class);
+        return $this->hasMany(FavoriteBook::class); 
     }
-public function books()
-{
-    return $this->hasMany(Book::class);
-}
 
-public function premiumRequests()
-{
-    return $this->hasMany(PremiumRequest::class);
-}
+    public function books()
+    {
+        return $this->hasMany(Book::class);
+    }
 
+    public function premiumRequests()
+    {
+        return $this->hasMany(PremiumRequest::class);
+    }
 
     // helper nama lengkap
     public function getNamaLengkapAttribute()

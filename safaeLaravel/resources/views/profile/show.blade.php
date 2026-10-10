@@ -215,6 +215,27 @@
                 </div>
 
             </div>
+            <div class="col-md-6">
+    <div class="profile-item">
+        <div class="profile-item-title">
+            <i class="bi bi-mortarboard"></i> Jurusan
+        </div>
+        <div class="profile-item-content">
+            {{ $profile->jurusan ?? 'Belum diisi' }}
+        </div>
+    </div>
+</div>
+
+<div class="col-md-6">
+    <div class="profile-item">
+        <div class="profile-item-title">
+            <i class="bi bi-calendar3"></i> Semester
+        </div>
+        <div class="profile-item-content">
+            {{ $profile->semester ? 'Semester ' . $profile->semester : 'Belum diisi' }}
+        </div>
+    </div>
+</div>
 
         </div>
 

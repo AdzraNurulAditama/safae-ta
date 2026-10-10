@@ -11,12 +11,13 @@ use App\Models\Promotion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Services\RecommendationService;
 
 class UserDashboardController extends Controller
 {
-    public function index()
-    {
+    public function index(RecommendationService $recommendationService)    {
         $user = Auth::user();
+        $rekomendasi = $recommendationService->forUser($user, 8);
 
         // Statistik Umum
         $totalBooks = Book::where('status', 'approved')->count();
@@ -118,7 +119,8 @@ class UserDashboardController extends Controller
             'latestBooks',
             'popularGenres',
             'recentActivities',
-            'promotions'
+            'promotions',
+            'rekomendasi'
         ));
     }
 }

@@ -223,6 +223,24 @@
                            value="{{ old('social_media', $profile->social_media) }}">
                 </div>
 
+                <!-- Bagian Jurusan yang diubah ke Textarea -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Jurusan</label>
+                    <textarea name="jurusan" 
+                              class="form-control" 
+                              rows="2" 
+                              placeholder="Masukkan jurusan">{{ old('jurusan', $profile->jurusan) }}</textarea>
+                </div>
+
+                <!-- Bagian Semester yang diubah ke Textarea -->
+                <div class="col-md-6 mb-3">
+                    <label class="form-label">Semester</label>
+                    <textarea name="semester" 
+                              class="form-control" 
+                              rows="2" 
+                              placeholder="Masukkan semester">{{ old('semester', $profile->semester) }}</textarea>
+                </div>
+
                 <div class="col-12 mb-3">
 
                     <label class="form-label">

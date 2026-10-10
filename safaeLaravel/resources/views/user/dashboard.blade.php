@@ -253,6 +253,9 @@
                 </div>
             </div>
         </div>
+            <div class="row g-4 mb-4">              {{-- ← baris 206: awal "Sedang Dibaca" --}}
+            <div class="col-xl-6"></div>
+        @include('partials.rekomendasi', ['rekomendasi' => $rekomendasi])   {{-- ← TAMBAHKAN DI SINI --}}
 
         <div class="row g-4 mb-4">
             <div class="col-12">
