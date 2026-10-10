@@ -29,12 +29,25 @@
                                              alt="{{ $book->title }}">
                                     </div>
                                     <div class="p-3">
+                                        <!-- Judul -->
                                         <h6 class="text-white fw-bold mb-1 small">{{ Str::limit($book->title, 40) }}</h6>
-                                        <small class="text-secondary d-block" style="color: #94a3b8 !important;">
-                                            {{ $book->author }}
+                                        
+                                        <!-- Penulis dan Tahun -->
+                                        <small class="text-secondary d-block mb-2" style="color: #94a3b8 !important;">
+                                            {{ $book->author }} &bull; {{ $book->year }}
                                         </small>
-                                        <div class="mt-2">
+                                        
+                                        <!-- Deskripsi Singkat -->
+                                        <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">
+                                            {{ Str::limit($book->description, 60) }}
+                                        </p>
+
+                                        <!-- Kumpulan Badge (Genre, Jenis Buku, Halaman, Premium) -->
+                                        <div class="mt-2 d-flex flex-wrap gap-1">
                                             <span class="badge bg-info bg-opacity-25 text-info">{{ $book->genre }}</span>
+                                            <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jenis_buku }}</span>
+                                            <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jumlah_halaman }} hal</span>
+                                            
                                             @if ($book->is_premium)
                                                 <span class="badge bg-warning bg-opacity-25 text-warning">
                                                     <i class="fas fa-crown me-1"></i>Premium
@@ -57,4 +70,4 @@
         </div>
     </div>
 </div>
-@endif
+@endif  

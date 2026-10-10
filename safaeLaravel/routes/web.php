@@ -33,11 +33,12 @@ use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\AdminNotificationController;
 use App\Http\Middleware\AdminOnly;
 use App\Http\Controllers\BookResumeController;
-  use App\Http\Controllers\PromotionController;
-  use App\Http\Controllers\AdminPromotionController;
-  use App\Http\Controllers\PremiumController;
-  use App\Http\Controllers\AdminPremiumController;
+use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\AdminPromotionController;
+use App\Http\Controllers\PremiumController;
+use App\Http\Controllers\AdminPremiumController;
 use App\Http\Controllers\PremiumBookController;
+use App\Http\Controllers\BookFinishController; // <-- TAMBAHAN IMPORT CONTROLLER
 
 /*
 |--------------------------------------------------------------------------
@@ -102,18 +103,23 @@ Route::middleware('auth')->group(function () {
     | BACA BUKU
     |--------------------------------------------------------------------------
     */
-    Route::get('/buku/{id}/{page?}', [FullBacaanController::class, 'show'])
-        ->name('book.show');
+    Route::get('/buku/{book}/selesai', [BookFinishController::class, 'show'])
+    ->name('books.finished')->middleware('auth');
+Route::post('/buku/{book}/feedback', [BookFinishController::class, 'feedback'])
+    ->name('books.feedback')->middleware('auth');
+
+// route baca yang lama di bawahnya
+    Route::get('/buku/{id}/{page}', [FullBacaanController::class, 'show'])
+    ->where('page', '[0-9]+')
+    ->name('book.show'); // biarkan nama route aslinya
 
     Route::get('/full-bacaan/{id}', [FullBacaanController::class, 'show'])
         ->name('fullbacaan.show');
-
-        /*
-|--------------------------------------------------------------------------
-| BOOK RESUME
-|--------------------------------------------------------------------------
-*/
-
+    /*
+    |--------------------------------------------------------------------------
+    | BOOK RESUME
+    |--------------------------------------------------------------------------
+    */
     Route::get('/book/{book}/resume/create', [BookResumeController::class, 'create'])->name('resume.create');
     Route::post('/book/{book}/resume/store', [BookResumeController::class, 'store'])->name('resume.store');
     Route::get('/my-resumes', [BookResumeController::class, 'myResumes'])->name('resume.my');
@@ -127,6 +133,7 @@ Route::middleware('auth')->group(function () {
 
     // Rute untuk menghapus
     Route::delete('/resume/{resume}', [BookResumeController::class, 'destroy'])->name('resume.destroy');
+    
     /*
     |--------------------------------------------------------------------------
     | FAVORIT
@@ -157,13 +164,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/ajukan-premium', [PremiumController::class, 'index'])->name('premium.index');
     Route::post('/ajukan-premium/{book}', [PremiumController::class, 'store'])->name('premium.store');
 
-Route::get('/buku-premium', [PremiumBookController::class, 'index'])
-    ->name('premium.books');
+    Route::get('/buku-premium', [PremiumBookController::class, 'index'])
+        ->name('premium.books');
 
-Route::post(
-    '/buku-premium/tukar/{book}',
-    [PremiumBookController::class, 'tukar']
-)->name('premium.tukar');
+    Route::post(
+        '/buku-premium/tukar/{book}',
+        [PremiumBookController::class, 'tukar']
+    )->name('premium.tukar');
 
     /*
     |--------------------------------------------------------------------------
@@ -258,16 +265,16 @@ Route::post(
     Route::post('/notifikasi/read/{id}', [NotificationController::class, 'markAsRead'])
         ->name('notifikasi.read');
 
-     /*
-        |--------------------------------------------------------------------------
-        | PROMOSI DI DASHBOARD
-        |--------------------------------------------------------------------------
-        */
-        Route::get('/promotions', [PromotionController::class, 'index'])
-    ->name('promotions.index');
+    /*
+    |--------------------------------------------------------------------------
+    | PROMOSI DI DASHBOARD
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/promotions', [PromotionController::class, 'index'])
+        ->name('promotions.index');
 
-Route::get('/promotions/{id}', [PromotionController::class, 'show'])
-    ->name('promotions.show');
+    Route::get('/promotions/{id}', [PromotionController::class, 'show'])
+        ->name('promotions.show');
 });
 
 /*
@@ -280,17 +287,17 @@ Route::middleware(['auth', AdminOnly::class])
     ->name('admin.')
     ->group(function () {
 
-         Route::post('/premium-books/{book}/set',
+        Route::post('/premium-books/{book}/set',
         [AdminPremiumController::class, 'setPremium'])
         ->name('premium.set');
 
         Route::get('/', [AdminController::class, 'index'])
             ->name('dashboard');
 
-            Route::delete(
-    '/premium-books/{id}',
-    [AdminPremiumController::class, 'destroy']
-)->name('premium.destroy');
+        Route::delete(
+            '/premium-books/{id}',
+            [AdminPremiumController::class, 'destroy']
+        )->name('premium.destroy');
 
 
        
@@ -349,6 +356,7 @@ Route::middleware(['auth', AdminOnly::class])
         // Arahkan ke AdminForumController dengan method detail, dan cukup beri nama 'forum.detail'
         Route::get('/forum/{id}', [AdminForumController::class, 'detail'])->name('forum.detail');
         Route::delete('/forum/{id}', [AdminForumController::class, 'destroy'])->name('forum.destroy');
+        
         /*
         |--------------------------------------------------------------------------
         | GENRE & BUKU
@@ -418,7 +426,7 @@ Route::middleware(['auth', AdminOnly::class])
         Route::post('/rewards/{user}/remove', [AdminRewardController::class, 'remove'])
             ->name('reward.remove');
 
-            /*
+        /*
         |--------------------------------------------------------------------------
         | premium
         |--------------------------------------------------------------------------
@@ -431,22 +439,22 @@ Route::middleware(['auth', AdminOnly::class])
         Route::post('/premium/{id}/reject',[AdminPremiumController::class, 'reject'])->name('premium.reject');
 
         Route::get('/premium-books', [AdminPremiumController::class, 'books'])
-    ->name('premium.books');
+            ->name('premium.books');
 
-    Route::get('/buku-premium', [PremiumBookController::class, 'index'])
-    ->name('premium.books');
+        Route::get('/buku-premium', [PremiumBookController::class, 'index'])
+            ->name('premium.books');
 
-Route::post('/buku-premium/{book}/tukar', [PremiumBookController::class, 'tukar'])
-    ->name('premium.tukar');
+        Route::post('/buku-premium/{book}/tukar', [PremiumBookController::class, 'tukar'])
+            ->name('premium.tukar');
 
-Route::post('/admin/premium-books/{book}/set',
-    [AdminPremiumController::class, 'setPremium'])
-    ->name('premium.set');
+        Route::post('/admin/premium-books/{book}/set',
+            [AdminPremiumController::class, 'setPremium'])
+            ->name('premium.set');
 
-Route::delete(
-    '/premium-books/{id}',
-    [AdminPremiumController::class, 'destroy']
-)->name('premium.destroy');
+        Route::delete(
+            '/premium-books/{id}',
+            [AdminPremiumController::class, 'destroy']
+        )->name('premium.destroy');
 
         /*
         |--------------------------------------------------------------------------
@@ -477,28 +485,28 @@ Route::delete(
             ->name('notifications.destroy');
 
         /*
-|--------------------------------------------------------------------------
-| KELOLA PROMOSI
-|--------------------------------------------------------------------------
-*/
+        |--------------------------------------------------------------------------
+        | KELOLA PROMOSI
+        |--------------------------------------------------------------------------
+        */
 
-Route::get('/promotions', [AdminPromotionController::class, 'index'])
-    ->name('promotions.index');
+        Route::get('/promotions', [AdminPromotionController::class, 'index'])
+            ->name('promotions.index');
 
-Route::get('/promotions/create', [AdminPromotionController::class, 'create'])
-    ->name('promotions.create');
+        Route::get('/promotions/create', [AdminPromotionController::class, 'create'])
+            ->name('promotions.create');
 
-Route::post('/promotions/store', [AdminPromotionController::class, 'store'])
-    ->name('promotions.store');
+        Route::post('/promotions/store', [AdminPromotionController::class, 'store'])
+            ->name('promotions.store');
 
-Route::get('/promotions/{id}/edit', [AdminPromotionController::class, 'edit'])
-    ->name('promotions.edit');
+        Route::get('/promotions/{id}/edit', [AdminPromotionController::class, 'edit'])
+            ->name('promotions.edit');
 
-Route::post('/promotions/{id}/update', [AdminPromotionController::class, 'update'])
-    ->name('promotions.update');
+        Route::post('/promotions/{id}/update', [AdminPromotionController::class, 'update'])
+            ->name('promotions.update');
 
-Route::delete('/promotions/{id}', [AdminPromotionController::class, 'destroy'])
-    ->name('promotions.destroy');
+        Route::delete('/promotions/{id}', [AdminPromotionController::class, 'destroy'])
+            ->name('promotions.destroy');
     });
 
 /*

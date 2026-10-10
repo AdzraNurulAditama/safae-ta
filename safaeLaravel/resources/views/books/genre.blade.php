@@ -146,27 +146,12 @@
         font-size: 1.05rem;
         font-weight: 700;
         line-height: 1.4;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
         min-height: 42px;
-    }
-
-    .book-meta {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #94a3b8;
-        font-size: 0.85rem;
-        margin-bottom: 8px;
-    }
-
-    .book-meta i {
-        width: 16px;
-        color: #38bdf8;
-        text-align: center;
     }
 
     /* ================= FOOTER BUTTONS ================= */
@@ -235,28 +220,26 @@
 
     /* ================= RESPONSIVE ================= */
     @media(max-width: 1400px) {
-        .book-grid { grid-template-columns: repeat(4, 1fr); } /* 4 kolom untuk layar laptop sedang */
+        .book-grid { grid-template-columns: repeat(4, 1fr); }
     }
 
     @media(max-width: 1100px) {
-        .book-grid { grid-template-columns: repeat(3, 1fr); } /* 3 kolom untuk tablet landscape */
+        .book-grid { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media(max-width: 768px) {
         .book-grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 kolom untuk tablet portrait/HP besar */
+            grid-template-columns: repeat(2, 1fr);
             gap: 15px;
         }
-
         .card-img-wrapper { height: 230px; }
-        
         .search-bar { width: 100%; }
         .search-wrapper { width: 100%; }
         .search-wrapper .form-control { min-width: unset; }
     }
 
     @media(max-width: 480px) {
-        .book-grid { grid-template-columns: repeat(1, 1fr); } /* 1 kolom untuk HP kecil agar tetap jelas terbaca */
+        .book-grid { grid-template-columns: repeat(1, 1fr); }
     }
 </style>
 
@@ -301,21 +284,32 @@
                 </div>
 
                 <div class="book-content">
+                    <!-- Judul -->
                     <div class="book-title" title="{{ $book->title }}">
                         {{ $book->title }}
                     </div>
 
-                    <div class="book-meta">
-                        <i class="fa-solid fa-user"></i>
-                        <span class="text-truncate">{{ $book->author }}</span>
-                    </div>
-                    <div class="book-meta">
-                        <i class="fa-solid fa-tag"></i>
-                        <span>{{ $book->genre }}</span>
-                    </div>
-                    <div class="book-meta">
-                        <i class="fa-solid fa-calendar"></i>
-                        <span>{{ $book->year }}</span>
+                    <!-- Penulis dan Tahun -->
+                    <small class="text-secondary d-block mb-2" style="color: #94a3b8 !important;">
+                        {{ $book->author }} &bull; {{ $book->year }}
+                    </small>
+                    
+                    <!-- Deskripsi Singkat -->
+                    <p class="text-white-50 small mb-2" style="font-size: 0.8rem;">
+                        {{ Str::limit($book->description, 60) }}
+                    </p>
+
+                    <!-- Kumpulan Badge (Genre, Jenis Buku, Halaman) -->
+                    <div class="mt-2 d-flex flex-wrap gap-1 mb-2">
+                        <span class="badge bg-info bg-opacity-25 text-info">{{ $book->genre }}</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jenis_buku }}</span>
+                        <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jumlah_halaman }} hal</span>
+                        
+                        @if (isset($book->is_premium) && $book->is_premium)
+                            <span class="badge bg-warning bg-opacity-25 text-warning">
+                                <i class="fas fa-crown me-1"></i>Premium
+                            </span>
+                        @endif
                     </div>
 
                     <div class="book-footer">
