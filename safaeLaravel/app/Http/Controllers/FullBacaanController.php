@@ -3,172 +3,137 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
+use App\Models\Chapter;
 use App\Models\ReadingHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class FullBacaanController extends Controller
 {
-   
    public function show($id, $page = 1)
-{
-    $book = Book::findOrFail($id);
+   {
+       $book = Book::with('chapters')->findOrFail($id);
 
-    if ($book->is_premium) {
+       if ($book->is_premium) {
+           $akses = \App\Models\PremiumBookUser::where('user_id', Auth::id())
+               ->where('book_id', $book->id)
+               ->exists();
 
-    $akses =
-        \App\Models\PremiumBookUser::where(
-            'user_id',
-            Auth::id()
-        )
-        ->where(
-            'book_id',
-            $book->id
-        )
-        ->exists();
+           if (!$akses) {
+               return redirect()
+                   ->route('premium.books')
+                   ->with('error', 'Silakan tukarkan poin terlebih dahulu.');
+           }
+       }
 
-    if (!$akses) {
+       if (Auth::check()) {
+           $existingReader = ReadingHistory::where('user_id', Auth::id())
+               ->where('book_id', $book->id)
+               ->exists();
 
-        return redirect()
-            ->route('premium.books')
-            ->with(
-                'error',
-                'Silakan tukarkan poin terlebih dahulu.'
-            );
-    }
-}
+           if (!$existingReader) {
+               $book->increment('reader_count');
+               $book->refresh();
 
-    if (Auth::check()) {
+               if ($book->reader_count >= 100000 && !$book->premium_notified) {
+                   \App\Models\Notification::create([
+                       'user_id' => $book->user_id,
+                       'title' => 'Buku Siap Premium',
+                       'message' => '🎉 Buku "' . $book->title . '" telah mencapai 100.000 pembaca dan dapat diajukan menjadi Premium.',
+                   ]);
 
-        $existingReader = ReadingHistory::where(
-            'user_id',
-            Auth::id()
-        )->where(
-            'book_id',
-            $book->id
-        )->exists();
+                   $book->update([
+                       'premium_notified' => true
+                   ]);
+               }
+           }
 
-        if (!$existingReader) {
+           ReadingHistory::updateOrCreate(
+               [
+                   'user_id' => Auth::id(),
+                   'book_id' => $book->id,
+               ],
+               [
+                   'progress' => $page,
+                   'last_read_at' => now(),
+               ]
+           );
+       }
 
-            $book->increment('reader_count');
+       // =========================================================
+       // PROSES ISI BUKU BERDASARKAN CHAPTER / BAB YANG DITULIS PENULIS
+       // =========================================================
+       $chapters = $book->chapters()->orderBy('chapter_number', 'asc')->get();
+       $totalHalaman = $chapters->count();
 
-            $book->refresh();
+       if ($totalHalaman == 0) {
+           return view('books.fullbacaan', [
+               'buku' => $book,
+               'halaman' => 'Belum ada konten bab pada buku ini.',
+               'chapter' => null,
+               'page' => 1,
+               'totalHalaman' => 1
+           ]);
+       }
 
-            if (
-                $book->reader_count >= 100000 &&
-                !$book->premium_notified
-            ) {
+       if ($page < 1) {
+           $page = 1;
+       }
 
-                \App\Models\Notification::create([
-                    'user_id' => $book->user_id,
-                    'title' => 'Buku Siap Premium',
-                    'message' => '🎉 Buku "' . $book->title . '" telah mencapai 100.000 pembaca dan dapat diajukan menjadi Premium.',
-                ]);
+       if ($page > $totalHalaman) {
+           $page = $totalHalaman;
+       }
 
-                $book->update([
-                    'premium_notified' => true
-                ]);
-            }
-        }
+       // Ambil bab sesuai nomor halaman aktif (indeks array dimulai dari 0, jadi $page - 1)
+       $currentChapter = $chapters[$page - 1] ?? null;
+       $halamanKonten = $currentChapter ? $currentChapter->content : 'Konten tidak ditemukan.';
 
-        ReadingHistory::updateOrCreate(
-            [
-                'user_id' => Auth::id(),
-                'book_id' => $book->id,
-            ],
-            [
-                'progress' => $page,
-                'last_read_at' => now(),
-            ]
-        );
-    }
+       return view('books.fullbacaan', [
+           'buku' => $book,
+           'halaman' => $halamanKonten,
+           'chapter' => $currentChapter, // <--- DIKIRIM AGAR GAMBAR DAPAT DIAKSES DI VIEW
+           'page' => $page,
+           'totalHalaman' => $totalHalaman
+       ]);
+   }
 
-    // =========================
-    // PROSES ISI BUKU
-    // =========================
+   public function ulasan($id)
+   {
+       $book = Book::with('reviews.user')->findOrFail($id);
 
-    $text = $book->full_text ?? $book->content ?? '';
+       $reviews = $book->reviews;
+       $totalReview = $reviews->count();
 
-    $text = str_replace("\r\n", "\n", $text);
-    $text = str_replace("\r", "\n", $text);
+       if ($totalReview > 0) {
+           $avgRating = round($reviews->avg('rating'), 1);
+       } else {
+           $avgRating = 0;
+       }
 
-    $halaman = explode("\n", $text);
+       return view('review.index', [
+           'book' => $book,
+           'reviews' => $reviews,
+           'totalReview' => $totalReview,
+           'avgRating' => $avgRating
+       ]);
+   }
 
-    $hasil = [];
+   public function storeReview(Request $request, $id)
+   {
+       $request->validate([
+           'rating' => 'required|integer|min:1|max:5',
+           'komentar' => 'required|string'
+       ]);
 
-    foreach ($halaman as $baris) {
+       $book = Book::findOrFail($id);
 
-        if (trim($baris) !== '') {
-            $hasil[] = $baris;
-        }
-    }
+       $book->reviews()->create([
+           'user_id' => Auth::id(),
+           'rating' => $request->rating,
+           'komentar' => $request->komentar
+       ]);
 
-    $totalHalaman = count($hasil);
-
-    if ($totalHalaman == 0) {
-
-        return view('books.fullbacaan', [
-            'buku' => $book,
-            'halaman' => 'Belum ada konten.',
-            'page' => 1,
-            'totalHalaman' => 1
-        ]);
-    }
-
-    if ($page < 1) {
-        $page = 1;
-    }
-
-    if ($page > $totalHalaman) {
-        $page = $totalHalaman;
-    }
-
-    return view('books.fullbacaan', [
-        'buku' => $book,
-        'halaman' => $hasil[$page - 1],
-        'page' => $page,
-        'totalHalaman' => $totalHalaman
-    ]);
-}
-
-  
-    public function ulasan($id)
-    {
-        $book = Book::with('reviews.user')->findOrFail($id);
-
-        $reviews = $book->reviews;
-        $totalReview = $reviews->count();
-
-        if ($totalReview > 0) {
-            $avgRating = round($reviews->avg('rating'), 1);
-        } else {
-            $avgRating = 0;
-        }
-
-        return view('review.index', [
-            'book' => $book,
-            'reviews' => $reviews,
-            'totalReview' => $totalReview,
-            'avgRating' => $avgRating
-        ]);
-    }
-
-    public function storeReview(Request $request, $id)
-    {
-        $request->validate([
-            'rating' => 'required|integer|min:1|max:5',
-            'komentar' => 'required|string'
-        ]);
-
-        $book = Book::findOrFail($id);
-
-        $book->reviews()->create([
-            'user_id' => Auth::id(),
-            'rating' => $request->rating,
-            'komentar' => $request->komentar
-        ]);
-
-        return redirect()->route('ulasan.index', $id)
-            ->with('success', 'Ulasan berhasil ditambahkan!');
-    }
+       return redirect()->route('ulasan.index', $id)
+           ->with('success', 'Ulasan berhasil ditambahkan!');
+   }
 }

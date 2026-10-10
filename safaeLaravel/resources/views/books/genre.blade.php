@@ -278,9 +278,21 @@
             <div class="book-card">
                 
                 <div class="card-img-wrapper">
-                    <img src="{{ $book->image_path ? asset($book->image_path) : 'https://via.placeholder.com/300x400?text=No+Cover' }}"
-                         class="book-cover"
-                         alt="{{ $book->title }}">
+                    @php
+                        // Memberihkan path jika tersimpan dengan awalan 'public/' atau 'storage/'
+                        $coverPath = $book->image_path ? str_replace(['public/', 'storage/'], '', $book->image_path) : null;
+                    @endphp
+
+                    @if($coverPath)
+                        <img src="{{ asset('storage/' . $coverPath) }}"
+                             class="book-cover"
+                             alt="{{ $book->title }}"
+                             onerror="this.onerror=null; this.src='{{ asset($book->image_path) }}';">
+                    @else
+                        <img src="https://via.placeholder.com/300x400?text=No+Cover"
+                             class="book-cover"
+                             alt="No Cover Available">
+                    @endif
                 </div>
 
                 <div class="book-content">

@@ -38,7 +38,8 @@ use App\Http\Controllers\AdminPromotionController;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\AdminPremiumController;
 use App\Http\Controllers\PremiumBookController;
-use App\Http\Controllers\BookFinishController; // <-- TAMBAHAN IMPORT CONTROLLER
+use App\Http\Controllers\BookFinishController; 
+use App\Http\Controllers\WriterController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -105,10 +106,10 @@ Route::middleware('auth')->group(function () {
     */
     Route::get('/buku/{book}/selesai', [BookFinishController::class, 'show'])
     ->name('books.finished')->middleware('auth');
-Route::post('/buku/{book}/feedback', [BookFinishController::class, 'feedback'])
-    ->name('books.feedback')->middleware('auth');
+    Route::post('/buku/{book}/feedback', [BookFinishController::class, 'feedback'])
+        ->name('books.feedback')->middleware('auth');
 
-// route baca yang lama di bawahnya
+    // route baca yang lama di bawahnya
     Route::get('/buku/{id}/{page}', [FullBacaanController::class, 'show'])
     ->where('page', '[0-9]+')
     ->name('book.show'); // biarkan nama route aslinya
@@ -245,7 +246,7 @@ Route::post('/buku/{book}/feedback', [BookFinishController::class, 'feedback'])
 
     /*
     |--------------------------------------------------------------------------
-    | TULIS BUKU
+    | TULIS BUKU (LAMA)
     |--------------------------------------------------------------------------
     */
     Route::get('/tulis-buku', [BookSubmissionController::class, 'create'])
@@ -253,6 +254,26 @@ Route::post('/buku/{book}/feedback', [BookFinishController::class, 'feedback'])
 
     Route::post('/tulis-buku/store', [BookSubmissionController::class, 'store'])
         ->name('tulis-buku.store');
+
+    /*
+    |--------------------------------------------------------------------------
+    | STUDIO PENULIS (TAMBAHAN FITUR BARU NOVEL PER CHAPTER)
+    |--------------------------------------------------------------------------
+    */
+    Route::prefix('penulis')->group(function () {
+        Route::get('/buku', [WriterController::class, 'index'])->name('writer.books.index');
+        Route::get('/buku/create', [WriterController::class, 'createBook'])->name('writer.books.create');
+        Route::post('/buku/store', [WriterController::class, 'storeBook'])->name('writer.books.store');
+        Route::get('/buku/{book}/edit', [WriterController::class, 'editBook'])->name('writer.books.edit');
+        Route::post('/buku/{book}/update', [WriterController::class, 'updateBook'])->name('writer.books.update');
+
+        Route::get('/buku/{book}/chapters', [WriterController::class, 'chapters'])->name('writer.chapters.index');
+        Route::get('/buku/{book}/chapter/tambah', [WriterController::class, 'editor'])->name('writer.chapter.create');
+        Route::get('/buku/{book}/chapter/{chapter}/edit', [WriterController::class, 'editor'])->name('writer.chapter.edit');
+        Route::post('/buku/{book}/chapter/simpan/{chapter?}', [WriterController::class, 'saveChapter'])->name('writer.chapter.store');
+        Route::delete('/buku/{book}', [WriterController::class, 'destroyBook'])->name('writer.books.destroy');
+        Route::get('/buku/{book}/baca', [WriterController::class, 'readBook'])->name('writer.books.read');
+    });
 
     /*
     |--------------------------------------------------------------------------

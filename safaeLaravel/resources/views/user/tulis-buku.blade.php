@@ -11,269 +11,315 @@
     .writing-container{
         max-width:900px;
         margin:0 auto;
+
     }
 
     .writing-card{
         background:#1e293b;
-
         border:1px solid #334155;
-
         border-radius:20px;
-
         box-shadow:0 10px 30px rgba(0,0,0,.15);
-
         overflow:hidden;
+
     }
 
     .card-header-custom{
         background:transparent;
-
         border-bottom:1px solid #334155;
-
         padding:25px 30px;
+
     }
 
     .page-title{
         color:#f1f5f9;
-
         font-weight:800;
-
         margin-bottom:5px;
+
     }
 
     /* ================= INFO BOX ================= */
 
     .info-box{
         background:rgba(56,189,248,.1);
-
         border-left:4px solid #38bdf8;
-
         color:#e2e8f0;
-
         padding:15px 20px;
-
         border-radius:0 12px 12px 0;
-
         margin-bottom:25px;
+
     }
 
     /* ================= FORM ELEMENTS ================= */
 
     .form-label{
         color:#e2e8f0;
-
         font-weight:600;
-
         font-size:.95rem;
-
         margin-bottom:10px;
+
     }
 
     .form-control,
+
     .form-select{
         background-color:#0f172a;
-
         color:#f8fafc;
-
         border:1px solid #334155;
-
         border-radius:12px;
-
         padding:14px 18px;
-
         transition:.3s ease;
+
     }
 
     .form-control:focus,
+
     .form-select:focus{
         border-color:#38bdf8;
-
         box-shadow:0 0 0 3px rgba(56,189,248,.15);
-
         outline:none;
-
         color:#fff;
+
     }
 
     .form-control::placeholder{
         color:#64748b;
+
     }
 
     .form-select{
         appearance:none;
-
-        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
-
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http\://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
         background-repeat:no-repeat;
-
         background-position:right 1rem center;
-
         background-size:16px 12px;
+
     }
 
     textarea.form-control{
         min-height:350px;
-
         line-height:1.8;
-
         resize:vertical;
+
     }
 
     /* ================= UPLOAD ================= */
 
     .upload-area{
         background:#0f172a;
-
         border:2px dashed #334155;
-
         border-radius:14px;
-
         padding:40px 20px;
-
         text-align:center;
-
         transition:.3s ease;
-
         cursor:pointer;
-
         color:#94a3b8;
+
     }
 
     .upload-area:hover{
         border-color:#38bdf8;
-
         background:rgba(56,189,248,.05);
-
         color:#38bdf8;
+
     }
 
     .preview-image{
         max-width:200px;
         max-height:280px;
-
         margin-top:20px;
-
         border-radius:12px;
-
         box-shadow:0 10px 25px rgba(0,0,0,.3);
-
         border:1px solid #334155;
-
         object-fit:cover;
+
     }
 
     /* ================= BUTTON ================= */
 
     .btn-submit{
         background:#38bdf8;
-
         color:#0f172a;
-
         border:none;
-
         padding:16px 30px;
-
         border-radius:14px;
-
         font-weight:700;
-
         font-size:1.05rem;
-
         transition:.3s ease;
-
         width:100%;
-
         display:flex;
         align-items:center;
         justify-content:center;
-
         gap:10px;
+
     }
 
     .btn-submit:hover{
         background:#7dd3fc;
-
         transform:translateY(-2px);
-
         box-shadow:0 10px 20px rgba(56,189,248,.2);
+
     }
 
     .btn-back{
         color:#94a3b8;
-
         text-decoration:none;
-
         font-weight:600;
-
         transition:.3s;
+
     }
 
     .btn-back:hover{
         color:#f1f5f9;
+
     }
 
     /* ================= ALERT ================= */
 
     .alert-success-custom{
         background:rgba(34,197,94,.1);
-
         border:1px solid rgba(34,197,94,.3);
-
         color:#4ade80;
-
         border-radius:12px;
+
     }
 
     .alert-danger-custom{
         background:rgba(248,113,113,.1);
-
         border:1px solid rgba(248,113,113,.3);
-
         color:#f87171;
-
         border-radius:12px;
+
     }
 
     /* ================= GUIDE SECTION ================= */
 
     .guide-card{
         background:rgba(255,255,255,.03);
-
         border:1px solid #334155;
-
         border-radius:18px;
-
         padding:20px;
-
         height:100%;
-
         transition:.25s ease;
+
     }
 
     .guide-card:hover{
         border-color:#38bdf8;
-
         transform:translateY(-4px);
-
         background:rgba(56,189,248,.05);
+
     }
 
     .guide-title{
         color:#f8fafc;
-
         font-weight:700;
-
         font-size:1.05rem;
+
     }
 
     .guide-text{
         color:#cbd5e1;
-
         font-size:.92rem;
-
         line-height:1.7;
-
         margin-top:8px;
+
+    }
+
+    /* Form tetap gelap saat hover, fokus, dan autofill */
+    input.form-control[name="title"],
+    input.form-control[name="author"],
+    input.form-control[name="year"] {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    input.form-control[name="title"]:hover,
+    input.form-control[name="author"]:hover,
+    input.form-control[name="year"]:hover {
+        background-color: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+    }
+
+    input.form-control[name="title"]:focus,
+    input.form-control[name="author"]:focus,
+    input.form-control[name="year"]:focus {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+        box-shadow: 0 0 0 3px rgba(56,189,248,.15) !important;
+        outline: none;
+    }
+
+    input.form-control[name="title"]:-webkit-autofill,
+    input.form-control[name="author"]:-webkit-autofill,
+    input.form-control[name="year"]:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #0f172a inset !important;
+        -webkit-text-fill-color: #f8fafc !important;
+    }
+
+    /* ================= DARK INPUT HOVER & FOCUS ================= */
+    input.form-control[name="title"],
+    input.form-control[name="author"],
+    input.form-control[name="year"] {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    input.form-control[name="title"]:hover,
+    input.form-control[name="author"]:hover,
+    input.form-control[name="year"]:hover {
+        background-color: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+    }
+
+    input.form-control[name="title"]:focus,
+    input.form-control[name="author"]:focus,
+    input.form-control[name="year"]:focus {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+        box-shadow: 0 0 0 3px rgba(56, 189, 248, .15) !important;
+        outline: none !important;
+    }
+
+    input.form-control[name="title"]:-webkit-autofill,
+    input.form-control[name="author"]:-webkit-autofill,
+    input.form-control[name="year"]:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 1000px #0f172a inset !important;
+        -webkit-text-fill-color: #f8fafc !important;
+    }
+
+    /* Deskripsi dan Isi Buku tetap gelap saat hover dan focus */
+    textarea[name="description"],
+    textarea[name="content"] {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #334155 !important;
+    }
+
+    textarea[name="description"]:hover,
+    textarea[name="content"]:hover {
+        background-color: #1e293b !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+    }
+
+    textarea[name="description"]:focus,
+    textarea[name="content"]:focus {
+        background-color: #0f172a !important;
+        color: #f8fafc !important;
+        border-color: #38bdf8 !important;
+        box-shadow: 0 0 0 3px rgba(56,189,248,.15) !important;
+        outline: none !important;
+    }
+
+    textarea[name="description"]::placeholder,
+    textarea[name="content"]::placeholder {
+        color: #94a3b8 !important;
     }
 
 </style>
@@ -297,11 +343,15 @@
                 <div>
 
                     <h3 class="page-title">
+
                         Tulis Buku Baru
+
                     </h3>
 
                     <p class="mb-0 text-muted">
+
                         Bagikan imajinasi, cerita, dan karya Anda dengan dunia.
+
                     </p>
 
                 </div>
@@ -319,7 +369,9 @@
                     <i class="fa-solid fa-circle-check fa-lg me-3"></i>
 
                     <div>
+
                         {{ session('success') }}
+
                     </div>
 
                 </div>
@@ -335,7 +387,9 @@
                         <i class="fa-solid fa-triangle-exclamation fa-lg me-2"></i>
 
                         <strong>
+
                             Terjadi kesalahan:
+
                         </strong>
 
                     </div>
@@ -364,6 +418,7 @@
 
             <form action="{{ url('/tulis-buku/store') }}"
                   method="POST"
+
                   enctype="multipart/form-data">
 
                 @csrf
@@ -371,6 +426,7 @@
                 <div class="row g-4">
 
                     <!-- JUDUL -->
+
                     <div class="col-md-6">
 
                         <label class="form-label">
@@ -383,14 +439,19 @@
 
                         <input type="text"
                                name="title"
+
                                class="form-control"
+
                                placeholder="Masukkan judul yang menarik..."
+
                                value="{{ old('title') }}"
+
                                required>
 
                     </div>
 
                     <!-- AUTHOR -->
+
                     <div class="col-md-6">
 
                         <label class="form-label">
@@ -403,14 +464,19 @@
 
                         <input type="text"
                                name="author"
+
                                class="form-control"
+
                                placeholder="Nama pena Anda"
+
                                value="{{ old('author', Auth::user()->username ?? '') }}"
+
                                required>
 
                     </div>
 
                     <!-- GENRE -->
+
                     <div class="col-md-6">
 
                         <label class="form-label">
@@ -423,17 +489,25 @@
 
                         <select name="genre"
                                 class="form-select"
+
                                 required>
 
                             <option value="">-- Pilih Genre --</option>
 
                             <option value="Pemrograman">Pemrograman</option>
+
                             <option value="Novel">Novel</option>
+
                             <option value="Hobi">Hobi</option>
+
                             <option value="Horror">Horror</option>
+
                             <option value="Romance">Romantis</option>
+
                             <option value="Fantasi">Fantasi</option>
+
                             <option value="Komedi">Komedi</option>
+
                             <option value="Misteri">Misteri</option>
 
                         </select>
@@ -441,6 +515,7 @@
                     </div>
 
                     <!-- YEAR -->
+
                     <div class="col-md-6">
 
                         <label class="form-label">
@@ -453,13 +528,17 @@
 
                         <input type="number"
                                name="year"
+
                                class="form-control"
+
                                value="{{ old('year', date('Y')) }}"
+
                                required>
 
                     </div>
 
                     <!-- DESCRIPTION -->
+
                     <div class="col-12">
 
                         <label class="form-label">
@@ -472,13 +551,17 @@
 
                         <textarea name="description"
                                   class="form-control"
+
                                   style="min-height:120px;"
+
                                   placeholder="Tuliskan sinopsis singkat..."
+
                                   required>{{ old('description') }}</textarea>
 
                     </div>
 
                     <!-- IMAGE -->
+
                     <div class="col-12">
 
                         <label class="form-label">
@@ -496,20 +579,28 @@
                                style="color:#475569;"></i>
 
                             <h5 class="text-white mb-1">
+
                                 Klik untuk upload cover buku
+
                             </h5>
 
                             <small class="text-muted">
+
                                 JPG, PNG, WEBP (Max 2MB)
+
                             </small>
 
                         </div>
 
                         <input type="file"
                                name="image"
+
                                id="imageUpload"
+
                                class="d-none"
+
                                accept="image/*"
+
                                onchange="previewImage(event)">
 
                         <div id="imagePreview"
@@ -518,6 +609,7 @@
                     </div>
 
                     <!-- CONTENT -->
+
                     <div class="col-12 mt-4">
 
                         <label class="form-label">
@@ -530,12 +622,15 @@
 
                         <textarea name="content"
                                   class="form-control"
+
                                   placeholder="Mulai menulis cerita Anda..."
+
                                   required>{{ old('content') }}</textarea>
 
                     </div>
 
                     <!-- BUTTON -->
+
                     <div class="col-12 mt-5">
 
                         <button type="submit"
@@ -587,6 +682,7 @@
             <div class="row g-4">
 
                 <!-- ITEM 1 -->
+
                 <div class="col-md-4">
 
                     <div class="guide-card">
@@ -598,11 +694,15 @@
                             <div>
 
                                 <strong class="guide-title">
+
                                     Judul Memikat
+
                                 </strong>
 
                                 <p class="guide-text mb-0">
+
                                     Buatlah judul yang eye-catching namun tetap merepresentasikan isi cerita Anda.
+
                                 </p>
 
                             </div>
@@ -614,6 +714,7 @@
                 </div>
 
                 <!-- ITEM 2 -->
+
                 <div class="col-md-4">
 
                     <div class="guide-card">
@@ -625,11 +726,15 @@
                             <div>
 
                                 <strong class="guide-title">
+
                                     Resolusi Cover
+
                                 </strong>
 
                                 <p class="guide-text mb-0">
+
                                     Gunakan rasio potret seperti 3:4 dengan resolusi tinggi agar cover tetap tajam.
+
                                 </p>
 
                             </div>
@@ -641,6 +746,7 @@
                 </div>
 
                 <!-- ITEM 3 -->
+
                 <div class="col-md-4">
 
                     <div class="guide-card">
@@ -652,11 +758,15 @@
                             <div>
 
                                 <strong class="guide-title">
+
                                     Orisinalitas
+
                                 </strong>
 
                                 <p class="guide-text mb-0">
+
                                     Pastikan naskah merupakan karya asli Anda dan tidak melanggar hak cipta.
+
                                 </p>
 
                             </div>
@@ -678,25 +788,30 @@
 <script>
 
 function previewImage(event){
-
     const reader = new FileReader();
-
     reader.onload = function(){
-
         const preview = document.getElementById('imagePreview');
-
         preview.innerHTML = `
+
             <img src="${reader.result}" class="preview-image">
+
             <div class="mt-3 text-success fw-bold">
+
                 <i class="fa-solid fa-check-circle me-1"></i>
+
                 Cover berhasil dipilih
+
             </div>
+
         `;
+
     }
 
     if(event.target.files[0]){
         reader.readAsDataURL(event.target.files[0]);
+
     }
+
 }
 
 </script>

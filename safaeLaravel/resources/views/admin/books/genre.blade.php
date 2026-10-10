@@ -235,7 +235,7 @@
     <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary border-opacity-10 pb-3">
         <div>
             <h1 class="h4 fw-bold text-white m-0">Kelola Genre & Buku</h1>
-            <small class="text-muted">Halaman Administrasi Data Buku Utama</small>
+            <small class="text-muted">Halaman Administrasi Data Buku Utama & Validasi Publikasi</small>
         </div>
     </div>
 
@@ -244,6 +244,55 @@
         <div class="alert alert-admin-success mb-4 shadow-sm d-flex align-items-center gap-2">
             <i class="fa-solid fa-check-circle text-primary"></i>
             <span>{{ session('success') }}</span>
+        </div>
+    @endif
+
+    {{-- SECTION KHUSUS BUKU MENUNGGU VALIDASI (PENDING) --}}
+    @if(isset($pendingBooks) && $pendingBooks->count() > 0)
+        <div class="mb-5 p-4 rounded-4" style="background: rgba(234, 179, 8, 0.05); border: 1px solid rgba(234, 179, 8, 0.2);">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="fa-solid fa-clock-rotate-left text-warning fa-lg"></i>
+                <h3 class="h5 text-warning fw-bold m-0">Menunggu Validasi Publikasi ({{ $pendingBooks->count() }})</h3>
+            </div>
+            
+            <div class="books-grid">
+                @foreach($pendingBooks as $pending)
+                <div class="book-admin-card">
+                    <div class="book-cover-wrapper">
+                        @if ($pending->image_path)
+                            <img src="{{ asset('storage/'.$pending->image_path) }}" alt="Cover">
+                        @else
+                            <i class="fas fa-book fa-2x text-muted"></i>
+                        @endif
+                    </div>
+
+                    <div class="book-details">
+                        <h5 class="book-card-title">{{ $pending->title }}</h5>
+                        <div>
+                            <div class="book-card-text"><strong>Penulis:</strong> {{ $pending->author }}</div>
+                            <div class="book-card-text"><strong>Genre:</strong> {{ $pending->genre }}</div>
+                        </div>
+                    </div>
+
+                    <div class="card-action-footer justify-content-between gap-2">
+                        <!-- Tombol Setujui -->
+                        <form action="{{ url('/admin/buku/'.$pending->id.'/approve') }}" method="POST" class="w-50 m-0">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-success w-100 fw-bold rounded-2 py-2">
+                                <i class="fas fa-check me-1"></i> Setujui
+                            </button>
+                        </form>
+                        <!-- Tombol Tolak -->
+                        <form action="{{ url('/admin/buku/'.$pending->id.'/reject') }}" method="POST" class="w-50 m-0">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-outline-danger w-100 fw-bold rounded-2 py-2">
+                                <i class="fas fa-xmark me-1"></i> Tolak
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                @endforeach
+            </div>
         </div>
     @endif
 
@@ -288,7 +337,7 @@
                 <div class="book-admin-card">
                     <div class="book-cover-wrapper">
                         @if ($book->image_path)
-                            <img src="{{ asset($book->image_path) }}" alt="Cover">
+                            <img src="{{ asset('storage/'.$book->image_path) }}" alt="Cover">
                         @else
                             <i class="fas fa-book fa-2x text-muted"></i>
                         @endif
@@ -355,7 +404,7 @@
                     <div class="book-admin-card">
                         <div class="book-cover-wrapper">
                             @if ($book->image_path)
-                                <img src="{{ asset($book->image_path) }}" alt="Cover">
+                                <img src="{{ asset('storage/'.$book->image_path) }}" alt="Cover">
                             @else
                                 <i class="fas fa-book fa-2x text-muted"></i>
                             @endif
@@ -376,10 +425,10 @@
                             <a href="{{ route('admin.books.edit', $book->id) }}" class="btn-action-tool tool-edit" title="Edit Buku">
                                 <i class="fas fa-edit"></i>
                             </a>
-                            <form method="POST" action="{{ url('/books/delete') }}" class="m-0">
+                            <form method="POST" action="{{ route('admin.books.delete') }}" class="m-0">
                                 @csrf
                                 <input type="hidden" name="id" value="{{ $book->id }}">
-                                <input type="hidden" name="genre_filter" value="">
+                                <input type="hidden" name="genre_filter" value="{{ $current_genre }}">
                                 <button type="submit" class="btn-action-tool tool-delete" title="Hapus Buku" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">
                                     <i class="fas fa-trash"></i>
                                 </button>

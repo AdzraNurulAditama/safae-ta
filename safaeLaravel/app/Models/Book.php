@@ -10,20 +10,20 @@ class Book extends Model
 {
     use HasFactory;
 
- protected $fillable = [
-    'title',
-    'author',
-    'genre',
-    'year',
-    'description',
-    'content',
-    'status',
-    'image_path',
-    'user_id',
-    'reader_count',
-    'is_premium',
-    'premium_point'
-];
+    protected $fillable = [
+        'title',
+        'author',
+        'genre',
+        'year',
+        'description',
+        'content',
+        'status',
+        'image_path',
+        'user_id',
+        'reader_count',
+        'is_premium',
+        'premium_point'
+    ];
 
     /**
      * Accessor URL GAMBAR (UNTUK FLUTTER)
@@ -53,13 +53,18 @@ class Book extends Model
     }
 
     public function user()
-{
-    return $this->belongsTo(User::class);
-}
+    {
+        return $this->belongsTo(User::class);
+    }
 
-public function premiumRequests()
-{
-    return $this->hasMany(PremiumRequest::class);
-}
+    public function premiumRequests()
+    {
+        return $this->hasMany(PremiumRequest::class);
+    }
 
+    // PINDAHKAN chapters() KE SINI (DI DALAM KELAS BOOK)
+    public function chapters()
+    {
+        return $this->hasMany(Chapter::class, 'book_id');
+    }
 }
