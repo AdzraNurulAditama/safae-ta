@@ -1,0 +1,97 @@
+/* Reset dan dasar */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+/* Container utama */
+.container {
+    max-width: 720px;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    line-height: 1.6;
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+}
+
+/* Judul halaman */
+h2 {
+    color: #1a73e8;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+/* Label dan isi */
+p {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+p strong {
+    display: inline-block;
+    width: 100px;
+    color: #1a73e8;
+    font-weight: 600;
+}
+
+/* Isi konten (text panjang) */
+p strong + br + * {
+    display: block;
+    margin-top: 8px;
+    color: #333;
+    white-space: pre-wrap; /* agar nl2br tetap rapi */
+}
+
+/* Link kembali */
+a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 28px;
+    background-color: #1a73e8;
+    color: white;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 5px 12px rgba(26, 115, 232, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+a:hover {
+    background-color: #155ab6;
+    box-shadow: 0 8px 18px rgba(21, 90, 182, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 20px;
+    }
+
+    p strong {
+        width: 90px;
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    a {
+        width: 100%;
+        text-align: center;
+    }
+}

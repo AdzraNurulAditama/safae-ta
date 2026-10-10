@@ -1,0 +1,213 @@
+.adm-wrap {
+    padding: 30px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* TOPBAR */
+.adm-topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.adm-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f0f4f8;        /* terang, bukan gelap */
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.adm-title i {
+    font-size: 20px;
+    color: #EF9F27;
+}
+
+.adm-count {
+    font-size: 12px;
+    background: rgba(250,199,117,0.15);
+    color: #FAC775;
+    border: 0.5px solid rgba(250,199,117,0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+/* ALERT */
+.adm-alert {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.adm-alert.success {
+    background: #EAF3DE;
+    color: #27500A;
+    border: 0.5px solid #97C459;
+}
+.adm-alert.danger {
+    background: #FCEBEB;
+    color: #791F1F;
+    border: 0.5px solid #F09595;
+}
+.adm-alert i { font-size: 16px; }
+
+/* CARD & TABLE */
+.adm-card {
+    background: #1e2433;
+    border: 0.5px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.adm-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.adm-table thead tr {
+    background: rgba(255,255,255,0.04);
+}
+
+.adm-table th {
+    padding: 12px 16px;
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-bottom: 0.5px solid rgba(255,255,255,0.07);
+    text-align: left;
+    white-space: nowrap;
+}
+
+.adm-table td {
+    padding: 13px 16px;
+    border-bottom: 0.5px solid rgba(255,255,255,0.06);
+    color: #e2e8f0;
+    vertical-align: middle;
+}
+
+.adm-table tr:last-child td { border-bottom: none; }
+.adm-table tbody tr:hover td { background: rgba(255,255,255,0.03); }
+
+/* BOOK INFO */
+.book-info { display: flex; flex-direction: column; gap: 3px; }
+.book-title-cell  { font-size: 13px; font-weight: 500; color: #f0f4f8; }
+.book-author-cell { font-size: 11px; color: rgba(255,255,255,0.4); }
+
+/* BADGES */
+.badge-premium {
+    background: rgba(239,159,39,0.15);
+    color: #FAC775;
+    border: 0.5px solid rgba(239,159,39,0.3);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.badge-premium i { font-size: 12px; }
+
+.badge-biasa {
+    background: rgba(255,255,255,0.07);
+    color: rgba(255,255,255,0.4);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+}
+
+/* POIN */
+.poin-val {
+    font-size: 13px;
+    font-weight: 500;
+    color: #FAC775;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.poin-val i  { font-size: 13px; color: #EF9F27; }
+.poin-dash   { color: rgba(255,255,255,0.25); font-size: 13px; }
+
+/* AKSI */
+.aksi-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.inp-poin {
+    height: 32px;
+    border: 0.5px solid rgba(255,255,255,0.15);
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 12px;
+    width: 80px;
+    background: rgba(255,255,255,0.07);
+    color: #f0f4f8;
+    outline: none;
+}
+.inp-poin::placeholder { color: rgba(255,255,255,0.3); }
+.inp-poin:focus { border-color: #EF9F27; }
+
+.btn-set {
+    background: rgba(239,159,39,0.15);
+    color: #FAC775;
+    border: 0.5px solid rgba(239,159,39,0.35);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+.btn-set:hover {
+    background: rgba(239,159,39,0.28);
+    color: #fff;
+}
+.btn-set i { font-size: 13px; }
+
+.btn-hapus {
+    background: rgba(240,149,149,0.1);
+    color: #F09595;
+    border: 0.5px solid rgba(240,149,149,0.25);
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+.btn-hapus:hover {
+    background: rgba(240,149,149,0.22);
+    color: #fff;
+}
+.btn-hapus i { font-size: 13px; }
+
+.txt-premium {
+    font-size: 12px;
+    color: #86c97e;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.txt-premium i { font-size: 13px; }
+
+.adm-empty-row {
+    text-align: center;
+    padding: 32px;
+    color: rgba(255,255,255,0.3);
+    font-size: 13px;
+}
+

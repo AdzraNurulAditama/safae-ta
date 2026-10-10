@@ -1,0 +1,99 @@
+/* Container utama edit komentar */
+.edit-komentar-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Judul */
+.edit-komentar-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 28px;
+}
+
+/* Info user */
+.user-auto {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Textarea komentar */
+textarea[name="komentar"] {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    resize: vertical;
+}
+
+/* Tombol */
+.btn-kirim {
+    display: inline-block;
+    background-color: #ffc107;
+    color: #fff;
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-kirim:hover {
+    background-color: #e0a800;
+}
+
+/* Alert success/error */
+.alert-success, .alert-error {
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* File upload */
+.file-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-label {
+    background-color: #17a2b8;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.file-label:hover {
+    background-color: #138496;
+}
+
+.file-info {
+    font-size: 14px;
+    color: #555;
+}

@@ -1,0 +1,133 @@
+/* ==========================
+   Body & Container
+=========================== */
+body {
+    background-color: #f7f9fd;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container h2 {
+    color: #4a90e2;
+    font-weight: 700;
+}
+
+/* ==========================
+   Card Styling
+=========================== */
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #4a90e2;
+    color: #fff;
+    font-weight: 600;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* ==========================
+   Table Styling
+=========================== */
+.table {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: #357ABD;
+    color: #fff;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ==========================
+   Buttons
+=========================== */
+.btn-info {
+    background-color: #4a90e2;
+    border: none;
+}
+
+.btn-info:hover {
+    background-color: #357ABD;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* ==========================
+   Pagination
+=========================== */
+.pagination {
+    justify-content: center;
+}
+
+.pagination .page-item .page-link {
+    color: #4a90e2;
+    border-radius: 6px;
+    margin: 0 2px;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+}
+
+/* ==========================
+   Show Ulasan Detail
+=========================== */
+.review-card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.review-card .user-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.review-card .rating-star {
+    color: #ffc107;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.review-card .review-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.review-card .review-date {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* ==========================
+   Responsive adjustments
+=========================== */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
