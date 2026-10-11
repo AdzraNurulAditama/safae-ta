@@ -6,33 +6,43 @@ use App\Models\Book;
 use App\Models\BookFeedback;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
 
 class BookFinishController extends Controller
 {
+    private const JUMLAH_REKOMENDASI = 6;
+
     /**
-     * Halaman setelah user selesai membaca buku:
-     * popup "Cocok untukku" + daftar rekomendasi.
+     * Halaman rekomendasi setelah user menilai / selesai membaca.
+     * Rekomendasi dibaca dari tabel book_recommendations (hasil batch model),
+     * bukan dihitung saat halaman dibuka.
      */
     public function show(Book $book)
     {
         $user = auth()->user();
 
-        // Buku yang sudah pernah dibaca user (tidak ikut direkomendasikan)
-        $readIds = DB::table('reading_histories')
+        // Buku yang sudah dibaca user + buku ini tidak ikut direkomendasikan
+        $excludeIds = DB::table('reading_histories')
             ->where('user_id', $user->id)
-            ->pluck('book_id');
+            ->pluck('book_id')
+            ->push($book->id)
+            ->unique()
+            ->values();
 
-        // Sudah pernah menilai buku ini? Kalau sudah, popup tidak muncul lagi.
         $sudahMenilai = BookFeedback::where('user_id', $user->id)
             ->where('book_id', $book->id)
             ->exists();
 
-        // Tahap 2 (model Python) dulu, kalau gagal jatuh ke tahap 1 (aturan)
-        $recs = $this->fromModel($user->id, $book->id, $readIds)
-            ?? $this->fromRules($user->id, $book, $readIds);
+        // 1) Rekomendasi personal dari hasil batch model
+        $recs = $this->fromBatch($user->id, $excludeIds);
 
-        return view('feedback.finished', compact('book', 'recs', 'sudahMenilai'));
+        // 2) Kalau belum ada (user baru / batch belum jalan): buku populer
+        $judul = 'Buku lain yang mungkin kamu suka';
+        if ($recs->isEmpty()) {
+            $recs = $this->popular($excludeIds);
+            $judul = 'Buku populer di Safae';
+        }
+
+        return view('feedback.finished', compact('book', 'recs', 'sudahMenilai', 'judul'));
     }
 
     /**
@@ -54,51 +64,44 @@ class BookFinishController extends Controller
     }
 
     /**
-     * Tahap 2: ambil rekomendasi dari model Python (Decision Tree / SVM).
-     * Return null kalau endpoint belum ada, error, atau timeout.
+     * Ambil N buku dengan skor tertinggi untuk user ini dari book_recommendations.
      */
-    private function fromModel($userId, $bookId, $readIds)
+    private function fromBatch(int $userId, $excludeIds)
     {
-        try {
-            $res = Http::timeout(3)->post('http://127.0.0.1:5000/recommend', [
-                'user_id' => $userId,
-                'book_id' => $bookId,
-                'limit'   => 6,
-            ]);
+        $ids = DB::table('book_recommendations')
+            ->where('user_id', $userId)
+            ->whereNotIn('book_id', $excludeIds)
+            ->orderByDesc('skor')
+            ->limit(self::JUMLAH_REKOMENDASI)
+            ->pluck('book_id');
 
-            if (!$res->ok() || empty($res['book_ids'])) {
-                return null;
-            }
-
-            return Book::whereIn('id', $res['book_ids'])
-                ->whereNotIn('id', $readIds)
-                ->get();
-        } catch (\Throwable $e) {
-            return null;
+        if ($ids->isEmpty()) {
+            return collect();
         }
+
+        return Book::whereIn('id', $ids)
+            // ->where('status', 'approved') // sesuaikan dengan nilai status di tabel books
+            ->get()
+            ->sortBy(fn ($b) => $ids->search($b->id)) // pertahankan urutan skor
+            ->values();
     }
 
     /**
-     * Tahap 1: berbasis aturan. Genre yang paling sering dibaca user
-     * (selesai dihitung 2x, sedang dibaca 1x), jenis buku disamakan.
+     * Fallback untuk user tanpa rekomendasi: buku paling banyak dibaca.
      */
-    private function fromRules($userId, Book $book, $readIds)
+    private function popular($excludeIds)
     {
-        $topGenres = DB::table('reading_histories as rh')
-            ->join('books as b', 'b.id', '=', 'rh.book_id')
-            ->where('rh.user_id', $userId)
-            ->selectRaw('b.genre, SUM(CASE WHEN rh.progress = 100 THEN 2 ELSE 1 END) AS skor')
-            ->groupBy('b.genre')
-            ->orderByDesc('skor')
-            ->limit(3)
-            ->pluck('genre');
-
-        return Book::whereIn('genre', $topGenres)
-            ->where('jenis_buku', $book->jenis_buku)
-            ->whereNotIn('id', $readIds)
-            // ->where('status', 'approved') // sesuaikan dengan nilai status di tabel books
-            ->inRandomOrder()
-            ->limit(6)
+        return Book::select('books.*')
+            ->selectSub(
+                DB::table('reading_histories')
+                    ->selectRaw('COUNT(*)')
+                    ->whereColumn('reading_histories.book_id', 'books.id'),
+                'jumlah_pembaca'
+            )
+            ->whereNotIn('books.id', $excludeIds)
+            // ->where('status', 'approved')
+            ->orderByDesc('jumlah_pembaca')
+            ->limit(self::JUMLAH_REKOMENDASI)
             ->get();
     }
 }

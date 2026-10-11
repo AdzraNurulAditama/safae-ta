@@ -210,8 +210,8 @@
             {{-- Teks Bacaan --}}
             <div class="reader-content">
                 @if(!empty($halaman))
-                    {!! nl2br(e(is_object($halaman) ? ($halaman->content ?? $halaman->title) : $halaman)) !!}
-                @else
+                        {!! $halaman !!} 
+                                       @else
                     <p class="text-center text-muted">Belum ada konten pada bab/halaman ini.</p>
                 @endif
             </div>
@@ -264,19 +264,78 @@
     </div>
 </div>
 
-{{-- MODAL POP-UP TAMAT MEMBACA YANG LEBIH ELEGAN --}}
+{{-- MODAL POP-UP TAMAT MEMBACA + FEEDBACK --}}
 @if($page >= $totalHalaman)
+@php
+    $nonfiksi = $buku->jenis_buku === 'nonfiksi';
+    $sudahMenilai = \App\Models\BookFeedback::where('user_id', auth()->id())
+        ->where('book_id', $buku->id)
+        ->exists();
+@endphp
+
+<style>
+    .fb-choice {
+        flex: 1;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 8px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+    .fb-choice:disabled { opacity: .6; cursor: default; }
+    .fb-yes { background: #22c55e; color: #052e16; }
+    .fb-yes:hover:not(:disabled) { background: #4ade80; }
+    .fb-no { background: #334155; color: #e2e8f0; }
+    .fb-no:hover:not(:disabled) { background: #475569; }
+    .fb-later {
+        margin-top: 14px;
+        background: none;
+        border: 0;
+        color: #94a3b8;
+        font-size: 0.85rem;
+        cursor: pointer;
+    }
+</style>
+
 <div class="modal fade" id="finishReadModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content modal-content-custom text-center p-3">
             <div class="modal-body">
                 <div class="finish-icon">🎉</div>
                 <h3 class="fw-bold text-white mb-3">Selamat, Kamu Tamat Membaca!</h3>
-                <p class="text-muted mb-4" style="line-height: 1.6; font-size: 0.95rem;">
-                    Terima kasih telah membaca buku ini sampai selesai. Kamu bisa menulis resume atau memberikan ulasan melalui tombol di bawah cerita.
-                </p>
-                <button type="button" class="btn-nav-main justify-content-center w-100 py-3" data-bs-dismiss="modal">
-                    Lanjut Berinteraksi
+
+                @unless($sudahMenilai)
+                    <div id="fb-question">
+                        <p class="text-muted mb-3" style="line-height: 1.6; font-size: 0.95rem;">
+                            {{ $nonfiksi ? 'Apakah buku ini membantu kamu?' : 'Apakah buku ini cocok untukmu?' }}
+                        </p>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="fb-choice fb-yes" data-cocok="1">
+                                {{ $nonfiksi ? 'Membantu' : 'Cocok untukku' }}
+                            </button>
+                            <button type="button" class="fb-choice fb-no" data-cocok="0">
+                                {{ $nonfiksi ? 'Kurang membantu' : 'Belum cocok' }}
+                            </button>
+                        </div>
+                    </div>
+                @endunless
+
+                <div id="fb-thanks" class="{{ $sudahMenilai ? '' : 'd-none' }}">
+                    <p class="text-muted mb-3" style="line-height: 1.6; font-size: 0.95rem;">
+                        {{ $sudahMenilai
+                            ? 'Terima kasih sudah membaca buku ini sampai selesai.'
+                            : 'Terima kasih atas penilaianmu!' }}
+                    </p>
+                    <a href="{{ route('books.finished', $buku->id) }}"
+                       class="btn-nav-main justify-content-center w-100 py-3">
+                        <i class="fa-solid fa-book"></i> Lihat rekomendasi buku
+                    </a>
+                </div>
+
+                <button type="button" class="fb-later" data-bs-dismiss="modal">
+                    Lanjut berinteraksi
                 </button>
             </div>
         </div>
@@ -284,9 +343,45 @@
 </div>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         var finishModal = new bootstrap.Modal(document.getElementById('finishReadModal'));
-        finishModal.show();
+        var isModalShown = false;
+
+        // Kirim penilaian
+        var buttons = document.querySelectorAll('#finishReadModal [data-cocok]');
+        buttons.forEach(function (btn) {
+            btn.addEventListener('click', async function () {
+                buttons.forEach(function (b) { b.disabled = true; });
+                try {
+                    await fetch("{{ route('books.feedback', $buku->id) }}", {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                            'Accept': 'application/json'
+                        },
+                        body: JSON.stringify({ cocok: btn.dataset.cocok === '1' ? 1 : 0 })
+                    });
+                } catch (e) {
+                    console.error(e);
+                }
+                document.getElementById('fb-question').classList.add('d-none');
+                document.getElementById('fb-thanks').classList.remove('d-none');
+            });
+        });
+
+        @if($totalHalaman == 1)
+            // 1 halaman: munculkan saat user scroll ke paling bawah
+            window.addEventListener('scroll', function () {
+                if (!isModalShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
+                    finishModal.show();
+                    isModalShown = true;
+                }
+            });
+        @else
+            // Lebih dari 1 halaman: langsung muncul di halaman terakhir
+            finishModal.show();
+        @endif
     });
 </script>
 @endif

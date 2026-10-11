@@ -325,7 +325,7 @@
                     </div>
 
                     <div class="book-footer">
-                        <a href="{{ route('book.show', $book->id) }}" class="btn-detail">
+                        <a href="{{ route('book.show',['id' => $book->id, 'page' => 1]) }}" class="btn-detail">
                             <i class="fa-solid fa-book-open me-1"></i> Baca
                         </a>
 

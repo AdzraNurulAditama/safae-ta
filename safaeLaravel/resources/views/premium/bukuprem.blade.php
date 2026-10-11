@@ -132,8 +132,7 @@
                         {{-- Bagian Footer / Tombol Logika Transaksi atau Baca --}}
                         <div class="card-footer p-2 text-center bg-transparent border-0 mt-auto">
                             @if($sudahDitukar)
-                                <a href="{{ route('book.show', $book->id) }}" class="btn btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2" 
-                                   style="background: #38bdf8; color: #0f172a; border: none; padding: 7px 0; border-radius: 6px;">
+                                    <a href="{{ route('book.show', ['id' => $book->id, 'page' => 1]) }}" class="btn btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2"                                   style="background: #38bdf8; color: #0f172a; border: none; padding: 7px 0; border-radius: 6px;">
                                     <i class="fa-solid fa-book-open"></i> Baca Buku
                                 </a>
                             @else
