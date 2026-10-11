@@ -38,6 +38,7 @@ use App\Http\Controllers\BookResumeController;
   use App\Http\Controllers\PremiumController;
   use App\Http\Controllers\AdminPremiumController;
 use App\Http\Controllers\PremiumBookController;
+use App\Http\Controllers\BookmarkController;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,6 +142,21 @@ Route::middleware('auth')->group(function () {
     Route::post('/buku-favorit/hapus', [BukuFavoritController::class, 'hapus'])
         ->name('favorite.hapus');
 
+/*
+    |--------------------------------------------------------------------------
+    | BOOKMARK
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/bookmarks', [App\Http\Controllers\BookmarkController::class, 'index'])
+        ->name('bookmark.index');
+
+    Route::post('/books/{bookId}/bookmark', [App\Http\Controllers\BookmarkController::class, 'toggle'])
+        ->name('bookmark.toggle');
+
+    Route::delete('/bookmarks/{id}', [App\Http\Controllers\BookmarkController::class, 'destroy'])
+        ->name('bookmark.remove');
+
+        
     /*
     |--------------------------------------------------------------------------
     | REWARD

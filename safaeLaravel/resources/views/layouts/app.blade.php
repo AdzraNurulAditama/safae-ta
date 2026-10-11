@@ -414,6 +414,10 @@
         <i class="fa-regular fa-heart"></i> Buku Favorit
     </a>
 
+    <a href="{{ route('bookmark.index') }}" class="{{ request()->is('bookmarks*') ? 'active' : '' }}">
+        <i class="fa-solid fa-bookmark"></i> Bookmark Saya
+    </a>
+
     <a href="{{ route('reading.history') }}">
         <i class="fa-solid fa-clock-rotate-left"></i> Riwayat Baca
     </a>

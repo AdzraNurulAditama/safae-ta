@@ -70,8 +70,8 @@
         <div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4">
             @forelse($books as $book)
             <div class="col">
-                <a href="{{ url('/books/read/'.$book->id) }}" class="text-decoration-none">
-                    <div class="book-card">
+                <div class="book-card position-relative">
+                    <a href="{{ url('/books/read/'.$book->id) }}" class="text-decoration-none">
                         <div class="book-cover-wrapper">
                             @if($book->image_path)
                                 <img src="{{ asset($book->image_path) }}" class="book-cover" alt="{{ $book->title }}">
@@ -80,15 +80,15 @@
                                     <i class="fas fa-book fa-2x"></i>
                                 </div>
                             @endif
-                            
-                            
                             <div class="book-badge">{{ $book->genre }}</div>
                         </div>
-                        
-                        <div class="book-info">
+                    </a>
+                    
+                    <div class="book-info">
+                        <a href="{{ url('/books/read/'.$book->id) }}" class="text-decoration-none text-white">
                             <div class="book-title">{{ $book->title }}</div>
                             <div class="book-author">{{ $book->author }}</div>
-                            <div class="book-rating">
+                            <div class="book-rating mb-2">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -96,9 +96,17 @@
                                 <i class="fas fa-star-half-alt"></i>
                                 <span class="text-muted ms-1">(4.5)</span>
                             </div>
-                        </div>
+                        </a>
+
+                        {{-- TOMBOL BOOKMARK DI SINI --}}
+                        <form action="{{ route('bookmark.toggle', $book->id) }}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-sm btn-outline-primary w-100 rounded-pill">
+                                <i class="fa-solid fa-bookmark me-1"></i> Bookmark
+                            </button>
+                        </form>
                     </div>
-                </a>
+                </div>
             </div>
             @empty
             <div class="col-12 text-center py-5">
@@ -137,7 +145,18 @@
                                 <p class="card-text small text-secondary mb-2 line-clamp-2">
                                     {{ Str::limit($book->content, 60) }}
                                 </p>
-                                <a href="{{ url('/books/read/'.$book->id) }}" class="btn btn-sm btn-outline-primary rounded-pill w-max-content" style="width: fit-content;">Baca Sekarang</a>
+                                
+                                <div class="d-flex gap-2">
+                                    <a href="{{ url('/books/read/'.$book->id) }}" class="btn btn-sm btn-outline-primary rounded-pill">Baca</a>
+                                    
+                                    {{-- TOMBOL BOOKMARK BUKU BARU --}}
+                                    <form action="{{ route('bookmark.toggle', $book->id) }}" method="POST">
+                                        @csrf
+                                        <button type="submit" class="btn btn-sm btn-primary rounded-circle" title="Tambah Bookmark">
+                                            <i class="fa-solid fa-bookmark"></i>
+                                        </button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
