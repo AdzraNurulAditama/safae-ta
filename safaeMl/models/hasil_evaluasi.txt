@@ -1,0 +1,11 @@
+Dataset: data/dataset_dummy_safae.csv (1500 baris)
+Split: 80% latih / 20% uji, stratifikasi, random_state=42
+Hyperparameter: GridSearchCV 5-fold pada data latih, skor F1
+
+               model  akurasi  precision  recall    f1  TN  FP  FN  TP
+Baseline (mayoritas)    0.555      0.555   1.000 0.714   0 167   0 208
+       Decision Tree    0.651      0.681   0.697 0.689  99  68  63 145
+                 SVM    0.669      0.665   0.812 0.732  82  85  39 169
+
+Model terbaik (CV F1): SVM
+Catatan: TN/FP/FN/TP dihitung pada data uji; kelas positif = cocok (1).

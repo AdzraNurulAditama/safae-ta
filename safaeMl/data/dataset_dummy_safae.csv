@@ -1,0 +1,1501 @@
+user_id,book_id,jurusan,semester,jenis_buku,kategori_topik,tipe_konten,jumlah_halaman,status_premium,rata_durasi_lain,rasio_favorit_lain,jumlah_buku_lain,porsi_genre_dibaca,porsi_jenis_dibaca,rata_durasi_genre_lain,cocok
+134,4,Ekonomi,7,fiksi,Novel,novel,316,0,18.2,0.091,22,0.182,0.682,27.0,1
+156,41,Ekonomi,7,nonfiksi,Pemrograman,buku,342,0,17.0,0.048,21,0.095,0.19,4.5,0
+175,46,Informatika,8,nonfiksi,Pemrograman,buku,253,0,11.7,0.222,9,0.222,0.222,16.5,1
+16,34,Teknik,7,nonfiksi,Hobi,artikel ilmiah,29,0,19.5,0.13,23,0.174,0.435,13.8,0
+147,38,Ekonomi,6,nonfiksi,Hobi,TA,93,0,17.9,0.167,18,0.167,0.222,13.3,0
+177,26,Informatika,7,fiksi,Horror,novel,163,0,25.7,0.278,18,0.389,0.889,34.0,1
+199,17,Informatika,6,fiksi,Romance,novel,283,1,31.8,0.375,8,0.125,0.25,26.0,1
+68,41,Informatika,7,nonfiksi,Pemrograman,buku,342,0,23.5,0.143,21,0.286,0.524,50.0,1
+126,49,Informatika,8,fiksi,Action,novel,319,1,19.9,0.136,22,0.182,0.591,10.5,1
+137,42,Teknik,1,nonfiksi,Pemrograman,buku,173,1,19.2,0.167,18,0.278,0.667,25.4,1
+48,33,Lainnya,2,nonfiksi,Hobi,buku,222,1,18.1,0.316,19,0.105,0.421,5.5,0
+122,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,28.7,0.294,17,0.118,0.294,20.0,1
+41,18,Informatika,3,fiksi,Romance,novel,417,1,39.5,0.294,17,0.118,0.706,10.0,1
+148,37,Informatika,6,nonfiksi,Hobi,artikel ilmiah,27,0,21.6,0.231,13,0.077,0.385,9.0,0
+110,21,Informatika,1,fiksi,Romance,novel,377,0,26.8,0.438,16,0.375,0.625,12.7,1
+193,27,Informatika,6,fiksi,Horror,novel,313,1,22.8,0.133,15,0.133,0.8,12.0,0
+108,20,Teknik,6,fiksi,Romance,novel,383,0,16.8,0.0,20,0.05,0.55,8.0,0
+48,47,Lainnya,2,fiksi,Action,novel,249,1,18.8,0.316,19,0.158,0.526,16.0,0
+74,26,Informatika,1,fiksi,Horror,novel,163,0,31.3,0.267,15,0.267,0.667,52.8,1
+4,31,Informatika,2,fiksi,Horror,novel,426,0,25.1,0.5,12,0.5,0.833,30.8,0
+144,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,25.0,0.167,12,0.083,0.167,14.0,1
+128,6,Ekonomi,5,fiksi,Novel,novel,169,0,22.4,0.478,23,0.217,0.565,11.6,1
+117,18,Teknik,5,fiksi,Romance,novel,417,1,26.9,0.286,14,0.071,0.571,5.0,0
+45,2,Informatika,4,fiksi,Novel,novel,218,0,33.6,0.25,8,0.5,0.625,51.8,1
+56,45,Lainnya,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,17.4,0.421,19,0.053,0.316,14.0,0
+31,42,Teknik,2,nonfiksi,Pemrograman,buku,173,1,20.8,0.478,23,0.217,0.522,11.0,0
+183,37,Teknik,8,nonfiksi,Hobi,artikel ilmiah,27,0,32.9,0.375,16,0.0,0.125,32.9,0
+20,27,Informatika,8,fiksi,Horror,novel,313,1,31.3,0.143,21,0.238,0.762,40.8,0
+71,51,Informatika,3,fiksi,Action,novel,432,0,22.1,0.333,15,0.0,0.267,22.1,1
+121,51,Ekonomi,4,fiksi,Action,novel,432,0,22.4,0.143,14,0.143,0.643,22.5,1
+27,47,Ekonomi,6,fiksi,Action,novel,249,1,22.1,0.095,21,0.238,0.667,38.6,1
+75,1,Lainnya,2,fiksi,Novel,novel,285,0,17.0,0.238,21,0.238,0.714,14.4,1
+23,35,Ekonomi,4,nonfiksi,Hobi,TA,96,0,29.6,0.333,21,0.238,0.238,17.8,1
+177,7,Informatika,7,fiksi,Novel,novel,407,0,26.8,0.333,18,0.222,0.889,16.0,1
+187,38,Informatika,8,nonfiksi,Hobi,TA,93,0,21.8,0.375,16,0.125,0.438,11.5,0
+42,34,Lainnya,6,nonfiksi,Hobi,artikel ilmiah,29,0,21.5,0.273,22,0.318,0.545,21.9,0
+193,23,Informatika,6,fiksi,Horror,novel,259,0,22.9,0.2,15,0.133,0.8,13.0,1
+136,45,Informatika,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,17.8,0.167,12,0.167,0.167,11.5,0
+36,27,Informatika,5,fiksi,Horror,novel,313,1,33.7,0.562,16,0.5,0.625,33.0,1
+74,5,Informatika,1,fiksi,Novel,novel,416,0,30.5,0.267,15,0.133,0.667,34.5,0
+109,3,Informatika,5,fiksi,Novel,novel,177,0,15.6,0.348,23,0.304,0.652,14.9,1
+138,19,Lainnya,6,fiksi,Romance,novel,353,0,20.6,0.238,21,0.095,0.524,6.5,0
+160,26,Informatika,3,fiksi,Horror,novel,163,0,35.1,0.211,19,0.158,0.474,12.7,0
+128,39,Ekonomi,5,nonfiksi,Hobi,TA,66,0,22.0,0.435,23,0.304,0.391,46.3,1
+193,44,Informatika,6,nonfiksi,Pemrograman,TA,71,1,20.6,0.2,15,0.067,0.133,14.0,0
+28,48,Informatika,2,fiksi,Action,novel,218,0,28.8,0.455,11,0.091,0.727,19.0,1
+71,41,Informatika,3,nonfiksi,Pemrograman,buku,342,0,21.8,0.333,15,0.333,0.667,13.0,0
+121,52,Ekonomi,4,fiksi,Action,novel,281,0,24.5,0.143,14,0.143,0.643,37.5,1
+39,27,Informatika,3,fiksi,Horror,novel,313,1,17.3,0.167,18,0.056,0.5,10.0,0
+135,27,Informatika,1,fiksi,Horror,novel,313,1,29.9,0.467,15,0.2,0.533,20.7,0
+27,32,Ekonomi,6,nonfiksi,Hobi,TA,127,1,23.7,0.095,21,0.143,0.286,16.0,0
+113,15,Ekonomi,5,fiksi,Romance,novel,170,0,23.6,0.35,20,0.15,0.8,14.0,0
+167,52,Lainnya,4,fiksi,Action,novel,281,0,20.0,0.368,19,0.105,0.737,22.5,1
+7,51,Ekonomi,7,fiksi,Action,novel,432,0,20.1,0.227,22,0.136,0.818,6.3,1
+66,38,Informatika,5,nonfiksi,Hobi,TA,93,0,21.4,0.071,14,0.429,0.5,34.2,0
+166,15,Informatika,5,fiksi,Romance,novel,170,0,22.0,0.25,16,0.188,0.5,18.3,0
+34,10,Informatika,2,fiksi,Novel,novel,339,1,23.0,0.25,16,0.438,0.562,24.1,1
+145,19,Informatika,7,fiksi,Romance,novel,353,0,16.8,0.235,17,0.235,0.647,9.2,1
+70,29,Teknik,1,fiksi,Horror,novel,373,1,19.2,0.273,22,0.136,0.364,15.7,0
+21,48,Lainnya,7,fiksi,Action,novel,218,0,22.9,0.267,15,0.067,0.6,11.0,0
+56,37,Lainnya,7,nonfiksi,Hobi,artikel ilmiah,27,0,17.6,0.421,19,0.211,0.316,13.5,0
+85,4,Ekonomi,1,fiksi,Novel,novel,316,0,21.4,0.19,21,0.238,0.81,11.0,1
+142,48,Teknik,6,fiksi,Action,novel,218,0,28.4,0.444,9,0.0,0.889,28.4,0
+105,46,Informatika,8,nonfiksi,Pemrograman,buku,253,0,32.7,0.167,12,0.5,0.583,50.7,1
+156,19,Ekonomi,7,fiksi,Romance,novel,353,0,17.3,0.048,21,0.381,0.762,28.0,1
+151,22,Lainnya,8,fiksi,Horror,novel,208,0,21.2,0.25,20,0.15,0.7,12.7,0
+161,11,Ekonomi,2,fiksi,Novel,novel,199,0,41.9,0.571,7,0.571,0.857,60.8,1
+132,25,Informatika,2,fiksi,Horror,novel,299,0,28.4,0.3,10,0.0,0.7,28.4,0
+196,49,Lainnya,4,fiksi,Action,novel,319,1,23.4,0.214,14,0.143,0.571,43.5,1
+66,24,Informatika,5,fiksi,Horror,novel,290,0,21.4,0.143,14,0.286,0.429,13.2,0
+11,53,Ekonomi,6,fiksi,Fiksi,novel,198,0,19.1,0.0,9,0.0,0.778,19.1,1
+47,46,Teknik,6,nonfiksi,Pemrograman,buku,253,0,18.8,0.308,13,0.231,0.462,20.3,1
+42,1,Lainnya,6,fiksi,Novel,novel,285,0,21.8,0.318,22,0.273,0.409,19.8,0
+10,1,Ekonomi,6,fiksi,Novel,novel,285,0,29.6,0.286,7,0.714,0.857,35.8,1
+17,33,Informatika,5,nonfiksi,Hobi,buku,222,1,23.1,0.188,16,0.25,0.438,21.2,0
+10,9,Ekonomi,6,fiksi,Novel,novel,233,1,23.4,0.143,7,0.714,0.857,27.2,1
+140,15,Lainnya,4,fiksi,Romance,novel,170,0,21.8,0.238,21,0.286,0.762,27.3,1
+43,1,Teknik,3,fiksi,Novel,novel,285,0,30.4,0.455,11,0.364,0.818,40.8,1
+197,40,Informatika,5,nonfiksi,Pemrograman,buku,251,0,18.0,0.435,23,0.174,0.391,14.8,0
+36,46,Informatika,5,nonfiksi,Pemrograman,buku,253,0,33.4,0.625,16,0.188,0.312,24.3,0
+80,2,Informatika,8,fiksi,Novel,novel,218,0,21.8,0.087,23,0.174,0.522,8.0,0
+98,41,Informatika,4,nonfiksi,Pemrograman,buku,342,0,14.4,0.571,7,0.286,0.286,18.5,0
+146,40,Lainnya,2,nonfiksi,Pemrograman,buku,251,0,16.6,0.3,10,0.4,0.4,21.8,1
+9,48,Lainnya,7,fiksi,Action,novel,218,0,25.1,0.444,9,0.0,1.0,25.1,1
+150,23,Ekonomi,6,fiksi,Horror,novel,259,0,26.8,0.235,17,0.176,0.588,12.0,0
+85,5,Ekonomi,1,fiksi,Novel,novel,416,0,22.7,0.143,21,0.238,0.81,16.4,1
+186,8,Informatika,7,fiksi,Novel,novel,398,1,18.8,0.227,22,0.091,0.682,11.5,1
+159,40,Informatika,3,nonfiksi,Pemrograman,buku,251,0,32.5,0.182,22,0.182,0.318,14.0,1
+189,1,Informatika,1,fiksi,Novel,novel,285,0,17.9,0.2,10,0.2,1.0,19.5,1
+102,27,Teknik,8,fiksi,Horror,novel,313,1,31.7,0.308,13,0.154,0.385,11.0,0
+131,23,Lainnya,5,fiksi,Horror,novel,259,0,24.7,0.381,21,0.333,0.619,22.3,1
+33,27,Informatika,4,fiksi,Horror,novel,313,1,29.4,0.35,20,0.4,0.55,25.5,1
+5,51,Lainnya,8,fiksi,Action,novel,432,0,26.1,0.444,9,0.222,0.556,15.5,0
+59,53,Teknik,5,fiksi,Fiksi,novel,198,0,15.0,0.357,14,0.0,0.429,15.0,1
+67,48,Lainnya,5,fiksi,Action,novel,218,0,29.4,0.222,18,0.222,0.722,35.2,1
+34,43,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,25.3,0.312,16,0.062,0.375,22.0,1
+72,15,Lainnya,2,fiksi,Romance,novel,170,0,20.1,0.267,15,0.533,0.933,27.6,1
+73,29,Lainnya,6,fiksi,Horror,novel,373,1,24.7,0.2,15,0.133,0.8,33.0,1
+5,32,Lainnya,8,nonfiksi,Hobi,TA,127,1,25.3,0.444,9,0.222,0.333,39.0,0
+129,22,Lainnya,4,fiksi,Horror,novel,208,0,30.2,0.273,11,0.364,0.727,21.5,1
+178,32,Informatika,5,nonfiksi,Hobi,TA,127,1,18.5,0.267,15,0.067,0.533,7.0,0
+56,21,Lainnya,7,fiksi,Romance,novel,377,0,16.8,0.368,19,0.053,0.632,19.0,0
+48,53,Lainnya,2,fiksi,Fiksi,novel,198,0,19.0,0.263,19,0.0,0.526,19.0,1
+31,41,Teknik,2,nonfiksi,Pemrograman,buku,342,0,21.3,0.478,23,0.217,0.522,13.0,1
+197,37,Informatika,5,nonfiksi,Hobi,artikel ilmiah,27,0,17.9,0.391,23,0.174,0.391,23.2,0
+169,13,Informatika,4,fiksi,Romance,novel,360,0,16.1,0.217,23,0.13,0.696,22.3,0
+191,20,Teknik,7,fiksi,Romance,novel,383,0,33.4,0.438,16,0.125,0.562,24.5,1
+14,43,Informatika,6,nonfiksi,Pemrograman,artikel ilmiah,18,1,20.0,0.429,7,0.286,0.286,19.5,1
+118,9,Informatika,1,fiksi,Novel,novel,233,1,21.3,0.294,17,0.176,0.765,30.7,0
+53,43,Teknik,8,nonfiksi,Pemrograman,artikel ilmiah,18,1,18.0,0.308,13,0.385,0.462,32.2,1
+144,24,Informatika,8,fiksi,Horror,novel,290,0,24.8,0.25,12,0.0,0.75,24.8,1
+133,41,Teknik,8,nonfiksi,Pemrograman,buku,342,0,40.6,0.182,22,0.136,0.227,40.7,1
+65,13,Ekonomi,7,fiksi,Romance,novel,360,0,32.6,0.5,8,0.375,0.625,39.7,1
+200,42,Lainnya,5,nonfiksi,Pemrograman,buku,173,1,30.5,0.375,8,0.375,0.5,55.0,1
+47,26,Teknik,6,fiksi,Horror,novel,163,0,19.3,0.385,13,0.308,0.462,29.2,1
+154,41,Informatika,6,nonfiksi,Pemrograman,buku,342,0,19.5,0.19,21,0.286,0.524,16.3,1
+146,6,Lainnya,2,fiksi,Novel,novel,169,0,20.1,0.4,10,0.2,0.5,13.5,0
+130,39,Informatika,2,nonfiksi,Hobi,TA,66,0,17.7,0.455,22,0.273,0.455,25.0,1
+60,31,Informatika,8,fiksi,Horror,novel,426,0,57.9,0.286,7,0.0,1.0,57.9,0
+100,51,Informatika,4,fiksi,Action,novel,432,0,22.8,0.357,14,0.286,0.643,25.5,1
+43,24,Teknik,3,fiksi,Horror,novel,290,0,30.3,0.364,11,0.091,0.818,62.0,1
+36,25,Informatika,5,fiksi,Horror,novel,299,0,33.2,0.562,16,0.5,0.625,32.1,1
+70,9,Teknik,1,fiksi,Novel,novel,233,1,21.1,0.273,22,0.045,0.364,6.0,0
+24,21,Teknik,7,fiksi,Romance,novel,377,0,19.9,0.4,20,0.3,0.7,28.8,1
+22,19,Ekonomi,7,fiksi,Romance,novel,353,0,10.7,0.538,13,0.077,0.692,23.0,0
+5,25,Lainnya,8,fiksi,Horror,novel,299,0,23.4,0.444,9,0.222,0.556,24.0,1
+70,16,Teknik,1,fiksi,Romance,novel,441,0,22.2,0.273,22,0.0,0.364,22.2,0
+165,10,Teknik,8,fiksi,Novel,novel,339,1,20.0,0.263,19,0.158,0.421,22.3,1
+131,31,Lainnya,5,fiksi,Horror,novel,426,0,25.7,0.381,21,0.333,0.619,25.3,1
+80,25,Informatika,8,fiksi,Horror,novel,299,0,20.7,0.13,23,0.043,0.522,14.0,0
+186,43,Informatika,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,19.2,0.227,22,0.182,0.273,12.5,0
+151,23,Lainnya,8,fiksi,Horror,novel,259,0,21.2,0.25,20,0.15,0.7,12.3,1
+170,34,Lainnya,2,nonfiksi,Hobi,artikel ilmiah,29,0,25.0,0.25,16,0.062,0.25,22.0,0
+56,22,Lainnya,7,fiksi,Horror,novel,208,0,17.4,0.421,19,0.316,0.632,11.7,1
+108,30,Teknik,6,fiksi,Horror,novel,354,0,16.4,0.0,20,0.2,0.55,18.2,0
+186,3,Informatika,7,fiksi,Novel,novel,177,0,19.8,0.227,22,0.091,0.682,22.5,0
+107,50,Lainnya,3,fiksi,Action,novel,350,0,15.3,0.308,13,0.308,0.769,24.8,1
+6,13,Lainnya,3,fiksi,Romance,novel,360,0,20.2,0.333,18,0.278,0.5,7.4,1
+147,48,Ekonomi,6,fiksi,Action,novel,218,0,18.3,0.167,18,0.167,0.722,25.0,0
+65,20,Ekonomi,7,fiksi,Romance,novel,383,0,31.1,0.5,8,0.375,0.625,35.7,0
+163,44,Informatika,2,nonfiksi,Pemrograman,TA,71,1,23.9,0.222,18,0.333,0.444,44.2,1
+123,11,Informatika,5,fiksi,Novel,novel,199,0,18.6,0.286,14,0.357,0.643,27.8,0
+8,32,Informatika,5,nonfiksi,Hobi,TA,127,1,24.7,0.2,15,0.133,0.467,5.0,0
+172,27,Informatika,2,fiksi,Horror,novel,313,1,32.2,0.364,11,0.091,0.545,3.0,0
+135,29,Informatika,1,fiksi,Horror,novel,373,1,28.9,0.467,15,0.2,0.533,15.7,1
+182,44,Informatika,6,nonfiksi,Pemrograman,TA,71,1,14.4,0.125,16,0.25,0.375,11.2,1
+150,27,Ekonomi,6,fiksi,Horror,novel,313,1,26.6,0.235,17,0.176,0.588,11.0,0
+161,2,Ekonomi,2,fiksi,Novel,novel,218,0,23.1,0.571,7,0.571,0.857,28.0,1
+38,30,Teknik,3,fiksi,Horror,novel,354,0,20.0,0.381,21,0.0,0.619,20.0,0
+86,27,Lainnya,5,fiksi,Horror,novel,313,1,17.3,0.167,12,0.167,0.583,18.0,0
+25,2,Ekonomi,4,fiksi,Novel,novel,218,0,37.2,0.417,12,0.667,0.833,29.9,1
+137,36,Teknik,1,nonfiksi,Hobi,buku,211,0,19.9,0.222,18,0.333,0.667,18.5,1
+70,26,Teknik,1,fiksi,Horror,novel,163,0,21.1,0.273,22,0.136,0.364,30.0,1
+93,38,Informatika,2,nonfiksi,Hobi,TA,93,0,18.3,0.231,13,0.231,0.538,16.0,0
+163,7,Informatika,2,fiksi,Novel,novel,407,0,24.6,0.278,18,0.278,0.5,11.0,0
+38,33,Teknik,3,nonfiksi,Hobi,buku,222,1,21.0,0.381,21,0.19,0.333,15.5,0
+93,31,Informatika,2,fiksi,Horror,novel,426,0,20.4,0.231,13,0.077,0.385,15.0,0
+30,1,Informatika,1,fiksi,Novel,novel,285,0,24.4,0.333,9,0.0,0.444,24.4,0
+114,10,Informatika,2,fiksi,Novel,novel,339,1,23.1,0.312,16,0.375,0.375,33.0,1
+191,2,Teknik,7,fiksi,Novel,novel,218,0,34.8,0.438,16,0.062,0.562,5.0,0
+123,5,Informatika,5,fiksi,Novel,novel,416,0,17.5,0.286,14,0.357,0.643,24.8,1
+127,34,Teknik,7,nonfiksi,Hobi,artikel ilmiah,29,0,18.0,0.381,21,0.333,0.619,14.4,1
+116,8,Ekonomi,2,fiksi,Novel,novel,398,1,21.2,0.471,17,0.353,0.647,25.8,1
+48,42,Lainnya,2,nonfiksi,Pemrograman,buku,173,1,18.8,0.263,19,0.263,0.421,24.4,1
+27,51,Ekonomi,6,fiksi,Action,novel,432,0,24.1,0.048,21,0.238,0.667,47.0,1
+126,34,Informatika,8,nonfiksi,Hobi,artikel ilmiah,29,0,19.8,0.182,22,0.045,0.364,6.0,0
+75,41,Lainnya,2,nonfiksi,Pemrograman,buku,342,0,16.3,0.19,21,0.19,0.238,20.8,0
+134,22,Ekonomi,7,fiksi,Horror,novel,208,0,18.8,0.091,22,0.045,0.682,5.0,0
+16,11,Teknik,7,fiksi,Novel,novel,199,0,19.4,0.13,23,0.174,0.522,21.5,0
+154,48,Informatika,6,fiksi,Action,novel,218,0,30.6,0.19,21,0.095,0.429,12.5,1
+85,12,Ekonomi,1,fiksi,Romance,novel,377,0,22.3,0.19,21,0.286,0.81,33.0,1
+141,4,Lainnya,6,fiksi,Novel,novel,316,0,24.1,0.368,19,0.158,0.947,10.3,1
+158,38,Teknik,5,nonfiksi,Hobi,TA,93,0,19.3,0.364,11,0.182,0.545,28.5,0
+102,35,Teknik,8,nonfiksi,Hobi,TA,96,0,29.0,0.385,13,0.385,0.538,44.2,1
+50,28,Teknik,7,fiksi,Horror,novel,196,0,26.1,0.545,11,0.455,0.727,21.6,1
+119,27,Lainnya,5,fiksi,Horror,novel,313,1,31.9,0.25,8,0.5,0.625,47.2,1
+20,26,Informatika,8,fiksi,Horror,novel,163,0,30.3,0.19,21,0.238,0.762,36.6,1
+171,46,Informatika,6,nonfiksi,Pemrograman,buku,253,0,17.9,0.13,23,0.217,0.348,38.2,1
+97,38,Informatika,7,nonfiksi,Hobi,TA,93,0,18.7,0.333,15,0.133,0.467,13.5,0
+54,14,Teknik,7,fiksi,Romance,novel,256,0,29.1,0.353,17,0.059,0.353,16.0,0
+101,42,Informatika,7,nonfiksi,Pemrograman,buku,173,1,17.8,0.385,13,0.308,0.385,31.8,0
+185,8,Lainnya,6,fiksi,Novel,novel,398,1,20.0,0.3,10,0.6,0.9,26.7,1
+57,9,Lainnya,3,fiksi,Novel,novel,233,1,22.3,0.286,7,0.286,0.857,38.0,1
+91,6,Ekonomi,8,fiksi,Novel,novel,169,0,16.9,0.421,19,0.158,0.526,6.3,1
+82,17,Teknik,8,fiksi,Romance,novel,283,1,28.6,0.375,8,0.25,0.75,26.5,0
+192,51,Informatika,8,fiksi,Action,novel,432,0,23.6,0.3,20,0.1,0.4,8.5,0
+112,39,Informatika,5,nonfiksi,Hobi,TA,66,0,21.7,0.35,20,0.2,0.45,25.0,0
+156,14,Ekonomi,7,fiksi,Romance,novel,256,0,17.2,0.048,21,0.381,0.762,27.9,1
+91,11,Ekonomi,8,fiksi,Novel,novel,199,0,17.6,0.368,19,0.158,0.526,10.7,0
+104,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,17.3,0.182,22,0.091,0.091,11.0,0
+192,8,Informatika,8,fiksi,Novel,novel,398,1,20.4,0.25,20,0.1,0.4,11.5,0
+20,11,Informatika,8,fiksi,Novel,novel,199,0,31.5,0.19,21,0.143,0.762,10.0,1
+91,26,Ekonomi,8,fiksi,Horror,novel,163,0,17.3,0.421,19,0.053,0.526,9.0,0
+104,26,Informatika,8,fiksi,Horror,novel,163,0,17.7,0.136,22,0.409,0.864,20.3,0
+11,49,Ekonomi,6,fiksi,Action,novel,319,1,19.4,0.111,9,0.333,0.778,25.0,0
+15,25,Lainnya,2,fiksi,Horror,novel,299,0,22.7,0.267,15,0.267,0.867,17.5,0
+171,48,Informatika,6,fiksi,Action,novel,218,0,18.7,0.13,23,0.043,0.609,5.0,0
+82,49,Teknik,8,fiksi,Action,novel,319,1,24.8,0.375,8,0.0,0.75,24.8,0
+24,16,Teknik,7,fiksi,Romance,novel,441,0,18.2,0.35,20,0.3,0.7,23.3,1
+108,1,Teknik,6,fiksi,Novel,novel,285,0,16.6,0.0,20,0.15,0.55,15.7,1
+39,47,Informatika,3,fiksi,Action,novel,249,1,17.3,0.167,18,0.222,0.5,13.0,1
+149,32,Teknik,3,nonfiksi,Hobi,TA,127,1,21.9,0.348,23,0.217,0.522,29.0,1
+116,2,Ekonomi,2,fiksi,Novel,novel,218,0,21.8,0.412,17,0.353,0.647,27.5,1
+104,3,Informatika,8,fiksi,Novel,novel,177,0,18.0,0.182,22,0.182,0.864,13.8,1
+7,14,Ekonomi,7,fiksi,Romance,novel,256,0,19.6,0.227,22,0.045,0.818,43.0,1
+34,32,Informatika,2,nonfiksi,Hobi,TA,127,1,25.2,0.312,16,0.25,0.375,28.5,0
+107,3,Lainnya,3,fiksi,Novel,novel,177,0,19.2,0.308,13,0.231,0.769,9.7,0
+11,50,Ekonomi,6,fiksi,Action,novel,350,0,17.7,0.111,9,0.333,0.778,19.7,1
+136,41,Informatika,7,nonfiksi,Pemrograman,buku,342,0,19.8,0.25,12,0.167,0.167,23.0,1
+112,34,Informatika,5,nonfiksi,Hobi,artikel ilmiah,29,0,23.1,0.4,20,0.2,0.45,32.0,0
+117,42,Teknik,5,nonfiksi,Pemrograman,buku,173,1,27.1,0.286,14,0.0,0.357,27.1,0
+166,30,Informatika,5,fiksi,Horror,novel,354,0,22.6,0.25,16,0.188,0.5,10.0,0
+67,19,Lainnya,5,fiksi,Romance,novel,353,0,29.3,0.278,18,0.167,0.722,48.0,0
+29,12,Teknik,3,fiksi,Romance,novel,377,0,14.6,0.125,8,0.125,0.75,8.0,0
+85,17,Ekonomi,1,fiksi,Romance,novel,283,1,21.5,0.143,21,0.286,0.81,30.3,1
+85,9,Ekonomi,1,fiksi,Novel,novel,233,1,21.6,0.19,21,0.238,0.81,11.8,0
+16,51,Teknik,7,fiksi,Action,novel,432,0,17.7,0.13,23,0.087,0.522,15.0,0
+141,15,Lainnya,6,fiksi,Romance,novel,170,0,22.5,0.316,19,0.211,0.947,43.0,1
+131,38,Lainnya,5,nonfiksi,Hobi,TA,93,0,25.0,0.333,21,0.143,0.333,47.3,0
+169,52,Informatika,4,fiksi,Action,novel,281,0,15.4,0.261,23,0.13,0.696,25.3,1
+42,37,Lainnya,6,nonfiksi,Hobi,artikel ilmiah,27,0,22.4,0.273,22,0.318,0.545,24.9,1
+90,40,Ekonomi,5,nonfiksi,Pemrograman,buku,251,0,26.0,0.692,13,0.154,0.231,33.0,0
+162,46,Lainnya,8,nonfiksi,Pemrograman,buku,253,0,15.6,0.083,12,0.333,0.333,9.0,1
+173,44,Informatika,5,nonfiksi,Pemrograman,TA,71,1,21.4,0.167,12,0.25,0.333,27.0,1
+29,43,Teknik,3,nonfiksi,Pemrograman,artikel ilmiah,18,1,16.0,0.125,8,0.0,0.125,16.0,0
+68,47,Informatika,7,fiksi,Action,novel,249,1,25.0,0.143,21,0.048,0.429,8.0,0
+199,37,Informatika,6,nonfiksi,Hobi,artikel ilmiah,27,0,31.5,0.5,8,0.125,0.625,44.0,0
+39,40,Informatika,3,nonfiksi,Pemrograman,buku,251,0,15.9,0.111,18,0.333,0.444,26.2,1
+114,1,Informatika,2,fiksi,Novel,novel,285,0,23.4,0.375,16,0.375,0.375,33.8,1
+199,13,Informatika,6,fiksi,Romance,novel,360,0,30.4,0.5,8,0.125,0.25,15.0,1
+106,33,Ekonomi,1,nonfiksi,Hobi,buku,222,1,26.4,0.5,18,0.278,0.333,31.8,1
+83,6,Lainnya,5,fiksi,Novel,novel,169,0,21.7,0.067,15,0.133,0.933,13.5,1
+153,46,Teknik,7,nonfiksi,Pemrograman,buku,253,0,17.9,0.214,14,0.286,0.286,15.5,1
+152,8,Ekonomi,7,fiksi,Novel,novel,398,1,15.8,0.222,18,0.5,0.778,14.3,0
+130,17,Informatika,2,fiksi,Romance,novel,283,1,19.5,0.5,22,0.0,0.5,19.5,0
+48,45,Lainnya,2,nonfiksi,Pemrograman,artikel ilmiah,23,0,17.5,0.263,19,0.263,0.421,19.6,0
+10,5,Ekonomi,6,fiksi,Novel,novel,416,0,27.9,0.286,7,0.714,0.857,33.4,1
+39,45,Informatika,3,nonfiksi,Pemrograman,artikel ilmiah,23,0,16.2,0.167,18,0.333,0.444,26.8,1
+141,52,Lainnya,6,fiksi,Action,novel,281,0,23.7,0.368,19,0.053,0.947,11.0,0
+18,33,Informatika,3,nonfiksi,Hobi,buku,222,1,21.2,0.462,13,0.385,0.769,10.6,1
+192,26,Informatika,8,fiksi,Horror,novel,163,0,22.4,0.3,20,0.0,0.4,22.4,1
+101,40,Informatika,7,nonfiksi,Pemrograman,buku,251,0,17.5,0.308,13,0.308,0.385,30.5,1
+112,13,Informatika,5,fiksi,Romance,novel,360,0,24.4,0.4,20,0.2,0.5,29.5,0
+53,19,Teknik,8,fiksi,Romance,novel,353,0,17.9,0.385,13,0.231,0.462,6.7,1
+186,24,Informatika,7,fiksi,Horror,novel,290,0,19.4,0.227,22,0.409,0.682,29.1,1
+72,19,Lainnya,2,fiksi,Romance,novel,353,0,20.9,0.267,15,0.533,0.933,29.1,1
+193,53,Informatika,6,fiksi,Fiksi,novel,198,0,22.4,0.133,15,0.0,0.8,22.4,0
+83,19,Lainnya,5,fiksi,Romance,novel,353,0,21.8,0.133,15,0.4,0.933,31.7,0
+191,48,Teknik,7,fiksi,Action,novel,218,0,33.5,0.375,16,0.125,0.562,32.5,1
+63,34,Ekonomi,6,nonfiksi,Hobi,artikel ilmiah,29,0,11.5,0.25,12,0.333,0.5,13.5,1
+188,11,Informatika,4,fiksi,Novel,novel,199,0,36.6,0.438,16,0.125,0.75,52.5,0
+180,29,Ekonomi,2,fiksi,Horror,novel,373,1,12.6,0.182,11,0.182,0.727,8.5,0
+39,53,Informatika,3,fiksi,Fiksi,novel,198,0,17.5,0.167,18,0.0,0.5,17.5,0
+141,1,Lainnya,6,fiksi,Novel,novel,285,0,23.6,0.368,19,0.158,0.947,7.3,1
+129,43,Lainnya,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,29.4,0.182,11,0.091,0.182,17.0,0
+31,5,Teknik,2,fiksi,Novel,novel,416,0,21.3,0.478,23,0.087,0.435,16.0,1
+21,44,Lainnya,7,nonfiksi,Pemrograman,TA,71,1,22.7,0.267,15,0.333,0.333,28.6,1
+83,17,Lainnya,5,fiksi,Romance,novel,283,1,22.1,0.133,15,0.4,0.933,32.5,0
+27,39,Ekonomi,6,nonfiksi,Hobi,TA,66,0,23.8,0.095,21,0.143,0.286,17.0,1
+109,25,Informatika,5,fiksi,Horror,novel,299,0,15.8,0.348,23,0.13,0.652,10.0,0
+32,13,Informatika,4,fiksi,Romance,novel,360,0,30.7,0.217,23,0.304,0.478,66.7,1
+148,13,Informatika,6,fiksi,Romance,novel,360,0,22.2,0.231,13,0.231,0.538,19.3,0
+166,39,Informatika,5,nonfiksi,Hobi,TA,66,0,22.9,0.25,16,0.0,0.438,22.9,0
+67,20,Lainnya,5,fiksi,Romance,novel,383,0,28.8,0.278,18,0.167,0.722,45.3,1
+159,22,Informatika,3,fiksi,Horror,novel,208,0,34.3,0.182,22,0.045,0.636,5.0,0
+28,49,Informatika,2,fiksi,Action,novel,319,1,28.6,0.545,11,0.091,0.727,17.0,0
+154,45,Informatika,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,30.0,0.19,21,0.286,0.524,52.8,1
+132,21,Informatika,2,fiksi,Romance,novel,377,0,27.3,0.3,10,0.1,0.7,22.0,0
+197,11,Informatika,5,fiksi,Novel,novel,199,0,18.5,0.435,23,0.13,0.565,10.3,0
+34,1,Informatika,2,fiksi,Novel,novel,285,0,24.5,0.312,16,0.438,0.562,27.6,1
+93,10,Informatika,2,fiksi,Novel,novel,339,1,21.6,0.154,13,0.0,0.385,21.6,0
+112,38,Informatika,5,nonfiksi,Hobi,TA,93,0,22.7,0.4,20,0.2,0.45,30.0,0
+107,32,Lainnya,3,nonfiksi,Hobi,TA,127,1,17.5,0.308,13,0.154,0.154,10.5,0
+49,44,Teknik,3,nonfiksi,Pemrograman,TA,71,1,33.7,0.286,7,0.143,1.0,9.0,1
+75,40,Lainnya,2,nonfiksi,Pemrograman,buku,251,0,17.0,0.19,21,0.19,0.238,24.2,1
+112,21,Informatika,5,fiksi,Romance,novel,377,0,23.0,0.4,20,0.2,0.5,22.2,0
+164,45,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,17.7,0.227,22,0.091,0.091,18.5,1
+20,49,Informatika,8,fiksi,Action,novel,319,1,31.7,0.143,21,0.048,0.762,46.0,0
+38,37,Teknik,3,nonfiksi,Hobi,artikel ilmiah,27,0,20.5,0.381,21,0.19,0.333,12.8,1
+58,4,Informatika,4,fiksi,Novel,novel,316,0,25.6,0.273,11,0.182,0.545,11.5,0
+55,15,Informatika,4,fiksi,Romance,novel,170,0,17.9,0.222,9,0.222,0.444,10.5,0
+198,30,Lainnya,1,fiksi,Horror,novel,354,0,39.9,0.375,8,0.375,0.875,50.0,1
+110,19,Informatika,1,fiksi,Romance,novel,353,0,27.5,0.375,16,0.375,0.625,14.5,0
+183,25,Teknik,8,fiksi,Horror,novel,299,0,34.9,0.375,16,0.188,0.812,40.0,1
+50,24,Teknik,7,fiksi,Horror,novel,290,0,39.2,0.545,11,0.455,0.727,50.4,1
+99,6,Lainnya,5,fiksi,Novel,novel,169,0,13.9,0.375,16,0.25,0.75,7.8,1
+156,18,Ekonomi,7,fiksi,Romance,novel,417,1,14.0,0.048,21,0.381,0.762,19.4,1
+125,52,Informatika,7,fiksi,Action,novel,281,0,28.8,0.308,13,0.154,0.692,79.0,0
+150,40,Ekonomi,6,nonfiksi,Pemrograman,buku,251,0,26.4,0.176,17,0.0,0.353,26.4,0
+81,43,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,22.2,0.231,13,0.231,0.538,12.3,0
+21,45,Lainnya,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.4,0.267,15,0.333,0.333,24.8,1
+70,41,Teknik,1,nonfiksi,Pemrograman,buku,342,0,21.2,0.227,22,0.227,0.591,21.6,1
+57,10,Lainnya,3,fiksi,Novel,novel,339,1,24.1,0.286,7,0.286,0.857,44.5,0
+111,45,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,18.9,0.375,8,0.125,0.5,3.0,0
+127,45,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,18.9,0.381,21,0.238,0.619,34.8,1
+40,22,Teknik,5,fiksi,Horror,novel,208,0,24.8,0.111,9,0.111,0.444,11.0,0
+99,36,Lainnya,5,nonfiksi,Hobi,buku,211,0,14.7,0.375,16,0.062,0.188,10.0,0
+42,43,Lainnya,6,nonfiksi,Pemrograman,artikel ilmiah,18,1,22.7,0.318,22,0.182,0.545,24.0,0
+23,14,Ekonomi,4,fiksi,Romance,novel,256,0,28.8,0.333,21,0.19,0.714,10.0,1
+3,1,Informatika,8,fiksi,Novel,novel,285,0,33.2,0.333,15,0.4,0.6,56.7,1
+31,34,Teknik,2,nonfiksi,Hobi,artikel ilmiah,29,0,21.6,0.435,23,0.261,0.522,26.0,1
+59,40,Teknik,5,nonfiksi,Pemrograman,buku,251,0,16.9,0.357,14,0.357,0.5,24.0,1
+197,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,18.2,0.435,23,0.174,0.391,15.5,0
+89,35,Informatika,1,nonfiksi,Hobi,TA,96,0,13.3,0.467,15,0.133,0.533,6.0,0
+77,37,Teknik,6,nonfiksi,Hobi,artikel ilmiah,27,0,20.1,0.389,18,0.278,0.444,13.2,1
+159,43,Informatika,3,nonfiksi,Pemrograman,artikel ilmiah,18,1,34.0,0.182,22,0.182,0.318,22.8,0
+63,3,Ekonomi,6,fiksi,Novel,novel,177,0,13.3,0.25,12,0.083,0.417,14.0,0
+80,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,21.4,0.087,23,0.261,0.435,50.5,1
+141,53,Lainnya,6,fiksi,Fiksi,novel,198,0,23.4,0.316,19,0.0,0.947,23.4,1
+23,10,Ekonomi,4,fiksi,Novel,novel,339,1,29.8,0.333,21,0.429,0.714,43.3,1
+169,19,Informatika,4,fiksi,Romance,novel,353,0,15.6,0.261,23,0.13,0.696,18.7,0
+92,37,Informatika,6,nonfiksi,Hobi,artikel ilmiah,27,0,19.5,0.353,17,0.235,0.471,19.8,0
+131,33,Lainnya,5,nonfiksi,Hobi,buku,222,1,25.6,0.381,21,0.143,0.333,51.3,0
+127,43,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,18.2,0.381,21,0.238,0.619,32.0,1
+101,49,Informatika,7,fiksi,Action,novel,319,1,16.6,0.308,13,0.077,0.538,2.0,0
+115,41,Teknik,2,nonfiksi,Pemrograman,buku,342,0,28.1,0.308,13,0.231,0.385,41.7,1
+128,45,Ekonomi,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,23.0,0.478,23,0.043,0.391,9.0,0
+160,42,Informatika,3,nonfiksi,Pemrograman,buku,173,1,31.3,0.211,19,0.316,0.474,48.3,1
+63,53,Ekonomi,6,fiksi,Fiksi,novel,198,0,13.5,0.167,12,0.0,0.417,13.5,1
+91,25,Ekonomi,8,fiksi,Horror,novel,299,0,17.5,0.421,19,0.053,0.526,13.0,0
+57,14,Lainnya,3,fiksi,Romance,novel,256,0,23.6,0.286,7,0.0,0.857,23.6,0
+7,49,Ekonomi,7,fiksi,Action,novel,319,1,20.2,0.182,22,0.136,0.818,7.3,1
+46,27,Teknik,2,fiksi,Horror,novel,313,1,21.9,0.571,7,0.143,0.429,5.0,0
+126,31,Informatika,8,fiksi,Horror,novel,426,0,15.9,0.182,22,0.091,0.591,21.5,1
+6,2,Lainnya,3,fiksi,Novel,novel,218,0,21.4,0.333,18,0.056,0.5,13.0,0
+14,11,Informatika,6,fiksi,Novel,novel,199,0,20.4,0.429,7,0.143,0.571,33.0,1
+31,23,Teknik,2,fiksi,Horror,novel,259,0,21.2,0.435,23,0.304,0.435,27.4,1
+140,13,Lainnya,4,fiksi,Romance,novel,360,0,21.7,0.19,21,0.286,0.762,27.0,0
+15,36,Lainnya,2,nonfiksi,Hobi,buku,211,0,22.1,0.267,15,0.067,0.067,6.0,0
+120,8,Ekonomi,4,fiksi,Novel,novel,398,1,20.4,0.375,8,0.125,0.75,45.0,1
+15,30,Lainnya,2,fiksi,Horror,novel,354,0,22.9,0.267,15,0.267,0.867,18.5,1
+164,30,Informatika,1,fiksi,Horror,novel,354,0,16.5,0.227,22,0.364,0.864,22.6,1
+197,6,Informatika,5,fiksi,Novel,novel,169,0,18.3,0.435,23,0.13,0.565,9.3,0
+122,33,Informatika,6,nonfiksi,Hobi,buku,222,1,29.0,0.353,17,0.118,0.294,22.0,0
+79,49,Lainnya,7,fiksi,Action,novel,319,1,23.6,0.174,23,0.217,0.739,38.0,1
+198,24,Lainnya,1,fiksi,Horror,novel,290,0,29.6,0.375,8,0.375,0.875,22.7,1
+77,41,Teknik,6,nonfiksi,Pemrograman,buku,342,0,18.8,0.444,18,0.111,0.444,17.5,1
+93,32,Informatika,2,nonfiksi,Hobi,TA,127,1,21.5,0.231,13,0.231,0.538,29.7,1
+192,3,Informatika,8,fiksi,Novel,novel,177,0,23.4,0.3,20,0.1,0.4,42.0,0
+131,52,Lainnya,5,fiksi,Action,novel,281,0,25.1,0.333,21,0.143,0.619,31.0,1
+17,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,23.4,0.125,16,0.125,0.438,28.5,1
+71,7,Informatika,3,fiksi,Novel,novel,407,0,21.5,0.333,15,0.067,0.267,4.0,0
+158,20,Teknik,5,fiksi,Romance,novel,383,0,24.1,0.273,11,0.091,0.364,18.0,0
+69,36,Informatika,6,nonfiksi,Hobi,buku,211,0,23.8,0.222,18,0.111,0.333,11.0,0
+105,36,Informatika,8,nonfiksi,Hobi,buku,211,0,37.1,0.25,12,0.0,0.583,37.1,0
+130,6,Informatika,2,fiksi,Novel,novel,169,0,19.2,0.455,22,0.273,0.5,19.5,1
+49,46,Teknik,3,nonfiksi,Pemrograman,buku,253,0,40.0,0.143,7,0.143,1.0,53.0,0
+104,4,Informatika,8,fiksi,Novel,novel,316,0,17.8,0.136,22,0.182,0.864,12.8,1
+114,42,Informatika,2,nonfiksi,Pemrograman,buku,173,1,24.1,0.312,16,0.375,0.562,21.3,1
+113,1,Ekonomi,5,fiksi,Novel,novel,285,0,23.3,0.35,20,0.4,0.8,25.5,1
+67,44,Lainnya,5,nonfiksi,Pemrograman,TA,71,1,29.3,0.278,18,0.167,0.222,23.3,0
+128,38,Ekonomi,5,nonfiksi,Hobi,TA,93,0,17.1,0.435,23,0.304,0.391,30.3,1
+99,14,Lainnya,5,fiksi,Romance,novel,256,0,14.6,0.312,16,0.125,0.75,25.5,1
+117,20,Teknik,5,fiksi,Romance,novel,383,0,27.7,0.286,14,0.071,0.571,16.0,1
+171,27,Informatika,6,fiksi,Horror,novel,313,1,18.5,0.13,23,0.043,0.609,5.0,0
+101,22,Informatika,7,fiksi,Horror,novel,208,0,18.0,0.385,13,0.231,0.538,10.3,1
+73,5,Lainnya,6,fiksi,Novel,novel,416,0,23.7,0.2,15,0.4,0.8,33.0,1
+49,33,Teknik,3,nonfiksi,Hobi,buku,222,1,33.6,0.286,7,0.714,1.0,34.6,1
+165,32,Teknik,8,nonfiksi,Hobi,TA,127,1,18.2,0.211,19,0.316,0.526,24.5,1
+163,48,Informatika,2,fiksi,Action,novel,218,0,24.4,0.278,18,0.056,0.5,37.0,0
+108,31,Teknik,6,fiksi,Horror,novel,426,0,16.8,0.0,20,0.2,0.55,20.2,0
+89,29,Informatika,1,fiksi,Horror,novel,373,1,14.2,0.467,15,0.267,0.4,14.0,0
+43,11,Teknik,3,fiksi,Novel,novel,199,0,26.0,0.364,11,0.364,0.818,28.8,1
+26,5,Teknik,6,fiksi,Novel,novel,416,0,17.1,0.562,16,0.25,0.438,16.2,0
+26,45,Teknik,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,18.4,0.5,16,0.312,0.5,21.0,1
+80,4,Informatika,8,fiksi,Novel,novel,316,0,21.7,0.13,23,0.174,0.522,7.2,0
+170,44,Lainnya,2,nonfiksi,Pemrograman,TA,71,1,25.5,0.25,16,0.125,0.25,15.5,0
+65,37,Ekonomi,7,nonfiksi,Hobi,artikel ilmiah,27,0,30.4,0.375,8,0.0,0.25,30.4,1
+20,23,Informatika,8,fiksi,Horror,novel,259,0,28.5,0.19,21,0.238,0.762,29.0,1
+54,23,Teknik,7,fiksi,Horror,novel,259,0,27.1,0.353,17,0.118,0.353,23.0,0
+85,16,Ekonomi,1,fiksi,Romance,novel,441,0,20.4,0.19,21,0.286,0.81,26.5,1
+31,39,Teknik,2,nonfiksi,Hobi,TA,66,0,20.0,0.435,23,0.261,0.522,19.8,1
+19,33,Teknik,5,nonfiksi,Hobi,buku,222,1,28.4,0.5,18,0.333,0.389,33.2,1
+48,49,Lainnya,2,fiksi,Action,novel,319,1,17.4,0.263,19,0.158,0.526,6.7,0
+94,39,Ekonomi,8,nonfiksi,Hobi,TA,66,0,22.8,0.562,16,0.25,0.375,28.8,1
+65,10,Ekonomi,7,fiksi,Novel,novel,339,1,33.9,0.5,8,0.125,0.625,5.0,1
+74,7,Informatika,1,fiksi,Novel,novel,407,0,30.4,0.267,15,0.133,0.667,34.0,0
+169,10,Informatika,4,fiksi,Novel,novel,339,1,15.7,0.261,23,0.217,0.696,12.6,1
+35,51,Teknik,4,fiksi,Action,novel,432,0,29.0,0.273,11,0.182,0.273,33.0,0
+22,5,Ekonomi,7,fiksi,Novel,novel,416,0,11.4,0.462,13,0.231,0.692,11.0,1
+72,14,Lainnya,2,fiksi,Romance,novel,256,0,19.2,0.267,15,0.533,0.933,26.0,1
+35,41,Teknik,4,nonfiksi,Pemrograman,buku,342,0,33.2,0.273,11,0.182,0.636,12.5,0
+110,46,Informatika,1,nonfiksi,Pemrograman,buku,253,0,27.2,0.438,16,0.312,0.312,36.4,1
+9,16,Lainnya,7,fiksi,Romance,novel,441,0,24.9,0.444,9,0.0,1.0,24.9,0
+106,8,Ekonomi,1,fiksi,Novel,novel,398,1,26.8,0.5,18,0.222,0.611,38.0,1
+199,45,Informatika,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,32.6,0.375,8,0.375,0.625,40.7,1
+130,35,Informatika,2,nonfiksi,Hobi,TA,96,0,19.5,0.455,22,0.273,0.455,31.7,1
+89,43,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,18,1,14.0,0.4,15,0.333,0.533,17.6,1
+70,28,Teknik,1,fiksi,Horror,novel,196,0,21.9,0.273,22,0.136,0.364,35.7,0
+50,22,Teknik,7,fiksi,Horror,novel,208,0,37.0,0.636,11,0.455,0.727,45.6,1
+171,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,13.3,0.087,23,0.217,0.348,17.2,1
+84,29,Lainnya,6,fiksi,Horror,novel,373,1,31.7,0.111,9,0.0,0.556,31.7,1
+89,44,Informatika,1,nonfiksi,Pemrograman,TA,71,1,14.1,0.4,15,0.333,0.533,17.8,1
+25,4,Ekonomi,4,fiksi,Novel,novel,316,0,36.2,0.5,12,0.667,0.833,28.5,1
+73,10,Lainnya,6,fiksi,Novel,novel,339,1,23.6,0.133,15,0.4,0.8,32.7,1
+33,26,Informatika,4,fiksi,Horror,novel,163,0,29.0,0.4,20,0.4,0.55,24.5,0
+92,24,Informatika,6,fiksi,Horror,novel,290,0,20.9,0.412,17,0.118,0.471,9.5,0
+160,22,Informatika,3,fiksi,Horror,novel,208,0,35.4,0.211,19,0.158,0.474,15.0,0
+87,18,Lainnya,6,fiksi,Romance,novel,417,1,20.2,0.375,16,0.125,0.938,17.0,0
+41,44,Informatika,3,nonfiksi,Pemrograman,TA,71,1,41.0,0.294,17,0.118,0.235,27.0,1
+97,45,Informatika,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,18.6,0.333,15,0.267,0.467,25.5,1
+64,30,Ekonomi,2,fiksi,Horror,novel,354,0,26.2,0.364,11,0.364,0.636,46.5,1
+186,15,Informatika,7,fiksi,Romance,novel,170,0,19.7,0.227,22,0.0,0.682,19.7,0
+71,20,Informatika,3,fiksi,Romance,novel,383,0,21.3,0.333,15,0.0,0.267,21.3,0
+164,21,Informatika,1,fiksi,Romance,novel,377,0,17.2,0.227,22,0.045,0.864,2.0,0
+142,15,Teknik,6,fiksi,Romance,novel,170,0,25.7,0.444,9,0.667,0.889,36.2,1
+159,18,Informatika,3,fiksi,Romance,novel,417,1,29.9,0.136,22,0.409,0.636,53.9,1
+96,18,Lainnya,2,fiksi,Romance,novel,417,1,11.1,0.231,13,0.462,0.846,11.7,1
+158,53,Teknik,5,fiksi,Fiksi,novel,198,0,23.3,0.364,11,0.0,0.364,23.3,0
+139,19,Teknik,1,fiksi,Romance,novel,353,0,27.0,0.261,23,0.217,0.435,34.0,0
+80,53,Informatika,8,fiksi,Fiksi,novel,198,0,21.0,0.13,23,0.0,0.522,21.0,1
+143,31,Ekonomi,4,fiksi,Horror,novel,426,0,25.2,0.333,12,0.083,0.5,41.0,1
+51,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,20.5,0.364,11,0.182,0.182,77.0,1
+104,30,Informatika,8,fiksi,Horror,novel,354,0,17.8,0.136,22,0.409,0.864,20.7,1
+154,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,30.0,0.19,21,0.286,0.524,53.2,1
+69,9,Informatika,6,fiksi,Novel,novel,233,1,22.6,0.222,18,0.5,0.611,27.4,1
+120,28,Ekonomi,4,fiksi,Horror,novel,196,0,22.1,0.5,8,0.25,0.75,24.0,0
+51,10,Informatika,8,fiksi,Novel,novel,339,1,21.4,0.364,11,0.182,0.727,3.5,0
+162,22,Lainnya,8,fiksi,Horror,novel,208,0,15.9,0.083,12,0.25,0.583,11.3,0
+182,37,Informatika,6,nonfiksi,Hobi,artikel ilmiah,27,0,13.6,0.125,16,0.062,0.375,4.0,0
+76,4,Informatika,5,fiksi,Novel,novel,316,0,25.5,0.5,10,0.4,0.7,17.0,1
+117,29,Teknik,5,fiksi,Horror,novel,373,1,25.0,0.286,14,0.286,0.571,22.5,1
+130,34,Informatika,2,nonfiksi,Hobi,artikel ilmiah,29,0,18.4,0.5,22,0.273,0.455,27.3,0
+200,7,Lainnya,5,fiksi,Novel,novel,407,0,32.6,0.375,8,0.0,0.375,32.6,0
+32,42,Informatika,4,nonfiksi,Pemrograman,buku,173,1,33.0,0.217,23,0.261,0.478,19.3,1
+155,9,Teknik,3,fiksi,Novel,novel,233,1,29.2,0.375,8,0.125,0.25,34.0,1
+183,22,Teknik,8,fiksi,Horror,novel,208,0,30.5,0.375,16,0.188,0.812,16.7,1
+41,48,Informatika,3,fiksi,Action,novel,218,0,40.2,0.235,17,0.0,0.706,40.2,0
+108,32,Teknik,6,nonfiksi,Hobi,TA,127,1,15.4,0.0,20,0.3,0.4,15.3,1
+27,24,Ekonomi,6,fiksi,Horror,novel,290,0,23.7,0.095,21,0.143,0.667,12.0,0
+194,36,Teknik,1,nonfiksi,Hobi,buku,211,0,37.4,0.286,7,0.0,0.571,37.4,0
+165,6,Teknik,8,fiksi,Novel,novel,169,0,19.1,0.263,19,0.158,0.421,16.3,0
+192,35,Informatika,8,nonfiksi,Hobi,TA,96,0,23.3,0.25,20,0.2,0.55,15.8,0
+183,12,Teknik,8,fiksi,Romance,novel,377,0,31.6,0.375,16,0.438,0.812,33.1,0
+157,32,Lainnya,3,nonfiksi,Hobi,TA,127,1,21.4,0.2,10,0.1,0.3,7.0,0
+148,4,Informatika,6,fiksi,Novel,novel,316,0,22.0,0.231,13,0.0,0.538,22.0,0
+24,12,Teknik,7,fiksi,Romance,novel,377,0,20.4,0.35,20,0.3,0.7,30.3,1
+124,41,Lainnya,6,nonfiksi,Pemrograman,buku,342,0,27.0,0.273,11,0.273,0.364,53.3,1
+196,28,Lainnya,4,fiksi,Horror,novel,196,0,23.2,0.286,14,0.143,0.571,19.5,0
+109,34,Informatika,5,nonfiksi,Hobi,artikel ilmiah,29,0,15.8,0.348,23,0.043,0.304,61.0,0
+8,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,24.2,0.133,15,0.267,0.467,29.5,1
+141,26,Lainnya,6,fiksi,Horror,novel,163,0,23.4,0.368,19,0.316,0.947,25.3,1
+159,44,Informatika,3,nonfiksi,Pemrograman,TA,71,1,33.6,0.182,22,0.182,0.318,20.2,0
+70,6,Teknik,1,fiksi,Novel,novel,169,0,22.3,0.273,22,0.045,0.364,31.0,0
+112,46,Informatika,5,nonfiksi,Pemrograman,buku,253,0,23.5,0.4,20,0.2,0.45,19.0,1
+158,35,Teknik,5,nonfiksi,Hobi,TA,96,0,21.5,0.364,11,0.182,0.545,40.5,0
+41,41,Informatika,3,nonfiksi,Pemrograman,buku,342,0,40.5,0.294,17,0.118,0.235,23.0,1
+79,13,Lainnya,7,fiksi,Romance,novel,360,0,25.3,0.217,23,0.304,0.739,18.1,1
+40,35,Teknik,5,nonfiksi,Hobi,TA,96,0,23.9,0.111,9,0.333,0.444,27.3,1
+49,34,Teknik,3,nonfiksi,Hobi,artikel ilmiah,29,0,38.1,0.286,7,0.714,1.0,41.0,0
+126,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,20.0,0.136,22,0.273,0.364,25.0,1
+160,6,Informatika,3,fiksi,Novel,novel,169,0,35.6,0.211,19,0.263,0.474,43.0,0
+180,33,Ekonomi,2,nonfiksi,Hobi,buku,222,1,12.5,0.091,11,0.091,0.182,11.0,1
+188,42,Informatika,4,nonfiksi,Pemrograman,buku,173,1,36.2,0.438,16,0.125,0.188,36.0,1
+147,52,Ekonomi,6,fiksi,Action,novel,281,0,17.7,0.167,18,0.167,0.722,21.7,1
+80,37,Informatika,8,nonfiksi,Hobi,artikel ilmiah,27,0,21.3,0.13,23,0.13,0.435,5.7,0
+33,19,Informatika,4,fiksi,Romance,novel,353,0,28.6,0.4,20,0.1,0.55,23.0,0
+191,14,Teknik,7,fiksi,Romance,novel,256,0,33.0,0.438,16,0.125,0.562,21.0,1
+153,43,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,19.0,0.286,14,0.286,0.286,19.2,0
+72,21,Lainnya,2,fiksi,Romance,novel,377,0,18.1,0.2,15,0.533,0.933,24.0,1
+16,30,Teknik,7,fiksi,Horror,novel,354,0,19.3,0.13,23,0.174,0.522,15.2,0
+108,36,Teknik,6,nonfiksi,Hobi,buku,211,0,15.8,0.0,20,0.3,0.4,17.0,1
+193,7,Informatika,6,fiksi,Novel,novel,407,0,20.3,0.2,15,0.133,0.8,10.0,1
+26,46,Teknik,6,nonfiksi,Pemrograman,buku,253,0,18.6,0.5,16,0.312,0.5,21.6,1
+73,4,Lainnya,6,fiksi,Novel,novel,316,0,22.4,0.2,15,0.4,0.8,29.7,1
+165,35,Teknik,8,nonfiksi,Hobi,TA,96,0,18.5,0.211,19,0.316,0.526,25.5,1
+23,32,Ekonomi,4,nonfiksi,Hobi,TA,127,1,30.0,0.333,21,0.238,0.238,19.4,1
+114,3,Informatika,2,fiksi,Novel,novel,177,0,22.9,0.375,16,0.375,0.375,32.5,1
+125,49,Informatika,7,fiksi,Action,novel,319,1,25.8,0.308,13,0.154,0.692,59.0,1
+166,28,Informatika,5,fiksi,Horror,novel,196,0,22.7,0.188,16,0.188,0.5,10.7,0
+12,41,Teknik,5,nonfiksi,Pemrograman,buku,342,0,31.1,0.167,18,0.333,0.667,23.2,1
+187,46,Informatika,8,nonfiksi,Pemrograman,buku,253,0,22.5,0.375,16,0.25,0.438,21.8,1
+67,8,Lainnya,5,fiksi,Novel,novel,398,1,28.6,0.278,18,0.111,0.722,29.0,1
+154,31,Informatika,6,fiksi,Horror,novel,426,0,30.1,0.19,21,0.095,0.429,24.5,0
+138,44,Lainnya,6,nonfiksi,Pemrograman,TA,71,1,19.1,0.19,21,0.095,0.429,49.5,0
+42,35,Lainnya,6,nonfiksi,Hobi,TA,96,0,22.4,0.273,22,0.318,0.545,24.7,1
+15,18,Lainnya,2,fiksi,Romance,novel,417,1,17.1,0.267,15,0.267,0.867,17.8,1
+169,4,Informatika,4,fiksi,Novel,novel,316,0,15.9,0.217,23,0.217,0.696,13.2,0
+137,38,Teknik,1,nonfiksi,Hobi,TA,93,0,19.9,0.222,18,0.333,0.667,18.3,0
+197,46,Informatika,5,nonfiksi,Pemrograman,buku,253,0,18.0,0.435,23,0.174,0.391,14.5,0
+174,44,Informatika,8,nonfiksi,Pemrograman,TA,71,1,24.6,0.455,22,0.136,0.5,13.7,0
+167,15,Lainnya,4,fiksi,Romance,novel,170,0,19.3,0.316,19,0.316,0.737,23.3,1
+111,37,Informatika,1,nonfiksi,Hobi,artikel ilmiah,27,0,20.1,0.25,8,0.25,0.5,42.0,0
+195,53,Informatika,1,fiksi,Fiksi,novel,198,0,21.4,0.214,14,0.0,0.5,21.4,1
+179,38,Teknik,4,nonfiksi,Hobi,TA,93,0,24.6,0.55,20,0.05,0.3,40.0,0
+143,38,Ekonomi,4,nonfiksi,Hobi,TA,93,0,24.9,0.25,12,0.25,0.417,43.7,1
+35,48,Teknik,4,fiksi,Action,novel,218,0,29.6,0.273,11,0.182,0.273,36.5,0
+91,32,Ekonomi,8,nonfiksi,Hobi,TA,127,1,17.6,0.421,19,0.368,0.421,29.4,1
+133,17,Teknik,8,fiksi,Romance,novel,283,1,36.8,0.227,22,0.227,0.727,74.6,1
+87,20,Lainnya,6,fiksi,Romance,novel,383,0,20.1,0.375,16,0.125,0.938,16.0,1
+69,8,Informatika,6,fiksi,Novel,novel,398,1,21.7,0.167,18,0.5,0.611,25.6,1
+194,42,Teknik,1,nonfiksi,Pemrograman,buku,173,1,38.6,0.286,7,0.429,0.571,19.0,1
+53,18,Teknik,8,fiksi,Romance,novel,417,1,18.7,0.385,13,0.231,0.462,10.0,0
+153,45,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,19.4,0.286,14,0.286,0.286,20.8,0
+58,10,Informatika,4,fiksi,Novel,novel,339,1,28.4,0.273,11,0.182,0.545,26.5,0
+72,10,Lainnya,2,fiksi,Novel,novel,339,1,20.9,0.267,15,0.133,0.933,15.5,0
+148,31,Informatika,6,fiksi,Horror,novel,426,0,21.1,0.231,13,0.154,0.538,21.5,0
+33,39,Informatika,4,nonfiksi,Hobi,TA,66,0,28.4,0.4,20,0.35,0.4,41.1,0
+175,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,16.6,0.111,9,0.222,0.222,38.5,1
+198,26,Lainnya,1,fiksi,Horror,novel,163,0,40.1,0.25,8,0.375,0.875,50.7,1
+137,20,Teknik,1,fiksi,Romance,novel,383,0,19.3,0.167,18,0.111,0.278,11.0,1
+162,2,Lainnya,8,fiksi,Novel,novel,218,0,17.8,0.083,12,0.167,0.583,28.5,1
+107,2,Lainnya,3,fiksi,Novel,novel,218,0,18.2,0.308,13,0.231,0.769,5.3,0
+64,5,Ekonomi,2,fiksi,Novel,novel,416,0,25.2,0.364,11,0.182,0.636,13.0,1
+58,1,Informatika,4,fiksi,Novel,novel,285,0,28.6,0.273,11,0.182,0.545,28.0,0
+192,41,Informatika,8,nonfiksi,Pemrograman,buku,342,0,22.2,0.3,20,0.3,0.55,32.5,1
+181,9,Informatika,4,fiksi,Novel,novel,233,1,19.6,0.133,15,0.333,0.4,24.4,0
+71,44,Informatika,3,nonfiksi,Pemrograman,TA,71,1,21.3,0.267,15,0.333,0.667,11.4,1
+97,37,Informatika,7,nonfiksi,Hobi,artikel ilmiah,27,0,18.3,0.333,15,0.133,0.467,10.5,1
+85,23,Ekonomi,1,fiksi,Horror,novel,259,0,21.7,0.19,21,0.143,0.81,26.0,1
+127,40,Teknik,7,nonfiksi,Pemrograman,buku,251,0,18.7,0.333,21,0.238,0.619,34.2,1
+185,6,Lainnya,6,fiksi,Novel,novel,169,0,16.9,0.3,10,0.6,0.9,21.5,1
+116,5,Ekonomi,2,fiksi,Novel,novel,416,0,21.9,0.412,17,0.353,0.647,27.8,1
+37,37,Lainnya,2,nonfiksi,Hobi,artikel ilmiah,27,0,13.9,0.5,8,0.75,0.75,16.5,0
+111,26,Informatika,1,fiksi,Horror,novel,163,0,20.5,0.375,8,0.125,0.375,12.0,0
+169,49,Informatika,4,fiksi,Action,novel,319,1,15.3,0.261,23,0.13,0.696,25.0,1
+104,20,Informatika,8,fiksi,Romance,novel,383,0,17.9,0.182,22,0.182,0.864,19.2,1
+140,27,Lainnya,4,fiksi,Horror,novel,313,1,21.8,0.238,21,0.19,0.762,20.2,0
+178,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,17.5,0.2,15,0.4,0.533,26.2,1
+21,28,Lainnya,7,fiksi,Horror,novel,196,0,22.7,0.267,15,0.4,0.6,19.7,0
+67,43,Lainnya,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,29.2,0.278,18,0.167,0.222,22.7,0
+64,32,Ekonomi,2,nonfiksi,Hobi,TA,127,1,24.5,0.455,11,0.273,0.273,6.7,0
+12,53,Teknik,5,fiksi,Fiksi,novel,198,0,31.9,0.167,18,0.0,0.278,31.9,0
+192,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,23.0,0.25,20,0.3,0.55,35.2,1
+189,18,Informatika,1,fiksi,Romance,novel,417,1,19.5,0.2,10,0.2,1.0,6.5,1
+144,5,Informatika,8,fiksi,Novel,novel,416,0,23.6,0.25,12,0.583,0.75,31.1,1
+7,53,Ekonomi,7,fiksi,Fiksi,novel,198,0,19.2,0.227,22,0.0,0.818,19.2,1
+150,37,Ekonomi,6,nonfiksi,Hobi,artikel ilmiah,27,0,26.7,0.176,17,0.294,0.353,23.2,1
+25,50,Ekonomi,4,fiksi,Action,novel,350,0,39.8,0.5,12,0.0,0.833,39.8,0
+16,1,Teknik,7,fiksi,Novel,novel,285,0,19.1,0.13,23,0.174,0.522,19.5,0
+133,2,Teknik,8,fiksi,Novel,novel,218,0,38.3,0.182,22,0.182,0.727,19.0,1
+127,32,Teknik,7,nonfiksi,Hobi,TA,127,1,18.6,0.333,21,0.333,0.619,16.3,1
+154,33,Informatika,6,nonfiksi,Hobi,buku,222,1,28.4,0.143,21,0.19,0.524,19.0,0
+20,3,Informatika,8,fiksi,Novel,novel,177,0,31.8,0.19,21,0.143,0.762,12.3,0
+174,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,24.4,0.455,22,0.136,0.5,12.0,0
+156,47,Ekonomi,7,fiksi,Action,novel,249,1,17.4,0.048,21,0.095,0.762,11.0,0
+4,20,Informatika,2,fiksi,Romance,novel,383,0,25.2,0.417,12,0.083,0.833,16.0,0
+49,38,Teknik,3,nonfiksi,Hobi,TA,93,0,38.9,0.143,7,0.714,1.0,42.0,1
+134,19,Ekonomi,7,fiksi,Romance,novel,353,0,18.6,0.091,22,0.318,0.682,10.1,0
+33,36,Informatika,4,nonfiksi,Hobi,buku,211,0,26.9,0.4,20,0.35,0.4,36.7,0
+159,11,Informatika,3,fiksi,Novel,novel,199,0,33.7,0.182,22,0.091,0.636,6.0,1
+50,29,Teknik,7,fiksi,Horror,novel,373,1,39.1,0.545,11,0.455,0.727,50.2,1
+151,47,Lainnya,8,fiksi,Action,novel,249,1,20.2,0.25,20,0.15,0.7,48.7,1
+68,43,Informatika,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,25.0,0.095,21,0.286,0.524,55.5,0
+5,22,Lainnya,8,fiksi,Horror,novel,208,0,27.0,0.333,9,0.222,0.556,40.0,1
+190,32,Teknik,3,nonfiksi,Hobi,TA,127,1,38.0,0.25,12,0.167,0.167,40.5,1
+179,37,Teknik,4,nonfiksi,Hobi,artikel ilmiah,27,0,24.0,0.55,20,0.05,0.3,28.0,0
+24,25,Teknik,7,fiksi,Horror,novel,299,0,20.1,0.35,20,0.0,0.7,20.1,0
+72,17,Lainnya,2,fiksi,Romance,novel,283,1,20.9,0.2,15,0.533,0.933,29.1,0
+37,2,Lainnya,2,fiksi,Novel,novel,218,0,15.5,0.5,8,0.0,0.125,15.5,0
+109,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,15.8,0.304,23,0.217,0.304,18.2,1
+68,33,Informatika,7,nonfiksi,Hobi,buku,222,1,25.1,0.143,21,0.19,0.524,15.2,0
+133,47,Teknik,8,fiksi,Action,novel,249,1,41.0,0.227,22,0.136,0.727,18.3,1
+39,44,Informatika,3,nonfiksi,Pemrograman,TA,71,1,15.1,0.167,18,0.333,0.444,23.7,1
+19,18,Teknik,5,fiksi,Romance,novel,417,1,27.3,0.5,18,0.278,0.556,30.2,1
+41,17,Informatika,3,fiksi,Romance,novel,283,1,40.5,0.294,17,0.118,0.706,18.0,1
+12,3,Teknik,5,fiksi,Novel,novel,177,0,31.1,0.222,18,0.0,0.278,31.1,0
+7,23,Ekonomi,7,fiksi,Horror,novel,259,0,19.1,0.227,22,0.273,0.818,23.7,0
+55,43,Informatika,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,17.4,0.222,9,0.333,0.444,32.3,1
+19,23,Teknik,5,fiksi,Horror,novel,259,0,26.3,0.556,18,0.167,0.556,13.7,0
+123,1,Informatika,5,fiksi,Novel,novel,285,0,17.6,0.214,14,0.357,0.643,25.0,1
+140,11,Lainnya,4,fiksi,Novel,novel,199,0,20.4,0.19,21,0.19,0.762,20.2,0
+124,45,Lainnya,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,25.5,0.273,11,0.273,0.364,48.0,1
+198,18,Lainnya,1,fiksi,Romance,novel,417,1,39.2,0.375,8,0.125,0.875,29.0,0
+59,33,Teknik,5,nonfiksi,Hobi,buku,222,1,16.1,0.429,14,0.071,0.5,5.0,1
+21,40,Lainnya,7,nonfiksi,Pemrograman,buku,251,0,23.2,0.267,15,0.333,0.333,30.2,1
+97,14,Informatika,7,fiksi,Romance,novel,256,0,18.9,0.267,15,0.333,0.467,20.2,0
+70,33,Teknik,1,nonfiksi,Hobi,buku,222,1,21.1,0.273,22,0.318,0.591,19.0,1
+128,11,Ekonomi,5,fiksi,Novel,novel,199,0,22.6,0.435,23,0.217,0.565,12.4,1
+65,9,Ekonomi,7,fiksi,Novel,novel,233,1,34.8,0.375,8,0.125,0.625,12.0,1
+39,32,Informatika,3,nonfiksi,Hobi,TA,127,1,17.6,0.167,18,0.056,0.444,8.0,0
+138,39,Lainnya,6,nonfiksi,Hobi,TA,66,0,20.7,0.19,21,0.286,0.429,28.3,1
+195,41,Informatika,1,nonfiksi,Pemrograman,buku,342,0,28.1,0.214,14,0.429,0.429,25.7,1
+177,11,Informatika,7,fiksi,Novel,novel,199,0,28.8,0.333,18,0.222,0.889,25.0,1
+102,37,Teknik,8,nonfiksi,Hobi,artikel ilmiah,27,0,31.1,0.385,13,0.385,0.538,49.6,1
+90,38,Ekonomi,5,nonfiksi,Hobi,TA,93,0,28.9,0.692,13,0.0,0.231,28.9,0
+98,3,Informatika,4,fiksi,Novel,novel,177,0,18.3,0.571,7,0.143,0.571,14.0,1
+27,46,Ekonomi,6,nonfiksi,Pemrograman,buku,253,0,22.0,0.095,21,0.095,0.286,10.0,0
+80,34,Informatika,8,nonfiksi,Hobi,artikel ilmiah,29,0,21.8,0.13,23,0.13,0.435,9.0,0
+148,43,Informatika,6,nonfiksi,Pemrograman,artikel ilmiah,18,1,21.5,0.154,13,0.231,0.385,42.0,1
+35,38,Teknik,4,nonfiksi,Hobi,TA,93,0,31.0,0.273,11,0.364,0.636,42.8,1
+51,52,Informatika,8,fiksi,Action,novel,281,0,21.6,0.455,11,0.091,0.727,10.0,1
+189,48,Informatika,1,fiksi,Action,novel,218,0,17.2,0.2,10,0.1,1.0,21.0,0
+187,25,Informatika,8,fiksi,Horror,novel,299,0,20.9,0.375,16,0.375,0.5,30.3,1
+35,36,Teknik,4,nonfiksi,Hobi,buku,211,0,31.7,0.182,11,0.364,0.636,44.8,1
+50,44,Teknik,7,nonfiksi,Pemrograman,TA,71,1,39.5,0.545,11,0.091,0.182,50.0,1
+42,7,Lainnya,6,fiksi,Novel,novel,407,0,23.0,0.318,22,0.273,0.409,24.3,1
+69,10,Informatika,6,fiksi,Novel,novel,339,1,23.4,0.222,18,0.5,0.611,29.0,1
+135,47,Informatika,1,fiksi,Action,novel,249,1,29.6,0.4,15,0.133,0.533,31.0,1
+21,41,Lainnya,7,nonfiksi,Pemrograman,buku,342,0,20.7,0.267,15,0.333,0.333,22.8,1
+193,18,Informatika,6,fiksi,Romance,novel,417,1,20.7,0.2,15,0.267,0.8,24.2,1
+192,50,Informatika,8,fiksi,Action,novel,350,0,23.4,0.3,20,0.1,0.4,7.0,1
+107,47,Lainnya,3,fiksi,Action,novel,249,1,18.2,0.231,13,0.308,0.769,34.0,0
+182,9,Informatika,6,fiksi,Novel,novel,233,1,14.7,0.125,16,0.0,0.562,14.7,0
+34,9,Informatika,2,fiksi,Novel,novel,233,1,24.3,0.312,16,0.438,0.562,27.1,1
+155,40,Teknik,3,nonfiksi,Pemrograman,buku,251,0,29.4,0.375,8,0.625,0.625,26.2,0
+54,43,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,29.0,0.294,17,0.176,0.588,22.7,1
+131,51,Lainnya,5,fiksi,Action,novel,432,0,24.4,0.381,21,0.143,0.619,26.3,1
+171,43,Informatika,6,nonfiksi,Pemrograman,artikel ilmiah,18,1,18.0,0.13,23,0.217,0.348,38.8,0
+42,46,Lainnya,6,nonfiksi,Pemrograman,buku,253,0,23.1,0.318,22,0.182,0.545,26.2,0
+112,53,Informatika,5,fiksi,Fiksi,novel,198,0,23.6,0.35,20,0.0,0.5,23.6,1
+16,37,Teknik,7,nonfiksi,Hobi,artikel ilmiah,27,0,18.8,0.13,23,0.174,0.435,9.8,1
+112,35,Informatika,5,nonfiksi,Hobi,TA,96,0,23.6,0.35,20,0.2,0.45,34.2,1
+195,23,Informatika,1,fiksi,Horror,novel,259,0,28.2,0.286,14,0.143,0.5,19.5,0
+40,38,Teknik,5,nonfiksi,Hobi,TA,93,0,23.6,0.111,9,0.333,0.444,26.3,1
+162,40,Lainnya,8,nonfiksi,Pemrograman,buku,251,0,18.1,0.0,12,0.333,0.333,16.5,0
+24,15,Teknik,7,fiksi,Romance,novel,170,0,20.4,0.4,20,0.3,0.7,30.7,1
+18,50,Informatika,3,fiksi,Action,novel,350,0,22.0,0.462,13,0.154,0.154,21.0,0
+144,9,Informatika,8,fiksi,Novel,novel,233,1,24.2,0.167,12,0.583,0.75,32.1,1
+134,3,Ekonomi,7,fiksi,Novel,novel,177,0,18.8,0.091,22,0.182,0.682,30.2,0
+152,50,Ekonomi,7,fiksi,Action,novel,350,0,15.4,0.222,18,0.222,0.778,21.5,1
+158,44,Teknik,5,nonfiksi,Pemrograman,TA,71,1,24.0,0.364,11,0.273,0.545,23.7,1
+119,33,Lainnya,5,nonfiksi,Hobi,buku,222,1,42.9,0.25,8,0.25,0.25,15.0,1
+80,47,Informatika,8,fiksi,Action,novel,249,1,21.8,0.13,23,0.087,0.522,11.0,1
+129,37,Lainnya,4,nonfiksi,Hobi,artikel ilmiah,27,0,30.2,0.273,11,0.0,0.182,30.2,0
+178,41,Informatika,5,nonfiksi,Pemrograman,buku,342,0,18.0,0.267,15,0.4,0.533,27.5,1
+162,29,Lainnya,8,fiksi,Horror,novel,373,1,17.8,0.083,12,0.25,0.583,18.7,0
+3,46,Informatika,8,nonfiksi,Pemrograman,buku,253,0,33.7,0.4,15,0.133,0.333,28.5,1
+157,46,Lainnya,3,nonfiksi,Pemrograman,buku,253,0,26.3,0.2,10,0.1,0.3,15.0,1
+32,39,Informatika,4,nonfiksi,Hobi,TA,66,0,34.3,0.217,23,0.174,0.478,9.0,0
+33,18,Informatika,4,fiksi,Romance,novel,417,1,28.0,0.4,20,0.1,0.55,17.0,0
+83,26,Lainnya,5,fiksi,Horror,novel,163,0,21.9,0.133,15,0.2,0.933,18.7,1
+163,10,Informatika,2,fiksi,Novel,novel,339,1,24.6,0.278,18,0.278,0.5,11.0,0
+17,42,Informatika,5,nonfiksi,Pemrograman,buku,173,1,22.9,0.188,16,0.125,0.438,24.0,1
+36,34,Informatika,5,nonfiksi,Hobi,artikel ilmiah,29,0,33.9,0.562,16,0.062,0.312,41.0,1
+168,46,Informatika,6,nonfiksi,Pemrograman,buku,253,0,15.2,0.091,11,0.455,0.455,23.8,1
+75,22,Lainnya,2,fiksi,Horror,novel,208,0,16.5,0.238,21,0.238,0.714,9.4,0
+152,4,Ekonomi,7,fiksi,Novel,novel,316,0,14.8,0.222,18,0.5,0.778,12.3,1
+159,21,Informatika,3,fiksi,Romance,novel,377,0,30.7,0.182,22,0.409,0.636,55.9,1
+78,49,Informatika,5,fiksi,Action,novel,319,1,33.7,0.143,7,0.429,0.571,27.3,1
+102,44,Teknik,8,nonfiksi,Pemrograman,TA,71,1,30.8,0.385,13,0.077,0.538,9.0,0
+149,29,Teknik,3,fiksi,Horror,novel,373,1,21.7,0.348,23,0.217,0.435,19.0,0
+19,37,Teknik,5,nonfiksi,Hobi,artikel ilmiah,27,0,28.9,0.5,18,0.333,0.389,34.7,1
+88,20,Teknik,5,fiksi,Romance,novel,383,0,18.3,0.25,12,0.25,0.5,23.7,1
+75,42,Lainnya,2,nonfiksi,Pemrograman,buku,173,1,16.4,0.19,21,0.19,0.238,21.2,0
+63,35,Ekonomi,6,nonfiksi,Hobi,TA,96,0,12.2,0.25,12,0.333,0.5,15.8,1
+142,18,Teknik,6,fiksi,Romance,novel,417,1,28.2,0.444,9,0.667,0.889,40.0,1
+71,32,Informatika,3,nonfiksi,Hobi,TA,127,1,21.9,0.333,15,0.267,0.667,46.5,0
+23,15,Ekonomi,4,fiksi,Romance,novel,170,0,30.0,0.333,21,0.19,0.714,16.5,0
+177,21,Informatika,7,fiksi,Romance,novel,377,0,25.8,0.278,18,0.111,0.889,14.5,0
+135,23,Informatika,1,fiksi,Horror,novel,259,0,29.5,0.4,15,0.2,0.533,18.7,0
+47,25,Teknik,6,fiksi,Horror,novel,299,0,18.2,0.385,13,0.308,0.462,25.5,1
+13,32,Informatika,7,nonfiksi,Hobi,TA,127,1,29.2,0.286,14,0.143,0.429,31.0,1
+149,31,Teknik,3,fiksi,Horror,novel,426,0,21.3,0.348,23,0.217,0.435,17.6,0
+84,45,Lainnya,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,28.9,0.111,9,0.222,0.333,11.0,0
+19,24,Teknik,5,fiksi,Horror,novel,290,0,28.5,0.5,18,0.167,0.556,27.0,1
+48,44,Lainnya,2,nonfiksi,Pemrograman,TA,71,1,18.4,0.316,19,0.263,0.421,23.0,1
+99,29,Lainnya,5,fiksi,Horror,novel,373,1,13.8,0.375,16,0.188,0.75,10.3,0
+56,26,Lainnya,7,fiksi,Horror,novel,163,0,17.5,0.421,19,0.316,0.632,11.8,1
+93,24,Informatika,2,fiksi,Horror,novel,290,0,21.3,0.231,13,0.077,0.385,27.0,0
+113,2,Ekonomi,5,fiksi,Novel,novel,218,0,23.4,0.3,20,0.4,0.8,25.9,1
+123,3,Informatika,5,fiksi,Novel,novel,177,0,17.6,0.286,14,0.357,0.643,25.2,1
+152,49,Ekonomi,7,fiksi,Action,novel,319,1,15.0,0.167,18,0.222,0.778,19.8,1
+52,40,Informatika,6,nonfiksi,Pemrograman,buku,251,0,17.0,0.615,13,0.077,0.231,18.0,0
+95,44,Informatika,8,nonfiksi,Pemrograman,TA,71,1,23.9,0.143,7,0.143,0.143,12.0,1
+21,27,Lainnya,7,fiksi,Horror,novel,313,1,23.1,0.267,15,0.4,0.6,20.7,1
+45,44,Informatika,4,nonfiksi,Pemrograman,TA,71,1,36.0,0.25,8,0.25,0.25,23.5,1
+70,44,Teknik,1,nonfiksi,Pemrograman,TA,71,1,22.2,0.227,22,0.227,0.591,25.8,1
+90,51,Ekonomi,5,fiksi,Action,novel,432,0,27.0,0.692,13,0.308,0.692,26.8,1
+170,4,Lainnya,2,fiksi,Novel,novel,316,0,24.0,0.25,16,0.375,0.688,20.7,1
+99,25,Lainnya,5,fiksi,Horror,novel,299,0,14.4,0.312,16,0.188,0.75,14.0,1
+174,10,Informatika,8,fiksi,Novel,novel,339,1,24.2,0.455,22,0.364,0.455,20.9,1
+117,48,Teknik,5,fiksi,Action,novel,218,0,27.7,0.286,14,0.0,0.571,27.7,0
+92,48,Informatika,6,fiksi,Action,novel,218,0,21.1,0.412,17,0.118,0.471,30.5,0
+192,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,21.0,0.3,20,0.3,0.55,28.5,1
+131,37,Lainnya,5,nonfiksi,Hobi,artikel ilmiah,27,0,24.3,0.381,21,0.143,0.333,42.0,0
+79,38,Lainnya,7,nonfiksi,Hobi,TA,93,0,25.8,0.217,23,0.217,0.217,14.8,0
+18,39,Informatika,3,nonfiksi,Hobi,TA,66,0,23.2,0.538,13,0.385,0.769,15.6,0
+151,46,Lainnya,8,nonfiksi,Pemrograman,buku,253,0,21.2,0.25,20,0.0,0.25,21.2,0
+167,43,Lainnya,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,20.2,0.316,19,0.105,0.211,29.5,0
+157,10,Lainnya,3,fiksi,Novel,novel,339,1,26.7,0.1,10,0.1,0.6,35.0,0
+76,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,24.6,0.5,10,0.2,0.2,64.5,1
+193,1,Informatika,6,fiksi,Novel,novel,285,0,22.7,0.2,15,0.133,0.8,28.0,0
+73,36,Lainnya,6,nonfiksi,Hobi,buku,211,0,24.3,0.2,15,0.0,0.133,24.3,0
+34,39,Informatika,2,nonfiksi,Hobi,TA,66,0,25.1,0.25,16,0.25,0.375,28.0,0
+82,10,Teknik,8,fiksi,Novel,novel,339,1,23.1,0.375,8,0.125,0.75,5.0,0
+190,20,Teknik,3,fiksi,Romance,novel,383,0,39.0,0.25,12,0.167,0.75,14.5,1
+12,43,Teknik,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,31.9,0.167,18,0.333,0.667,25.7,1
+6,32,Lainnya,3,nonfiksi,Hobi,TA,127,1,21.3,0.333,18,0.167,0.444,29.0,0
+192,37,Informatika,8,nonfiksi,Hobi,artikel ilmiah,27,0,22.0,0.3,20,0.2,0.55,9.0,0
+17,39,Informatika,5,nonfiksi,Hobi,TA,66,0,24.0,0.188,16,0.25,0.438,25.0,0
+179,23,Teknik,4,fiksi,Horror,novel,259,0,25.5,0.5,20,0.25,0.65,25.0,0
+94,3,Ekonomi,8,fiksi,Novel,novel,177,0,24.0,0.562,16,0.375,0.562,28.0,1
+102,46,Teknik,8,nonfiksi,Pemrograman,buku,253,0,31.9,0.385,13,0.077,0.538,23.0,1
+183,19,Teknik,8,fiksi,Romance,novel,353,0,35.0,0.375,16,0.438,0.812,41.0,1
+107,12,Lainnya,3,fiksi,Romance,novel,377,0,19.2,0.308,13,0.077,0.769,4.0,1
+20,31,Informatika,8,fiksi,Horror,novel,426,0,32.0,0.19,21,0.238,0.762,43.6,1
+33,17,Informatika,4,fiksi,Romance,novel,283,1,29.2,0.35,20,0.1,0.55,29.0,0
+189,27,Informatika,1,fiksi,Horror,novel,313,1,17.6,0.2,10,0.2,1.0,21.5,0
+142,3,Teknik,6,fiksi,Novel,novel,177,0,28.4,0.444,9,0.0,0.889,28.4,0
+39,52,Informatika,3,fiksi,Action,novel,281,0,17.3,0.167,18,0.222,0.5,13.0,1
+69,32,Informatika,6,nonfiksi,Hobi,TA,127,1,23.6,0.222,18,0.111,0.333,9.5,0
+139,24,Teknik,1,fiksi,Horror,novel,290,0,27.2,0.261,23,0.174,0.435,7.5,0
+188,12,Informatika,4,fiksi,Romance,novel,377,0,36.2,0.375,16,0.312,0.75,32.0,1
+134,20,Ekonomi,7,fiksi,Romance,novel,383,0,18.8,0.091,22,0.318,0.682,10.9,0
+159,17,Informatika,3,fiksi,Romance,novel,283,1,29.2,0.182,22,0.409,0.636,52.2,1
+155,5,Teknik,3,fiksi,Novel,novel,416,0,27.0,0.375,8,0.125,0.25,16.0,1
+145,21,Informatika,7,fiksi,Romance,novel,377,0,17.2,0.235,17,0.235,0.647,10.8,1
+54,30,Teknik,7,fiksi,Horror,novel,354,0,27.7,0.353,17,0.118,0.353,28.5,1
+42,39,Lainnya,6,nonfiksi,Hobi,TA,66,0,23.0,0.273,22,0.318,0.545,26.6,0
+38,21,Teknik,3,fiksi,Romance,novel,377,0,20.7,0.333,21,0.333,0.619,34.0,1
+116,24,Ekonomi,2,fiksi,Horror,novel,290,0,21.8,0.412,17,0.176,0.647,11.7,1
+175,14,Informatika,8,fiksi,Romance,novel,256,0,17.9,0.222,9,0.222,0.667,13.0,1
+146,43,Lainnya,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,19.9,0.3,10,0.4,0.4,30.0,1
+144,43,Informatika,8,nonfiksi,Pemrograman,artikel ilmiah,18,1,24.8,0.25,12,0.083,0.167,11.0,1
+101,14,Informatika,7,fiksi,Romance,novel,256,0,17.8,0.308,13,0.077,0.538,9.0,1
+184,52,Lainnya,1,fiksi,Action,novel,281,0,22.4,0.286,7,0.286,1.0,11.0,0
+133,26,Teknik,8,fiksi,Horror,novel,163,0,39.8,0.227,22,0.045,0.727,17.0,0
+37,38,Lainnya,2,nonfiksi,Hobi,TA,93,0,15.9,0.375,8,0.75,0.75,19.2,1
+147,37,Ekonomi,6,nonfiksi,Hobi,artikel ilmiah,27,0,18.0,0.167,18,0.167,0.222,13.7,0
+36,23,Informatika,5,fiksi,Horror,novel,259,0,34.3,0.625,16,0.5,0.625,34.2,1
+156,17,Ekonomi,7,fiksi,Romance,novel,283,1,16.2,0.048,21,0.381,0.762,25.1,0
+136,17,Informatika,7,fiksi,Romance,novel,283,1,18.8,0.25,12,0.167,0.75,6.5,0
+179,8,Teknik,4,fiksi,Novel,novel,398,1,25.7,0.55,20,0.25,0.65,35.8,1
+20,22,Informatika,8,fiksi,Horror,novel,208,0,31.3,0.19,21,0.238,0.762,40.6,1
+3,7,Informatika,8,fiksi,Novel,novel,407,0,32.3,0.333,15,0.4,0.6,54.3,1
+20,44,Informatika,8,nonfiksi,Pemrograman,TA,71,1,31.6,0.19,21,0.095,0.19,20.0,1
+77,42,Teknik,6,nonfiksi,Pemrograman,buku,173,1,19.6,0.444,18,0.111,0.444,24.5,0
+31,36,Teknik,2,nonfiksi,Hobi,buku,211,0,21.5,0.478,23,0.261,0.522,25.8,1
+176,17,Informatika,3,fiksi,Romance,novel,283,1,13.0,0.167,18,0.111,0.5,8.0,0
+140,10,Lainnya,4,fiksi,Novel,novel,339,1,20.3,0.238,21,0.19,0.762,20.0,0
+80,7,Informatika,8,fiksi,Novel,novel,407,0,21.9,0.13,23,0.174,0.522,8.5,0
+30,26,Informatika,1,fiksi,Horror,novel,163,0,23.7,0.333,9,0.222,0.444,21.0,0
+123,28,Informatika,5,fiksi,Horror,novel,196,0,18.5,0.286,14,0.214,0.643,16.0,1
+17,29,Informatika,5,fiksi,Horror,novel,373,1,23.9,0.188,16,0.062,0.5,10.0,0
+67,50,Lainnya,5,fiksi,Action,novel,350,0,26.3,0.222,18,0.222,0.722,21.2,1
+94,34,Ekonomi,8,nonfiksi,Hobi,artikel ilmiah,29,0,24.3,0.562,16,0.25,0.375,34.8,1
+153,44,Teknik,7,nonfiksi,Pemrograman,TA,71,1,18.2,0.286,14,0.286,0.286,16.5,1
+164,11,Informatika,1,fiksi,Novel,novel,199,0,17.9,0.227,22,0.273,0.864,11.2,1
+120,34,Ekonomi,4,nonfiksi,Hobi,artikel ilmiah,29,0,21.9,0.5,8,0.0,0.125,21.9,0
+68,44,Informatika,7,nonfiksi,Pemrograman,TA,71,1,23.1,0.143,21,0.286,0.524,48.7,0
+18,40,Informatika,3,nonfiksi,Pemrograman,buku,251,0,22.9,0.462,13,0.308,0.769,36.8,0
+173,49,Informatika,5,fiksi,Action,novel,319,1,21.4,0.167,12,0.167,0.583,7.0,0
+65,40,Ekonomi,7,nonfiksi,Pemrograman,buku,251,0,31.4,0.375,8,0.125,0.25,53.0,1
+26,6,Teknik,6,fiksi,Novel,novel,169,0,19.6,0.5,16,0.25,0.438,26.2,0
+86,25,Lainnya,5,fiksi,Horror,novel,299,0,15.1,0.167,12,0.167,0.583,4.5,0
+139,45,Teknik,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,27.3,0.261,23,0.217,0.522,22.2,0
+47,34,Teknik,6,nonfiksi,Hobi,artikel ilmiah,29,0,19.3,0.385,13,0.154,0.462,10.0,0
+37,33,Lainnya,2,nonfiksi,Hobi,buku,222,1,15.9,0.375,8,0.75,0.75,19.2,1
+149,39,Teknik,3,nonfiksi,Hobi,TA,66,0,21.5,0.348,23,0.217,0.522,27.2,1
+34,5,Informatika,2,fiksi,Novel,novel,416,0,24.4,0.312,16,0.438,0.562,27.4,1
+128,32,Ekonomi,5,nonfiksi,Hobi,TA,127,1,20.0,0.478,23,0.304,0.391,39.9,1
+113,10,Ekonomi,5,fiksi,Novel,novel,339,1,21.0,0.35,20,0.4,0.8,19.9,1
+145,34,Informatika,7,nonfiksi,Hobi,artikel ilmiah,29,0,17.4,0.235,17,0.059,0.294,29.0,1
+195,43,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,18,1,27.9,0.286,14,0.429,0.429,25.2,1
+85,29,Ekonomi,1,fiksi,Horror,novel,373,1,21.6,0.19,21,0.143,0.81,25.0,1
+22,32,Ekonomi,7,nonfiksi,Hobi,TA,127,1,11.4,0.462,13,0.231,0.231,15.3,0
+52,34,Informatika,6,nonfiksi,Hobi,artikel ilmiah,29,0,17.5,0.615,13,0.077,0.231,13.0,0
+69,6,Informatika,6,fiksi,Novel,novel,169,0,23.4,0.167,18,0.5,0.611,29.1,0
+60,5,Informatika,8,fiksi,Novel,novel,416,0,51.9,0.286,7,0.429,1.0,88.7,0
+72,13,Lainnya,2,fiksi,Romance,novel,360,0,17.0,0.267,15,0.533,0.933,21.9,1
+117,37,Teknik,5,nonfiksi,Hobi,artikel ilmiah,27,0,25.2,0.214,14,0.286,0.357,39.0,0
+177,31,Informatika,7,fiksi,Horror,novel,426,0,26.0,0.333,18,0.389,0.889,34.9,1
+1,37,Ekonomi,7,nonfiksi,Hobi,artikel ilmiah,27,0,48.1,0.429,7,0.143,0.143,13.0,0
+114,43,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,23.1,0.375,16,0.375,0.562,18.5,0
+126,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,20.0,0.182,22,0.273,0.364,25.0,1
+55,44,Informatika,4,nonfiksi,Pemrograman,TA,71,1,14.6,0.222,9,0.333,0.444,23.7,0
+36,26,Informatika,5,fiksi,Horror,novel,163,0,30.6,0.562,16,0.5,0.625,26.9,1
+2,7,Informatika,7,fiksi,Novel,novel,407,0,18.1,0.222,9,0.222,0.556,16.0,1
+25,3,Ekonomi,4,fiksi,Novel,novel,177,0,39.8,0.5,12,0.667,0.833,33.8,1
+67,6,Lainnya,5,fiksi,Novel,novel,169,0,28.9,0.278,18,0.111,0.722,31.5,1
+159,3,Informatika,3,fiksi,Novel,novel,177,0,34.1,0.182,22,0.091,0.636,10.5,0
+6,37,Lainnya,3,nonfiksi,Hobi,artikel ilmiah,27,0,21.4,0.278,18,0.167,0.444,29.7,1
+67,42,Lainnya,5,nonfiksi,Pemrograman,buku,173,1,27.9,0.222,18,0.167,0.222,14.7,0
+27,52,Ekonomi,6,fiksi,Action,novel,281,0,22.0,0.095,21,0.238,0.667,38.2,1
+112,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,24.0,0.35,20,0.2,0.45,21.2,1
+17,2,Informatika,5,fiksi,Novel,novel,218,0,23.3,0.188,16,0.188,0.5,27.3,1
+190,22,Teknik,3,fiksi,Horror,novel,208,0,36.9,0.333,12,0.333,0.75,65.5,0
+158,41,Teknik,5,nonfiksi,Pemrograman,buku,342,0,22.7,0.273,11,0.273,0.545,19.0,0
+119,25,Lainnya,5,fiksi,Horror,novel,299,0,44.0,0.125,8,0.5,0.625,71.5,0
+119,24,Lainnya,5,fiksi,Horror,novel,290,0,37.0,0.25,8,0.5,0.625,57.5,1
+136,42,Informatika,7,nonfiksi,Pemrograman,buku,173,1,19.7,0.167,12,0.167,0.167,22.5,1
+151,50,Lainnya,8,fiksi,Action,novel,350,0,21.2,0.2,20,0.15,0.7,56.0,1
+176,1,Informatika,3,fiksi,Novel,novel,285,0,13.1,0.167,18,0.111,0.5,4.5,0
+181,8,Informatika,4,fiksi,Novel,novel,398,1,20.7,0.133,15,0.333,0.4,27.8,1
+70,39,Teknik,1,nonfiksi,Hobi,TA,66,0,21.5,0.227,22,0.318,0.591,20.4,0
+193,13,Informatika,6,fiksi,Romance,novel,360,0,22.5,0.2,15,0.267,0.8,31.0,1
+196,40,Lainnya,4,nonfiksi,Pemrograman,buku,251,0,22.6,0.214,14,0.357,0.357,26.4,1
+79,12,Lainnya,7,fiksi,Romance,novel,377,0,25.6,0.174,23,0.304,0.739,19.0,1
+183,13,Teknik,8,fiksi,Romance,novel,360,0,34.5,0.312,16,0.438,0.812,39.9,1
+184,48,Lainnya,1,fiksi,Action,novel,218,0,23.3,0.286,7,0.286,1.0,14.0,1
+42,2,Lainnya,6,fiksi,Novel,novel,218,0,21.9,0.318,22,0.273,0.409,20.2,0
+148,41,Informatika,6,nonfiksi,Pemrograman,buku,342,0,17.4,0.231,13,0.231,0.385,24.3,1
+35,19,Teknik,4,fiksi,Romance,novel,353,0,32.6,0.273,11,0.0,0.273,32.6,0
+52,17,Informatika,6,fiksi,Romance,novel,283,1,17.5,0.538,13,0.462,0.692,19.8,1
+144,4,Informatika,8,fiksi,Novel,novel,316,0,23.6,0.167,12,0.583,0.75,31.1,1
+36,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,32.6,0.625,16,0.188,0.312,19.7,1
+32,52,Informatika,4,fiksi,Action,novel,281,0,34.2,0.217,23,0.043,0.478,2.0,0
+198,13,Lainnya,1,fiksi,Romance,novel,360,0,38.5,0.25,8,0.125,0.875,23.0,1
+191,46,Teknik,7,nonfiksi,Pemrograman,buku,253,0,32.9,0.438,16,0.25,0.375,68.8,1
+150,48,Ekonomi,6,fiksi,Action,novel,218,0,26.4,0.235,17,0.059,0.588,71.0,0
+49,35,Teknik,3,nonfiksi,Hobi,TA,96,0,38.1,0.286,7,0.714,1.0,41.0,0
+67,25,Lainnya,5,fiksi,Horror,novel,299,0,29.4,0.278,18,0.056,0.722,40.0,0
+71,42,Informatika,3,nonfiksi,Pemrograman,buku,173,1,21.9,0.267,15,0.333,0.667,13.2,1
+196,41,Lainnya,4,nonfiksi,Pemrograman,buku,342,0,21.0,0.214,14,0.357,0.357,21.8,0
+42,38,Lainnya,6,nonfiksi,Hobi,TA,93,0,22.9,0.273,22,0.318,0.545,26.3,1
+139,32,Teknik,1,nonfiksi,Hobi,TA,127,1,26.4,0.261,23,0.261,0.522,44.7,1
+171,9,Informatika,6,fiksi,Novel,novel,233,1,18.7,0.13,23,0.261,0.609,15.8,1
+118,31,Informatika,1,fiksi,Horror,novel,426,0,21.1,0.235,17,0.412,0.765,27.4,1
+161,24,Ekonomi,2,fiksi,Horror,novel,290,0,43.0,0.571,7,0.143,0.857,31.0,0
+96,51,Lainnya,2,fiksi,Action,novel,432,0,10.6,0.308,13,0.0,0.846,10.6,0
+26,44,Teknik,6,nonfiksi,Pemrograman,TA,71,1,19.6,0.5,16,0.312,0.5,25.0,1
+109,7,Informatika,5,fiksi,Novel,novel,407,0,15.8,0.304,23,0.304,0.652,15.7,1
+180,52,Ekonomi,2,fiksi,Action,novel,281,0,12.4,0.182,11,0.273,0.727,17.3,0
+173,41,Informatika,5,nonfiksi,Pemrograman,buku,342,0,20.4,0.167,12,0.25,0.333,23.0,1
+109,11,Informatika,5,fiksi,Novel,novel,199,0,15.7,0.304,23,0.304,0.652,15.3,1
+9,10,Lainnya,7,fiksi,Novel,novel,339,1,23.9,0.444,9,0.556,1.0,32.0,1
+45,9,Informatika,4,fiksi,Novel,novel,233,1,24.9,0.375,8,0.5,0.625,34.2,1
+70,45,Teknik,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.8,0.273,22,0.227,0.591,24.0,1
+4,10,Informatika,2,fiksi,Novel,novel,339,1,25.3,0.5,12,0.083,0.833,29.0,0
+24,5,Teknik,7,fiksi,Novel,novel,416,0,20.7,0.4,20,0.15,0.7,12.0,0
+154,38,Informatika,6,nonfiksi,Hobi,TA,93,0,30.2,0.19,21,0.19,0.524,28.5,0
+121,48,Ekonomi,4,fiksi,Action,novel,218,0,22.1,0.143,14,0.143,0.643,21.0,0
+66,37,Informatika,5,nonfiksi,Hobi,artikel ilmiah,27,0,20.3,0.143,14,0.429,0.5,31.7,0
+98,28,Informatika,4,fiksi,Horror,novel,196,0,15.6,0.571,7,0.286,0.571,8.5,0
+110,13,Informatika,1,fiksi,Romance,novel,360,0,26.1,0.375,16,0.375,0.625,10.7,1
+165,45,Teknik,8,nonfiksi,Pemrograman,artikel ilmiah,23,0,19.7,0.263,19,0.158,0.526,9.0,0
+12,36,Teknik,5,nonfiksi,Hobi,buku,211,0,31.3,0.222,18,0.278,0.667,60.4,0
+179,4,Teknik,4,fiksi,Novel,novel,316,0,24.4,0.5,20,0.25,0.65,30.4,1
+31,43,Teknik,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,21.4,0.478,23,0.217,0.522,13.6,0
+130,29,Informatika,2,fiksi,Horror,novel,373,1,19.4,0.5,22,0.045,0.5,5.0,1
+147,28,Ekonomi,6,fiksi,Horror,novel,196,0,18.1,0.167,18,0.056,0.722,20.0,0
+102,32,Teknik,8,nonfiksi,Hobi,TA,127,1,25.3,0.385,13,0.385,0.538,34.6,0
+179,1,Teknik,4,fiksi,Novel,novel,285,0,25.5,0.5,20,0.25,0.65,35.0,1
+75,2,Lainnya,2,fiksi,Novel,novel,218,0,16.9,0.238,21,0.238,0.714,13.8,1
+137,48,Teknik,1,fiksi,Action,novel,218,0,19.1,0.222,18,0.0,0.278,19.1,0
+186,50,Informatika,7,fiksi,Action,novel,350,0,19.7,0.227,22,0.045,0.682,1.0,0
+137,18,Teknik,1,fiksi,Romance,novel,417,1,19.4,0.222,18,0.111,0.278,12.0,1
+140,26,Lainnya,4,fiksi,Horror,novel,163,0,21.2,0.19,21,0.19,0.762,17.5,1
+60,4,Informatika,8,fiksi,Novel,novel,316,0,55.7,0.429,7,0.429,1.0,97.7,1
+31,25,Teknik,2,fiksi,Horror,novel,299,0,18.4,0.435,23,0.304,0.435,18.4,1
+183,41,Teknik,8,nonfiksi,Pemrograman,buku,342,0,33.6,0.312,16,0.062,0.125,19.0,0
+133,39,Teknik,8,nonfiksi,Hobi,TA,66,0,41.5,0.227,22,0.045,0.227,2.0,0
+41,34,Informatika,3,nonfiksi,Hobi,artikel ilmiah,29,0,41.0,0.294,17,0.059,0.235,3.0,0
+161,5,Ekonomi,2,fiksi,Novel,novel,416,0,31.1,0.571,7,0.571,0.857,42.0,0
+74,29,Informatika,1,fiksi,Horror,novel,373,1,31.3,0.2,15,0.267,0.667,52.8,1
+1,22,Ekonomi,7,fiksi,Horror,novel,208,0,38.0,0.286,7,0.143,0.714,13.0,1
+2,11,Informatika,7,fiksi,Novel,novel,199,0,22.3,0.111,9,0.222,0.556,35.0,1
+35,49,Teknik,4,fiksi,Action,novel,319,1,32.4,0.273,11,0.182,0.273,51.5,0
+135,38,Informatika,1,nonfiksi,Hobi,TA,93,0,30.2,0.467,15,0.067,0.4,11.0,0
+140,6,Lainnya,4,fiksi,Novel,novel,169,0,21.1,0.238,21,0.19,0.762,24.2,0
+79,27,Lainnya,7,fiksi,Horror,novel,313,1,25.6,0.217,23,0.043,0.739,7.0,0
+41,2,Informatika,3,fiksi,Novel,novel,218,0,39.6,0.235,17,0.353,0.706,83.8,1
+196,50,Lainnya,4,fiksi,Action,novel,350,0,19.4,0.286,14,0.143,0.571,15.5,1
+24,51,Teknik,7,fiksi,Action,novel,432,0,19.6,0.35,20,0.05,0.7,13.0,1
+120,47,Ekonomi,4,fiksi,Action,novel,249,1,20.5,0.375,8,0.125,0.75,24.0,1
+5,38,Lainnya,8,nonfiksi,Hobi,TA,93,0,20.2,0.444,9,0.222,0.333,16.0,1
+144,6,Informatika,8,fiksi,Novel,novel,169,0,20.5,0.25,12,0.583,0.75,25.9,1
+64,7,Ekonomi,2,fiksi,Novel,novel,407,0,26.4,0.455,11,0.182,0.636,19.5,1
+182,25,Informatika,6,fiksi,Horror,novel,299,0,13.9,0.125,16,0.188,0.562,6.0,1
+104,16,Informatika,8,fiksi,Romance,novel,441,0,17.9,0.182,22,0.182,0.864,19.2,0
+76,40,Informatika,5,nonfiksi,Pemrograman,buku,251,0,16.1,0.6,10,0.2,0.2,22.0,1
+150,1,Ekonomi,6,fiksi,Novel,novel,285,0,23.6,0.235,17,0.235,0.588,32.5,1
+85,31,Ekonomi,1,fiksi,Horror,novel,426,0,20.9,0.143,21,0.143,0.81,20.3,1
+82,30,Teknik,8,fiksi,Horror,novel,354,0,24.8,0.375,8,0.0,0.75,24.8,1
+157,18,Lainnya,3,fiksi,Romance,novel,417,1,27.5,0.2,10,0.0,0.6,27.5,0
+75,11,Lainnya,2,fiksi,Novel,novel,199,0,16.4,0.238,21,0.238,0.714,12.0,0
+2,37,Informatika,7,nonfiksi,Hobi,artikel ilmiah,27,0,22.1,0.222,9,0.111,0.333,38.0,0
+30,45,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.2,0.333,9,0.333,0.444,39.7,1
+97,15,Informatika,7,fiksi,Romance,novel,170,0,19.6,0.333,15,0.333,0.467,22.2,0
+4,25,Informatika,2,fiksi,Horror,novel,299,0,25.5,0.5,12,0.5,0.833,31.7,1
+38,15,Teknik,3,fiksi,Romance,novel,170,0,20.3,0.333,21,0.333,0.619,33.0,1
+69,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,20.1,0.222,18,0.167,0.333,16.3,0
+7,37,Ekonomi,7,nonfiksi,Hobi,artikel ilmiah,27,0,20.2,0.182,22,0.091,0.136,10.0,1
+179,27,Teknik,4,fiksi,Horror,novel,313,1,24.4,0.5,20,0.25,0.65,20.6,1
+15,13,Lainnya,2,fiksi,Romance,novel,360,0,22.8,0.2,15,0.267,0.867,39.0,1
+39,50,Informatika,3,fiksi,Action,novel,350,0,17.5,0.167,18,0.222,0.5,14.0,1
+7,1,Ekonomi,7,fiksi,Novel,novel,285,0,19.5,0.182,22,0.182,0.818,15.2,1
+27,2,Ekonomi,6,fiksi,Novel,novel,218,0,23.5,0.095,21,0.143,0.667,15.7,1
+24,19,Teknik,7,fiksi,Romance,novel,353,0,18.0,0.35,20,0.3,0.7,22.7,1
+16,47,Teknik,7,fiksi,Action,novel,249,1,18.8,0.087,23,0.087,0.522,27.5,0
+128,8,Ekonomi,5,fiksi,Novel,novel,398,1,22.7,0.478,23,0.217,0.565,12.8,1
+113,4,Ekonomi,5,fiksi,Novel,novel,316,0,22.4,0.35,20,0.4,0.8,23.2,1
+95,30,Informatika,8,fiksi,Horror,novel,354,0,9.0,0.143,7,0.143,0.714,5.0,0
+11,37,Ekonomi,6,nonfiksi,Hobi,artikel ilmiah,27,0,19.2,0.111,9,0.111,0.111,22.0,1
+98,1,Informatika,4,fiksi,Novel,novel,285,0,17.3,0.429,7,0.143,0.571,7.0,1
+171,33,Informatika,6,nonfiksi,Hobi,buku,222,1,18.6,0.13,23,0.087,0.348,14.0,0
+121,1,Ekonomi,4,fiksi,Novel,novel,285,0,20.2,0.143,14,0.429,0.643,25.0,1
+110,52,Informatika,1,fiksi,Action,novel,281,0,27.0,0.375,16,0.125,0.625,51.5,1
+7,28,Ekonomi,7,fiksi,Horror,novel,196,0,19.8,0.227,22,0.273,0.818,26.2,1
+167,38,Lainnya,4,nonfiksi,Hobi,TA,93,0,20.5,0.368,19,0.053,0.211,12.0,1
+64,24,Ekonomi,2,fiksi,Horror,novel,290,0,21.9,0.455,11,0.364,0.636,34.8,0
+26,28,Teknik,6,fiksi,Horror,novel,196,0,19.6,0.562,16,0.125,0.438,7.0,1
+138,28,Lainnya,6,fiksi,Horror,novel,196,0,21.0,0.19,21,0.0,0.524,21.0,0
+147,49,Ekonomi,6,fiksi,Action,novel,319,1,17.6,0.111,18,0.167,0.722,21.0,1
+174,33,Informatika,8,nonfiksi,Hobi,buku,222,1,23.1,0.455,22,0.318,0.5,37.3,0
+123,24,Informatika,5,fiksi,Horror,novel,290,0,18.1,0.286,14,0.214,0.643,14.0,1
+65,44,Ekonomi,7,nonfiksi,Pemrograman,TA,71,1,28.8,0.5,8,0.125,0.25,32.0,1
+145,39,Informatika,7,nonfiksi,Hobi,TA,66,0,16.2,0.235,17,0.059,0.294,10.0,0
+151,39,Lainnya,8,nonfiksi,Hobi,TA,66,0,21.3,0.2,20,0.2,0.25,17.8,0
+72,52,Lainnya,2,fiksi,Action,novel,281,0,20.2,0.267,15,0.0,0.933,20.2,1
+55,42,Informatika,4,nonfiksi,Pemrograman,buku,173,1,15.9,0.111,9,0.333,0.444,27.7,1
+176,18,Informatika,3,fiksi,Romance,novel,417,1,12.9,0.167,18,0.111,0.5,7.5,0
+94,1,Ekonomi,8,fiksi,Novel,novel,285,0,24.4,0.562,16,0.375,0.562,29.2,1
+169,18,Informatika,4,fiksi,Romance,novel,417,1,16.2,0.217,23,0.13,0.696,23.0,1
+150,10,Ekonomi,6,fiksi,Novel,novel,339,1,26.2,0.235,17,0.235,0.588,43.2,1
+131,14,Lainnya,5,fiksi,Romance,novel,256,0,25.8,0.381,21,0.0,0.619,25.8,0
+8,23,Informatika,5,fiksi,Horror,novel,259,0,24.1,0.2,15,0.333,0.467,37.6,0
+185,1,Lainnya,6,fiksi,Novel,novel,285,0,18.4,0.3,10,0.6,0.9,24.0,1
+13,4,Informatika,7,fiksi,Novel,novel,316,0,30.9,0.286,14,0.071,0.5,5.0,1
+80,24,Informatika,8,fiksi,Horror,novel,290,0,21.6,0.13,23,0.043,0.522,35.0,0
+108,35,Teknik,6,nonfiksi,Hobi,TA,96,0,16.0,0.0,20,0.3,0.4,17.7,1
+169,40,Informatika,4,nonfiksi,Pemrograman,buku,251,0,15.5,0.261,23,0.13,0.261,10.0,0
+23,4,Ekonomi,4,fiksi,Novel,novel,316,0,30.0,0.333,21,0.429,0.714,43.8,1
+32,16,Informatika,4,fiksi,Romance,novel,441,0,32.2,0.217,23,0.304,0.478,71.6,0
+82,14,Teknik,8,fiksi,Romance,novel,256,0,23.8,0.375,8,0.25,0.75,7.0,1
+177,29,Informatika,7,fiksi,Horror,novel,373,1,26.4,0.333,18,0.389,0.889,36.0,1
+41,5,Informatika,3,fiksi,Novel,novel,416,0,39.9,0.235,17,0.353,0.706,84.7,1
+149,47,Teknik,3,fiksi,Action,novel,249,1,22.3,0.348,23,0.087,0.435,10.0,0
+63,16,Ekonomi,6,fiksi,Romance,novel,441,0,14.0,0.25,12,0.083,0.417,3.0,1
+172,34,Informatika,2,nonfiksi,Hobi,artikel ilmiah,29,0,32.9,0.273,11,0.0,0.364,32.9,0
+150,36,Ekonomi,6,nonfiksi,Hobi,buku,211,0,25.9,0.235,17,0.294,0.353,20.6,1
+103,1,Lainnya,7,fiksi,Novel,novel,285,0,20.3,0.444,9,0.556,0.889,30.8,1
+21,26,Lainnya,7,fiksi,Horror,novel,163,0,23.2,0.267,15,0.4,0.6,20.8,1
+137,1,Teknik,1,fiksi,Novel,novel,285,0,19.3,0.222,18,0.0,0.278,19.3,0
+138,13,Lainnya,6,fiksi,Romance,novel,360,0,20.9,0.238,21,0.095,0.524,10.0,0
+15,32,Lainnya,2,nonfiksi,Hobi,TA,127,1,23.5,0.267,15,0.067,0.067,26.0,0
+126,12,Informatika,8,fiksi,Romance,novel,377,0,19.3,0.182,22,0.182,0.591,10.2,0
+126,18,Informatika,8,fiksi,Romance,novel,417,1,20.1,0.182,22,0.182,0.591,15.0,0
+6,17,Lainnya,3,fiksi,Romance,novel,283,1,21.5,0.333,18,0.278,0.5,12.0,1
+89,37,Informatika,1,nonfiksi,Hobi,artikel ilmiah,27,0,14.6,0.467,15,0.133,0.533,16.0,0
+16,40,Teknik,7,nonfiksi,Pemrograman,buku,251,0,19.5,0.087,23,0.217,0.435,29.4,1
+23,39,Ekonomi,4,nonfiksi,Hobi,TA,66,0,30.3,0.333,21,0.238,0.238,20.8,1
+125,4,Informatika,7,fiksi,Novel,novel,316,0,30.6,0.308,13,0.077,0.692,66.0,0
+7,24,Ekonomi,7,fiksi,Horror,novel,290,0,18.5,0.182,22,0.273,0.818,21.2,1
+157,26,Lainnya,3,fiksi,Horror,novel,163,0,25.4,0.2,10,0.2,0.6,12.5,0
+67,26,Lainnya,5,fiksi,Horror,novel,163,0,27.7,0.278,18,0.056,0.722,10.0,1
+10,15,Ekonomi,6,fiksi,Romance,novel,170,0,31.1,0.286,7,0.0,0.857,31.1,0
+141,25,Lainnya,6,fiksi,Horror,novel,299,0,23.8,0.368,19,0.316,0.947,26.5,0
+61,39,Ekonomi,7,nonfiksi,Hobi,TA,66,0,21.0,0.286,7,0.286,0.571,19.5,1
+155,26,Teknik,3,fiksi,Horror,novel,163,0,24.5,0.5,8,0.0,0.25,24.5,0
+37,39,Lainnya,2,nonfiksi,Hobi,TA,66,0,16.0,0.375,8,0.75,0.75,19.3,1
+115,44,Teknik,2,nonfiksi,Pemrograman,TA,71,1,27.0,0.308,13,0.231,0.385,37.0,1
+21,31,Lainnya,7,fiksi,Horror,novel,426,0,22.2,0.267,15,0.4,0.6,18.3,1
+17,53,Informatika,5,fiksi,Fiksi,novel,198,0,23.4,0.188,16,0.0,0.5,23.4,1
+108,33,Teknik,6,nonfiksi,Hobi,buku,222,1,16.8,0.0,20,0.3,0.4,20.0,0
+96,46,Lainnya,2,nonfiksi,Pemrograman,buku,253,0,10.3,0.308,13,0.0,0.077,10.3,0
+17,32,Informatika,5,nonfiksi,Hobi,TA,127,1,23.1,0.188,16,0.25,0.438,21.5,0
+12,44,Teknik,5,nonfiksi,Pemrograman,TA,71,1,32.3,0.222,18,0.333,0.667,26.8,1
+161,34,Ekonomi,2,nonfiksi,Hobi,artikel ilmiah,29,0,41.7,0.714,7,0.0,0.0,41.7,1
+15,16,Lainnya,2,fiksi,Romance,novel,441,0,22.1,0.2,15,0.267,0.867,36.5,1
+167,41,Lainnya,4,nonfiksi,Pemrograman,buku,342,0,20.5,0.368,19,0.105,0.211,32.5,0
+66,36,Informatika,5,nonfiksi,Hobi,buku,211,0,15.2,0.143,14,0.429,0.5,19.8,0
+173,2,Informatika,5,fiksi,Novel,novel,218,0,19.6,0.167,12,0.083,0.583,20.0,0
+56,27,Lainnya,7,fiksi,Horror,novel,313,1,17.5,0.421,19,0.316,0.632,12.0,0
+20,16,Informatika,8,fiksi,Romance,novel,441,0,31.7,0.19,21,0.19,0.762,60.2,1
+28,13,Informatika,2,fiksi,Romance,novel,360,0,27.0,0.545,11,0.273,0.727,31.7,0
+35,40,Teknik,4,nonfiksi,Pemrograman,buku,251,0,32.5,0.182,11,0.182,0.636,9.0,0
+52,50,Informatika,6,fiksi,Action,novel,350,0,18.5,0.538,13,0.077,0.692,18.0,0
+114,2,Informatika,2,fiksi,Novel,novel,218,0,19.9,0.312,16,0.375,0.375,24.3,1
+104,19,Informatika,8,fiksi,Romance,novel,353,0,17.6,0.182,22,0.182,0.864,17.5,1
+38,35,Teknik,3,nonfiksi,Hobi,TA,96,0,21.0,0.333,21,0.19,0.333,15.2,1
+125,46,Informatika,7,nonfiksi,Pemrograman,buku,253,0,30.4,0.231,13,0.154,0.231,32.5,0
+103,9,Lainnya,7,fiksi,Novel,novel,233,1,14.9,0.444,9,0.556,0.889,21.0,1
+13,46,Informatika,7,nonfiksi,Pemrograman,buku,253,0,28.5,0.214,14,0.214,0.429,37.3,1
+116,37,Ekonomi,2,nonfiksi,Hobi,artikel ilmiah,27,0,20.1,0.412,17,0.176,0.294,12.3,1
+197,38,Informatika,5,nonfiksi,Hobi,TA,93,0,18.4,0.391,23,0.174,0.391,26.0,0
+88,28,Teknik,5,fiksi,Horror,novel,196,0,18.4,0.25,12,0.0,0.5,18.4,0
+128,44,Ekonomi,5,nonfiksi,Pemrograman,TA,71,1,22.8,0.478,23,0.043,0.391,6.0,0
+146,41,Lainnya,2,nonfiksi,Pemrograman,buku,342,0,19.9,0.3,10,0.4,0.4,30.0,0
+48,51,Lainnya,2,fiksi,Action,novel,432,0,19.1,0.316,19,0.158,0.526,17.3,0
+15,49,Lainnya,2,fiksi,Action,novel,319,1,23.3,0.267,15,0.2,0.867,19.0,1
+50,23,Teknik,7,fiksi,Horror,novel,259,0,38.4,0.545,11,0.455,0.727,48.6,1
+11,52,Ekonomi,6,fiksi,Action,novel,281,0,18.8,0.111,9,0.333,0.778,23.0,1
+178,21,Informatika,5,fiksi,Romance,novel,377,0,19.3,0.267,15,0.267,0.4,9.0,0
+109,40,Informatika,5,nonfiksi,Pemrograman,buku,251,0,14.9,0.348,23,0.217,0.304,14.2,1
+128,34,Ekonomi,5,nonfiksi,Hobi,artikel ilmiah,29,0,22.5,0.435,23,0.304,0.391,47.9,1
+26,11,Teknik,6,fiksi,Novel,novel,199,0,19.2,0.562,16,0.25,0.438,24.8,1
+180,50,Ekonomi,2,fiksi,Action,novel,350,0,12.6,0.182,11,0.273,0.727,18.3,1
+109,10,Informatika,5,fiksi,Novel,novel,339,1,15.7,0.348,23,0.304,0.652,15.3,0
+34,53,Informatika,2,fiksi,Fiksi,novel,198,0,25.1,0.312,16,0.0,0.562,25.1,1
+171,15,Informatika,6,fiksi,Romance,novel,170,0,18.7,0.13,23,0.13,0.609,15.0,0
+167,17,Lainnya,4,fiksi,Romance,novel,283,1,20.5,0.316,19,0.316,0.737,27.3,1
+162,28,Lainnya,8,fiksi,Horror,novel,196,0,16.7,0.083,12,0.25,0.583,14.3,0
+100,50,Informatika,4,fiksi,Action,novel,350,0,21.8,0.429,14,0.286,0.643,22.0,1
+91,7,Ekonomi,8,fiksi,Novel,novel,407,0,17.5,0.421,19,0.158,0.526,9.7,0
+87,23,Lainnya,6,fiksi,Horror,novel,259,0,20.3,0.375,16,0.062,0.938,11.0,0
+44,31,Ekonomi,4,fiksi,Horror,novel,426,0,18.8,0.25,8,0.25,0.625,18.0,1
+27,50,Ekonomi,6,fiksi,Action,novel,350,0,23.3,0.048,21,0.238,0.667,43.8,1
+190,13,Teknik,3,fiksi,Romance,novel,360,0,39.2,0.333,12,0.167,0.75,16.0,0
+181,42,Informatika,4,nonfiksi,Pemrograman,buku,173,1,20.9,0.133,15,0.4,0.533,22.7,1
+31,2,Teknik,2,fiksi,Novel,novel,218,0,21.2,0.478,23,0.087,0.435,14.5,1
+34,7,Informatika,2,fiksi,Novel,novel,407,0,23.7,0.312,16,0.438,0.562,25.7,1
+158,43,Teknik,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,22.7,0.364,11,0.273,0.545,19.0,0
+122,47,Informatika,6,fiksi,Action,novel,249,1,29.2,0.353,17,0.059,0.647,102.0,1
+16,22,Teknik,7,fiksi,Horror,novel,208,0,18.8,0.13,23,0.174,0.522,12.2,0
+160,41,Informatika,3,nonfiksi,Pemrograman,buku,342,0,33.4,0.158,19,0.316,0.474,55.0,1
+80,9,Informatika,8,fiksi,Novel,novel,233,1,21.8,0.13,23,0.174,0.522,8.0,0
+28,41,Informatika,2,nonfiksi,Pemrograman,buku,342,0,28.3,0.545,11,0.182,0.182,52.0,1
+181,4,Informatika,4,fiksi,Novel,novel,316,0,19.3,0.067,15,0.333,0.4,23.4,1
+170,26,Lainnya,2,fiksi,Horror,novel,163,0,25.0,0.25,16,0.062,0.688,5.0,0
+11,24,Ekonomi,6,fiksi,Horror,novel,290,0,19.8,0.111,9,0.222,0.778,20.0,1
+13,16,Informatika,7,fiksi,Romance,novel,441,0,29.7,0.214,14,0.214,0.5,18.0,0
+199,34,Informatika,6,nonfiksi,Hobi,artikel ilmiah,29,0,28.1,0.5,8,0.125,0.625,17.0,1
+6,44,Lainnya,3,nonfiksi,Pemrograman,TA,71,1,20.2,0.333,18,0.222,0.444,35.8,0
+96,12,Lainnya,2,fiksi,Romance,novel,377,0,10.8,0.231,13,0.462,0.846,11.0,1
+164,50,Informatika,1,fiksi,Action,novel,350,0,17.7,0.227,22,0.045,0.864,33.0,0
+179,2,Teknik,4,fiksi,Novel,novel,218,0,23.0,0.55,20,0.25,0.65,25.0,1
+52,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,17.6,0.615,13,0.077,0.231,26.0,0
+52,12,Informatika,6,fiksi,Romance,novel,377,0,17.2,0.538,13,0.462,0.692,19.3,1
+92,46,Informatika,6,nonfiksi,Pemrograman,buku,253,0,19.6,0.412,17,0.176,0.471,19.7,1
+85,21,Ekonomi,1,fiksi,Romance,novel,377,0,22.4,0.19,21,0.286,0.81,33.3,0
+129,27,Lainnya,4,fiksi,Horror,novel,313,1,30.8,0.273,11,0.364,0.727,23.2,1
+160,25,Informatika,3,fiksi,Horror,novel,299,0,35.7,0.211,19,0.158,0.474,17.0,0
+1,23,Ekonomi,7,fiksi,Horror,novel,259,0,47.3,0.429,7,0.143,0.714,78.0,0
+164,4,Informatika,1,fiksi,Novel,novel,316,0,17.8,0.227,22,0.273,0.864,10.7,0
+137,27,Teknik,1,fiksi,Horror,novel,313,1,20.1,0.222,18,0.0,0.278,20.1,0
+11,31,Ekonomi,6,fiksi,Horror,novel,426,0,17.8,0.111,9,0.222,0.778,11.0,0
+12,39,Teknik,5,nonfiksi,Hobi,TA,66,0,31.3,0.222,18,0.278,0.667,60.4,1
+18,38,Informatika,3,nonfiksi,Hobi,TA,93,0,23.2,0.462,13,0.385,0.769,15.8,0
+12,25,Teknik,5,fiksi,Horror,novel,299,0,32.3,0.222,18,0.056,0.278,10.0,0
+54,39,Teknik,7,nonfiksi,Hobi,TA,66,0,27.1,0.294,17,0.353,0.588,38.7,0
+131,43,Lainnya,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,25.6,0.381,21,0.143,0.333,17.0,1
+80,44,Informatika,8,nonfiksi,Pemrograman,TA,71,1,18.8,0.087,23,0.261,0.435,40.7,1
+192,32,Informatika,8,nonfiksi,Hobi,TA,127,1,23.4,0.25,20,0.2,0.55,16.2,0
+145,30,Informatika,7,fiksi,Horror,novel,354,0,16.6,0.176,17,0.294,0.647,26.6,1
+142,13,Teknik,6,fiksi,Romance,novel,360,0,25.2,0.444,9,0.667,0.889,35.5,1
+51,25,Informatika,8,fiksi,Horror,novel,299,0,21.3,0.455,11,0.182,0.727,10.0,0
+92,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,19.9,0.353,17,0.176,0.471,21.3,0
+104,41,Informatika,8,nonfiksi,Pemrograman,buku,342,0,18.3,0.182,22,0.091,0.091,22.0,0
+77,7,Teknik,6,fiksi,Novel,novel,407,0,20.2,0.444,18,0.278,0.5,34.4,1
+104,22,Informatika,8,fiksi,Horror,novel,208,0,16.2,0.182,22,0.409,0.864,16.7,1
+125,12,Informatika,7,fiksi,Romance,novel,377,0,30.8,0.308,13,0.231,0.692,10.3,1
+116,53,Ekonomi,2,fiksi,Fiksi,novel,198,0,20.6,0.412,17,0.0,0.647,20.6,1
+130,9,Informatika,2,fiksi,Novel,novel,233,1,18.1,0.5,22,0.273,0.5,15.3,1
+159,14,Informatika,3,fiksi,Romance,novel,256,0,33.9,0.182,22,0.409,0.636,63.6,1
+149,41,Teknik,3,nonfiksi,Pemrograman,buku,342,0,22.1,0.304,23,0.261,0.522,28.8,1
+47,42,Teknik,6,nonfiksi,Pemrograman,buku,173,1,17.1,0.308,13,0.231,0.462,13.0,0
+172,40,Informatika,2,nonfiksi,Pemrograman,buku,251,0,32.1,0.364,11,0.273,0.364,50.0,0
+131,22,Lainnya,5,fiksi,Horror,novel,208,0,24.5,0.381,21,0.333,0.619,21.7,0
+15,47,Lainnya,2,fiksi,Action,novel,249,1,23.5,0.267,15,0.2,0.867,20.0,1
+81,3,Informatika,2,fiksi,Novel,novel,177,0,21.3,0.231,13,0.154,0.385,19.0,0
+147,3,Ekonomi,6,fiksi,Novel,novel,177,0,17.9,0.167,18,0.222,0.722,23.2,1
+100,15,Informatika,4,fiksi,Romance,novel,170,0,23.5,0.429,14,0.143,0.643,15.5,0
+8,15,Informatika,5,fiksi,Romance,novel,170,0,24.0,0.2,15,0.0,0.467,24.0,0
+103,3,Lainnya,7,fiksi,Novel,novel,177,0,19.9,0.444,9,0.556,0.889,30.0,0
+135,48,Informatika,1,fiksi,Action,novel,218,0,27.5,0.467,15,0.133,0.533,15.0,1
+26,34,Teknik,6,nonfiksi,Hobi,artikel ilmiah,29,0,19.1,0.562,16,0.125,0.5,9.0,1
+18,35,Informatika,3,nonfiksi,Hobi,TA,96,0,22.0,0.538,13,0.385,0.769,12.6,0
+42,31,Lainnya,6,fiksi,Horror,novel,426,0,23.0,0.318,22,0.045,0.409,3.0,0
+141,10,Lainnya,6,fiksi,Novel,novel,339,1,24.1,0.368,19,0.158,0.947,10.3,1
+181,43,Informatika,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,20.3,0.133,15,0.4,0.533,21.3,1
+149,34,Teknik,3,nonfiksi,Hobi,artikel ilmiah,29,0,21.7,0.304,23,0.217,0.522,28.0,1
+169,50,Informatika,4,fiksi,Action,novel,350,0,15.4,0.217,23,0.13,0.696,25.7,0
+134,11,Ekonomi,7,fiksi,Novel,novel,199,0,17.0,0.091,22,0.182,0.682,20.0,1
+2,53,Informatika,7,fiksi,Fiksi,novel,198,0,22.8,0.111,9,0.0,0.556,22.8,0
+53,40,Teknik,8,nonfiksi,Pemrograman,buku,251,0,16.2,0.385,13,0.385,0.462,27.4,1
+84,47,Lainnya,6,fiksi,Action,novel,249,1,30.9,0.111,9,0.222,0.556,26.0,0
+29,53,Teknik,3,fiksi,Fiksi,novel,198,0,16.4,0.0,8,0.0,0.75,16.4,1
+106,15,Ekonomi,1,fiksi,Romance,novel,170,0,26.8,0.556,18,0.167,0.611,38.3,0
+44,24,Ekonomi,4,fiksi,Horror,novel,290,0,18.1,0.25,8,0.25,0.625,15.5,0
+109,30,Informatika,5,fiksi,Horror,novel,354,0,15.5,0.348,23,0.13,0.652,7.7,0
+110,20,Informatika,1,fiksi,Romance,novel,383,0,26.9,0.375,16,0.375,0.625,13.0,1
+170,11,Lainnya,2,fiksi,Novel,novel,199,0,25.4,0.188,16,0.375,0.688,24.3,1
+134,34,Ekonomi,7,nonfiksi,Hobi,artikel ilmiah,29,0,18.3,0.091,22,0.227,0.273,23.2,1
+54,35,Teknik,7,nonfiksi,Hobi,TA,96,0,29.0,0.353,17,0.353,0.588,44.0,0
+129,11,Lainnya,4,fiksi,Novel,novel,199,0,31.3,0.273,11,0.273,0.727,59.3,1
+113,25,Ekonomi,5,fiksi,Horror,novel,299,0,22.8,0.3,20,0.15,0.8,34.0,1
+60,50,Informatika,8,fiksi,Action,novel,350,0,51.3,0.429,7,0.143,1.0,31.0,1
+89,26,Informatika,1,fiksi,Horror,novel,163,0,13.1,0.467,15,0.267,0.4,9.8,0
+183,48,Teknik,8,fiksi,Action,novel,218,0,34.4,0.312,16,0.062,0.812,42.0,1
+104,2,Informatika,8,fiksi,Novel,novel,218,0,18.1,0.136,22,0.182,0.864,14.5,1
+87,15,Lainnya,6,fiksi,Romance,novel,170,0,19.6,0.375,16,0.125,0.938,12.0,1
+66,35,Informatika,5,nonfiksi,Hobi,TA,96,0,21.1,0.143,14,0.429,0.5,33.7,1
+83,20,Lainnya,5,fiksi,Romance,novel,383,0,18.2,0.133,15,0.4,0.933,22.7,1
+139,13,Teknik,1,fiksi,Romance,novel,360,0,26.8,0.261,23,0.217,0.435,33.2,0
+138,9,Lainnya,6,fiksi,Novel,novel,233,1,20.5,0.238,21,0.333,0.524,11.0,1
+123,43,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,19.0,0.286,14,0.214,0.286,16.3,1
+42,32,Lainnya,6,nonfiksi,Hobi,TA,127,1,22.8,0.318,22,0.318,0.545,26.1,0
+80,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,19.3,0.13,23,0.261,0.435,42.7,0
+153,8,Teknik,7,fiksi,Novel,novel,398,1,19.1,0.214,14,0.143,0.643,12.0,0
+41,1,Informatika,3,fiksi,Novel,novel,285,0,27.4,0.294,17,0.353,0.706,49.0,1
+114,35,Informatika,2,nonfiksi,Hobi,TA,96,0,23.1,0.375,16,0.125,0.562,6.0,0
+94,33,Ekonomi,8,nonfiksi,Hobi,buku,222,1,22.6,0.562,16,0.25,0.375,27.8,1
+88,45,Teknik,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,18.1,0.167,12,0.167,0.417,18.5,1
+124,32,Lainnya,6,nonfiksi,Hobi,TA,127,1,26.7,0.273,11,0.0,0.364,26.7,0
+115,4,Teknik,2,fiksi,Novel,novel,316,0,29.2,0.385,13,0.154,0.538,4.5,0
+160,32,Informatika,3,nonfiksi,Hobi,TA,127,1,35.2,0.211,19,0.105,0.474,1.5,1
+149,26,Teknik,3,fiksi,Horror,novel,163,0,21.6,0.348,23,0.217,0.435,18.6,0
+188,45,Informatika,4,nonfiksi,Pemrograman,artikel ilmiah,23,0,34.9,0.438,16,0.125,0.188,25.0,1
+191,43,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,34.6,0.375,16,0.25,0.375,75.5,1
+171,24,Informatika,6,fiksi,Horror,novel,290,0,18.8,0.13,23,0.043,0.609,11.0,1
+106,47,Ekonomi,1,fiksi,Action,novel,249,1,27.1,0.556,18,0.111,0.611,10.5,1
+12,20,Teknik,5,fiksi,Romance,novel,383,0,31.3,0.222,18,0.0,0.278,31.3,1
+98,31,Informatika,4,fiksi,Horror,novel,426,0,17.4,0.571,7,0.286,0.571,15.0,0
+130,7,Informatika,2,fiksi,Novel,novel,407,0,19.3,0.455,22,0.273,0.5,19.7,1
+80,45,Informatika,8,nonfiksi,Pemrograman,artikel ilmiah,23,0,20.7,0.13,23,0.261,0.435,47.8,1
+154,6,Informatika,6,fiksi,Novel,novel,169,0,30.5,0.19,21,0.143,0.429,24.3,1
+7,12,Ekonomi,7,fiksi,Romance,novel,377,0,18.7,0.227,22,0.045,0.818,24.0,0
+17,6,Informatika,5,fiksi,Novel,novel,169,0,23.2,0.188,16,0.188,0.5,26.7,0
+111,35,Informatika,1,nonfiksi,Hobi,TA,96,0,14.9,0.25,8,0.25,0.5,21.0,1
+169,6,Informatika,4,fiksi,Novel,novel,169,0,15.4,0.261,23,0.217,0.696,11.2,0
+100,40,Informatika,4,nonfiksi,Pemrograman,buku,251,0,21.4,0.429,14,0.286,0.286,27.0,1
+60,48,Informatika,8,fiksi,Action,novel,218,0,54.1,0.429,7,0.143,1.0,51.0,0
+177,16,Informatika,7,fiksi,Romance,novel,441,0,27.9,0.333,18,0.111,0.889,34.0,0
+39,48,Informatika,3,fiksi,Action,novel,218,0,17.2,0.167,18,0.222,0.5,12.5,0
+44,34,Ekonomi,4,nonfiksi,Hobi,artikel ilmiah,29,0,14.4,0.125,8,0.125,0.25,27.0,1
+122,8,Informatika,6,fiksi,Novel,novel,398,1,28.8,0.294,17,0.471,0.647,33.0,1
+108,24,Teknik,6,fiksi,Horror,novel,290,0,16.8,0.0,20,0.2,0.55,20.0,1
+100,52,Informatika,4,fiksi,Action,novel,281,0,23.0,0.429,14,0.286,0.643,26.2,1
+188,9,Informatika,4,fiksi,Novel,novel,233,1,34.7,0.438,16,0.125,0.75,37.0,1
+56,48,Lainnya,7,fiksi,Action,novel,218,0,16.7,0.368,19,0.158,0.632,38.7,0
+175,18,Informatika,8,fiksi,Romance,novel,417,1,17.9,0.222,9,0.222,0.667,13.0,0
+178,48,Informatika,5,fiksi,Action,novel,218,0,18.7,0.267,15,0.0,0.4,18.7,0
+78,50,Informatika,5,fiksi,Action,novel,350,0,25.7,0.286,7,0.429,0.571,8.7,0
+20,40,Informatika,8,nonfiksi,Pemrograman,buku,251,0,31.6,0.19,21,0.095,0.19,20.0,1
+6,12,Lainnya,3,fiksi,Romance,novel,377,0,21.6,0.333,18,0.278,0.5,12.4,0
+85,24,Ekonomi,1,fiksi,Horror,novel,290,0,22.5,0.143,21,0.143,0.81,31.7,1
+12,33,Teknik,5,nonfiksi,Hobi,buku,222,1,19.3,0.222,18,0.278,0.667,17.2,0
+192,34,Informatika,8,nonfiksi,Hobi,artikel ilmiah,29,0,23.5,0.3,20,0.2,0.55,16.8,0
+105,42,Informatika,8,nonfiksi,Pemrograman,buku,173,1,29.7,0.25,12,0.5,0.583,44.7,1
+191,13,Teknik,7,fiksi,Romance,novel,360,0,34.2,0.375,16,0.125,0.562,30.5,0
+130,38,Informatika,2,nonfiksi,Hobi,TA,93,0,17.9,0.5,22,0.273,0.455,25.5,1
+136,49,Informatika,7,fiksi,Action,novel,319,1,20.0,0.25,12,0.083,0.75,67.0,1
+195,22,Informatika,1,fiksi,Horror,novel,208,0,27.9,0.286,14,0.143,0.5,17.0,1
+59,36,Teknik,5,nonfiksi,Hobi,buku,211,0,17.6,0.429,14,0.071,0.5,26.0,1
+38,11,Teknik,3,fiksi,Novel,novel,199,0,20.9,0.381,21,0.095,0.619,10.0,0
+5,42,Lainnya,8,nonfiksi,Pemrograman,buku,173,1,26.2,0.333,9,0.0,0.333,26.2,0
+133,16,Teknik,8,fiksi,Romance,novel,441,0,38.5,0.227,22,0.227,0.727,82.2,1
+180,51,Ekonomi,2,fiksi,Action,novel,432,0,11.4,0.182,11,0.273,0.727,13.7,1
+112,50,Informatika,5,fiksi,Action,novel,350,0,23.5,0.4,20,0.15,0.5,19.0,1
+20,19,Informatika,8,fiksi,Romance,novel,353,0,29.5,0.19,21,0.19,0.762,48.8,0
+109,44,Informatika,5,nonfiksi,Pemrograman,TA,71,1,15.1,0.348,23,0.217,0.304,15.2,1
+58,33,Informatika,4,nonfiksi,Hobi,buku,222,1,28.5,0.182,11,0.0,0.364,28.5,0
+113,36,Ekonomi,5,nonfiksi,Hobi,buku,211,0,23.6,0.35,20,0.15,0.15,27.0,1
+130,11,Informatika,2,fiksi,Novel,novel,199,0,19.3,0.455,22,0.273,0.5,19.8,1
+123,33,Informatika,5,nonfiksi,Hobi,buku,222,1,18.9,0.286,14,0.0,0.286,18.9,0
+70,48,Teknik,1,fiksi,Action,novel,218,0,22.3,0.273,22,0.045,0.364,24.0,0
+90,47,Ekonomi,5,fiksi,Action,novel,249,1,27.5,0.615,13,0.308,0.692,28.2,1
+79,15,Lainnya,7,fiksi,Romance,novel,170,0,25.9,0.217,23,0.304,0.739,20.1,1
+26,41,Teknik,6,nonfiksi,Pemrograman,buku,342,0,19.2,0.5,16,0.312,0.5,23.6,1
+87,3,Lainnya,6,fiksi,Novel,novel,177,0,20.2,0.312,16,0.438,0.938,27.7,1
+165,5,Teknik,8,fiksi,Novel,novel,416,0,20.3,0.211,19,0.158,0.421,24.3,0
+163,9,Informatika,2,fiksi,Novel,novel,233,1,23.6,0.278,18,0.278,0.5,7.6,0
+112,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,23.8,0.4,20,0.2,0.45,20.2,0
+127,42,Teknik,7,nonfiksi,Pemrograman,buku,173,1,18.3,0.333,21,0.238,0.619,32.4,0
+15,20,Lainnya,2,fiksi,Romance,novel,383,0,22.9,0.267,15,0.267,0.867,39.2,1
+155,46,Teknik,3,nonfiksi,Pemrograman,buku,253,0,30.2,0.5,8,0.625,0.625,27.6,1
+69,46,Informatika,6,nonfiksi,Pemrograman,buku,253,0,22.7,0.222,18,0.167,0.333,32.0,1
+107,34,Lainnya,3,nonfiksi,Hobi,artikel ilmiah,29,0,18.7,0.308,13,0.154,0.154,18.0,0
+113,9,Ekonomi,5,fiksi,Novel,novel,233,1,21.2,0.35,20,0.4,0.8,20.4,1
+125,10,Informatika,7,fiksi,Novel,novel,339,1,26.2,0.308,13,0.077,0.692,9.0,0
+165,37,Teknik,8,nonfiksi,Hobi,artikel ilmiah,27,0,18.7,0.263,19,0.316,0.526,26.3,1
+169,24,Informatika,4,fiksi,Horror,novel,290,0,15.9,0.261,23,0.043,0.696,8.0,0
+145,22,Informatika,7,fiksi,Horror,novel,208,0,16.9,0.235,17,0.294,0.647,27.6,1
+106,35,Ekonomi,1,nonfiksi,Hobi,TA,96,0,24.7,0.5,18,0.278,0.333,25.4,0
+175,44,Informatika,8,nonfiksi,Pemrograman,TA,71,1,18.4,0.222,9,0.222,0.222,47.0,1
+103,50,Lainnya,7,fiksi,Action,novel,350,0,21.3,0.556,9,0.0,0.889,21.3,0
+87,44,Lainnya,6,nonfiksi,Pemrograman,TA,71,1,19.9,0.375,16,0.0,0.0,19.9,0
+85,1,Ekonomi,1,fiksi,Novel,novel,285,0,22.3,0.19,21,0.238,0.81,14.8,1
+53,14,Teknik,8,fiksi,Romance,novel,256,0,18.3,0.385,13,0.231,0.462,8.3,0
+31,45,Teknik,2,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.6,0.435,23,0.217,0.522,14.6,1
+11,47,Ekonomi,6,fiksi,Action,novel,249,1,17.6,0.111,9,0.333,0.778,19.3,1
+52,33,Informatika,6,nonfiksi,Hobi,buku,222,1,18.0,0.615,13,0.077,0.231,20.0,0
+46,8,Teknik,2,fiksi,Novel,novel,398,1,22.3,0.571,7,0.143,0.429,63.0,0
+21,23,Lainnya,7,fiksi,Horror,novel,259,0,21.9,0.2,15,0.4,0.6,17.5,1
+125,42,Informatika,7,nonfiksi,Pemrograman,buku,173,1,27.8,0.308,13,0.154,0.231,15.5,0
+173,35,Informatika,5,nonfiksi,Hobi,TA,96,0,20.0,0.167,12,0.0,0.333,20.0,0
+140,17,Lainnya,4,fiksi,Romance,novel,283,1,21.0,0.238,21,0.286,0.762,24.3,0
+138,32,Lainnya,6,nonfiksi,Hobi,TA,127,1,19.2,0.238,21,0.286,0.429,23.2,1
+71,35,Informatika,3,nonfiksi,Hobi,TA,96,0,18.1,0.333,15,0.267,0.667,32.5,1
+8,25,Informatika,5,fiksi,Horror,novel,299,0,19.7,0.2,15,0.333,0.467,24.4,0
+105,53,Informatika,8,fiksi,Fiksi,novel,198,0,37.2,0.25,12,0.0,0.333,37.2,0
+149,38,Teknik,3,nonfiksi,Hobi,TA,93,0,20.7,0.304,23,0.217,0.522,23.6,1
+187,23,Informatika,8,fiksi,Horror,novel,259,0,21.2,0.312,16,0.375,0.5,31.2,1
+32,17,Informatika,4,fiksi,Romance,novel,283,1,32.9,0.174,23,0.304,0.478,73.9,1
+6,11,Lainnya,3,fiksi,Novel,novel,199,0,21.4,0.333,18,0.056,0.5,14.0,0
+79,37,Lainnya,7,nonfiksi,Hobi,artikel ilmiah,27,0,24.8,0.217,23,0.217,0.217,10.4,0
+179,43,Teknik,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,25.4,0.5,20,0.2,0.3,23.8,1
+145,42,Informatika,7,nonfiksi,Pemrograman,buku,173,1,16.9,0.176,17,0.176,0.294,8.3,0
+116,32,Ekonomi,2,nonfiksi,Hobi,TA,127,1,22.0,0.471,17,0.176,0.294,23.0,1
+158,23,Teknik,5,fiksi,Horror,novel,259,0,24.5,0.364,11,0.0,0.364,24.5,0
+88,34,Teknik,5,nonfiksi,Hobi,artikel ilmiah,29,0,18.2,0.167,12,0.167,0.417,28.5,1
+22,28,Ekonomi,7,fiksi,Horror,novel,196,0,11.4,0.538,13,0.077,0.692,9.0,0
+110,45,Informatika,1,nonfiksi,Pemrograman,artikel ilmiah,23,0,25.7,0.438,16,0.312,0.312,31.6,0
+54,40,Teknik,7,nonfiksi,Pemrograman,buku,251,0,28.8,0.353,17,0.176,0.588,21.7,0
+80,48,Informatika,8,fiksi,Action,novel,218,0,21.4,0.13,23,0.087,0.522,6.0,0
+91,52,Ekonomi,8,fiksi,Action,novel,281,0,17.6,0.421,19,0.158,0.526,9.3,0
+179,51,Teknik,4,fiksi,Action,novel,432,0,25.6,0.5,20,0.0,0.65,25.6,1
+87,48,Lainnya,6,fiksi,Action,novel,218,0,20.1,0.312,16,0.125,0.938,18.5,0
+48,43,Lainnya,2,nonfiksi,Pemrograman,artikel ilmiah,18,1,17.9,0.263,19,0.263,0.421,21.0,1
+130,44,Informatika,2,nonfiksi,Pemrograman,TA,71,1,19.1,0.455,22,0.136,0.455,10.7,0
+100,41,Informatika,4,nonfiksi,Pemrograman,buku,342,0,21.2,0.357,14,0.286,0.286,26.2,1
+73,27,Lainnya,6,fiksi,Horror,novel,313,1,23.8,0.2,15,0.133,0.8,26.0,1
+16,41,Teknik,7,nonfiksi,Pemrograman,buku,342,0,19.3,0.13,23,0.217,0.435,28.6,1
+48,40,Lainnya,2,nonfiksi,Pemrograman,buku,251,0,18.0,0.263,19,0.263,0.421,21.4,0
+190,30,Teknik,3,fiksi,Horror,novel,354,0,37.3,0.333,12,0.333,0.75,66.8,1
+114,45,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,23,0,22.5,0.375,16,0.375,0.562,17.0,1
+72,16,Lainnya,2,fiksi,Romance,novel,441,0,21.1,0.267,15,0.533,0.933,29.6,1
+191,51,Teknik,7,fiksi,Action,novel,432,0,33.1,0.438,16,0.125,0.562,29.0,1
+12,48,Teknik,5,fiksi,Action,novel,218,0,32.1,0.222,18,0.0,0.278,32.1,0
+103,10,Lainnya,7,fiksi,Novel,novel,339,1,20.1,0.556,9,0.556,0.889,30.4,1
+152,9,Ekonomi,7,fiksi,Novel,novel,233,1,15.1,0.167,18,0.5,0.778,13.0,1
+191,42,Teknik,7,nonfiksi,Pemrograman,buku,173,1,27.9,0.438,16,0.25,0.375,49.0,1
+90,9,Ekonomi,5,fiksi,Novel,novel,233,1,27.5,0.692,13,0.231,0.692,34.3,1
+59,43,Teknik,5,nonfiksi,Pemrograman,artikel ilmiah,18,1,16.1,0.357,14,0.357,0.5,21.6,1
+3,11,Informatika,8,fiksi,Novel,novel,199,0,32.7,0.4,15,0.4,0.6,55.3,0
+46,35,Teknik,2,nonfiksi,Hobi,TA,96,0,23.0,0.429,7,0.429,0.429,20.7,1
+33,34,Informatika,4,nonfiksi,Hobi,artikel ilmiah,29,0,28.7,0.35,20,0.35,0.4,41.9,0
+127,23,Teknik,7,fiksi,Horror,novel,259,0,18.7,0.381,21,0.095,0.333,12.0,1
+139,39,Teknik,1,nonfiksi,Hobi,TA,66,0,25.0,0.261,23,0.261,0.522,39.2,1
+81,29,Informatika,2,fiksi,Horror,novel,373,1,21.7,0.231,13,0.0,0.385,21.7,0
+195,18,Informatika,1,fiksi,Romance,novel,417,1,28.3,0.286,14,0.0,0.5,28.3,1
+187,33,Informatika,8,nonfiksi,Hobi,buku,222,1,21.8,0.375,16,0.125,0.438,12.0,0
+81,10,Informatika,2,fiksi,Novel,novel,339,1,22.5,0.231,13,0.154,0.385,27.0,1
+103,15,Lainnya,7,fiksi,Romance,novel,170,0,21.2,0.444,9,0.111,0.889,6.0,0
+19,32,Teknik,5,nonfiksi,Hobi,TA,127,1,28.4,0.556,18,0.333,0.389,33.2,1
+108,38,Teknik,6,nonfiksi,Hobi,TA,93,0,16.5,0.0,20,0.3,0.4,19.2,1
+158,45,Teknik,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,23.6,0.273,11,0.273,0.545,22.3,1
+30,44,Informatika,1,nonfiksi,Pemrograman,TA,71,1,19.2,0.333,9,0.333,0.444,33.7,1
+38,14,Teknik,3,fiksi,Romance,novel,256,0,19.0,0.381,21,0.333,0.619,29.1,1
+187,45,Informatika,8,nonfiksi,Pemrograman,artikel ilmiah,23,0,20.8,0.375,16,0.25,0.438,15.0,1
+124,3,Lainnya,6,fiksi,Novel,novel,177,0,26.5,0.182,11,0.364,0.545,22.5,1
+63,44,Ekonomi,6,nonfiksi,Pemrograman,TA,71,1,13.3,0.25,12,0.083,0.5,14.0,0
+121,6,Ekonomi,4,fiksi,Novel,novel,169,0,22.9,0.143,14,0.429,0.643,31.3,1
+92,34,Informatika,6,nonfiksi,Hobi,artikel ilmiah,29,0,19.1,0.412,17,0.235,0.471,17.8,0
+174,1,Informatika,8,fiksi,Novel,novel,285,0,23.0,0.409,22,0.364,0.455,17.8,1
+91,17,Ekonomi,8,fiksi,Romance,novel,283,1,17.6,0.421,19,0.0,0.526,17.6,0
+140,9,Lainnya,4,fiksi,Novel,novel,233,1,21.3,0.238,21,0.19,0.762,25.0,0
+177,5,Informatika,7,fiksi,Novel,novel,416,0,27.8,0.278,18,0.222,0.889,20.5,0
+197,26,Informatika,5,fiksi,Horror,novel,163,0,18.5,0.391,23,0.261,0.565,22.3,1
+64,22,Ekonomi,2,fiksi,Horror,novel,208,0,24.5,0.455,11,0.364,0.636,41.8,1
+4,4,Informatika,2,fiksi,Novel,novel,316,0,24.8,0.5,12,0.083,0.833,22.0,0
+41,30,Informatika,3,fiksi,Horror,novel,354,0,40.4,0.294,17,0.059,0.706,5.0,1
+168,15,Informatika,6,fiksi,Romance,novel,170,0,16.3,0.091,11,0.273,0.455,8.3,0
+38,4,Teknik,3,fiksi,Novel,novel,316,0,20.8,0.381,21,0.095,0.619,9.0,0
+50,7,Teknik,7,fiksi,Novel,novel,407,0,37.7,0.636,11,0.182,0.727,39.0,1
+56,30,Lainnya,7,fiksi,Horror,novel,354,0,17.1,0.368,19,0.316,0.632,10.7,1
+25,36,Ekonomi,4,nonfiksi,Hobi,buku,211,0,29.7,0.417,12,0.083,0.083,66.0,1
+109,5,Informatika,5,fiksi,Novel,novel,416,0,16.0,0.348,23,0.304,0.652,16.3,0
+143,50,Ekonomi,4,fiksi,Action,novel,350,0,26.5,0.333,12,0.333,0.5,18.0,1
+160,3,Informatika,3,fiksi,Novel,novel,177,0,35.1,0.211,19,0.263,0.474,41.0,1
+121,8,Ekonomi,4,fiksi,Novel,novel,398,1,24.0,0.143,14,0.429,0.643,33.8,1
+193,28,Informatika,6,fiksi,Horror,novel,196,0,22.0,0.2,15,0.133,0.8,6.0,0
+13,18,Informatika,7,fiksi,Romance,novel,417,1,29.6,0.286,14,0.214,0.5,17.7,0
+121,34,Ekonomi,4,nonfiksi,Hobi,artikel ilmiah,29,0,24.5,0.143,14,0.214,0.286,11.3,1
+127,15,Teknik,7,fiksi,Romance,novel,170,0,18.9,0.381,21,0.095,0.333,10.5,0
+129,28,Lainnya,4,fiksi,Horror,novel,196,0,30.2,0.273,11,0.364,0.727,21.5,1
+82,34,Teknik,8,nonfiksi,Hobi,artikel ilmiah,29,0,27.2,0.375,8,0.125,0.125,14.0,1
+178,18,Informatika,5,fiksi,Romance,novel,417,1,18.7,0.267,15,0.267,0.4,6.5,0
+118,48,Informatika,1,fiksi,Action,novel,218,0,21.2,0.294,17,0.059,0.765,9.0,0
+19,35,Teknik,5,nonfiksi,Hobi,TA,96,0,28.8,0.5,18,0.333,0.389,34.2,1
+130,45,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,23,0,19.3,0.5,22,0.136,0.455,11.7,0
+171,8,Informatika,6,fiksi,Novel,novel,398,1,18.7,0.13,23,0.261,0.609,16.0,0
+200,36,Lainnya,5,nonfiksi,Hobi,buku,211,0,31.9,0.25,8,0.0,0.5,31.9,0
+94,35,Ekonomi,8,nonfiksi,Hobi,TA,96,0,24.5,0.625,16,0.25,0.375,35.5,1
+70,32,Teknik,1,nonfiksi,Hobi,TA,127,1,21.7,0.273,22,0.318,0.591,20.9,1
+83,24,Lainnya,5,fiksi,Horror,novel,290,0,22.0,0.133,15,0.2,0.933,19.0,1
+141,47,Lainnya,6,fiksi,Action,novel,249,1,23.8,0.368,19,0.053,0.947,12.0,0
+166,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.6,0.25,16,0.375,0.438,37.2,1
+57,25,Lainnya,3,fiksi,Horror,novel,299,0,22.7,0.286,7,0.143,0.857,22.0,1
+68,40,Informatika,7,nonfiksi,Pemrograman,buku,251,0,24.3,0.095,21,0.286,0.524,52.8,1
+134,39,Ekonomi,7,nonfiksi,Hobi,TA,66,0,18.5,0.091,22,0.227,0.273,24.0,0
+132,45,Informatika,2,nonfiksi,Pemrograman,artikel ilmiah,23,0,29.3,0.4,10,0.1,0.2,4.0,0
+96,22,Lainnya,2,fiksi,Horror,novel,208,0,10.9,0.308,13,0.154,0.846,8.0,0
+62,42,Informatika,4,nonfiksi,Pemrograman,buku,173,1,18.9,0.143,7,0.0,0.0,18.9,1
+75,10,Lainnya,2,fiksi,Novel,novel,339,1,17.4,0.238,21,0.238,0.714,16.0,1
+148,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,21.2,0.154,13,0.231,0.385,41.0,1
+177,41,Informatika,7,nonfiksi,Pemrograman,buku,342,0,28.4,0.333,18,0.056,0.056,5.0,0
+135,42,Informatika,1,nonfiksi,Pemrograman,buku,173,1,28.7,0.4,15,0.267,0.4,34.0,1
+94,50,Ekonomi,8,fiksi,Action,novel,350,0,25.2,0.562,16,0.062,0.562,3.0,0
+16,25,Teknik,7,fiksi,Horror,novel,299,0,19.4,0.13,23,0.174,0.522,15.8,0
+89,24,Informatika,1,fiksi,Horror,novel,290,0,14.1,0.467,15,0.267,0.4,13.5,0
+128,27,Ekonomi,5,fiksi,Horror,novel,313,1,23.0,0.478,23,0.0,0.565,23.0,0
+100,13,Informatika,4,fiksi,Romance,novel,360,0,22.5,0.429,14,0.143,0.643,8.5,0
+16,50,Teknik,7,fiksi,Action,novel,350,0,19.4,0.13,23,0.087,0.522,34.5,1
+79,32,Lainnya,7,nonfiksi,Hobi,TA,127,1,26.0,0.217,23,0.217,0.217,15.6,0
+190,35,Teknik,3,nonfiksi,Hobi,TA,96,0,38.7,0.333,12,0.167,0.167,44.5,1
+76,45,Informatika,5,nonfiksi,Pemrograman,artikel ilmiah,23,0,25.6,0.6,10,0.2,0.2,69.5,1
+42,42,Lainnya,6,nonfiksi,Pemrograman,buku,173,1,19.9,0.318,22,0.182,0.545,8.2,0
+31,44,Teknik,2,nonfiksi,Pemrograman,TA,71,1,21.7,0.435,23,0.217,0.522,15.2,1
+79,34,Lainnya,7,nonfiksi,Hobi,artikel ilmiah,29,0,25.8,0.217,23,0.217,0.217,14.8,0
+112,16,Informatika,5,fiksi,Romance,novel,441,0,22.6,0.4,20,0.2,0.5,20.8,0
+100,47,Informatika,4,fiksi,Action,novel,249,1,21.5,0.429,14,0.286,0.643,21.0,1
+104,15,Informatika,8,fiksi,Romance,novel,170,0,17.0,0.182,22,0.182,0.864,14.0,1
+7,2,Ekonomi,7,fiksi,Novel,novel,218,0,19.5,0.227,22,0.182,0.818,15.2,1
+170,3,Lainnya,2,fiksi,Novel,novel,177,0,23.8,0.25,16,0.375,0.688,20.2,1
+117,33,Teknik,5,nonfiksi,Hobi,buku,222,1,23.7,0.286,14,0.286,0.357,33.8,1
+106,1,Ekonomi,1,fiksi,Novel,novel,285,0,25.5,0.5,18,0.222,0.611,32.0,1
+92,31,Informatika,6,fiksi,Horror,novel,426,0,20.6,0.412,17,0.118,0.471,7.0,1
+142,16,Teknik,6,fiksi,Romance,novel,441,0,24.9,0.444,9,0.667,0.889,35.0,1
+200,46,Lainnya,5,nonfiksi,Pemrograman,buku,253,0,28.4,0.375,8,0.375,0.5,49.3,0
+1,3,Ekonomi,7,fiksi,Novel,novel,177,0,46.3,0.429,7,0.429,0.714,71.0,1
+120,48,Ekonomi,4,fiksi,Action,novel,218,0,19.9,0.5,8,0.125,0.75,19.0,0
+171,51,Informatika,6,fiksi,Action,novel,432,0,18.8,0.13,23,0.043,0.609,8.0,0
+31,29,Teknik,2,fiksi,Horror,novel,373,1,21.2,0.478,23,0.304,0.435,27.6,1
+158,8,Teknik,5,fiksi,Novel,novel,398,1,24.0,0.364,11,0.0,0.364,24.0,0
+181,41,Informatika,4,nonfiksi,Pemrograman,buku,342,0,20.5,0.133,15,0.4,0.533,21.7,1
+52,18,Informatika,6,fiksi,Romance,novel,417,1,16.8,0.538,13,0.462,0.692,18.3,1
+120,27,Ekonomi,4,fiksi,Horror,novel,313,1,20.5,0.5,8,0.25,0.75,17.5,0
+128,35,Ekonomi,5,nonfiksi,Hobi,TA,96,0,22.3,0.435,23,0.304,0.391,47.4,0
+101,23,Informatika,7,fiksi,Horror,novel,259,0,18.2,0.385,13,0.231,0.538,11.0,1
+177,28,Informatika,7,fiksi,Horror,novel,196,0,26.7,0.333,18,0.389,0.889,36.6,1
+34,11,Informatika,2,fiksi,Novel,novel,199,0,24.8,0.312,16,0.438,0.562,28.1,1
+156,43,Ekonomi,7,nonfiksi,Pemrograman,artikel ilmiah,18,1,17.7,0.048,21,0.095,0.19,11.0,0
+35,32,Teknik,4,nonfiksi,Hobi,TA,127,1,29.6,0.182,11,0.364,0.636,39.0,1
+19,14,Teknik,5,fiksi,Romance,novel,256,0,27.6,0.5,18,0.278,0.556,31.4,1
+135,44,Informatika,1,nonfiksi,Pemrograman,TA,71,1,23.6,0.4,15,0.267,0.4,14.8,1
+141,36,Lainnya,6,nonfiksi,Hobi,buku,211,0,24.0,0.368,19,0.0,0.0,24.0,0
+69,3,Informatika,6,fiksi,Novel,novel,177,0,19.3,0.222,18,0.5,0.611,20.9,0
+7,31,Ekonomi,7,fiksi,Horror,novel,426,0,19.4,0.227,22,0.273,0.818,24.7,1
+156,53,Ekonomi,7,fiksi,Fiksi,novel,198,0,16.6,0.048,21,0.0,0.762,16.6,0
+87,4,Lainnya,6,fiksi,Novel,novel,316,0,20.6,0.375,16,0.438,0.938,28.4,1
+101,45,Informatika,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,16.2,0.308,13,0.308,0.385,26.5,1
+131,50,Lainnya,5,fiksi,Action,novel,350,0,24.9,0.333,21,0.143,0.619,29.7,1
+137,37,Teknik,1,nonfiksi,Hobi,artikel ilmiah,27,0,18.9,0.222,18,0.333,0.667,15.5,0
+55,16,Informatika,4,fiksi,Romance,novel,441,0,17.4,0.222,9,0.222,0.444,8.5,1
+115,48,Teknik,2,fiksi,Action,novel,218,0,29.3,0.308,13,0.231,0.538,27.0,0
+78,35,Informatika,5,nonfiksi,Hobi,TA,96,0,34.0,0.286,7,0.143,0.286,17.0,0
+46,38,Teknik,2,nonfiksi,Hobi,TA,93,0,20.4,0.571,7,0.429,0.429,14.7,1
+62,27,Informatika,4,fiksi,Horror,novel,313,1,19.0,0.143,7,0.286,0.857,12.0,0
+36,35,Informatika,5,nonfiksi,Hobi,TA,96,0,32.1,0.625,16,0.062,0.312,13.0,1
+4,44,Informatika,2,nonfiksi,Pemrograman,TA,71,1,25.8,0.5,12,0.083,0.083,8.0,1
+81,4,Informatika,2,fiksi,Novel,novel,316,0,21.0,0.231,13,0.154,0.385,17.0,0
+6,42,Lainnya,3,nonfiksi,Pemrograman,buku,173,1,18.1,0.278,18,0.222,0.444,26.0,0
+108,45,Teknik,6,nonfiksi,Pemrograman,artikel ilmiah,23,0,16.0,0.0,20,0.05,0.4,5.0,0
+100,45,Informatika,4,nonfiksi,Pemrograman,artikel ilmiah,23,0,21.4,0.357,14,0.286,0.286,27.0,1
+178,17,Informatika,5,fiksi,Romance,novel,283,1,18.9,0.267,15,0.267,0.4,7.2,0
+47,39,Teknik,6,nonfiksi,Hobi,TA,66,0,19.0,0.385,13,0.154,0.462,8.0,0
+110,50,Informatika,1,fiksi,Action,novel,350,0,26.7,0.438,16,0.125,0.625,49.0,1
+66,39,Informatika,5,nonfiksi,Hobi,TA,66,0,21.4,0.071,14,0.429,0.5,34.3,0
+91,47,Ekonomi,8,fiksi,Action,novel,249,1,17.6,0.368,19,0.158,0.526,9.7,0
+127,41,Teknik,7,nonfiksi,Pemrograman,buku,342,0,18.7,0.381,21,0.238,0.619,34.0,0
+140,16,Lainnya,4,fiksi,Romance,novel,441,0,21.7,0.238,21,0.286,0.762,27.0,0
+27,43,Ekonomi,6,nonfiksi,Pemrograman,artikel ilmiah,18,1,23.8,0.095,21,0.095,0.286,29.0,0
+133,13,Teknik,8,fiksi,Romance,novel,360,0,40.5,0.182,22,0.227,0.727,90.8,1
+94,4,Ekonomi,8,fiksi,Novel,novel,316,0,24.7,0.625,16,0.375,0.562,29.8,1
+58,46,Informatika,4,nonfiksi,Pemrograman,buku,253,0,23.5,0.273,11,0.273,0.364,18.7,1
+19,19,Teknik,5,fiksi,Romance,novel,353,0,28.3,0.556,18,0.278,0.556,34.0,0
+114,4,Informatika,2,fiksi,Novel,novel,316,0,23.8,0.375,16,0.375,0.375,34.8,1
+103,2,Lainnya,7,fiksi,Novel,novel,218,0,19.4,0.444,9,0.556,0.889,29.2,1
+153,22,Teknik,7,fiksi,Horror,novel,208,0,18.6,0.214,14,0.143,0.643,13.5,0
+75,31,Lainnya,2,fiksi,Horror,novel,426,0,17.1,0.19,21,0.238,0.714,12.0,0
+81,34,Informatika,2,nonfiksi,Hobi,artikel ilmiah,29,0,21.5,0.154,13,0.231,0.538,34.7,1
+69,4,Informatika,6,fiksi,Novel,novel,316,0,23.7,0.167,18,0.5,0.611,29.7,1
+190,28,Teknik,3,fiksi,Horror,novel,196,0,36.6,0.333,12,0.333,0.75,64.5,1
+4,28,Informatika,2,fiksi,Horror,novel,196,0,26.5,0.417,12,0.5,0.833,33.7,1
+16,44,Teknik,7,nonfiksi,Pemrograman,TA,71,1,16.9,0.13,23,0.217,0.435,17.4,0
+149,22,Teknik,3,fiksi,Horror,novel,208,0,22.2,0.348,23,0.217,0.435,21.4,0
+196,51,Lainnya,4,fiksi,Action,novel,432,0,22.1,0.286,14,0.143,0.571,35.0,0
+110,5,Informatika,1,fiksi,Novel,novel,416,0,25.0,0.438,16,0.0,0.625,25.0,0
+116,23,Ekonomi,2,fiksi,Horror,novel,259,0,21.6,0.412,17,0.176,0.647,10.3,0
+196,46,Lainnya,4,nonfiksi,Pemrograman,buku,253,0,22.8,0.286,14,0.357,0.357,26.8,1
+22,34,Ekonomi,7,nonfiksi,Hobi,artikel ilmiah,29,0,11.1,0.538,13,0.231,0.231,14.0,0
+134,5,Ekonomi,7,fiksi,Novel,novel,416,0,16.6,0.091,22,0.182,0.682,18.0,1
+118,26,Informatika,1,fiksi,Horror,novel,163,0,19.9,0.294,17,0.412,0.765,24.7,1
+195,42,Informatika,1,nonfiksi,Pemrograman,buku,173,1,27.9,0.286,14,0.429,0.429,25.2,1
+165,33,Teknik,8,nonfiksi,Hobi,buku,222,1,20.2,0.263,19,0.316,0.526,31.0,1
+72,23,Lainnya,2,fiksi,Horror,novel,259,0,20.9,0.267,15,0.067,0.933,4.0,0
+21,42,Lainnya,7,nonfiksi,Pemrograman,buku,173,1,21.1,0.2,15,0.333,0.333,23.8,1
+34,2,Informatika,2,fiksi,Novel,novel,218,0,25.7,0.312,16,0.438,0.562,30.3,1
+59,42,Teknik,5,nonfiksi,Pemrograman,buku,173,1,15.4,0.429,14,0.357,0.5,19.8,1
+170,30,Lainnya,2,fiksi,Horror,novel,354,0,25.5,0.25,16,0.062,0.688,13.0,0
+166,40,Informatika,5,nonfiksi,Pemrograman,buku,251,0,19.2,0.25,16,0.375,0.438,30.8,1
+164,42,Informatika,1,nonfiksi,Pemrograman,buku,173,1,17.1,0.227,22,0.091,0.091,12.0,1
+63,33,Ekonomi,6,nonfiksi,Hobi,buku,222,1,14.2,0.167,12,0.333,0.5,21.5,0
+127,12,Teknik,7,fiksi,Romance,novel,377,0,18.7,0.381,21,0.095,0.333,8.5,0
+56,32,Lainnya,7,nonfiksi,Hobi,TA,127,1,16.7,0.368,19,0.211,0.316,9.0,0
+19,34,Teknik,5,nonfiksi,Hobi,artikel ilmiah,29,0,28.6,0.556,18,0.333,0.389,33.5,1
+145,14,Informatika,7,fiksi,Romance,novel,256,0,16.9,0.235,17,0.235,0.647,9.8,1
+140,12,Lainnya,4,fiksi,Romance,novel,377,0,19.0,0.238,21,0.286,0.762,17.3,1
+3,39,Informatika,8,nonfiksi,Hobi,TA,66,0,33.3,0.4,15,0.133,0.333,14.5,0
+128,33,Ekonomi,5,nonfiksi,Hobi,buku,222,1,22.9,0.435,23,0.304,0.391,49.1,1
+196,42,Lainnya,4,nonfiksi,Pemrograman,buku,173,1,20.6,0.286,14,0.357,0.357,20.6,1
+67,52,Lainnya,5,fiksi,Action,novel,281,0,28.3,0.278,18,0.222,0.722,30.5,1
+79,52,Lainnya,7,fiksi,Action,novel,281,0,23.7,0.217,23,0.217,0.739,38.4,0
+163,46,Informatika,2,nonfiksi,Pemrograman,buku,253,0,20.5,0.222,18,0.333,0.444,34.0,1
+122,2,Informatika,6,fiksi,Novel,novel,218,0,28.6,0.353,17,0.471,0.647,32.6,0
+166,41,Informatika,5,nonfiksi,Pemrograman,buku,342,0,18.7,0.188,16,0.375,0.438,29.3,0
+113,27,Ekonomi,5,fiksi,Horror,novel,313,1,20.8,0.35,20,0.15,0.8,20.7,0
+188,18,Informatika,4,fiksi,Romance,novel,417,1,34.6,0.375,16,0.312,0.75,26.8,0
+32,33,Informatika,4,nonfiksi,Hobi,buku,222,1,34.3,0.217,23,0.174,0.478,8.8,0
+96,25,Lainnya,2,fiksi,Horror,novel,299,0,11.2,0.308,13,0.154,0.846,10.0,0
+163,40,Informatika,2,nonfiksi,Pemrograman,buku,251,0,24.2,0.222,18,0.333,0.444,45.2,1
+26,35,Teknik,6,nonfiksi,Hobi,TA,96,0,20.1,0.562,16,0.125,0.5,17.0,1
+5,52,Lainnya,8,fiksi,Action,novel,281,0,25.3,0.333,9,0.222,0.556,12.0,0
+177,25,Informatika,7,fiksi,Horror,novel,299,0,28.2,0.278,18,0.389,0.889,40.4,1
+51,29,Informatika,8,fiksi,Horror,novel,373,1,21.3,0.455,11,0.182,0.727,10.0,1
+193,9,Informatika,6,fiksi,Novel,novel,233,1,22.5,0.2,15,0.133,0.8,27.0,0
+26,10,Teknik,6,fiksi,Novel,novel,339,1,19.1,0.5,16,0.25,0.438,24.2,1
+6,43,Lainnya,3,nonfiksi,Pemrograman,artikel ilmiah,18,1,21.4,0.333,18,0.222,0.444,41.0,1
+89,38,Informatika,1,nonfiksi,Hobi,TA,93,0,14.5,0.467,15,0.133,0.533,15.0,0
+125,53,Informatika,7,fiksi,Fiksi,novel,198,0,29.8,0.231,13,0.0,0.692,29.8,1
+55,13,Informatika,4,fiksi,Romance,novel,360,0,18.2,0.222,9,0.222,0.444,12.0,0
+169,20,Informatika,4,fiksi,Romance,novel,383,0,14.6,0.261,23,0.13,0.696,11.0,0
+196,43,Lainnya,4,nonfiksi,Pemrograman,artikel ilmiah,18,1,23.2,0.286,14,0.357,0.357,28.0,0
+81,32,Informatika,2,nonfiksi,Hobi,TA,127,1,22.7,0.231,13,0.231,0.538,39.7,0
+183,27,Teknik,8,fiksi,Horror,novel,313,1,33.7,0.375,16,0.188,0.812,33.7,0
+76,48,Informatika,5,fiksi,Action,novel,218,0,25.5,0.5,10,0.1,0.7,7.0,1
+171,1,Informatika,6,fiksi,Novel,novel,285,0,18.7,0.13,23,0.261,0.609,15.8,1
+142,17,Teknik,6,fiksi,Romance,novel,283,1,23.2,0.333,9,0.667,0.889,32.5,0
+135,46,Informatika,1,nonfiksi,Pemrograman,buku,253,0,29.6,0.467,15,0.267,0.4,37.2,1
+165,24,Teknik,8,fiksi,Horror,novel,290,0,20.0,0.263,19,0.105,0.421,17.5,0
+152,3,Ekonomi,7,fiksi,Novel,novel,177,0,15.6,0.222,18,0.5,0.778,14.0,1
+180,49,Ekonomi,2,fiksi,Action,novel,319,1,13.5,0.091,11,0.273,0.727,21.7,1
+96,35,Lainnya,2,nonfiksi,Hobi,TA,96,0,10.4,0.308,13,0.0,0.077,10.4,0
+19,22,Teknik,5,fiksi,Horror,novel,208,0,28.8,0.556,18,0.167,0.556,28.7,1
+113,8,Ekonomi,5,fiksi,Novel,novel,398,1,23.7,0.35,20,0.4,0.8,26.5,1
+138,5,Lainnya,6,fiksi,Novel,novel,416,0,20.3,0.238,21,0.333,0.524,10.6,0
+99,34,Lainnya,5,nonfiksi,Hobi,artikel ilmiah,29,0,14.4,0.375,16,0.062,0.188,6.0,0
+168,42,Informatika,6,nonfiksi,Pemrograman,buku,173,1,14.9,0.091,11,0.455,0.455,23.2,1
+106,39,Ekonomi,1,nonfiksi,Hobi,TA,66,0,25.4,0.5,18,0.278,0.333,28.0,1
+109,1,Informatika,5,fiksi,Novel,novel,285,0,15.7,0.304,23,0.304,0.652,15.1,1
+19,44,Teknik,5,nonfiksi,Pemrograman,TA,71,1,28.2,0.556,18,0.0,0.389,28.2,0
+182,14,Informatika,6,fiksi,Romance,novel,256,0,13.2,0.125,16,0.125,0.562,12.5,0
+62,2,Informatika,4,fiksi,Novel,novel,218,0,18.9,0.143,7,0.429,0.857,26.3,0
+133,19,Teknik,8,fiksi,Romance,novel,353,0,40.6,0.227,22,0.227,0.727,91.6,0
+146,2,Lainnya,2,fiksi,Novel,novel,218,0,19.5,0.4,10,0.2,0.5,10.5,0
+176,45,Informatika,3,nonfiksi,Pemrograman,artikel ilmiah,23,0,12.4,0.167,18,0.278,0.444,22.8,1
+15,26,Lainnya,2,fiksi,Horror,novel,163,0,22.1,0.267,15,0.267,0.867,15.2,1
+70,36,Teknik,1,nonfiksi,Hobi,buku,211,0,22.3,0.273,22,0.318,0.591,22.9,1
+176,38,Informatika,3,nonfiksi,Hobi,TA,93,0,12.8,0.167,18,0.111,0.444,9.0,0
+134,36,Ekonomi,7,nonfiksi,Hobi,buku,211,0,17.6,0.091,22,0.227,0.273,20.2,0
+7,10,Ekonomi,7,fiksi,Novel,novel,339,1,20.3,0.227,22,0.182,0.818,19.5,1
+19,39,Teknik,5,nonfiksi,Hobi,TA,66,0,28.4,0.5,18,0.333,0.389,33.0,1
+47,28,Teknik,6,fiksi,Horror,novel,196,0,16.0,0.385,13,0.308,0.462,18.5,0
+193,51,Informatika,6,fiksi,Action,novel,432,0,22.5,0.2,15,0.0,0.8,22.5,1
+24,45,Teknik,7,nonfiksi,Pemrograman,artikel ilmiah,23,0,19.7,0.35,20,0.1,0.25,26.5,1
+188,41,Informatika,4,nonfiksi,Pemrograman,buku,342,0,34.6,0.438,16,0.125,0.188,23.0,1
+132,16,Informatika,2,fiksi,Romance,novel,441,0,27.8,0.4,10,0.1,0.7,27.0,0
+174,48,Informatika,8,fiksi,Action,novel,218,0,24.5,0.455,22,0.045,0.455,11.0,0
+2,50,Informatika,7,fiksi,Action,novel,350,0,22.9,0.222,9,0.111,0.556,51.0,1
+121,32,Ekonomi,4,nonfiksi,Hobi,TA,127,1,23.3,0.143,14,0.214,0.286,5.7,1
+178,33,Informatika,5,nonfiksi,Hobi,buku,222,1,19.3,0.267,15,0.067,0.533,19.0,0
+127,33,Teknik,7,nonfiksi,Hobi,buku,222,1,18.8,0.381,21,0.333,0.619,16.9,1
+53,44,Teknik,8,nonfiksi,Pemrograman,TA,71,1,18.0,0.308,13,0.385,0.462,32.2,1
+29,39,Teknik,3,nonfiksi,Hobi,TA,66,0,11.5,0.125,8,0.0,0.125,11.5,1
+155,43,Teknik,3,nonfiksi,Pemrograman,artikel ilmiah,18,1,29.5,0.5,8,0.625,0.625,26.4,0
+108,2,Teknik,6,fiksi,Novel,novel,218,0,16.2,0.0,20,0.15,0.55,13.3,0
+181,10,Informatika,4,fiksi,Novel,novel,339,1,19.4,0.133,15,0.333,0.4,23.8,1
+106,34,Ekonomi,1,nonfiksi,Hobi,artikel ilmiah,29,0,26.9,0.556,18,0.278,0.333,33.6,1
+188,13,Informatika,4,fiksi,Romance,novel,360,0,36.6,0.438,16,0.312,0.75,33.4,1
+74,22,Informatika,1,fiksi,Horror,novel,208,0,30.5,0.267,15,0.267,0.667,49.5,1
+39,41,Informatika,3,nonfiksi,Pemrograman,buku,342,0,16.8,0.111,18,0.333,0.444,28.7,1
+170,7,Lainnya,2,fiksi,Novel,novel,407,0,25.1,0.25,16,0.375,0.688,23.5,1
+31,37,Teknik,2,nonfiksi,Hobi,artikel ilmiah,27,0,21.5,0.478,23,0.261,0.522,25.8,1
+155,42,Teknik,3,nonfiksi,Pemrograman,buku,173,1,27.9,0.5,8,0.625,0.625,23.8,1
+19,13,Teknik,5,fiksi,Romance,novel,360,0,27.4,0.556,18,0.278,0.556,30.8,1
+55,48,Informatika,4,fiksi,Action,novel,218,0,18.3,0.222,9,0.111,0.444,4.0,1
+76,2,Informatika,5,fiksi,Novel,novel,218,0,25.7,0.5,10,0.4,0.7,17.5,0
+197,27,Informatika,5,fiksi,Horror,novel,313,1,17.7,0.391,23,0.261,0.565,19.5,1
+188,30,Informatika,4,fiksi,Horror,novel,354,0,32.2,0.438,16,0.188,0.75,46.0,1
+67,21,Lainnya,5,fiksi,Romance,novel,377,0,24.1,0.278,18,0.167,0.722,16.7,1
+110,15,Informatika,1,fiksi,Romance,novel,170,0,27.4,0.438,16,0.375,0.625,14.2,1
+57,38,Lainnya,3,nonfiksi,Hobi,TA,93,0,22.0,0.286,7,0.0,0.0,22.0,0
+179,24,Teknik,4,fiksi,Horror,novel,290,0,23.3,0.5,20,0.25,0.65,16.2,1
+137,46,Teknik,1,nonfiksi,Pemrograman,buku,253,0,17.8,0.222,18,0.278,0.667,20.2,1
+18,51,Informatika,3,fiksi,Action,novel,432,0,21.0,0.462,13,0.154,0.154,14.5,1
+192,45,Informatika,8,nonfiksi,Pemrograman,artikel ilmiah,23,0,23.3,0.3,20,0.3,0.55,36.0,1
+47,49,Teknik,6,fiksi,Action,novel,319,1,18.4,0.385,13,0.0,0.462,18.4,1
+113,30,Ekonomi,5,fiksi,Horror,novel,354,0,23.5,0.3,20,0.15,0.8,38.3,0
+187,29,Informatika,8,fiksi,Horror,novel,373,1,19.9,0.312,16,0.375,0.5,27.7,1
+79,16,Lainnya,7,fiksi,Romance,novel,441,0,26.0,0.174,23,0.304,0.739,20.6,1
+160,2,Informatika,3,fiksi,Novel,novel,218,0,31.4,0.211,19,0.263,0.474,27.2,0
+54,34,Teknik,7,nonfiksi,Hobi,artikel ilmiah,29,0,27.1,0.294,17,0.353,0.588,38.7,1
+158,39,Teknik,5,nonfiksi,Hobi,TA,66,0,23.7,0.364,11,0.182,0.545,53.0,1
+21,50,Lainnya,7,fiksi,Action,novel,350,0,22.9,0.267,15,0.067,0.6,12.0,0
+134,35,Ekonomi,7,nonfiksi,Hobi,TA,96,0,18.5,0.091,22,0.227,0.273,24.0,1
+143,49,Ekonomi,4,fiksi,Action,novel,319,1,25.7,0.25,12,0.333,0.5,15.5,0
+72,18,Lainnya,2,fiksi,Romance,novel,417,1,20.5,0.2,15,0.533,0.933,28.5,1
+18,42,Informatika,3,nonfiksi,Pemrograman,buku,173,1,19.4,0.538,13,0.308,0.769,25.2,1
+90,3,Ekonomi,5,fiksi,Novel,novel,177,0,22.9,0.615,13,0.231,0.692,14.3,1
+116,25,Ekonomi,2,fiksi,Horror,novel,299,0,21.5,0.471,17,0.176,0.647,10.0,0
+23,8,Ekonomi,4,fiksi,Novel,novel,398,1,27.9,0.286,21,0.429,0.714,38.9,1
+106,40,Ekonomi,1,nonfiksi,Pemrograman,buku,251,0,27.0,0.556,18,0.0,0.333,27.0,0
+32,44,Informatika,4,nonfiksi,Pemrograman,TA,71,1,34.3,0.217,23,0.261,0.478,24.2,1
+34,8,Informatika,2,fiksi,Novel,novel,398,1,25.4,0.312,16,0.438,0.562,29.6,1
+180,28,Ekonomi,2,fiksi,Horror,novel,196,0,12.6,0.182,11,0.182,0.727,8.5,0
+46,36,Teknik,2,nonfiksi,Hobi,buku,211,0,20.0,0.429,7,0.429,0.429,13.7,1
+16,4,Teknik,7,fiksi,Novel,novel,316,0,19.4,0.13,23,0.174,0.522,21.5,1
+141,13,Lainnya,6,fiksi,Romance,novel,360,0,22.6,0.316,19,0.211,0.947,43.8,1
+23,11,Ekonomi,4,fiksi,Novel,novel,199,0,24.7,0.286,21,0.429,0.714,31.3,1
+170,8,Lainnya,2,fiksi,Novel,novel,398,1,24.9,0.188,16,0.375,0.688,23.0,0
+101,33,Informatika,7,nonfiksi,Hobi,buku,222,1,18.1,0.385,13,0.0,0.385,18.1,0
+28,44,Informatika,2,nonfiksi,Pemrograman,TA,71,1,22.2,0.455,11,0.182,0.182,18.5,0
+167,27,Lainnya,4,fiksi,Horror,novel,313,1,20.8,0.368,19,0.105,0.737,23.0,0
+190,25,Teknik,3,fiksi,Horror,novel,299,0,24.3,0.333,12,0.333,0.75,27.8,1
+188,14,Informatika,4,fiksi,Romance,novel,256,0,36.5,0.375,16,0.312,0.75,33.0,1
+135,50,Informatika,1,fiksi,Action,novel,350,0,29.7,0.4,15,0.133,0.533,32.0,1
+166,27,Informatika,5,fiksi,Horror,novel,313,1,22.6,0.25,16,0.188,0.5,10.0,0
+43,8,Teknik,3,fiksi,Novel,novel,398,1,30.5,0.455,11,0.364,0.818,41.2,0
+175,13,Informatika,8,fiksi,Romance,novel,360,0,17.9,0.111,9,0.222,0.667,13.0,1
+103,8,Lainnya,7,fiksi,Novel,novel,398,1,20.2,0.556,9,0.556,0.889,30.6,0
+25,11,Ekonomi,4,fiksi,Novel,novel,199,0,37.1,0.5,12,0.667,0.833,29.8,1
+77,6,Teknik,6,fiksi,Novel,novel,169,0,15.0,0.389,18,0.278,0.5,15.8,0
+1,32,Ekonomi,7,nonfiksi,Hobi,TA,127,1,47.3,0.286,7,0.143,0.143,7.0,0
+15,28,Lainnya,2,fiksi,Horror,novel,196,0,22.1,0.267,15,0.267,0.867,15.5,0
+83,32,Lainnya,5,nonfiksi,Hobi,TA,127,1,22.3,0.133,15,0.0,0.0,22.3,0
+191,38,Teknik,7,nonfiksi,Hobi,TA,93,0,33.6,0.438,16,0.062,0.375,16.0,1
+113,37,Ekonomi,5,nonfiksi,Hobi,artikel ilmiah,27,0,22.0,0.3,20,0.15,0.15,16.3,1
+177,48,Informatika,7,fiksi,Action,novel,218,0,28.3,0.333,18,0.0,0.889,28.3,0
+164,24,Informatika,1,fiksi,Horror,novel,290,0,16.6,0.227,22,0.364,0.864,22.9,1
+164,8,Informatika,1,fiksi,Novel,novel,398,1,17.8,0.182,22,0.273,0.864,10.8,0
+150,35,Ekonomi,6,nonfiksi,Hobi,TA,96,0,26.5,0.235,17,0.294,0.353,22.4,1
+179,40,Teknik,4,nonfiksi,Pemrograman,buku,251,0,25.3,0.55,20,0.2,0.3,23.5,1
+52,21,Informatika,6,fiksi,Romance,novel,377,0,17.0,0.538,13,0.462,0.692,18.8,0
+133,46,Teknik,8,nonfiksi,Pemrograman,buku,253,0,38.2,0.227,22,0.136,0.227,23.0,1
+147,1,Ekonomi,6,fiksi,Novel,novel,285,0,18.6,0.167,18,0.222,0.722,26.2,0
+186,29,Informatika,7,fiksi,Horror,novel,373,1,19.9,0.182,22,0.409,0.682,30.3,1
+163,14,Informatika,2,fiksi,Romance,novel,256,0,23.6,0.278,18,0.056,0.5,21.0,0
