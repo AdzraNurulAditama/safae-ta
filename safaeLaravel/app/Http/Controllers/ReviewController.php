@@ -18,29 +18,49 @@ class ReviewController extends Controller
         $avgRating = round($book->reviews()->avg('rating') ?? 0, 1);
         $totalReview = $reviews->count();
 
-        return view('reviews.index', compact('book', 'reviews', 'avgRating', 'totalReview'));
+        // Hitung persentase untuk masing-masing bintang (5 hingga 1)
+        $ratingCounts = [
+            5 => $reviews->where('rating', 5)->count(),
+            4 => $reviews->where('rating', 4)->count(),
+            3 => $reviews->where('rating', 3)->count(),
+            2 => $reviews->where('rating', 2)->count(),
+            1 => $reviews->where('rating', 1)->count(),
+        ];
+
+        $ratingPercentages = [];
+        foreach ($ratingCounts as $star => $count) {
+            $ratingPercentages[$star] = $totalReview > 0 ? round(($count / $totalReview) * 100) : 0;
+        }
+
+        return view('reviews.index', compact(
+            'book', 
+            'reviews', 
+            'avgRating', 
+            'totalReview', 
+            'ratingPercentages'
+        ));
     }
 
     // Tambah ulasan
     public function store(Request $request, $id)
-{
-    $book = Book::findOrFail($id);
+    {
+        $book = Book::findOrFail($id);
 
-    $request->validate([
-        'rating' => 'required|integer|min:1|max:5',
-        'komentar' => 'required|max:500',
-    ]);
+        $request->validate([
+            'rating' => 'required|integer|min:1|max:5',
+            'komentar' => 'required|max:500',
+        ]);
 
-    if ($book->reviews()->where('user_id', Auth::id())->exists()) {
-        return back()->with('error', 'Kamu sudah memberi ulasan.');
+        if ($book->reviews()->where('user_id', Auth::id())->exists()) {
+            return back()->with('error', 'Kamu sudah memberi ulasan untuk buku ini.');
+        }
+
+        $book->reviews()->create([
+            'user_id' => Auth::id(),
+            'rating' => $request->rating,
+            'komentar' => $request->komentar,
+        ]);
+
+        return back()->with('success', 'Ulasan berhasil dikirim!');
     }
-
-    $book->reviews()->create([
-        'user_id' => Auth::id(),
-        'rating' => $request->rating,
-        'komentar' => $request->komentar,
-    ]);
-
-    return back()->with('success', 'Ulasan berhasil dikirim!');
-}
 }

@@ -1,280 +1,135 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Profil')
+@section('title', 'Edit Profil - Safae')
 
 @section('content')
 
 <style>
-    .edit-wrapper {
+    .edit-profile-wrapper {
         max-width: 900px;
         margin: 0 auto;
-        padding: 40px 20px;
+        padding: 20px 0 50px 0;
+        color: #f1f5f9;
     }
 
-    .edit-card {
-        background: #ffffff;
+    .edit-profile-card {
+        background: #1e293b;
+        border: 1px solid #334155;
         border-radius: 24px;
-        padding: 40px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        padding: 35px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
 
-    /* HEADER */
-
-    .profile-header {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-        padding: 20px 25px;
-        border-radius: 18px;
-        background: linear-gradient(135deg,rgb(126, 160, 211), #4f8cff);
-        margin-bottom: 30px;
+    .form-dark-control {
+        background: #0f172a;
+        border: 1px solid #334155;
+        color: #f8fafc;
+        border-radius: 12px;
+        padding: 12px 16px;
     }
 
-    .header-icon {
-        width: 65px;
-        height: 65px;
-        border-radius: 50%;
-        background: rgba(255,255,255,0.2);
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .form-dark-control:focus {
+        background: #0f172a;
+        border-color: #38bdf8;
         color: white;
-        font-size: 28px;
+        box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15);
     }
 
-    .header-title {
-        color: white;
-        font-weight: 700;
-        margin: 0;
-    }
-
-    .header-subtitle {
-        color: rgba(255,255,255,0.85);
-        margin: 0;
-        font-size: 14px;
-    }
-
-    /* AVATAR */
-
-    .edit-avatar {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        margin-bottom: 35px;
-    }
-
-    .edit-avatar img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+    .avatar-preview-img {
+        width: 100px;
+        height: 100px;
         object-fit: cover;
-        border: 5px solid #f1f3f5;
-        box-shadow: 0 8px 20px rgba(0,0,0,.08);
+        border-radius: 50%;
+        border: 3px solid #38bdf8;
     }
 
-    /* FORM */
-
-    .form-label {
-        font-weight: 600;
-        color: #212529;
-        margin-bottom: 8px;
-    }
-
-    .form-control {
-        border-radius: 14px;
-        border: 1px solid #dee2e6;
-        padding: 12px 15px;
-        font-size: 14px;
-        transition: all .3s ease;
-    }
-
-    .form-control:focus {
-        border-color: #0d6efd;
-        box-shadow: 0 0 0 .2rem rgba(13,110,253,.15);
-    }
-
-    textarea.form-control {
-        resize: none;
-    }
-
-    /* BUTTON */
-
-    .btn-rounded {
-        border-radius: 50px;
-        padding: 11px 25px;
-        font-weight: 600;
-    }
-
-    .btn-primary {
-        background: linear-gradient(135deg, #0d6efd, #4f8cff);
+    .btn-save-profile {
+        background: #38bdf8;
+        color: #0f172a;
+        font-weight: 700;
         border: none;
+        padding: 12px 28px;
+        border-radius: 12px;
+        transition: 0.2s;
     }
 
-    .btn-primary:hover {
-        transform: translateY(-2px);
-    }
-
-    .btn-secondary:hover,
-    .btn-primary:hover {
-        transition: .3s;
-    }
-
-    @media (max-width: 768px) {
-
-        .edit-card {
-            padding: 25px;
-        }
-
-        .profile-header {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .edit-avatar {
-            flex-direction: column;
-            text-align: center;
-        }
-
-        .d-flex.justify-content-between {
-            flex-direction: column;
-        }
-
-        .btn-rounded {
-            width: 100%;
-        }
+    .btn-save-profile:hover {
+        background: #7dd3fc;
+        color: #0f172a;
     }
 </style>
 
-<div class="edit-wrapper">
+<div class="edit-profile-wrapper">
+    <div class="edit-profile-card">
 
-    <div class="edit-card">
-
-        <!-- HEADER -->
-        <div class="profile-header">
-
-
+        <div class="d-flex align-items-center justify-content-between mb-4 border-bottom border-secondary border-opacity-25 pb-3">
             <div>
-                <h3 class="header-title">
-                    Edit Profil
-                </h3>
-
-                <p class="header-subtitle">
-                    Perbarui informasi akun Safae kamu
-                </p>
+                <h3 class="fw-bold text-white mb-1"><i class="fa-solid fa-user-pen text-info me-2"></i> Edit Profil</h3>
+                <p class="text-secondary small mb-0">Perbarui informasi akun Safae kamu</p>
             </div>
-
         </div>
 
-        <!-- FOTO PROFIL -->
-        <div class="edit-avatar">
-
-            <img src="{{ $profile->foto_profil
-                ? asset('storage/' . $profile->foto_profil)
-                : 'https://ui-avatars.com/api/?name='.$profile->username.'&background=0d6efd&color=fff' }}"
-                 alt="Foto Profil">
-
-            <div>
-
-                <div class="profile-name">
-                <i class="bi bi-person-circle"></i>
-                {{ $profile->username }}
-            </div>
-
-                <div class="mt-2">
-                    <small class="text-muted">
-                        Ukuran disarankan 1:1 (JPG, PNG)
-                    </small>
-                </div>
-
-            </div>
-
-        </div>
-
-        <!-- FORM -->
-        <form method="POST"
-              enctype="multipart/form-data"
-              action="{{ route('profile.update') }}">
-
+        <form method="POST" action="{{ route('profile.update') }}" enctype="multipart/form-data">
             @csrf
 
-            <div class="row">
+            <!-- FOTO PROFIL SECTION -->
+            <div class="d-flex align-items-center gap-4 mb-4 p-3 rounded-3 bg-dark bg-opacity-50 border border-secondary border-opacity-25">
+                <img src="{{ $profile->foto_profil ? asset('storage/' . $profile->foto_profil) : 'https://ui-avatars.com/api/?name='.$profile->username.'&background=38bdf8&color=0f172a' }}" 
+                     class="avatar-preview-img" 
+                     alt="Foto Profil">
+                
+                <div>
+                    <h6 class="fw-bold text-white mb-1">{{ $profile->username }}</h6>
+                    <small class="text-secondary d-block mb-2">Ukuran disarankan 1:1 (JPG, PNG max 2MB)</small>
+                </div>
+            </div>
 
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">
-                        Nama Pengguna
-                    </label>
-
-                    <input type="text"
-                           name="username"
-                           class="form-control"
-                           value="{{ old('username', $profile->username) }}"
-                           required>
+            <!-- FORM INPUT GRID -->
+            <div class="row g-3">
+                <div class="col-md-6 mb-2">
+                    <label class="form-label text-white fw-bold small">Nama Pengguna</label>
+                    <input type="text" name="username" class="form-control form-dark-control" value="{{ old('username', $profile->username) }}" required>
                 </div>
 
-                <div class="col-md-6 mb-3">
-                    <label class="form-label">
-                        Social Media
-                    </label>
-
-                    <input type="text"
-                           name="social_media"
-                           class="form-control"
-                           placeholder="Instagram / Twitter / LinkedIn"
-                           value="{{ old('social_media', $profile->social_media) }}">
+                <div class="col-md-6 mb-2">
+                    <label class="form-label text-white fw-bold small">Social Media</label>
+                    <input type="text" name="social_media" class="form-control form-dark-control" placeholder="Instagram / Twitter / LinkedIn" value="{{ old('social_media', $profile->social_media) }}">
                 </div>
 
-                <div class="col-12 mb-3">
+                <div class="col-md-6 mb-2">
+                    <label class="form-label text-white fw-bold small">Jurusan</label>
+                    <input type="text" name="jurusan" class="form-control form-dark-control" placeholder="Masukkan jurusan" value="{{ old('jurusan', $profile->jurusan) }}">
+                </div>
 
-                    <label class="form-label">
-                        Bio
-                    </label>
+                <div class="col-md-6 mb-2">
+                    <label class="form-label text-white fw-bold small">Semester</label>
+                    <input type="text" name="semester" class="form-control form-dark-control" placeholder="Masukkan semester" value="{{ old('semester', $profile->semester) }}">
+                </div>
 
-                    <textarea name="bio"
-                              rows="4"
-                              class="form-control"
-                              placeholder="Ceritakan sedikit tentang dirimu">{{ old('bio', $profile->bio) }}</textarea>
-
+                <div class="col-12 mb-2">
+                    <label class="form-label text-white fw-bold small">Bio</label>
+                    <textarea name="bio" rows="3" class="form-control form-dark-control" placeholder="Ceritakan sedikit tentang dirimu">{{ old('bio', $profile->bio) }}</textarea>
                 </div>
 
                 <div class="col-12 mb-4">
-
-                    <label class="form-label">
-                        Foto Profil Baru
-                    </label>
-
-                    <input type="file"
-                           name="foto_profil"
-                           class="form-control"
-                           accept="image/*">
-
+                    <label class="form-label text-white fw-bold small">Unggah Foto Profil Baru</label>
+                    <input type="file" name="foto_profil" class="form-control form-dark-control" accept="image/*">
                 </div>
-
             </div>
 
-            <div class="d-flex justify-content-between gap-3">
-
-                <a href="{{ route('profile') }}"
-                   class="btn btn-secondary btn-rounded">
-
-                    <i class="bi bi-arrow-left"></i>
+            <!-- TOMBOL AKSI -->
+            <div class="d-flex justify-content-end gap-2 pt-3 border-top border-secondary border-opacity-25">
+                <a href="{{ route('profile') }}" class="btn btn-outline-secondary rounded-3 px-4">
                     Batal
-
                 </a>
-
-                <button type="submit"
-                        class="btn btn-primary btn-rounded">
-
-                    <i class="bi bi-check-circle"></i>
-                    Simpan Perubahan
-
+                <button type="submit" class="btn-save-profile">
+                    <i class="fa-solid fa-check me-1"></i> Simpan Perubahan
                 </button>
-
             </div>
 
         </form>
 
     </div>
-
 </div>
 
 @endsection

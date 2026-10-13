@@ -14,14 +14,41 @@
 
     <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
         @forelse ($favorites as $fav)
+            @if($fav->book)
             <div class="col">
                 <div class="book-card shadow-sm">
                     
                     <a href="{{ route('fullbacaan.show', $fav->book->id) }}" class="text-decoration-none">
-                        <div class="card-img-wrapper">
-                            <img src="{{ $fav->book->image_path ? asset($fav->book->image_path) : 'https://via.placeholder.com/300x400?text=No+Cover' }}" 
-                                 alt="{{ $fav->book->title }}">
-                        </div>
+ <div class="card-img-wrapper">
+    @php
+        $rawPath = $fav->book->image_path ?? $fav->book->cover ?? $fav->book->gambar ?? $fav->book->image ?? null;
+        $imageUrl = 'https://via.placeholder.com/300x400?text=No+Cover';
+
+        if (!empty($rawPath)) {
+            // 1. Jika URL penuh (http:// atau https://)
+            if (\Illuminate\Support\Str::startsWith($rawPath, ['http://', 'https://'])) {
+                $imageUrl = $rawPath;
+            } 
+            // 2. Jika path disimpan lengkap di public/ (seperti "uploads/cover/nama.jpg")
+            elseif (file_exists(public_path($rawPath))) {
+                $imageUrl = asset($rawPath);
+            } 
+            // 3. Jika nama filenya ada di folder public/uploads/cover/
+            elseif (file_exists(public_path('uploads/cover/' . basename($rawPath)))) {
+                $imageUrl = asset('uploads/cover/' . basename($rawPath));
+            }
+            // 4. Fallback langsung ke folder storage atau uploads
+            else {
+                $cleanPath = str_replace(['public/', 'storage/'], '', ltrim($rawPath, '/'));
+                $imageUrl = asset('storage/' . $cleanPath);
+            }
+        }
+    @endphp
+
+    <img src="{{ $imageUrl }}" 
+         alt="{{ $fav->book->title }}"
+         onerror="this.onerror=null; this.src='https://via.placeholder.com/300x400?text=No+Cover';">
+</div>
                         
                         <div class="card-body text-center">
                             <h6 class="book-title" title="{{ $fav->book->title }}">
@@ -45,6 +72,7 @@
 
                 </div>
             </div>
+            @endif
         @empty
             <div class="col-12">
                 <div class="empty-state shadow-sm">

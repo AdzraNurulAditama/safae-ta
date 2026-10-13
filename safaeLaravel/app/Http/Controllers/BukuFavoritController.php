@@ -7,7 +7,6 @@ use App\Models\FavoriteBook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class BukuFavoritController extends Controller
 {
     public function index()
@@ -21,38 +20,39 @@ class BukuFavoritController extends Controller
             'favorites' => $favorites
         ]);
     }
+
     public function tambah(Request $request)
     {
         $request->validate([
-        'book_id' => 'required|exists:books,id'
+            'book_id' => 'required|exists:books,id'
         ]);
 
-            $fav = FavoriteBook::firstOrCreate([
-        'user_id' => Auth::id(),
-        'book_id' => $request->book_id
-    ]);
-
-
-    if ($fav->wasRecentlyCreated) {
-        \App\Models\Notification::create([
+        $fav = FavoriteBook::firstOrCreate([
             'user_id' => Auth::id(),
-            'message' => 'Buku "' . $fav->book->judul . '" ditambahkan ke favorit',
-            'url' => route('favorite.index')
+            'book_id' => $request->book_id
         ]);
+
+        if ($fav->wasRecentlyCreated && $fav->book) {
+            \App\Models\Notification::create([
+                'user_id' => Auth::id(),
+                'message' => 'Buku "' . ($fav->book->title ?? 'Buku') . '" ditambahkan ke favorit',
+                'url'     => route('favorite.index')
+            ]);
+        }
+
+        return redirect()->back()->with('success', 'Buku berhasil ditambahkan ke favorit!');
     }
 
-
-return redirect('/genre');
-
-    }
     public function hapus(Request $request)
     {
         $request->validate([
             'book_id' => 'required|exists:books,id'
         ]);
 
-        FavoriteBook::where('user_id', Auth::id())->where('book_id', $request->book_id)->delete();
+        FavoriteBook::where('user_id', Auth::id())
+            ->where('book_id', $request->book_id)
+            ->delete();
 
-        return redirect('/buku-favorit');
+        return redirect()->back()->with('success', 'Buku berhasil dihapus dari favorit!');
     }
 }

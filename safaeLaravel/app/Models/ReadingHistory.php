@@ -8,12 +8,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class ReadingHistory extends Model
 {
     protected $fillable = [
-        'user_id',
-        'book_id',
-        'progress',
-        'last_read_at',
-        'bukti_progress',
-    ];
+    'user_id',
+    'book_id',
+    'progress',
+    'status',
+    'progress_percentage',
+    'last_read_at',
+    'bukti_progress',
+];
        protected $casts = [
         'last_read_at' => 'datetime',
     ];

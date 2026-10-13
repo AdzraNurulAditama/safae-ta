@@ -4,23 +4,16 @@ namespace App\Services;
 
 use App\Models\Book;
 use App\Models\BookRecommendation;
+use App\Models\ReadingHistory;
 use App\Models\User;
 
 class RecommendationService
 {
-    /**
-     * Rekomendasi untuk satu pengguna.
-     * - Pengguna yang punya hasil prediksi: urut skor tertinggi.
-     * - Pengguna baru / belum ada hasil: cadangan = buku populer (reader_count),
-     *   diprioritaskan yang genre-nya sama dengan buku yang pernah dibacanya jika ada.
-     *
-     * @return array{books: \Illuminate\Support\Collection, sumber: string}
-     */
     public function forUser(User $user, int $limit = 8): array
     {
         $recs = BookRecommendation::with('book')
             ->where('user_id', $user->id)
-            ->whereHas('book', fn ($q) => $q->where('status', 'published'))
+            ->whereHas('book', fn ($q) => $q->where('status', 'approved'))
             ->orderByDesc('skor')
             ->limit($limit)
             ->get();
@@ -35,8 +28,8 @@ class RecommendationService
             ];
         }
 
-        $sudahDibaca = $user->readingHistories()->pluck('book_id'); // sesuaikan nama relasi
-        $populer = Book::where('status', 'published')
+        $sudahDibaca = ReadingHistory::where('user_id', $user->id)->pluck('book_id');
+        $populer = Book::where('status', 'approved')
             ->whereNotIn('id', $sudahDibaca)
             ->orderByDesc('reader_count')
             ->limit($limit)

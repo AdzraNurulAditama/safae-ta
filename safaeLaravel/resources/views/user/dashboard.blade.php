@@ -213,8 +213,7 @@
                     </div>
                     <div class="card-body p-0">
                         @forelse($recentBooks as $history)
-                            <a href="{{ route('book.show', $history->book->id) }}" class="list-item-premium">
-                                <img src="{{ $history->book->image_path ? asset($history->book->image_path) : 'https://via.placeholder.com/300x400?text=No+Cover' }}" 
+                                        <a href="{{ route('book.show', ['id' => $history->book->id, 'page' => $history->progress ?? 1]) }}" class="list-item-premium">                                <img src="{{ $history->book->image_path ? asset($history->book->image_path) : 'https://via.placeholder.com/300x400?text=No+Cover' }}" 
                                      width="45" height="62" class="rounded me-3 object-fit-cover shadow-sm">
                                 <div>
                                     <h6 class="mb-1 text-white small fw-bold">{{ $history->book->title }}</h6>
@@ -253,6 +252,9 @@
                 </div>
             </div>
         </div>
+            <div class="row g-4 mb-4">              {{-- ← baris 206: awal "Sedang Dibaca" --}}
+            <div class="col-xl-6"></div>
+        @include('partials.rekomendasi', ['rekomendasi' => $rekomendasi])   {{-- ← TAMBAHKAN DI SINI --}}
 
         <div class="row g-4 mb-4">
             <div class="col-12">

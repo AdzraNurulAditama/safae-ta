@@ -1,247 +1,395 @@
 @extends('layouts.app')
 
-@section('title', 'Profil Saya')
+@section('title', 'Profil Saya - Safae')
 
 @section('content')
 
 <style>
-    .profile-wrapper {
-        max-width: 900px;
+    .profile-container {
+        max-width: 1050px;
         margin: 0 auto;
-        padding: 50px 20px;
+        padding: 20px 0 60px 0;
+        color: #f1f5f9;
     }
 
-    .profile-card {
-        background: #fff;
+    /* HEADER PROFIL MODERN DARK */
+    .profile-header-card {
+        background: #1e293b;
+        border: 1px solid #334155;
         border-radius: 24px;
-        padding: 100px 40px 40px;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        padding: 30px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        margin-bottom: 30px;
     }
 
-
-    /* FOTO PROFIL */
-
-    .profile-avatar {
-        position: absolute;
-        top: 70px;
-        left: 40px;
-        z-index: 10;
-    }
-
-    .profile-avatar img {
-        width: 130px;
-        height: 130px;
+    .avatar-lg {
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         border-radius: 50%;
-        border: 6px solid #fff;
-        background: #f1f3f5;
-        box-shadow: 0 10px 25px rgba(0,0,0,.15);
+        border: 4px solid #38bdf8;
+        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
     }
 
-    /* HEADER */
-
-    .profile-header {
-        margin-left: 130px;
-        margin-bottom: 35px;
-    }
-
-    .profile-badge {
+    .point-badge-pill {
+        background: rgba(245, 158, 11, 0.15);
+        border: 1px solid rgba(245, 158, 11, 0.4);
+        color: #fbbf24;
+        padding: 6px 16px;
+        border-radius: 999px;
+        font-weight: 700;
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: linear-gradient(135deg,#0d6efd,#4f8cff);
-        color: white;
-        padding: 8px 16px;
-        border-radius: 50px;
-        font-size: 13px;
+        font-size: 0.9rem;
+    }
+
+    /* STATISTIK COUNTER STRIP */
+    .stats-strip {
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 16px;
+        padding: 15px 25px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    .stat-item {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #38bdf8;
+        line-height: 1.1;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+        color: #94a3b8;
         font-weight: 600;
-        margin-bottom: 15px;
-        box-shadow: 0 6px 15px rgba(13,110,253,.25);
+        text-uppercase: uppercase;
+        letter-spacing: 0.5px;
     }
 
-
-    .profile-subtitle {
-        color: #6c757d;
-        font-size: 15px;
-        margin-bottom: 0;
+    .stat-divider {
+        width: 1px;
+        height: 35px;
+        background: #334155;
     }
 
-    /* INFO CARD */
-
-    .profile-item {
-        background: #f8f9fa;
-        border-radius: 18px;
-        padding: 18px;
-        margin-bottom: 18px;
-        transition: .3s;
-        border: 1px solid #ececec;
+    /* CARDS SECTION */
+    .section-card {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 20px;
+        padding: 25px;
+        height: 100%;
     }
 
-    .profile-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,.05);
-    }
-
-    .profile-item i {
-        color: #0d6efd;
-        font-size: 20px;
-        margin-right: 10px;
-    }
-
-    .profile-item-title {
+    .section-title {
+        font-size: 1.1rem;
         font-weight: 700;
-        margin-bottom: 5px;
-        color: #212529;
+        color: #f8fafc;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
     }
 
-    .profile-item-content {
-        color: #6c757d;
-        word-break: break-word;
+    /* PESAN TERAKHIR FORUM */
+    .forum-message-box {
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 16px;
+        padding: 18px;
     }
 
-    /* BUTTON */
-
-    .btn-rounded {
-        border-radius: 50px;
-        padding: 10px 22px;
-        font-weight: 600;
+    .user-avatar-sm {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
-    .btn-primary {
-        background: linear-gradient(135deg,#0d6efd,#4f8cff);
-        border: none;
+    /* DAFTAR BACAAN & KARYA GRID */
+    .reading-book-card {
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 14px;
+        padding: 10px;
+        transition: 0.2s;
+        text-decoration: none;
+        color: white;
+        display: block;
     }
 
-    .btn-primary:hover {
-        transform: translateY(-2px);
+    .reading-book-card:hover {
+        border-color: #38bdf8;
+        transform: translateY(-3px);
+        color: white;
     }
 
-    /* MOBILE */
+    .book-cover-mini {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
 
-    @media (max-width: 768px) {
+    .book-title-mini {
+        font-size: 0.82rem;
+        font-weight: 700;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 
-        .profile-card {
-            padding: 160px 25px 25px;
-            text-align: center;
-        }
+    .btn-edit-profile {
+        background: #38bdf8;
+        color: #0f172a;
+        font-weight: 700;
+        padding: 8px 20px;
+        border-radius: 12px;
+        text-decoration: none;
+        transition: 0.2s;
+    }
 
-        .profile-avatar {
-            left: 50%;
-            transform: translateX(-50%);
-            top: 55px;
-        }
-
-        .profile-header {
-            margin-left: 0;
-            margin-top: 20px;
-        }
-
-        .profile-name {
-            font-size: 28px;
-        }
-
-        .d-flex.flex-wrap {
-            flex-direction: column;
-        }
-
-        .btn-rounded {
-            width: 100%;
-        }
+    .btn-edit-profile:hover {
+        background: #7dd3fc;
+        color: #0f172a;
     }
 </style>
 
-<div class="profile-wrapper">
+<div class="profile-container">
 
-    <div class="profile-card">
+    <!-- 1. HEADER PROFIL UTAMA -->
+    <div class="profile-header-card">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+            
+            <!-- Foto Profil -->
+            <img src="{{ $profile->foto_profil ? asset('storage/' . $profile->foto_profil) : 'https://ui-avatars.com/api/?name='.urlencode($profile->username).'&background=38bdf8&color=0f172a' }}" 
+                 class="avatar-lg" 
+                 alt="{{ $profile->username }}">
 
-        <!-- FOTO PROFIL -->
-        <div class="profile-avatar">
-            <img
-                src="{{ $profile->foto_profil
-                    ? asset('storage/' . $profile->foto_profil)
-                    : 'https://ui-avatars.com/api/?name='.$profile->username.'&background=0d6efd&color=fff' }}"
-                alt="Foto Profil">
-        </div>
-
-        <!-- HEADER -->
-        <div class="profile-header">
-
-                <div class="profile-name">
-                    <i class="bi bi-person-circle"></i>
-                    {{ $profile->username }}
+            <!-- Informasi & Nama -->
+            <div class="flex-grow-1 text-center text-md-start">
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3 mb-2 flex-wrap">
+                    <h2 class="fw-bold text-white mb-0">{{ $profile->username }}</h2>
+                    <div class="point-badge-pill">
+                        <i class="fa-solid fa-star"></i> {{ number_format($user->points ?? 0) }} Poin
+                    </div>
                 </div>
 
-            <p class="profile-subtitle">
-                Selamat datang di perpustakaan digital Safae
-            </p>
+                <p class="text-secondary small mb-2">
+                    {{ $profile->bio ?? 'Belum ada bio singkat.' }}
+                </p>
 
-        </div>
-
-        <!-- INFORMASI -->
-        <div class="row">
-
-            <div class="col-md-6">
-
-                <div class="profile-item">
-
-                    <div class="profile-item-title">
-                        <i class="bi bi-link-45deg"></i>
-                        Social Media
-                    </div>
-
-                    <div class="profile-item-content">
-                        {{ $profile->social_media ?? 'Belum diisi' }}
-                    </div>
-
+                <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-3 text-secondary small flex-wrap">
+                    @if($profile->jurusan)
+                        <span><i class="fa-solid fa-graduation-cap text-info me-1"></i> {{ $profile->jurusan }}</span>
+                    @endif
+                    @if($profile->semester)
+                        <span><i class="fa-solid fa-calendar-days text-info me-1"></i> Semester {{ $profile->semester }}</span>
+                    @endif
+                    @if($profile->social_media)
+                        <span><i class="fa-solid fa-link text-info me-1"></i> {{ $profile->social_media }}</span>
+                    @endif
                 </div>
-
             </div>
 
-            <div class="col-md-6">
-
-                <div class="profile-item">
-
-                    <div class="profile-item-title">
-                        <i class="bi bi-person-lines-fill"></i>
-                        Bio
-                    </div>
-
-                    <div class="profile-item-content">
-                        {{ $profile->bio ?? 'Belum ada bio' }}
-                    </div>
-
-                </div>
-
+            <!-- Tombol Edit -->
+            <div>
+                <a href="{{ route('profile.edit') }}" class="btn-edit-profile">
+                    <i class="fa-solid fa-pen-to-square me-1"></i> Edit Profil
+                </a>
             </div>
 
         </div>
 
-        <!-- ACTION -->
-        <div class="d-flex flex-wrap gap-3 mt-4">
+        <!-- STATISTIK STRIP -->
+        <div class="stats-strip">
+            <div class="stat-item">
+                <div class="stat-number">{{ $karyaCount ?? 0 }}</div>
+                <div class="stat-label">Karya</div>
+            </div>
 
-            <a href="{{ route('profile.edit') }}"
-               class="btn btn-primary btn-rounded">
+            <div class="stat-divider"></div>
 
-                <i class="bi bi-pencil-square"></i>
-                Edit Profil
+            <div class="stat-item">
+                <div class="stat-number">{{ $readingList->count() }}</div>
+                <div class="stat-label">Daftar Bacaan</div>
+            </div>
 
-            </a>
+            <div class="stat-divider"></div>
 
-            <a href="{{ route('user.dashboard') }}"
-               class="btn btn-secondary btn-rounded">
+            <div class="stat-item">
+                <div class="stat-number text-warning">{{ number_format($user->points ?? 0) }}</div>
+                <div class="stat-label">Total Poin</div>
+            </div>
+        </div>
+    </div>
 
-                <i class="bi bi-arrow-left"></i>
-                Kembali
+    <!-- 2. KONTEN BARIS PERTAMA (PESAN FORUM & DAFTAR BACAAN) -->
+    <div class="row g-4 mb-4">
+        
+        <!-- PESAN TERAKHIR FORUM -->
+        <div class="col-lg-5">
+            <div class="section-card">
+                <div class="section-title">
+                    <i class="fa-solid fa-thumbtack text-info"></i> Pesan Terakhir Forum
+                </div>
 
-            </a>
+                @if($lastForumComment)
+                    <div class="forum-message-box">
+                        <div class="d-flex align-items-center gap-3 mb-3">
+                            <img src="{{ $profile->foto_profil ? asset('storage/' . $profile->foto_profil) : 'https://ui-avatars.com/api/?name='.urlencode($profile->username) }}" 
+                                 class="user-avatar-sm" alt="Avatar">
+                            <div>
+                                <h6 class="fw-bold text-white mb-0" style="font-size: 0.9rem;">{{ $profile->username }}</h6>
+                                <small class="text-secondary" style="font-size: 0.75rem;">
+                                    {{ $lastForumComment->created_at->diffForHumans() }}
+                                </small>
+                            </div>
+                        </div>
 
+                        <div class="p-2 rounded-3 bg-dark bg-opacity-50 mb-3 border border-secondary border-opacity-25">
+                            <small class="text-info d-block fw-bold mb-1" style="font-size: 0.75rem;">Topik:</small>
+                            <span class="text-white small fw-semibold">
+                                {{ $lastForumComment->topic->judul ?? 'Topik Diskusi' }}
+                            </span>
+                        </div>
+
+                        <p class="text-slate-300 small mb-3" style="color: #cbd5e1; white-space: pre-line;">
+                            "{{ $lastForumComment->isi }}"
+                        </p>
+
+                        @if(isset($lastForumComment->topic_id))
+                            <a href="{{ route('forum.detail', $lastForumComment->topic_id) }}" class="btn btn-sm btn-outline-info rounded-3 w-100">
+                                Lihat Semua Percakapan
+                            </a>
+                        @endif
+                    </div>
+                @else
+                    <div class="text-center py-4 text-secondary">
+                        <i class="fa-regular fa-comments fa-2x mb-2 opacity-50"></i>
+                        <p class="small mb-0">Belum pernah berdiskusi di forum.</p>
+                    </div>
+                @endif
+            </div>
         </div>
 
+        <!-- DAFTAR BACAAN (BUKU YANG DIBACA USER) -->
+        <div class="col-lg-7">
+            <div class="section-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="section-title mb-0">
+                        <i class="fa-solid fa-book-bookmark text-info"></i> Daftar Bacaan
+                    </div>
+                    <small class="text-secondary">{{ $readingList->count() }} Cerita</small>
+                </div>
+
+                <h6 class="fw-bold text-white mb-3" style="font-size: 0.95rem;">
+                    {{ $profile->username }}'s Reading List
+                </h6>
+
+                @if($readingList->isNotEmpty())
+                    <div class="row row-cols-2 row-cols-sm-3 g-3">
+                        @foreach($readingList as $progress)
+                            @if($progress->book)
+                                @php
+                                    $bookCover = $progress->book->image_path ? str_replace(['public/', 'storage/'], '', $progress->book->image_path) : null;
+                                @endphp
+                                <div class="col">
+                                    <a href="{{ route('book.preview', $progress->book->id) }}" class="reading-book-card">
+                                        @if($bookCover)
+                                            <img src="{{ asset('storage/' . $bookCover) }}" class="book-cover-mini" alt="{{ $progress->book->title }}" onerror="this.onerror=null; this.src='{{ asset($progress->book->image_path) }}';">
+                                        @else
+                                            <img src="https://via.placeholder.com/120x160" class="book-cover-mini" alt="No Cover">
+                                        @endif
+                                        <div class="book-title-mini" title="{{ $progress->book->title }}">
+                                            {{ $progress->book->title }}
+                                        </div>
+                                        <small class="text-secondary d-block" style="font-size: 0.7rem;">
+                                            {{ $progress->book->author }}
+                                        </small>
+                                    </a>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                @else
+                    <div class="text-center py-4 text-secondary">
+                        <i class="fa-solid fa-book-open fa-2x mb-2 opacity-50"></i>
+                        <p class="small mb-0">Belum ada buku yang dibaca.</p>
+                    </div>
+                @endif
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 3. KONTEN BARIS KEDUA (KARYA SAYA) -->
+    <div class="row">
+        <div class="col-12">
+            <div class="section-card">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <div class="section-title mb-0">
+                        <i class="fa-solid fa-book text-info"></i> Karya Saya
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                        <small class="text-secondary me-2">{{ $karyaCount }} Karya</small>
+                        <a href="{{ url('/tulis-buku') }}" class="btn btn-sm btn-info text-dark font-weight-bold fw-bold rounded-3">
+                            <i class="fa-solid fa-plus me-1"></i> Tulis Karya Baru
+                        </a>
+                    </div>
+                </div>
+
+                @if($myBooks->isEmpty())
+                    <div class="text-center py-4 text-secondary">
+                        <i class="fa-solid fa-pen-nib fa-2x mb-2 opacity-50"></i>
+                        <p class="small mb-0">Belum ada karya yang ditulis atau diunggah.</p>
+                    </div>
+                @else
+                    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+                        @foreach($myBooks as $book)
+                            @php
+                                $cover = $book->image_path ? str_replace(['public/', 'storage/'], '', $book->image_path) : null;
+                            @endphp
+                            <div class="col">
+                                <a href="{{ url('/penulis/buku/' . $book->id . '/chapters') }}" class="reading-book-card">
+                                    @if($cover)
+                                        <img src="{{ asset('storage/' . $cover) }}" class="book-cover-mini" alt="{{ $book->title }}" onerror="this.onerror=null; this.src='{{ asset($book->image_path) }}';">
+                                    @else
+                                        <img src="https://via.placeholder.com/120x160" class="book-cover-mini" alt="No Cover">
+                                    @endif
+                                    <div class="book-title-mini" title="{{ $book->title }}">{{ $book->title }}</div>
+                                    
+                                    <div class="d-flex justify-content-between align-items-center mt-2">
+                                        <small class="text-secondary" style="font-size: 0.7rem;">
+                                            {{ $book->chapters_count }} Bab
+                                        </small>
+                                        @if($book->status === 'published')
+                                            <span class="badge bg-success" style="font-size: 0.6rem;">Published</span>
+                                        @elseif($book->status === 'pending')
+                                            <span class="badge bg-warning text-dark" style="font-size: 0.6rem;">Pending</span>
+                                        @else
+                                            <span class="badge bg-secondary" style="font-size: 0.6rem;">Draft</span>
+                                        @endif
+                                    </div>
+                                </a>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+        </div>
     </div>
 
 </div>
 
 @endsection
-```
