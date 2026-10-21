@@ -2,16 +2,18 @@ import argparse
 import os
 import sys
 from datetime import datetime
- 
+
 import joblib
 import numpy as np
 import pandas as pd
 from sqlalchemy import create_engine, text
 from sqlalchemy.engine import URL
- 
-NONFIKSI = {"Pemrograman", "Hobi"}   # genre lain dianggap fiksi (harus sama dengan pengisian kolom jenis_buku)
- 
- 
+
+# tipe_konten yang termasuk nonfiksi.
+# Harus sama dengan aturan di form upload Laravel dan di skrip training.
+NONFIKSI_TIPE = {"tugas akhir", "karya ilmiah", "jurnal", "skripsi"}
+
+
 # ---------------------------------------------------------------- koneksi DB
 def parse_env(path):
     env = {}
@@ -23,8 +25,8 @@ def parse_env(path):
             k, v = line.split("=", 1)
             env[k.strip()] = v.strip().strip('"').strip("'")
     return env
- 
- 
+
+
 def make_engine(args):
     if args.db_url:
         return create_engine(args.db_url)
@@ -40,12 +42,13 @@ def make_engine(args):
         database=e.get("DB_DATABASE"),
     )
     return create_engine(url)
- 
- 
+
+
 # ---------------------------------------------------------------- data
 def load_data(engine, durasi_bagi):
     q = lambda sql: pd.read_sql(text(sql), engine)
     users = q("SELECT id AS user_id, jurusan, semester FROM users")
+    # hanya buku yang sudah disetujui admin
     books = q("""SELECT id AS book_id, genre AS kategori_topik, jenis_buku, tipe_konten,
                         jumlah_halaman, is_premium AS status_premium, reader_count
                  FROM books WHERE status = 'approved'""")
@@ -54,8 +57,8 @@ def load_data(engine, durasi_bagi):
     fav = q("SELECT DISTINCT user_id, book_id, 1 AS fav FROM favorite_books")
     dur["durasi"] = dur["durasi"] / durasi_bagi
     return users, books, hist, dur, fav
- 
- 
+
+
 def clean_inputs(users, books):
     """Isi nilai kosong dengan default yang wajar, dan laporkan jumlahnya."""
     n = {}
@@ -63,10 +66,14 @@ def clean_inputs(users, books):
     users["jurusan"] = users.jurusan.fillna("Lainnya")
     n["semester kosong"] = int(users.semester.isna().sum())
     users["semester"] = users.semester.fillna(users.semester.median() if users.semester.notna().any() else 1)
- 
+
+    # jenis_buku kosong -> turunkan dari tipe_konten (tugas akhir/skripsi/karya ilmiah/jurnal = nonfiksi)
     n["jenis_buku kosong"] = int(books.jenis_buku.isna().sum())
-    books["jenis_buku"] = books.jenis_buku.fillna(
-        books.kategori_topik.map(lambda g: "nonfiksi" if g in NONFIKSI else "fiksi"))
+    tipe = books.tipe_konten.fillna("").str.strip().str.lower()
+    kosong_jenis = books.jenis_buku.isna()
+    books.loc[kosong_jenis, "jenis_buku"] = np.where(
+        tipe[kosong_jenis].isin(NONFIKSI_TIPE), "nonfiksi", "fiksi")
+
     n["tipe_konten kosong"] = int(books.tipe_konten.isna().sum())
     books["tipe_konten"] = books.tipe_konten.fillna(books.jenis_buku.map({"fiksi": "novel", "nonfiksi": "buku"}))
     n["jumlah_halaman kosong"] = int(books.jumlah_halaman.isna().sum())
@@ -77,8 +84,8 @@ def clean_inputs(users, books):
         print("PERINGATAN - nilai kosong diisi default:", kosong)
         print("  Lengkapi kolom itu di database agar rekomendasi lebih akurat.")
     return users, books
- 
- 
+
+
 # ---------------------------------------------------------------- fitur
 def build_candidates(users, books, hist, dur, fav):
     """Satu baris per (pengguna, buku BELUM dibaca), dengan fitur yang sama seperti saat training."""
@@ -88,7 +95,7 @@ def build_candidates(users, books, hist, dur, fav):
     read["durasi"] = read.durasi.fillna(0.0)
     read["fav"] = read.fav.fillna(0)
     read = read.merge(books[["book_id", "kategori_topik", "jenis_buku"]], on="book_id", how="inner")
- 
+
     g = read.groupby("user_id")
     prof = pd.DataFrame({
         "jumlah_buku_lain": g.book_id.count(),
@@ -97,7 +104,7 @@ def build_candidates(users, books, hist, dur, fav):
     })
     genre_cnt = read.groupby(["user_id", "kategori_topik"]).agg(n_g=("book_id", "count"), d_g=("durasi", "mean")).reset_index()
     jenis_cnt = read.groupby(["user_id", "jenis_buku"]).agg(n_j=("book_id", "count")).reset_index()
- 
+
     # semua kombinasi pengguna-berpengalaman x buku, lalu buang yang sudah dibaca
     prof = prof.reset_index()
     cand = prof.merge(books, how="cross")
@@ -106,13 +113,13 @@ def build_candidates(users, books, hist, dur, fav):
     cand = cand.merge(users, on="user_id", how="left")
     cand = cand.merge(genre_cnt, on=["user_id", "kategori_topik"], how="left")
     cand = cand.merge(jenis_cnt, on=["user_id", "jenis_buku"], how="left")
- 
+
     cand["porsi_genre_dibaca"] = cand.n_g.fillna(0) / cand.jumlah_buku_lain
     cand["porsi_jenis_dibaca"] = cand.n_j.fillna(0) / cand.jumlah_buku_lain
     cand["rata_durasi_genre_lain"] = cand.d_g.fillna(cand.rata_durasi_lain)   # cadangan sama seperti training
     return cand
- 
- 
+
+
 def score(model, X):
     try:
         return model.predict_proba(X)[:, 1]
@@ -120,8 +127,8 @@ def score(model, X):
         # SVM tanpa probability=True: pakai jarak ke batas keputusan -> 0..1 lewat sigmoid
         s = model.decision_function(X)
         return 1 / (1 + np.exp(-s))
- 
- 
+
+
 # ---------------------------------------------------------------- main
 def main():
     ap = argparse.ArgumentParser()
@@ -133,22 +140,22 @@ def main():
                     help="bagi duration DB dengan angka ini (60 jika disimpan dalam detik)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
- 
+
     bundle = joblib.load(args.model)
     model, cat_cols, num_cols = bundle["model"], bundle["cat_cols"], bundle["num_cols"]
     print(f"Model: {bundle['model_name']} (dilatih {bundle['dilatih_pada']})")
- 
+
     engine = make_engine(args)
     users, books, hist, dur, fav = load_data(engine, args.durasi_bagi)
     users, books = clean_inputs(users, books)
-    print(f"Pengguna: {len(users)} | Buku terbit: {len(books)}")
- 
+    print(f"Pengguna: {len(users)} | Buku approved: {len(books)}")
+
     cand = build_candidates(users, books, hist, dur, fav)
     if cand.empty:
         print("Tidak ada kandidat (belum ada pengguna dengan riwayat baca). Tidak ada yang ditulis.")
         return
     print(f"Pengguna dengan riwayat: {cand.user_id.nunique()} | Pasangan dinilai: {len(cand)}")
- 
+
     cand["skor"] = score(model, cand[cat_cols + num_cols])
     top = (cand.sort_values(["user_id", "skor"], ascending=[True, False])
                .groupby("user_id").head(args.top)[["user_id", "book_id", "skor"]].copy())
@@ -156,18 +163,18 @@ def main():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     top["created_at"] = now
     top["updated_at"] = now
- 
+
     if args.dry_run:
         print("\n[dry-run] contoh hasil:")
         print(top.head(10).to_string(index=False))
         return
- 
+
     # ganti isi tabel dalam satu transaksi: kalau gagal, data lama tetap aman
     with engine.begin() as conn:
         conn.execute(text("DELETE FROM book_recommendations"))
         top.to_sql("book_recommendations", conn, if_exists="append", index=False, chunksize=1000)
     print(f"Selesai: {len(top)} rekomendasi untuk {top.user_id.nunique()} pengguna ditulis ke book_recommendations.")
- 
- 
+
+
 if __name__ == "__main__":
     main()

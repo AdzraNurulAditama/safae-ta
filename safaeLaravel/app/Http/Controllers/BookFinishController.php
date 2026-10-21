@@ -16,7 +16,7 @@ class BookFinishController extends Controller
      * Rekomendasi dibaca dari tabel book_recommendations (hasil batch model),
      * bukan dihitung saat halaman dibuka.
      */
-    public function show(Book $book)
+public function show(Book $book)
     {
         $user = auth()->user();
 
@@ -34,9 +34,19 @@ class BookFinishController extends Controller
 
         // 1) Rekomendasi personal dari hasil batch model
         $recs = $this->fromBatch($user->id, $excludeIds);
-
-        // 2) Kalau belum ada (user baru / batch belum jalan): buku populer
         $judul = 'Buku lain yang mungkin kamu suka';
+
+        // 2) Kalau belum ada (user baru / batch belum jalan): cari buku SERUPA (genre sama)
+        if ($recs->isEmpty()) {
+            $recs = Book::where('status', 'approved')
+                ->where('genre', $book->genre) // Pastikan nama kolom di database sesuai ('genre' atau 'kategori_topik')
+                ->whereNotIn('id', $excludeIds)
+                ->limit(self::JUMLAH_REKOMENDASI)
+                ->get();
+            $judul = 'Buku dengan genre serupa';
+        }
+
+        // 3) Kalau buku di genre yang sama juga habis/kosong: buku POPULER
         if ($recs->isEmpty()) {
             $recs = $this->popular($excludeIds);
             $judul = 'Buku populer di Safae';
@@ -44,7 +54,6 @@ class BookFinishController extends Controller
 
         return view('feedback.finished', compact('book', 'recs', 'sudahMenilai', 'judul'));
     }
-
     /**
      * Simpan label: cocok = 1 (cocok/membantu) atau 0 (belum cocok/kurang membantu).
      * Menutup popup tanpa memilih TIDAK menyimpan apa pun.
@@ -80,7 +89,7 @@ class BookFinishController extends Controller
         }
 
         return Book::whereIn('id', $ids)
-            // ->where('status', 'approved') // sesuaikan dengan nilai status di tabel books
+            ->where('status', 'approved')
             ->get()
             ->sortBy(fn ($b) => $ids->search($b->id)) // pertahankan urutan skor
             ->values();
@@ -99,7 +108,7 @@ class BookFinishController extends Controller
                 'jumlah_pembaca'
             )
             ->whereNotIn('books.id', $excludeIds)
-            // ->where('status', 'approved')
+            ->where('books.status', 'approved')
             ->orderByDesc('jumlah_pembaca')
             ->limit(self::JUMLAH_REKOMENDASI)
             ->get();

@@ -15,7 +15,7 @@ class GenreUserController extends Controller
         $current_genre = $request->input('genre', '');
         $search = $request->input('search', '');
 
-        $publicStatuses = ['approved', 'published'];
+        $publicStatuses = ['approved'];
 
         $all_genres = Book::whereIn('status', $publicStatuses)
                           ->pluck('genre')
@@ -94,15 +94,12 @@ class GenreUserController extends Controller
 
     public function preview($id)
     {
-        $book = Book::with('reviews')->findOrFail($id);
-
-        // Ambil 4 buku lain dengan genre sejenis sebagai rekomendasi "Anda Mungkin Juga Menyukai"
+        $book = Book::with('reviews')->where('status', 'approved')->findOrFail($id);
         $recommendedBooks = Book::where('genre', $book->genre)
-            ->where('id', '!=', $book->id)
-            ->whereIn('status', ['approved', 'published'])
-            ->take(4)
-            ->get();
-
+    ->where('id', '!=', $book->id)
+    ->where('status', 'approved')
+    ->take(4)
+    ->get();
         return view('books.preview', compact('book', 'recommendedBooks'));
     }
 }
