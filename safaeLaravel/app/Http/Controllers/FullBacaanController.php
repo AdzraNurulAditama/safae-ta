@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Book;
-use App\Models\Chapter;
+use App\Models\ChapterUnlock;
+use App\Models\PremiumBookUser;
+use App\Models\PenukaranPoint;
 use App\Models\ReadingHistory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,93 +14,113 @@ class FullBacaanController extends Controller
 {
     public function show($id, $page = 1)
     {
-        $book = Book::with('chapters')->findOrFail($id);
+        $book = Book::findOrFail($id);
 
-        if ($book->is_premium) {
-            $akses = \App\Models\PremiumBookUser::where('user_id', Auth::id())
+        // AMBIL BAB BUKU
+        $chapters = $book->chapters()
+        ->where('status', 'published')
+        ->orderBy('chapter_number')
+        ->get();
+
+        $totalHalaman = $chapters->count();
+
+        if ($totalHalaman > 0) {
+            $page = max(1, min((int) $page, $totalHalaman));
+            $currentChapter = $chapters->get($page - 1);
+        } else {
+            $page = 1;
+            $currentChapter = null;
+            $totalHalaman = 1;
+        }
+
+        // PEMERIKSAAN AKSES PREMIUM
+        $isChapterLocked = false;
+
+        if ($book->is_premium && $currentChapter && $currentChapter->is_premium) {
+            $userId = Auth::id();
+
+            if (!$userId) {
+                return redirect()->route('login')
+                    ->with('error', 'Silakan login untuk membuka bab premium.');
+            }
+
+            // Akses seluruh buku melalui PremiumBookUser
+            $hasBookAccess = PremiumBookUser::where('user_id', $userId)
                 ->where('book_id', $book->id)
                 ->exists();
 
-            if (!$akses) {
-                return redirect()
-                    ->route('premium.books')
-                    ->with('error', 'Silakan tukarkan poin terlebih dahulu.');
+            // Akses seluruh buku dari penukaran sistem lama
+            $hasOldAccess = PenukaranPoint::where('user_id', $userId)
+                ->where('book_id', $book->id)
+                ->exists();
+
+            // Akses satu bab menggunakan poin
+            $hasChapterAccess = ChapterUnlock::where('user_id', $userId)
+                ->where('chapter_id', $currentChapter->id)
+                ->exists();
+
+            // Kunci bab jika pengguna belum memiliki akses
+            $isChapterLocked = !($hasBookAccess || $hasOldAccess || $hasChapterAccess);
+        }
+
+        // RIWAYAT MEMBACA DAN JUMLAH PEMBACA
+        if (Auth::check() && !$isChapterLocked) {
+            $existingReader = ReadingHistory::where('user_id', Auth::id())
+                ->where('book_id', $book->id)
+                ->exists();
+
+            if (!$existingReader) {
+                $book->increment('reader_count');
+                $book->refresh();
+
+                // NOTIFIKASI 100.000 PEMBACA
+                if ($book->reader_count >= 100000 && !$book->premium_notified) {
+                    \App\Models\Notification::create([
+                        'user_id' => $book->user_id,
+                        'title' => 'Buku Siap Premium',
+                        'message' => '🎉 Buku "' . $book->title . '" telah mencapai 100.000 pembaca dan dapat diajukan menjadi Premium.',
+                    ]);
+
+                    $book->update([
+                        'premium_notified' => true
+                    ]);
+                }
             }
+
+            $totalPagesHistory = $totalHalaman;
+
+            $status = ($page >= $totalPagesHistory)
+                ? 'Selesai Dibaca'
+                : 'Sedang Dibaca';
+
+            $percentage = round(
+                ($page / max($totalPagesHistory, 1)) * 100,
+                2
+            );
+
+            ReadingHistory::updateOrCreate(
+                [
+                    'user_id' => Auth::id(),
+                    'book_id' => $book->id
+                ],
+                [
+                    'last_page' => $page,
+                    'total_pages' => $totalPagesHistory,
+                    'progress' => $page,
+                    'progress_percentage' => $percentage,
+                    'status' => $status,
+                    'last_read_at' => now()
+                ]
+            );
         }
 
-    //NAMBAHIN BUAT PROGRESS READING HISTORY DAN NOTIFIKASI KALO BUKU SUDAH 100.000 READER  
-        if (Auth::check()) {
-    // 1. Cek jumlah reader
-    $existingReader = ReadingHistory::where('user_id', Auth::id())
-        ->where('book_id', $book->id)
-        ->exists();
-
-    if (!$existingReader) {
-        $book->increment('reader_count');
-        $book->refresh();
-
-        if ($book->reader_count >= 100000 && !$book->premium_notified) {
-            \App\Models\Notification::create([
-                'user_id' => $book->user_id,
-                'title' => 'Buku Siap Premium',
-                'message' => '🎉 Buku "' . $book->title . '" telah mencapai 100.000 pembaca dan dapat diajukan menjadi Premium.',
-            ]);
-
-            $book->update([
-                'premium_notified' => true
-            ]);
-        }
-    }
-
-    // 2. Hitung Total Halaman & Status
-    $totalBab = $book->chapters()->count();
-    $totalHalaman = $totalBab > 0 ? $totalBab : ($book->jumlah_halaman ?? 1);
-    
-    // Tentukan status membaca
-    $status = ($page >= $totalHalaman) ? 'Selesai Dibaca' : 'Sedang Dibaca';
-    $percentage = round(($page / max($totalHalaman, 1)) * 100, 2);
-
-    // 3. Simpan Progres Lengkap
-    ReadingHistory::updateOrCreate(
-        [
-            'user_id' => Auth::id(),
-            'book_id' => $book->id,
-        ],
-        [
-            'last_page' => $page,
-            'total_pages' => $totalHalaman,
-            'progress' => $page,
-            'progress_percentage' => $percentage,
-            'status' => $status,
-            'last_read_at' => now(),
-        ]
-    );
-}
-
-        // =========================================================
-        // PROSES ISI BUKU (CEK DARI CHAPTER ATAU LANGSUNG DARI BUKU)
-        // =========================================================
-        $chapters = $book->chapters()->orderBy('chapter_number', 'asc')->get();
-        $totalHalaman = $chapters->count();
-
-        // JIKA BUKU MEMILIKI CHAPTER/BAB
-        if ($totalHalaman > 0) {
-            if ($page < 1) $page = 1;
-            if ($page > $totalHalaman) $page = $totalHalaman;
-
-            $currentChapter = $chapters->values()->get($page - 1);
-            $halamanKonten = $currentChapter ? $currentChapter->content : 'Konten tidak ditemukan.';
-        } 
-        // JIKA BUKU TIDAK ADA CHAPTER (TEKS DISIMPAN LANGSUNG DI TABEL BUKU SEPERTI DI ADMIN)
-        else {
-            /* 
-             * PENTING: Cek phpMyAdmin/Database kamu! 
-             * Apa nama kolom untuk "ISI BUKU LENGKAP" di tabel books? 
-             * Ganti "isi_buku" di bawah ini dengan nama kolom aslinya.
-             * (Biasanya bernama 'content', 'isi_buku', 'manuskrip', atau 'description')
-             */
-            
-            // Saya asumsikan nama kolomnya antara isi_buku atau content
+        // TAMPILKAN ISI BUKU
+        if ($isChapterLocked) {
+            // Konten bab terkunci tidak dikirim ke halaman
+            $halamanKonten = null;
+        } elseif ($currentChapter) {
+            $halamanKonten = $currentChapter->content;
+        } else {
             if (!empty($book->isi_buku)) {
                 $halamanKonten = $book->isi_buku;
             } elseif (!empty($book->content)) {
@@ -106,10 +128,6 @@ class FullBacaanController extends Controller
             } else {
                 $halamanKonten = 'Belum ada konten pada buku ini.';
             }
-
-            $currentChapter = null;
-            $totalHalaman = 1; // Karena hanya 1 teks panjang, dihitung 1 halaman
-            $page = 1;
         }
 
         return view('books.fullbacaan', [
@@ -117,7 +135,8 @@ class FullBacaanController extends Controller
             'halaman' => $halamanKonten,
             'chapter' => $currentChapter,
             'page' => $page,
-            'totalHalaman' => $totalHalaman
+            'totalHalaman' => $totalHalaman,
+            'isChapterLocked' => $isChapterLocked
         ]);
     }
 

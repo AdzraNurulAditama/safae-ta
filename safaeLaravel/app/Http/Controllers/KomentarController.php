@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\Komentar;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class KomentarController extends Controller
 {
     public function index($bookId, $page)
     {
-        $komentar = Komentar::where('book_id', $bookId)
+        $komentar = Komentar::with('user')
+            ->where('book_id', $bookId)
             ->where('page', $page)
             ->orderBy('created_at', 'desc')
             ->get();
@@ -34,10 +35,9 @@ class KomentarController extends Controller
 
         $namaFile = null;
 
+        // SIMPAN GAMBAR KE STORAGE
         if ($r->hasFile('image')) {
-            $file = $r->file('image');
-            $namaFile = time() . '_' . $file->getClientOriginalName();
-            $file->move(public_path('uploads'), $namaFile);
+            $namaFile = $r->file('image')->store('komentar', 'public');
         }
 
         $user = Auth::user();
@@ -66,13 +66,15 @@ class KomentarController extends Controller
             abort(403);
         }
 
-        return view('books.edit_komentar', ['komentar' => $komentar]);
+        return view('books.edit_komentar', [
+            'komentar' => $komentar
+        ]);
     }
 
     public function update(Request $r, $id)
     {
         $komentar = Komentar::findOrFail($id);
-        
+
         if (Auth::id() != $komentar->user_id) {
             abort(403, 'Kamu tidak berhak mengedit komentar ini');
         }
@@ -84,23 +86,32 @@ class KomentarController extends Controller
 
         $namaFile = $komentar->image_path;
 
+        // GANTI GAMBAR KOMENTAR
         if ($r->hasFile('image')) {
+            $gambarBaru = $r->file('image')->store('komentar', 'public');
+
+            $komentar->update([
+                'komentar' => $r->komentar,
+                'image_path' => $gambarBaru
+            ]);
+
+            // HAPUS GAMBAR LAMA DARI STORAGE
             if ($namaFile) {
-                $path = public_path('uploads/' . $namaFile);
-                if (File::exists($path)) {
-                    File::delete($path);
+                $pathLama = preg_replace(
+                    '#^(public/|storage/)+#',
+                    '',
+                    $namaFile
+                );
+
+                if (Storage::disk('public')->exists($pathLama)) {
+                    Storage::disk('public')->delete($pathLama);
                 }
             }
-
-            $file = $r->file('image');
-            $namaFile = time() . '_' . $file->getClientOriginalName();
-            $file->move(public_path('uploads'), $namaFile);
+        } else {
+            $komentar->update([
+                'komentar' => $r->komentar
+            ]);
         }
-
-        $komentar->update([
-            'komentar' => $r->komentar,
-            'image_path' => $namaFile
-        ]);
 
         return redirect()->route('komentar.index', [
             'bookId' => $komentar->book_id,
@@ -116,17 +127,24 @@ class KomentarController extends Controller
             abort(403, 'Kamu tidak berhak menghapus komentar ini');
         }
 
-        if ($komentar->image_path) {
-            $path = public_path('uploads/' . $komentar->image_path);
-            if (File::exists($path)) {
-                File::delete($path);
-            }
-        }
-
         $bookId = $komentar->book_id;
         $page = $komentar->page;
+        $namaFile = $komentar->image_path;
 
         $komentar->delete();
+
+        // HAPUS GAMBAR KOMENTAR DARI STORAGE
+        if ($namaFile) {
+            $path = preg_replace(
+                '#^(public/|storage/)+#',
+                '',
+                $namaFile
+            );
+
+            if (Storage::disk('public')->exists($path)) {
+                Storage::disk('public')->delete($path);
+            }
+        }
 
         return redirect()->route('komentar.index', [
             'bookId' => $bookId,

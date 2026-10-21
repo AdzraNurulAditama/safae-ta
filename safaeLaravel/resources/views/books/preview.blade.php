@@ -295,9 +295,9 @@
 
             <!-- STATISTIK -->
             <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-4 mb-4 flex-wrap">
-                <span class="stat-badge"><i class="fa-solid fa-eye me-1"></i> {{ number_format(rand(1000, 50000)) }} dibaca</span>
+                <span class="stat-badge"><i class="fa-solid fa-eye me-1"></i> {{ number_format($book->reader_count ?? 0) }} dibaca</span>
                 <span class="stat-badge"><i class="fa-solid fa-star text-warning me-1"></i> {{ $avgRating > 0 ? $avgRating : '4.8' }}</span>
-                <span class="stat-badge"><i class="fa-solid fa-list me-1"></i> {{ $book->jumlah_halaman ?? 1 }} bab / hal</span>
+                <span class="stat-badge"><i class="fa-solid fa-list me-1"></i> {{ $book->chapters_count }} bab</span>
             </div>
 
             <!-- TOMBOL BACA UTAMA -->

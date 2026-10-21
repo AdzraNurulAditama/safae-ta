@@ -1,152 +1,193 @@
-@extends('layouts.layoutsAdmin')
 
+@extends('layouts.layoutsAdmin')
+@section('title', 'Kelola Buku Premium')
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/admin-premium.css') }}">
 
-<div class="adm-wrap">
-
-    {{-- ================= TOPBAR HALAMAN ================= --}}
-    <div class="adm-topbar">
-        <div class="adm-title">
-            <i class="ti ti-crown"></i>
-            Kelola Buku Premium
+<div class="ap-page">
+    <div class="ap-header">
+        <div>
+            <span class="ap-eyebrow">
+                <i class="fa-solid fa-crown"></i> SAFAE ADMIN
+            </span>
+            <h1>Kelola <span>Buku Premium</span></h1>
+            <p>Kelola koleksi buku premium yang telah disetujui.</p>
         </div>
-        <span class="adm-count">{{ $books->count() }} buku</span>
+        <a href="{{ route('admin.premium.index') }}" class="ap-header-link">
+            <i class="fa-solid fa-clipboard-list"></i>
+            Lihat Pengajuan
+        </a>
     </div>
 
-    {{-- Alert Success --}}
-    @if(session('success'))
-        <div class="adm-alert success">
-            <i class="ti ti-circle-check"></i>
-            {{ session('success') }}
+    @foreach(['success', 'error', 'info'] as $type)
+        @if(session($type))
+            <div class="ap-alert {{ $type }}">
+                <i class="fa-solid fa-circle-info"></i>
+                {{ session($type) }}
+            </div>
+        @endif
+    @endforeach
+
+    <div class="ap-stats">
+        <div class="ap-stat">
+            <div class="ap-stat-icon purple">
+                <i class="fa-solid fa-crown"></i>
+            </div>
+            <div>
+                <strong>{{ number_format($totalPremium) }}</strong>
+                <span>Buku Premium</span>
+            </div>
         </div>
-    @endif
-
-    {{-- Alert Error --}}
-    @if(session('error'))
-        <div class="adm-alert danger">
-            <i class="ti ti-alert-circle"></i>
-            {{ session('error') }}
+        <div class="ap-stat">
+            <div class="ap-stat-icon blue">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+                <strong>{{ number_format($totalRegular) }}</strong>
+                <span>Buku Reguler</span>
+            </div>
         </div>
-    @endif
-
-    {{-- ================= CONTAINER TABEL UTAMA ================= --}}
-    <div class="adm-card">
-        <table class="adm-table">
-            <thead>
-                <tr>
-                    <th>Judul & Penulis</th>
-                    <th>Status</th>
-                    <th>Poin</th>
-                    <th>Aksi</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                @forelse($books as $book)
-                    <tr>
-
-                        {{-- Judul & Penulis --}}
-                        <td>
-                            <div class="book-info">
-                                <span class="book-title-cell">
-                                    {{ $book->title }}
-                                </span>
-                                <span class="book-author-cell">
-                                    {{ $book->author }}
-                                </span>
-                            </div>
-                        </td>
-
-                        {{-- Status Premium / Biasa --}}
-                        <td>
-                            @if($book->is_premium)
-                                <span class="badge-premium">
-                                    <i class="ti ti-crown"></i>
-                                    Premium
-                                </span>
-                            @else
-                                <span class="badge-biasa">
-                                    Biasa
-                                </span>
-                            @endif
-                        </td>
-
-                        {{-- Nilai Poin Premium --}}
-                        <td>
-                            @if($book->is_premium)
-                                <span class="poin-val">
-                                    <i class="ti ti-star"></i>
-                                    {{ number_format($book->premium_point) }}
-                                </span>
-                            @else
-                                <span class="poin-dash">—</span>
-                            @endif
-                        </td>
-
-                        {{-- Kolompok Tombol Aksi --}}
-                        <td>
-                            <div class="aksi-row">
-
-                                {{-- Kondisi 1: Jika Buku Belum Premium (Jadikan Premium) --}}
-                                @if(!$book->is_premium)
-                                    <form action="{{ route('admin.premium.set', $book->id) }}"
-                                          method="POST"
-                                          style="display:flex; gap:8px; align-items:center; margin:0;">
-                                        @csrf
-
-                                        <input type="number"
-                                               name="premium_point"
-                                               class="inp-poin"
-                                               placeholder="Poin"
-                                               min="1"
-                                               required>
-
-                                        <button type="submit" class="btn-set">
-                                            <i class="ti ti-crown"></i>
-                                            Jadikan Premium
-                                        </button>
-                                    </form>
-                                @else
-                                    {{-- Kondisi 2: Jika Buku Sudah Premium --}}
-                                    <span class="txt-premium">
-                                        <i class="ti ti-check"></i>
-                                        Sudah Premium
-                                    </span>
-                                @endif
-
-                                {{-- Tombol Batalkan / Hapus Status Premium --}}
-                                <form action="{{ route('admin.premium.destroy', $book->id) }}"
-                                      method="POST"
-                                      style="margin:0;">
-                                    @csrf
-                                    @method('DELETE')
-
-                                    <button type="submit"
-                                            class="btn-generic btn-hapus"
-                                            style="cursor:pointer;"
-                                            onclick="return confirm('Yakin ingin menghapus status premium dari buku ini?')">
-                                        <i class="ti ti-trash"></i>
-                                        Hapus
-                                    </button>
-                                </form>
-
-                            </div>
-                        </td>
-
-                    </tr>
-                @empty
-                    {{-- Tampilan jika tidak ada data buku --}}
-                    <tr>
-                        <td colspan="4" class="adm-empty-row" style="text-align:center; padding:20px;">
-                            Tidak ada data data buku yang tersedia.
-                        </td>
-                    </tr>
-                @endforelse
-            </tbody>
-
-        </table>
+        <div class="ap-stat">
+            <div class="ap-stat-icon yellow">
+                <i class="fa-solid fa-hourglass-half"></i>
+            </div>
+            <div>
+                <strong>{{ number_format($totalPending) }}</strong>
+                <span>Menunggu Persetujuan</span>
+            </div>
+        </div>
     </div>
 
+    <div class="ap-panel">
+        <div class="ap-panel-header">
+            <div>
+                <h2><i class="fa-solid fa-layer-group"></i> Daftar Buku Premium</h2>
+                <p>Cari berdasarkan judul buku atau nama penulis.</p>
+            </div>
+            <span class="ap-count">{{ $books->total() }} Buku</span>
+        </div>
+
+        <form method="GET" action="{{ route('admin.premium.books') }}" class="ap-filter">
+            <div class="ap-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="search" value="{{ request('search') }}"
+                    placeholder="Cari judul buku atau penulis...">
+            </div>
+            <button type="submit" class="ap-btn primary">
+                <i class="fa-solid fa-search"></i> Cari
+            </button>
+            @if(request('search'))
+                <a href="{{ route('admin.premium.books') }}" class="ap-btn secondary">
+                    <i class="fa-solid fa-rotate-left"></i> Reset
+                </a>
+            @endif
+        </form>
+
+        <div class="ap-book-grid">
+            @forelse($books as $book)
+                @php
+                    $cover = $book->image_path
+                        ? preg_replace('#^(public/|storage/)+#', '', $book->image_path)
+                        : null;
+                @endphp
+
+                <div class="ap-book-card">
+                    <div class="ap-book-main">
+                        <div class="ap-cover">
+                            @if($cover)
+                                <img src="{{ asset('storage/'.$cover) }}" alt="Cover {{ $book->title }}">
+                            @else
+                                <div class="ap-cover-empty">
+                                    <i class="fa-solid fa-book-open"></i>
+                                </div>
+                            @endif
+                        </div>
+                        <div class="ap-book-info">
+                            <span class="ap-premium-badge">
+                                <i class="fa-solid fa-crown"></i> PREMIUM
+                            </span>
+                            <h3>{{ $book->title }}</h3>
+                            <p><i class="fa-solid fa-user-pen"></i>
+                                {{ $book->author ?: ($book->user?->username ?? 'Penulis Safae') }}
+                            </p>
+                            <p><i class="fa-solid fa-tag"></i>
+                                {{ $book->genre ?? 'Tanpa Genre' }}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ap-book-meta">
+                        <span>
+                            <i class="fa-solid fa-list"></i>
+                            {{ $book->published_chapters_count }} Bab Terbit
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-eye"></i>
+                            {{ number_format($book->reader_count ?? 0) }} Pembaca
+                        </span>
+                    </div>
+
+                    <div class="ap-book-actions">
+                        <button type="button" class="ap-btn secondary"
+                            onclick="document.getElementById('ap-detail-{{ $book->id }}').showModal()">
+                            <i class="fa-solid fa-circle-info"></i> Detail
+                        </button>
+                        <form action="{{ route('admin.premium.destroy', $book->id) }}"
+                            method="POST"
+                            onsubmit="return confirm('Cabut status premium buku ini? Buku tidak akan dihapus.')">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="ap-btn danger">
+                                <i class="fa-solid fa-crown"></i> Cabut Premium
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <dialog id="ap-detail-{{ $book->id }}" class="ap-dialog">
+                    <div class="ap-dialog-header">
+                        <h2>Detail Buku Premium</h2>
+                        <button type="button"
+                            onclick="this.closest('dialog').close()"
+                            aria-label="Tutup">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                    <div class="ap-dialog-book">
+                        @if($cover)
+                            <img src="{{ asset('storage/'.$cover) }}" alt="{{ $book->title }}">
+                        @endif
+                        <div>
+                            <h3>{{ $book->title }}</h3>
+                            <p><strong>Penulis:</strong>
+                                {{ $book->author ?: ($book->user?->username ?? '-') }}
+                            </p>
+                            <p><strong>Genre:</strong> {{ $book->genre ?? '-' }}</p>
+                            <p><strong>Bab terbit:</strong> {{ $book->published_chapters_count }}</p>
+                            <p><strong>Total bab:</strong> {{ $book->chapters_count }}</p>
+                            <p><strong>Pembaca:</strong> {{ number_format($book->reader_count ?? 0) }}</p>
+                            <p><strong>Status:</strong> Premium</p>
+                        </div>
+                    </div>
+                    <div class="ap-description">
+                        <strong>Deskripsi Buku</strong>
+                        <p>{{ $book->description ?: 'Belum ada deskripsi.' }}</p>
+                    </div>
+                </dialog>
+            @empty
+                <div class="ap-empty">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Tidak Ada Buku Premium</h3>
+                    <p>Belum ada buku yang sesuai dengan pencarian.</p>
+                </div>
+            @endforelse
+        </div>
+
+        @if($books->hasPages())
+            <div class="ap-pagination">
+                {{ $books->links() }}
+            </div>
+        @endif
+    </div>
 </div>
 @endsection

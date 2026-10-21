@@ -275,6 +275,60 @@
     @media(max-width: 480px) {
         .book-grid { grid-template-columns: repeat(1, 1fr); }
     }
+
+
+/* PAGINATION GENRE */
+.genre-pagination {
+    display: flex;
+    justify-content: center;
+    margin: 35px 0 25px;
+}
+
+.genre-pagination .pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.genre-pagination .page-item .page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 8px 13px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    color: #cbd5e1;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+.genre-pagination .page-item .page-link:hover {
+    background: #334155;
+    border-color: #38bdf8;
+    color: #38bdf8;
+}
+
+.genre-pagination .page-item.active .page-link {
+    background: #38bdf8;
+    border-color: #38bdf8;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+.genre-pagination .page-item.disabled .page-link {
+    opacity: .45;
+    cursor: not-allowed;
+}
+
 </style>
 
 <div class="container-fluid">
@@ -386,7 +440,15 @@
                     <div class="mt-2 d-flex flex-wrap gap-1 mb-2">
                         <span class="badge bg-info bg-opacity-25 text-info">{{ $book->genre }}</span>
                         <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jenis_buku }}</span>
-                        <span class="badge bg-secondary bg-opacity-25 text-light">{{ $book->jumlah_halaman }} hal</span>
+                        @php
+                            $jumlahBab = (int) ($book->chapters_count ?? 0);
+                            $totalHalamanBaca = $jumlahBab > 0 ? $jumlahBab : 1;
+                        @endphp
+
+                        <span class="badge bg-secondary bg-opacity-25 text-light">
+                            <i class="fa-solid fa-book-open me-1"></i>
+                            {{ $totalHalamanBaca }} Halaman
+                        </span>
                         
                         @if (isset($book->is_premium) && $book->is_premium)
                             <span class="badge bg-warning bg-opacity-25 text-warning">
@@ -437,8 +499,17 @@
                 <h4 class="text-white fw-bold mb-2">Tidak ada buku ditemukan</h4>
                 <p>Coba gunakan kata kunci pencarian lain atau pilih genre yang berbeda.</p>
             </div>
-        @endforelse
+               @endforelse
     </div>
+
+    {{-- PAGINATION DAFTAR BUKU --}}
+    @if($books_to_show instanceof \Illuminate\Contracts\Pagination\Paginator)
+        @if($books_to_show->hasPages())
+            <div class="genre-pagination">
+                {{ $books_to_show->withQueryString()->links() }}
+            </div>
+        @endif
+    @endif
 
 </div>
 

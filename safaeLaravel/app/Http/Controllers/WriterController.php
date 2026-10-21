@@ -10,100 +10,141 @@ use Illuminate\Support\Facades\Storage;
 
 class WriterController extends Controller
 {
-    // 1. Menampilkan Daftar Buku Milik Penulis (Kelola Buku)
-    public function index()
-    {
-        $books = Book::where('user_id', Auth::id())
-                     ->withCount('chapters')
-                     ->latest()
-                     ->get();
+    // 1. Menampilkan daftar buku milik penulis
+public function index()
+{
+    $books = Book::where('user_id', Auth::id())
+        ->withCount([
+            'chapters',
+            'favorites as favorites_count',
+            'komentar as comments_count'
+        ])
+        ->with('premiumRequests')
+        ->latest()
+        ->get();
 
-        return view('writer.index', compact('books'));
-    }
+    return view('writer.index', compact('books'));
+}
 
-    // 2. Menampilkan Daftar Bab / Chapter Berdasarkan Buku
+    // 2. Menampilkan daftar bab berdasarkan buku
     public function chapters($bookId)
     {
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
-        $chapters = $book->chapters()->orderBy('chapter_number', 'asc')->get();
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
+
+        $chapters = $book->chapters()
+            ->orderBy('chapter_number', 'asc')
+            ->get();
 
         return view('writer.chapters-index', compact('book', 'chapters'));
     }
 
-    // 3. Form Tulis / Edit Chapter
+    // 3. Form tambah atau edit bab
     public function editor($bookId, $chapterId = null)
     {
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
+
         $chapter = null;
 
         if ($chapterId) {
-            $chapter = Chapter::where('book_id', $book->id)->findOrFail($chapterId);
+            $chapter = Chapter::where('book_id', $book->id)
+                ->findOrFail($chapterId);
         }
 
-        // Hitung otomatis nomor chapter berikutnya jika baru
-        $nextChapterNumber = $book->chapters()->max('chapter_number') + 1;
+        // Nomor bab berikutnya
+        $nextChapterNumber = ($book->chapters()
+            ->max('chapter_number') ?? 0) + 1;
 
-        return view('writer.editor', compact('book', 'chapter', 'nextChapterNumber'));
+        return view('writer.editor', compact(
+            'book',
+            'chapter',
+            'nextChapterNumber'
+        ));
     }
 
-    // 4. Menyimpan atau Memperbarui Chapter (Draft / Publish + Foto Chapter)
+    // 4. Menyimpan atau memperbarui bab
+    // Mendukung Draft, Published, Gratis, Premium, dan Ilustrasi
     public function saveChapter(Request $request, $bookId, $chapterId = null)
     {
         $request->validate([
-            'chapter_number' => 'required|integer',
+            'chapter_number' => 'required|integer|min:1',
             'title'          => 'required|string|max:255',
-            'content'        => 'required',
+            'content'        => 'required|string',
             'chapter_image'  => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
             'status'         => 'required|in:draft,published',
+            'is_premium'     => 'required|in:0,1',
         ]);
 
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
+        // Pastikan buku milik penulis yang login
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
 
-        // Data yang akan disimpan
-        $data = [
-            'book_id'        => $book->id,
-            'chapter_number' => $request->input('chapter_number'),
-            'title'          => $request->input('title'),
-            'content'        => $request->input('content'),
-            'status'         => $request->input('status'),
-        ];
-
-        // Handle Upload Foto Ilustrasi Chapter
-        if ($request->hasFile('chapter_image')) {
-            if ($chapterId) {
-                $oldChapter = Chapter::find($chapterId);
-                if ($oldChapter && $oldChapter->image) {
-                    Storage::disk('public')->delete($oldChapter->image);
-                }
-            }
-            $data['image'] = $request->file('chapter_image')->store('chapter-images', 'public');
-        }
-
+        // Ambil bab lama atau buat bab baru
         if ($chapterId) {
-            // Update Chapter
-            $chapter = Chapter::where('book_id', $book->id)->findOrFail($chapterId);
-            $chapter->update($data);
-            $message = 'Bab berhasil diperbarui!';
+            $chapter = Chapter::where('book_id', $book->id)
+                ->findOrFail($chapterId);
         } else {
-            // Buat Chapter Baru
-            Chapter::create($data);
-            $message = 'Bab baru berhasil ditambahkan!';
+            $chapter = new Chapter();
         }
 
-        return redirect()->to('/penulis/buku/'.$book->id.'/chapters')->with('success', $message);
+        // Simpan informasi bab
+        $chapter->book_id = $book->id;
+        $chapter->chapter_number = $request->input('chapter_number');
+        $chapter->title = $request->input('title');
+        $chapter->content = $request->input('content');
+        $chapter->status = $request->input('status');
+
+        // Simpan akses bab: 0 = Gratis, 1 = Premium
+        $chapter->is_premium = $request->boolean('is_premium');
+
+        // Upload ilustrasi bab jika ada
+        $oldImage = $chapter->image;
+        $newImage = null;
+
+        if ($request->hasFile('chapter_image')) {
+            $newImage = $request->file('chapter_image')
+                ->store('chapter-images', 'public');
+
+            $chapter->image = $newImage;
+        }
+
+        try {
+            $chapter->save();
+        } catch (\Throwable $e) {
+            // Hapus file baru jika penyimpanan database gagal
+            if ($newImage) {
+                Storage::disk('public')->delete($newImage);
+            }
+
+            throw $e;
+        }
+
+        // Hapus ilustrasi lama setelah data berhasil disimpan
+        if ($newImage && $oldImage && $oldImage !== $newImage) {
+            Storage::disk('public')->delete($oldImage);
+        }
+
+        $message = $chapterId
+            ? 'Bab berhasil diperbarui!'
+            : 'Bab baru berhasil ditambahkan!';
+
+        return redirect()
+            ->route('writer.chapters.index', ['book' => $book->id])
+            ->with('success', $message);
     }
 
-    // =========================================================================
-    // KELOLA BUKU UTAMA (TAMBAH & EDIT NOVEL BARU)
-    // =========================================================================
+    // =========================================================
+    // KELOLA BUKU UTAMA
+    // =========================================================
 
-    // 5. Form Membuat Buku/Novel Baru
+    // 5. Form membuat buku baru
     public function createBook()
     {
         return view('writer.create');
     }
 
-    // 6. Menyimpan Buku/Novel Baru
+    // 6. Menyimpan buku baru
     public function storeBook(Request $request)
     {
         $request->validate([
@@ -116,12 +157,15 @@ class WriterController extends Controller
         ]);
 
         $coverPath = null;
+
         if ($request->hasFile('cover')) {
-            $coverPath = $request->file('cover')->store('covers', 'public');
+            $coverPath = $request->file('cover')
+                ->store('covers', 'public');
         }
 
-        // Jika status yang dipilih published, ubah menjadi pending agar divalidasi admin
+        // Buku yang dipublikasikan harus menunggu persetujuan admin
         $statusInput = $request->input('status');
+
         if ($statusInput === 'published') {
             $statusInput = 'pending';
         }
@@ -129,7 +173,10 @@ class WriterController extends Controller
         $book = Book::create([
             'user_id'     => Auth::id(),
             'title'       => $request->input('title'),
-            'author'      => $request->input('author', Auth::user()->username ?? 'Penulis'),
+            'author'      => $request->input(
+                'author',
+                Auth::user()->username ?? 'Penulis'
+            ),
             'genre'       => $request->input('genre'),
             'year'        => $request->input('year', date('Y')),
             'description' => $request->input('description'),
@@ -137,21 +184,28 @@ class WriterController extends Controller
             'status'      => $statusInput,
         ]);
 
-        return redirect()->to('/penulis/buku/'.$book->id.'/chapters')
-                         ->with('success', 'Buku baru berhasil dibuat dan diajukan untuk validasi!');
+        return redirect()
+            ->route('writer.chapters.index', ['book' => $book->id])
+            ->with(
+                'success',
+                'Buku baru berhasil dibuat dan diajukan untuk validasi!'
+            );
     }
 
-    // 7. Form Edit Detail Buku/Novel
+    // 7. Form edit detail buku
     public function editBook($bookId)
     {
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
+
         return view('writer.edit', compact('book'));
     }
 
-    // 8. Memperbarui Detail Buku/Novel
+    // 8. Memperbarui detail buku
     public function updateBook(Request $request, $bookId)
     {
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
 
         $request->validate([
             'title'       => 'required|string|max:255',
@@ -162,8 +216,9 @@ class WriterController extends Controller
             'status'      => 'required|in:draft,published',
         ]);
 
-        // Jika penulis memilih published, ubah menjadi pending untuk validasi admin
+        // Jika dipublikasikan, harus divalidasi admin
         $statusInput = $request->input('status');
+
         if ($statusInput === 'published') {
             $statusInput = 'pending';
         }
@@ -177,41 +232,78 @@ class WriterController extends Controller
             'status'      => $statusInput,
         ];
 
+        // Upload cover baru jika ada
         if ($request->hasFile('cover')) {
-            if ($book->image_path) {
-                Storage::disk('public')->delete($book->image_path);
-            }
-            $data['image_path'] = $request->file('cover')->store('covers', 'public');
+            $oldCover = $book->image_path;
+
+            $newCover = $request->file('cover')
+                ->store('covers', 'public');
+
+            $data['image_path'] = $newCover;
         }
 
-        $book->update($data);
+        try {
+            $book->update($data);
+        } catch (\Throwable $e) {
+            if (isset($newCover)) {
+                Storage::disk('public')->delete($newCover);
+            }
 
-        return redirect()->to('/penulis/buku')
-                         ->with('success', 'Informasi buku berhasil diperbarui dan diajukan untuk validasi!');
+            throw $e;
+        }
+
+        // Hapus cover lama setelah update berhasil
+        if (isset($newCover) && !empty($oldCover)) {
+            Storage::disk('public')->delete($oldCover);
+        }
+
+        return redirect()
+            ->route('writer.books.index')
+            ->with(
+                'success',
+                'Informasi buku berhasil diperbarui dan diajukan untuk validasi!'
+            );
     }
 
-    // 9. Menghapus Buku/Novel beserta file cover dan chapternya
+    // 9. Menghapus buku beserta cover dan seluruh bab
     public function destroyBook($bookId)
     {
-        $book = Book::where('user_id', Auth::id())->findOrFail($bookId);
+        $book = Book::where('user_id', Auth::id())
+            ->findOrFail($bookId);
 
-        // Hapus file cover jika ada
-        if ($book->image_path && Storage::disk('public')->exists($book->image_path)) {
+        // Hapus cover dari storage
+        if (
+            $book->image_path &&
+            Storage::disk('public')->exists($book->image_path)
+        ) {
             Storage::disk('public')->delete($book->image_path);
         }
 
-        // Hapus seluruh bab terkait lalu hapus bukunya
+        // Hapus seluruh bab terkait
         $book->chapters()->delete();
+
+        // Hapus buku
         $book->delete();
 
-        return redirect()->to('/penulis/buku')->with('success', 'Buku beserta seluruh bab berhasil dihapus!');
+        return redirect()
+            ->route('writer.books.index')
+            ->with(
+                'success',
+                'Buku beserta seluruh bab berhasil dihapus!'
+            );
     }
 
-    // 10. Halaman Baca / Pratinjau Buku Khusus Penulis
+    // 10. Halaman baca/pratinjau khusus penulis
     public function readBook($bookId)
     {
-        $book = Book::where('user_id', Auth::id())->with('chapters')->findOrFail($bookId);
-        $chapters = $book->chapters()->orderBy('chapter_number', 'asc')->get();
+        $book = Book::where('user_id', Auth::id())
+            ->with('chapters')
+            ->findOrFail($bookId);
+
+        // Penulis tetap dapat melihat draft miliknya sendiri
+        $chapters = $book->chapters()
+            ->orderBy('chapter_number', 'asc')
+            ->get();
 
         return view('writer.read', compact('book', 'chapters'));
     }

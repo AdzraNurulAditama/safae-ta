@@ -1,156 +1,227 @@
+
 @extends('layouts.app')
-
-@section('title', 'Buku Premium')
-
+@section('title', 'Buku Premium - Safae')
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="{{ asset('css/favorite.css') }}">
 <link rel="stylesheet" href="{{ asset('css/buku-premium.css') }}">
 
-<div class="container-fluid">
+<div class="premium-page">
+    <section class="premium-hero">
+        <div class="premium-hero-content">
+            <span class="premium-eyebrow">
+                <i class="fa-solid fa-crown"></i>
+                SAFAE PREMIUM COLLECTION
+            </span>
+            <h1>Jelajahi Cerita <span>Premium</span></h1>
+            <p>Temukan karya pilihan dari penulis Safae. Nikmati bab gratis dan lanjutkan cerita favoritmu dengan poin.</p>
 
-    {{-- ================= HEADER UTAMA HALAMAN ================= --}}
-    <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mb-4">
-        <div>
-            <h3 class="favorite-header mb-1 text-white" style="color: #ffffff !important;">
-                <i class="fa-solid fa-crown text-warning me-2"></i> Buku Premium
-            </h3>
-            <p class="text-white small mb-0" style="opacity: 0.85; font-size: 0.9rem; color: #ffffff !important;">Tukarkan poin reward membaca kamu untuk membuka akses konten-konten premium eksklusif.</p>
+            <div class="premium-hero-benefits">
+                <span><i class="fa-solid fa-book-open"></i> Bab Awal Gratis</span>
+                <span><i class="fa-solid fa-coins"></i> 50 Poin per Bab Premium</span>
+                <span><i class="fa-solid fa-unlock"></i> Akses Seluruh Bab</span>
+            </div>
         </div>
 
-        {{-- Badge Informasi Poin User --}}
-        <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-3 shadow-sm" 
-             style="background: rgba(6, 182, 212, 0.05); border: 1px solid rgba(6, 182, 212, 0.15); color: #38bdf8;">
-            <i class="fa-solid fa-coins opacity-80"></i>
-            <span class="text-white-50" style="font-size: 0.85rem; color: rgba(255,255,255,0.5) !important;">Poin Kamu:</span>
-            <strong class="font-monospace text-white" style="font-size: 1.05rem; color: #ffffff !important;">{{ number_format(auth()->user()->points ?? 0) }}</strong>
+        <div class="premium-hero-icon">
+            <i class="fa-solid fa-crown"></i>
         </div>
-    </div>
+    </section>
 
-    {{-- ================= NOTIFIKASI ALERT SISTEM ================= --}}
+    {{-- NOTIFIKASI --}}
     @if(session('success'))
-        <div class="alert alert-success d-flex align-items-center gap-2 mb-4 py-3 rounded-3 shadow-sm" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.15); color: #a7f3d0;">
-            <i class="fa-solid fa-circle-check text-success fs-5"></i>
-            <div>{{ session('success') }}</div>
+        <div class="premium-alert success">
+            <i class="fa-solid fa-circle-check"></i>
+            {{ session('success') }}
         </div>
     @endif
 
     @if(session('error'))
-        <div class="alert alert-danger d-flex align-items-center gap-2 mb-4 py-3 rounded-3 shadow-sm" style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.15); color: #fca5a5;">
-            <i class="fa-solid fa-triangle-exclamation text-danger fs-5"></i>
-            <div>{{ session('error') }}</div>
+        <div class="premium-alert error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            {{ session('error') }}
         </div>
     @endif
 
-    {{-- ================= KONDISI 1: JIKA DATA KOSONG ================= --}}
-    @if($books->count() == 0)
-        <div class="col-12">
-            <div class="empty-state shadow-sm text-center py-5">
-                <i class="fa-solid fa-crown fa-4x text-muted mb-3 opacity-30"></i>
-                <h4 class="text-white fw-bold mb-2">Belum Ada Buku Premium</h4>
-                <p class="text-white-50 mb-4">Daftar buku premium belum tersedia atau masih dalam proses peninjauan sistem admin.</p>
-                <a href="{{ route('genre.index') }}" class="btn btn-secondary rounded-pill px-4 py-2 fw-bold" style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); color: #fff;">
-                    <i class="fa-solid fa-arrow-left me-2"></i> Kembali ke Eksplorasi
-                </a>
+    {{-- DAFTAR BUKU PREMIUM --}}
+    <section class="premium-section">
+        <div class="premium-section-heading">
+            <div>
+                <span class="premium-label">KOLEKSI EKSKLUSIF</span>
+                <h2>
+                    <i class="fa-solid fa-gem"></i>
+                    Buku Premium
+                </h2>
+                <p>Pilih cerita yang ingin kamu baca dan temukan pengalaman membaca yang berbeda.</p>
+            </div>
+
+            <div class="premium-total">
+                <i class="fa-solid fa-book"></i>
+                {{ $books instanceof \Illuminate\Contracts\Pagination\LengthAwarePaginator ? $books->total() : $books->count() }} Buku
             </div>
         </div>
 
-    {{-- ================= KONDISI 2: TAMPILAN GRID LIST BUKU ================= --}}
-    @else
-        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
-            @foreach($books as $book)
-                @php
-                    $sudahDitukar = \App\Models\PenukaranPoint::where('user_id', auth()->id())
-                                      ->where('book_id', $book->id)
-                                      ->exists();
+        {{-- SEARCH DAN FILTER GENRE --}}
+        <form method="GET" action="{{ url('/buku-premium') }}" class="premium-filter">
+            <div class="premium-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input
+                    type="text"
+                    name="search"
+                    value="{{ request('search') }}"
+                    placeholder="Cari judul buku atau penulis..."
+                >
+            </div>
 
-                    // Menggabungkan variabel cover dari kodemu
-                    $cover = $book->image_path ?? $book->cover_image;
+            <select name="genre" class="premium-select">
+                <option value="">Semua Genre</option>
 
-                    // Logika dinamis pemecah path agar gambar dari seeder / upload admin tidak duplikat storage/
-                    $finalPath = '';
-                    if ($cover) {
-                        if (str_contains($cover, 'storage/')) {
-                            // Jika sudah ada kata storage/ di database, langsung di-load murni
-                            $finalPath = asset(ltrim($cover, '/'));
-                        } else {
-                            // Jika murni nama folder seeder seperti images/kkn.jpeg
-                            $finalPath = asset('storage/' . ltrim($cover, '/'));
-                        }
-                    }
-                @endphp
-                
-                <div class="col">
-                    <div class="book-card shadow-sm d-flex flex-column h-100 position-relative" style="background: #1e293b; border: 1px solid rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden;">
-                        
-                        {{-- Lapisan Lencana Status Buku Premium / Kepemilikan --}}
-                        <span class="badge position-absolute top-0 start-0 m-2 px-2 py-1 rounded-2 shadow-sm d-flex align-items-center gap-1" 
-                              style="z-index: 5; font-size: 0.68rem; font-weight: 700; background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a;">
-                            <i class="fa-solid fa-crown"></i> Premium
-                        </span>
+                @foreach($genres as $genre)
+                    <option
+                        value="{{ $genre }}"
+                        {{ request('genre') == $genre ? 'selected' : '' }}
+                    >
+                        {{ $genre }}
+                    </option>
+                @endforeach
+            </select>
 
-                        @if($sudahDitukar)
-                            <span class="badge bg-success position-absolute top-0 end-0 m-2 px-2 py-1 rounded-2 shadow-sm d-flex align-items-center gap-1" 
-                                  style="z-index: 5; font-size: 0.68rem; font-weight: 700;">
-                                <i class="fa-solid fa-circle-check"></i> Dimiliki
-                            </span>
-                        @endif
+            <button type="submit" class="premium-filter-btn">
+                <i class="fa-solid fa-filter"></i>
+                Terapkan
+            </button>
 
-                        {{-- AREA COVER: Menggabungkan kode styling tinggi kontainer milikmu secara simetris --}}
-                        <div class="d-flex align-items-center justify-content-center" style="height: 240px; overflow: hidden; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid rgba(255,255,255,0.05); width: 100%;">
+            @if(request('search') || request('genre'))
+                <a href="{{ url('/buku-premium') }}" class="premium-reset">
+                    <i class="fa-solid fa-rotate-left"></i>
+                </a>
+            @endif
+        </form>
+
+        {{-- TAMPILKAN BUKU --}}
+        @if($books->count() > 0)
+            <div class="premium-grid">
+                @foreach($books as $book)
+                    @php
+                        $cover = $book->image_path
+                            ? preg_replace('#^(public/|storage/)#', '', $book->image_path)
+                            : null;
+                    @endphp
+
+                    <article class="premium-card">
+                        {{-- COVER BUKU --}}
+                        <div class="premium-cover-wrapper">
                             @if($cover)
-                                <img src="{{ $finalPath }}" style="width:100%; height:100%; object-fit:cover;" alt="{{ $book->title }}">
+                                <img
+                                    src="{{ asset('storage/' . $cover) }}"
+                                    alt="{{ $book->title }}"
+                                    class="premium-cover"
+                                >
                             @else
-                                <div class="text-center" style="opacity: 0.5;">
-                                    <i class="fa-solid fa-book-bookmark text-white mb-2" style="font-size: 3.5rem; color: #ffffff !important;"></i>
-                                    <div class="font-monospace text-uppercase tracking-wider text-muted" style="font-size: 0.65rem; letter-spacing: 1px; color: rgba(255,255,255,0.4) !important;">Safae Content</div>
+                                <div class="premium-cover-empty">
+                                    <i class="fa-solid fa-book-open"></i>
+                                    <span>SAFAE</span>
                                 </div>
                             @endif
-                        </div>
-                        
-                        {{-- Detail Informasi Konten Buku --}}
-                        <div class="card-body p-3 text-center d-flex flex-column flex-grow-1 justify-content-between">
-                            <div>
-                                <h6 class="book-title text-white fw-bold mb-1 text-truncate" title="{{ $book->title }}" style="color: #ffffff !important; font-size: 1rem;">
-                                    {{ $book->title }}
-                                </h6>
-                                <p class="mb-2 text-truncate text-white small" style="opacity: 0.85; color: #ffffff !important;">
-                                    <i class="fa-solid fa-feather-alt opacity-70 me-1"></i> {{ $book->author }}
-                                </p>
-                                <p class="text-start mb-3 style-desc text-white" style="font-size: 0.78rem; line-height: 1.4; opacity: 0.7; color: rgba(255,255,255,0.7) !important;">
-                                    {{ \Illuminate\Support\Str::limit($book->description, 65) }}
-                                </p>
-                            </div>
 
-                            {{-- Row Label Tag Harga Poin Reward --}}
-                            <div class="d-flex align-items-center justify-content-center gap-1 text-warning font-monospace fw-bold mb-1" style="font-size: 0.95rem; color: #fbbf24 !important;">
-                                <i class="fa-solid fa-star" style="font-size: 0.75rem;"></i>
-                                <span>{{ number_format($book->premium_point ?? 100) }} Poin</span>
-                            </div>
+                            <span class="premium-card-badge">
+                                <i class="fa-solid fa-crown"></i>
+                                PREMIUM
+                            </span>
                         </div>
 
-                        {{-- Bagian Footer / Tombol Logika Transaksi atau Baca --}}
-                        <div class="card-footer p-2 text-center bg-transparent border-0 mt-auto">
-                            @if($sudahDitukar)
-                                    <a href="{{ route('book.show', ['id' => $book->id, 'page' => 1]) }}" class="btn btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2"                                   style="background: #38bdf8; color: #0f172a; border: none; padding: 7px 0; border-radius: 6px;">
-                                    <i class="fa-solid fa-book-open"></i> Baca Buku
+                        {{-- INFORMASI BUKU --}}
+                        <div class="premium-card-content">
+                            <span class="premium-genre">
+                                {{ $book->genre ?? 'Cerita' }}
+                            </span>
+
+                            <h3 title="{{ $book->title }}">
+                                {{ $book->title }}
+                            </h3>
+
+                            <p class="premium-author">
+                                <i class="fa-regular fa-user"></i>
+                                {{ $book->author ?? 'Penulis Safae' }}
+                            </p>
+
+                            <p class="premium-description">
+                                {{ \Illuminate\Support\Str::limit($book->description ?? 'Jelajahi cerita menarik dari koleksi premium Safae.', 105) }}
+                            </p>
+
+                            {{-- STATISTIK BUKU --}}
+                            <div class="premium-card-stats">
+                                <span>
+                                    <i class="fa-solid fa-eye"></i>
+                                    {{ number_format($book->reader_count ?? 0) }}
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-list"></i>
+                                    {{ $book->chapters_count ?? 0 }} Bab
+                                </span>
+                            </div>
+
+                            {{-- TOMBOL MULAI MEMBACA --}}
+                            <div class="premium-card-footer">
+                                <div class="premium-point-info">
+                                    <i class="fa-solid fa-coins"></i>
+                                    <span>
+                                        <strong>50 Poin</strong> / Bab Premium
+                                    </span>
+                                </div>
+
+                                <a
+                                    href="{{ route('book.show', ['id' => $book->id, 'page' => 1]) }}"
+                                    class="premium-read-btn"
+                                >
+                                    <i class="fa-solid fa-book-open"></i>
+                                    Mulai Membaca
+                                    <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                            @else
-                                <form action="{{ route('premium.tukar', $book->id) }}" method="POST" class="m-0" onsubmit="return confirm('Apakah kamu yakin ingin menukarkan poin untuk membaca buku premium ini?')">
-                                    @csrf
-                                    <button type="submit" class="btn btn-sm w-100 fw-bold d-flex align-items-center justify-content-center gap-2" 
-                                            style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 7px 0; border-radius: 6px; cursor: pointer;">
-                                        <i class="fa-solid fa-cart-shopping"></i> Tukarkan Poin
-                                    </button>
-                                </form>
-                            @endif
+                            </div>
                         </div>
+                    </article>
+                @endforeach
+            </div>
 
-                    </div>
+            {{-- PAGINATION --}}
+            @if($books instanceof \Illuminate\Contracts\Pagination\Paginator)
+                <div class="premium-pagination">
+                    {{ $books->withQueryString()->links() }}
                 </div>
-            @endforeach
-        </div>
-    @endif
+            @endif
+        @else
+            {{-- JIKA TIDAK ADA BUKU --}}
+            <div class="premium-empty">
+                <div class="premium-empty-icon">
+                    <i class="fa-solid fa-book-open"></i>
+                </div>
 
+                <h3>Belum Ada Buku Premium</h3>
+                <p>Belum ada buku yang sesuai dengan pencarianmu. Coba kata kunci atau genre lainnya.</p>
+
+                <a href="{{ url('/buku-premium') }}">
+                    Lihat Semua Buku
+                </a>
+            </div>
+        @endif
+    </section>
+
+    {{-- INFORMASI PREMIUM --}}
+    <section class="premium-info">
+        <div class="premium-info-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <div>
+            <h3>Bagaimana Cara Membaca Buku Premium?</h3>
+            <p>
+                Kamu bisa membaca bab gratis terlebih dahulu.
+                Untuk melanjutkan bab premium, gunakan 50 poin per bab
+                atau pilih akses seluruh bab seharga Rp15.000 melalui
+                simulasi pembayaran pada halaman bacaan.
+            </p>
+        </div>
+    </section>
 </div>
+
 @endsection

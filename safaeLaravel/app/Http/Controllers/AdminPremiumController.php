@@ -2,120 +2,199 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Book;
 use App\Models\PremiumRequest;
 use App\Models\Notification;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminPremiumController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $requests = PremiumRequest::with([
-            'user',
-            'book'
-        ])->latest()->get();
+        $search = trim($request->input('search', ''));
+        $status = $request->input('status', '');
 
-        return view(
-            'admin.premium.index',
-            compact('requests')
-        );
-    }
-public function books()
-{
-    $requests = PremiumRequest::with([
-        'user',
-        'book'
-    ])->latest()->get();
+        $query = PremiumRequest::with(['user', 'book']);
 
-    $books = Book::latest()->get();
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->whereHas('book', function ($book) use ($search) {
+                    $book->where('title', 'like', "%{$search}%")
+                        ->orWhere('author', 'like', "%{$search}%");
+                })->orWhereHas('user', function ($user) use ($search) {
+                    $user->where('username', 'like', "%{$search}%");
+                });
+            });
+        }
 
-    return view(
-        'admin.premium.books',
-        compact('requests', 'books')
-    );
-}
+        if (in_array($status, ['pending', 'approved', 'rejected'])) {
+            $query->where('status', $status);
+        }
 
-public function setPremium(Request $request, Book $book)
-{
-    $request->validate([
-        'premium_point' => 'required|integer|min:1'
-    ]);
+        $requests = $query->latest()->paginate(10)->withQueryString();
 
-    $book->update([
-        'is_premium' => true,
-        'premium_point' => $request->premium_point
-    ]);
+        $totalRequests = PremiumRequest::count();
+        $totalPending = PremiumRequest::where('status', 'pending')->count();
+        $totalApproved = PremiumRequest::where('status', 'approved')->count();
+        $totalRejected = PremiumRequest::where('status', 'rejected')->count();
 
-    return back()->with(
-        'success',
-        'Buku berhasil dijadikan Premium.'
-    );
-}
-
-    public function approve(Request $request, $id)
-    {
-        $request->validate([
-            'premium_point' => 'required|integer|min:1'
-        ]);
-
-        $premium = PremiumRequest::findOrFail($id);
-
-        $premium->update([
-            'status' => 'approved'
-        ]);
-
-        $premium->book->update([
-            'is_premium' => true,
-            'premium_point' => $request->premium_point
-        ]);
-
-        Notification::create([
-            'user_id' => $premium->user_id,
-            'title' => 'Pengajuan Premium Disetujui',
-            'message' => '🎉 Buku "' .
-                $premium->book->title .
-                '" berhasil menjadi Buku Premium.'
-        ]);
-
-        return back()->with(
-            'success',
-            'Pengajuan berhasil disetujui.'
-        );
+        return view('admin.premium.index', compact(
+            'requests',
+            'totalRequests',
+            'totalPending',
+            'totalApproved',
+            'totalRejected'
+        ));
     }
 
- 
+    public function books(Request $request)
+    {
+        $search = trim($request->input('search', ''));
+
+        $query = Book::with('user')
+            ->withCount([
+                'chapters',
+                'chapters as published_chapters_count' => function ($q) {
+                    $q->where('status', 'published');
+                }
+            ])
+            ->where('is_premium', true);
+
+        if ($search !== '') {
+            $query->where(function ($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                    ->orWhere('author', 'like', "%{$search}%")
+                    ->orWhereHas('user', function ($user) use ($search) {
+                        $user->where('username', 'like', "%{$search}%");
+                    });
+            });
+        }
+
+        $books = $query->latest()->paginate(9)->withQueryString();
+
+        $totalPremium = Book::where('is_premium', true)->count();
+        $totalRegular = Book::where('is_premium', false)->count();
+        $totalPending = PremiumRequest::where('status', 'pending')->count();
+
+        return view('admin.premium.books', compact(
+            'books',
+            'totalPremium',
+            'totalRegular',
+            'totalPending'
+        ));
+    }
+
+    public function approve($id)
+    {
+        $result = DB::transaction(function () use ($id) {
+            $premium = PremiumRequest::whereKey($id)
+                ->lockForUpdate()
+                ->firstOrFail();
+
+            if ($premium->status !== 'pending') {
+                return 'processed';
+            }
+
+            $book = Book::whereKey($premium->book_id)
+                ->lockForUpdate()
+                ->firstOrFail();
+
+            if (!in_array($book->status, ['approved', 'published'], true)) {
+                return 'book_not_approved';
+            }
+
+            $premium->update(['status' => 'approved']);
+            $book->update(['is_premium' => true]);
+
+            Notification::create([
+                'user_id' => $premium->user_id,
+                'title' => 'Pengajuan Premium Disetujui',
+                'message' => 'Buku "'.$book->title.'" berhasil menjadi Buku Premium.'
+            ]);
+
+            return 'success';
+        });
+
+        if ($result === 'processed') {
+            return back()->with('info', 'Pengajuan ini sudah diproses.');
+        }
+
+        if ($result === 'book_not_approved') {
+            return back()->with('error', 'Buku harus disetujui sebelum menjadi premium.');
+        }
+
+        return back()->with('success', 'Pengajuan disetujui. Penulis dapat mengatur bab premium.');
+    }
+
     public function reject($id)
     {
-        $premium = PremiumRequest::findOrFail($id);
+        $result = DB::transaction(function () use ($id) {
+            $premium = PremiumRequest::with('book')
+                ->whereKey($id)
+                ->lockForUpdate()
+                ->firstOrFail();
 
-        $premium->update([
-            'status' => 'rejected'
-        ]);
+            if ($premium->status !== 'pending') {
+                return false;
+            }
 
-        Notification::create([
-            'user_id' => $premium->user_id,
-            'title' => 'Pengajuan Premium Ditolak',
-            'message' => 'Pengajuan premium untuk buku "' .
-                $premium->book->title .
-                '" ditolak admin.'
-        ]);
+            $premium->update(['status' => 'rejected']);
+
+            Notification::create([
+                'user_id' => $premium->user_id,
+                'title' => 'Pengajuan Premium Ditolak',
+                'message' => 'Pengajuan premium untuk buku "'.
+                    ($premium->book?->title ?? 'yang diajukan').
+                    '" ditolak admin.'
+            ]);
+
+            return true;
+        });
+
+        return $result
+            ? back()->with('success', 'Pengajuan berhasil ditolak.')
+            : back()->with('info', 'Pengajuan ini sudah diproses.');
+    }
+
+    public function setPremium($book)
+    {
+        $book = Book::findOrFail($book);
+
+        if (!in_array($book->status, ['approved', 'published'], true)) {
+            return back()->with('error', 'Buku belum disetujui untuk publikasi.');
+        }
+
+        if ($book->is_premium) {
+            return back()->with('info', 'Buku ini sudah premium.');
+        }
 
         return back()->with(
-            'success',
-            'Pengajuan berhasil ditolak.'
+            'error',
+            'Buku harus melalui proses pengajuan premium dan persetujuan admin.'
         );
     }
 
     public function destroy($id)
-{
-    $book = Book::findOrFail($id);
+    {
+        DB::transaction(function () use ($id) {
+            $book = Book::whereKey($id)->lockForUpdate()->firstOrFail();
 
-    $book->delete();
+            $book->update(['is_premium' => false]);
 
-    return back()->with(
-        'success',
-        'Buku berhasil dihapus.'
-    );
-}
+            // Sinkronkan riwayat persetujuan agar penulis bisa mengajukan ulang.
+            PremiumRequest::where('book_id', $book->id)
+                ->where('status', 'approved')
+                ->update(['status' => 'rejected']);
+
+            Notification::create([
+                'user_id' => $book->user_id,
+                'title' => 'Status Premium Dicabut',
+                'message' => 'Status premium buku "'.$book->title.
+                    '" telah dicabut oleh admin.'
+            ]);
+        });
+
+        return back()->with('success', 'Status premium berhasil dicabut. Buku tidak dihapus.');
+    }
 }

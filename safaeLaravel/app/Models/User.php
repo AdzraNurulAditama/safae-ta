@@ -2,11 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\ReadingProgress;
-use App\Models\PointHistory;
-use App\Models\FavoriteBook;
-use App\Models\Book; 
-use App\Models\PremiumRequest; 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -27,7 +22,6 @@ class User extends Authenticatable
         'role',
         'jurusan',
         'semester',
-        // Tambahan agar kolom ini bisa diupdate:
         'social_media',
         'bio',
         'foto_profil',
@@ -46,10 +40,6 @@ class User extends Authenticatable
         ];
     }
 
-    /* =====================
-       RELATION
-       ===================== */
-
     public function readingProgress()
     {
         return $this->hasMany(ReadingProgress::class);
@@ -60,9 +50,14 @@ class User extends Authenticatable
         return $this->hasMany(PointHistory::class);
     }
 
+    public function chapterUnlocks()
+    {
+        return $this->hasMany(ChapterUnlock::class);
+    }
+
     public function favoriteBooks()
     {
-        return $this->hasMany(FavoriteBook::class); 
+        return $this->hasMany(FavoriteBook::class);
     }
 
     public function books()
@@ -75,9 +70,8 @@ class User extends Authenticatable
         return $this->hasMany(PremiumRequest::class);
     }
 
-    // helper nama lengkap
     public function getNamaLengkapAttribute()
     {
-        return $this->nama_depan . ' ' . $this->nama_belakang;
+        return trim($this->nama_depan.' '.$this->nama_belakang);
     }
 }

@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
-use App\Models\Bookmark; // Model Bookmark
-use App\Models\FavoriteBook; // 🔥 1. TAMBAHKAN IMPORT MODEL FAVORITEBOOK DI SINI
+use App\Models\FavoriteBook;
+use App\Models\Bookmark;
 use Illuminate\Support\Facades\Auth;
 
 class GenreUserController extends Controller
@@ -15,91 +15,108 @@ class GenreUserController extends Controller
         $current_genre = $request->input('genre', '');
         $search = $request->input('search', '');
 
-        $publicStatuses = ['approved'];
+        // Status buku yang boleh dilihat pembaca
+        $publicStatuses = ['approved', 'published'];
 
-        $all_genres = Book::whereIn('status', $publicStatuses)
-                          ->pluck('genre')
-                          ->unique()
-                          ->filter()
-                          ->values();
+        // Hanya mengambil buku gratis
+        // Buku premium tidak tampil di halaman Genre
+        $freeBooks = Book::whereIn('status', $publicStatuses)
+            ->where(function ($query) {
+                $query->where('is_premium', 0)
+                      ->orWhereNull('is_premium');
+            });
 
-        $books_query = Book::whereIn('status', $publicStatuses);
+        // Ambil daftar genre dari buku gratis
+        $all_genres = (clone $freeBooks)
+            ->whereNotNull('genre')
+            ->where('genre', '!=', '')
+            ->distinct()
+            ->orderBy('genre')
+            ->pluck('genre');
 
-        if ($current_genre) {
+        // Ambil buku beserta jumlah likes
+       $books_query = (clone $freeBooks)
+        ->withCount([
+            'favorites as likes_count',
+            'chapters as chapters_count' => function ($query) {
+                $query->where('status', 'published');
+            }
+        ]);
+
+        // Filter genre
+        if (!empty($current_genre)) {
             $books_query->where('genre', $current_genre);
         }
 
-        if ($search) {
-            $books_query->where(function($q) use ($search) {
-                $q->where('title', 'like', "%{$search}%")
-                  ->orWhere('author', 'like', "%{$search}%");
+        // Search berdasarkan judul atau penulis
+        if (!empty($search)) {
+            $books_query->where(function ($query) use ($search) {
+                $query->where('title', 'like', "%{$search}%")
+                      ->orWhere('author', 'like', "%{$search}%");
             });
         }
 
-        $books_to_show = $books_query->latest()->get();
+        // Pagination 10 buku per halaman
+        $books_to_show = $books_query
+            ->latest()
+            ->paginate(10)
+            ->withQueryString();
 
-        // Ambil daftar ID buku yang sudah di-bookmark oleh user yang sedang login
-        $bookmarkedBookIds = [];
-        if (Auth::check()) {
-            $bookmarkedBookIds = Bookmark::where('user_id', Auth::id())
-                ->pluck('book_id')
-                ->toArray();
-        }
-
-        // 🔥 2. TAMBAHKAN KODE INI UNTUK MENGAMBIL DAFTAR ID BUKU FAVORIT USER
+        // Buku favorit pengguna
         $favorites = [];
+        $bookmarkedBookIds = [];
+
         if (Auth::check()) {
             $favorites = FavoriteBook::where('user_id', Auth::id())
                 ->pluck('book_id')
                 ->toArray();
+
+            // Ambil bookmark hanya jika model dan tabel tersedia
+            if (
+                class_exists(Bookmark::class) &&
+                \Illuminate\Support\Facades\Schema::hasTable('bookmarks')
+            ) {
+                $bookmarkedBookIds = Bookmark::where('user_id', Auth::id())
+                    ->pluck('book_id')
+                    ->toArray();
+            }
         }
 
-        // 🔥 3. MASUKKAN 'favorites' KE DALAM COMPACT() DI BAWAH INI
         return view('books.genre', compact(
             'books_to_show',
             'all_genres',
             'current_genre',
             'search',
-            'bookmarkedBookIds',
-            'favorites'
+            'favorites',
+            'bookmarkedBookIds'
         ));
-    }
-
-    /**
-     * Aksi Simpan / Hapus Bookmark (Toggle)
-     */
-    public function toggleBookmark($bookId)
-    {
-        $userId = Auth::id();
-
-        $bookmark = Bookmark::where('user_id', $userId)
-            ->where('book_id', $bookId)
-            ->first();
-
-        if ($bookmark) {
-            // Jika sudah ada, hapus bookmark
-            $bookmark->delete();
-            $message = 'Buku berhasil dihapus dari Bookmark!';
-        } else {
-            // Jika belum ada, simpan bookmark baru
-            Bookmark::create([
-                'user_id' => $userId,
-                'book_id' => $bookId,
-            ]);
-            $message = 'Buku berhasil disimpan ke Bookmark!';
-        }
-
-        return redirect()->back()->with('success', $message);
     }
 
     public function preview($id)
     {
-        $book = Book::with('reviews')->where('status', 'approved')->findOrFail($id);
-        $recommendedBooks = Book::where('genre', $book->genre)
-    ->where('id', '!=', $book->id)
-    ->where('status', 'approved')
-    ->take(4)
-    ->get();
-        return view('books.preview', compact('book', 'recommendedBooks'));
+        $book = Book::with([
+            'reviews.user'
+        ])
+        ->withCount([
+            'favorites as likes_count',
+            'chapters'
+        ])
+        ->findOrFail($id);
+
+        $recommendedBooks = Book::where('id', '!=', $book->id)
+            ->whereIn('status', ['approved', 'published'])
+            ->where(function ($query) {
+                $query->where('is_premium', 0)
+                      ->orWhereNull('is_premium');
+            })
+            ->where('genre', $book->genre)
+            ->latest()
+            ->take(4)
+            ->get();
+
+        return view('books.preview', compact(
+            'book',
+            'recommendedBooks'
+        ));
     }
 }

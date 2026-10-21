@@ -1,12 +1,10 @@
+
 @extends('layouts.app')
-
-@section('title', 'Diskusi Halaman ' . $page . ' - Safae')
-
+@section('title', 'Komentar Halaman ' . $page . ' - Safae')
 @section('content')
-
 <style>
     .comment-page-wrapper {
-        padding: 10px 0 50px 0;
+        padding: 10px 0 50px;
         color: #f1f5f9;
     }
 
@@ -37,6 +35,7 @@
         color: #64748b;
     }
 
+    /* FOTO PROFIL PENGGUNA */
     .user-avatar-circle {
         width: 44px;
         height: 44px;
@@ -49,6 +48,15 @@
         justify-content: center;
         font-size: 1rem;
         flex-shrink: 0;
+        overflow: hidden;
+        border: 2px solid rgba(56, 189, 248, 0.2);
+    }
+
+    .user-avatar-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
     }
 
     .btn-submit-comment {
@@ -96,11 +104,28 @@
         transform: translateY(-2px);
     }
 
+    /* GAMBAR LAMPIRAN KOMENTAR */
     .attached-img {
+        max-width: 100%;
         max-height: 280px;
         border-radius: 12px;
         border: 1px solid #334155;
-        object-fit: cover;
+        object-fit: contain;
+    }
+
+    @media (max-width: 576px) {
+        .dark-card {
+            padding: 18px;
+        }
+
+        .comment-card {
+            padding: 16px;
+        }
+
+        .user-avatar-circle {
+            width: 40px;
+            height: 40px;
+        }
     }
 </style>
 
@@ -110,13 +135,16 @@
         <!-- TOMBOL KEMBALI -->
         <div class="mb-4">
             <a href="{{ route('book.show', ['id' => $bookId, 'page' => $page]) }}" class="btn btn-outline-secondary btn-sm rounded-3">
-                <i class="fa-solid fa-arrow-left me-1"></i> Kembali ke Bacaan (Halaman {{ $page }})
+                <i class="fa-solid fa-arrow-left me-1"></i>
+                Kembali ke Bacaan (Halaman {{ $page }})
             </a>
         </div>
 
+        <!-- NOTIFIKASI -->
         @if(session('success'))
             <div class="alert alert-success bg-opacity-10 border-success text-success mb-4 rounded-3">
-                <i class="fa-solid fa-circle-check me-2"></i> {{ session('success') }}
+                <i class="fa-solid fa-circle-check me-2"></i>
+                {{ session('success') }}
             </div>
         @endif
 
@@ -135,29 +163,39 @@
                 <input type="hidden" name="page" value="{{ $page }}">
 
                 <div class="mb-3">
-                    <textarea name="komentar" class="form-control form-dark-control" rows="3" placeholder="Bagikan pendapat atau diskusikan bacaan halaman {{ $page }} ini..." required></textarea>
+                    <textarea name="komentar" class="form-control form-dark-control" rows="3" placeholder="Bagikan pendapat atau komentar bacaan halaman {{ $page }} ini..." required>{{ old('komentar') }}</textarea>
+                    @error('komentar')
+                        <small class="text-danger">{{ $message }}</small>
+                    @enderror
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
                     <div class="d-flex align-items-center gap-2">
                         <label class="btn-upload-img small mb-0">
-                            <i class="fa-solid fa-image text-info me-1"></i> Tambah Gambar
+                            <i class="fa-solid fa-image text-info me-1"></i>
+                            Tambah Gambar
                             <input type="file" name="image" accept="image/*" class="d-none" id="comment-image-input" onchange="updateFileName(this)">
                         </label>
                         <span id="file-name-preview" class="text-secondary small d-inline-block text-truncate" style="max-width: 200px;"></span>
                     </div>
 
                     <button type="submit" class="btn-submit-comment">
-                        Kirim Komentar <i class="fa-solid fa-paper-plane ms-1"></i>
+                        Kirim Komentar
+                        <i class="fa-solid fa-paper-plane ms-1"></i>
                     </button>
                 </div>
+
+                @error('image')
+                    <small class="text-danger d-block mt-2">{{ $message }}</small>
+                @enderror
             </form>
         </div>
 
         <!-- HEADER DAFTAR KOMENTAR -->
         <div class="d-flex align-items-center justify-content-between border-bottom border-secondary border-opacity-25 pb-3 mb-4">
             <div class="fw-bold text-white fs-6">
-                <i class="fa-solid fa-comments me-2 text-info"></i> Semua Diskusi
+                <i class="fa-solid fa-comments me-2 text-info"></i>
+                Semua Komentar
             </div>
             <span class="badge bg-secondary bg-opacity-25 text-info px-3 py-2 rounded-3">
                 {{ count($komentar) }} Komentar
@@ -168,22 +206,46 @@
         <div class="d-flex flex-column gap-3">
             @forelse($komentar as $c)
                 @php
-                    $initials = strtoupper(substr($c->username ?? 'User', 0, 2));
+                    $initials = mb_strtoupper(mb_substr($c->username ?? 'User', 0, 2));
+
+                    // FOTO PROFIL DARI STORAGE LINK
+                    $fotoProfil = $c->user?->foto_profil;
+
+                    $fotoProfilPath = $fotoProfil
+                        ? preg_replace('#^(public/|storage/)+#', '', $fotoProfil)
+                        : null;
+
+                    // GAMBAR KOMENTAR DARI STORAGE LINK
+                    $gambarKomentar = $c->image_path
+                        ? preg_replace('#^(public/|storage/)+#', '', $c->image_path)
+                        : null;
                 @endphp
 
                 <div class="comment-card">
                     <div class="d-flex align-items-center justify-content-between mb-3">
                         <div class="d-flex align-items-center gap-3">
-                            <div class="user-avatar-circle">{{ $initials }}</div>
+
+                            <!-- FOTO PROFIL USER -->
+                            <div class="user-avatar-circle">
+                                @if($fotoProfilPath)
+                                    <img src="{{ asset('storage/'.$fotoProfilPath) }}" alt="Foto Profil {{ $c->username }}">
+                                @else
+                                    {{ $initials }}
+                                @endif
+                            </div>
+
                             <div>
-                                <h6 class="fw-bold text-white mb-0">{{ $c->username }}</h6>
+                                <h6 class="fw-bold text-white mb-0">
+                                    {{ $c->username }}
+                                </h6>
                                 <small class="text-secondary" style="font-size: 0.78rem;">
-                                    <i class="fa-regular fa-clock me-1"></i>{{ $c->created_at ? $c->created_at->diffForHumans() : 'Baru saja' }}
+                                    <i class="fa-regular fa-clock me-1"></i>
+                                    {{ $c->created_at ? $c->created_at->diffForHumans() : 'Baru saja' }}
                                 </small>
                             </div>
                         </div>
 
-                        <!-- TOMBOL ACTION EDIT & HAPUS -->
+                        <!-- TOMBOL EDIT DAN HAPUS -->
                         @if(Auth::check() && Auth::id() == $c->user_id)
                             <div class="d-flex gap-2">
                                 <a href="{{ route('komentar.edit', $c->id) }}" class="btn btn-outline-info btn-sm rounded-2 py-1 px-2" title="Edit">
@@ -200,14 +262,14 @@
                         @endif
                     </div>
 
+                    <!-- ISI KOMENTAR -->
                     <div class="ps-md-5">
-                        <p class="mb-3 lh-lg small text-slate-300" style="color: #cbd5e1; white-space: pre-line;">
-                            {{ $c->komentar }}
-                        </p>
+                        <p class="mb-3 lh-lg small" style="color: #cbd5e1; white-space: pre-line;">{{ $c->komentar }}</p>
 
-                        @if($c->image_path)
+                        <!-- GAMBAR KOMENTAR STORAGE LINK -->
+                        @if($gambarKomentar)
                             <div class="mb-2">
-                                <img src="{{ asset('uploads/' . $c->image_path) }}" class="img-fluid attached-img" alt="Lampiran">
+                                <img src="{{ asset('storage/'.$gambarKomentar) }}" class="img-fluid attached-img" alt="Lampiran Komentar">
                             </div>
                         @endif
                     </div>
@@ -215,18 +277,20 @@
             @empty
                 <div class="dark-card text-center py-5">
                     <i class="fa-regular fa-comments fa-3x text-secondary mb-3"></i>
-                    <h5 class="fw-bold text-white">Belum Ada Diskusi di Halaman Ini</h5>
-                    <p class="text-secondary small mb-0">Mulai ketikkan sesuatu untuk memicu obrolan bersama pembaca lain!</p>
+                    <h5 class="fw-bold text-white">Belum Ada Komentar di Halaman Ini</h5>
+                    <p class="text-secondary small mb-0">
+                        Mulai ketikkan sesuatu untuk memicu obrolan bersama pembaca lain!
+                    </p>
                 </div>
             @endforelse
         </div>
-
     </div>
 </div>
 
 <script>
     function updateFileName(input) {
         const preview = document.getElementById('file-name-preview');
+
         if (input.files && input.files.length > 0) {
             preview.innerText = '📎 ' + input.files[0].name;
         } else {
@@ -234,5 +298,4 @@
         }
     }
 </script>
-
 @endsection

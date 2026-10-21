@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
+use App\Models\Book;
+
 use App\Services\RecommendationService;
 
 // Controllers
@@ -38,11 +40,12 @@ use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\AdminPromotionController;
 use App\Http\Controllers\PremiumController;
 use App\Http\Controllers\AdminPremiumController;
-use App\Http\Controllers\PremiumBookController;
+use App\Http\Controllers\PremiumAccessController;
 use App\Http\Controllers\BookmarkController;
 use App\Http\Controllers\BookFinishController; 
 use App\Http\Controllers\WriterController;
 use App\Http\Controllers\ReadingStatisticController; 
+use App\Http\Controllers\PremiumLibraryController;
 
 // Middleware
 use App\Http\Middleware\AdminOnly;
@@ -82,7 +85,7 @@ Route::middleware('auth')->group(function () {
 
     /* GENRE & PREVIEW BUKU */
     Route::get('/genre', [GenreUserController::class, 'index'])->name('genre.index');
-    Route::get('/buku/preview/{id}', [GenreUserController::class, 'preview'])->name('book.preview');
+    Route::get('/buku/preview/{id}', [GenreUserController::class, 'preview'])->middleware('auth')->name('book.preview');
 
     /* BACA BUKU & FEEDBACK */
     Route::get('/buku/{book}/selesai', [BookFinishController::class, 'show'])->name('books.finished');
@@ -114,10 +117,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/reward-detail', [RewardController::class, 'detail'])->name('reward.detail');
 
     /* BUKU PREMIUM & PENGAJUAN */
+   
+    Route::get('/buku-premium', [PremiumLibraryController::class, 'index']) ->name('premium.books');
     Route::get('/ajukan-premium', [PremiumController::class, 'index'])->name('premium.index');
     Route::post('/ajukan-premium/{book}', [PremiumController::class, 'store'])->name('premium.store');
-    Route::get('/buku-premium', [PremiumBookController::class, 'index'])->name('premium.books');
-    Route::post('/buku-premium/tukar/{book}', [PremiumBookController::class, 'tukar'])->name('premium.tukar');
+
+    // TUKAR 50 POIN UNTUK MEMBUKA SATU BAB PREMIUM
+    Route::post('/premium/chapter/{chapter}/unlock',[PremiumAccessController::class, 'unlockChapter'])->name('premium.chapter.unlock');
+
+    // SIMULASI PEMBAYARAN Rp15.000 UNTUK SELURUH BAB PREMIUM
+    Route::post( '/premium/book/{book}/simulate',[PremiumAccessController::class, 'simulateBookPayment'])->name('premium.book.simulate');
 
     /* RIWAYAT BACA */
     Route::get('/riwayat-baca', [ReadingHistoryController::class, 'index'])->name('reading.history');
@@ -228,14 +237,17 @@ Route::middleware(['auth', AdminOnly::class])
         Route::post('/validasi/{id}/approve', [BookSubmissionController::class, 'approve'])->name('validasi.approve');
         Route::post('/validasi/{id}/reject', [BookSubmissionController::class, 'reject'])->name('validasi.reject');
 
-        /* KOMENTAR ADMIN */
+        // KELOLA KOMENTAR ADMIN
         Route::get('/komentar', [AdminKomentarController::class, 'index'])->name('komentar.index');
-        Route::delete('/komentar/{id}', [AdminKomentarController::class, 'hapus'])->name('komentar.hapus');
+        Route::delete('/komentar/{id}', [AdminKomentarController::class, 'destroy'])->name('komentar.hapus');
 
+        
         /* REWARDS ADMIN */
         Route::get('/rewards', [AdminRewardController::class, 'index'])->name('rewards.index');
         Route::post('/rewards/{user}/add', [AdminRewardController::class, 'add'])->name('reward.add');
         Route::post('/rewards/{user}/remove', [AdminRewardController::class, 'remove'])->name('reward.remove');
+        Route::get('/rewards/{user}/history', [AdminRewardController::class, 'history'])->name('reward.history');
+
 
         /* PREMIUM ADMIN */
         Route::get('/premium', [AdminPremiumController::class, 'index'])->name('premium.index');

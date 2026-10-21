@@ -216,6 +216,54 @@
             border:1px solid rgba(56,189,248,.2);
         }
 
+
+        /* SIDEBAR BUKU PREMIUM */
+        .sidebar-premium {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #fbbf24 !important;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-premium i {
+            color: #fbbf24 !important;
+            font-size: 17px;
+        }
+
+        .sidebar-premium .premium-vip-badge {
+            margin-left: auto;
+            padding: 3px 9px;
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #422006;
+            border-radius: 7px;
+            font-size: 10px;
+            font-weight: 800;
+            box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2);
+        }
+
+        .sidebar-premium:hover {
+            color: #fde68a !important;
+            background: rgba(251, 191, 36, 0.10);
+        }
+
+        .sidebar-premium:hover i {
+            color: #fde68a !important;
+        }
+
+        .sidebar-premium.active {
+            color: #fbbf24 !important;
+            background: rgba(251, 191, 36, 0.12);
+            border: 1px solid rgba(251, 191, 36, 0.25);
+            border-radius: 14px;
+        }
+
+        .sidebar-premium.active i {
+            color: #fbbf24 !important;
+        }
+
+
         /* ================= MAIN ================= */
 
         main{
@@ -389,13 +437,6 @@
         <i class="fa-solid fa-feather-pointed"></i> Studio Penulis
     </a>
 
-<a href="{{ route('premium.index') }}"
-   class="{{ request()->is('ajukan-premium*') ? 'active' : '' }}">
-
-    <i class="fa-solid fa-crown"></i>
-    Ajukan Premium
-
-</a>
 
     <div class="sidebar-title">
         Koleksi
@@ -405,11 +446,14 @@
         <i class="fa-solid fa-book-bookmark"></i> Genre Buku
     </a>
 
-    <a href="{{ route('premium.books') }}"
-   class="{{ request()->is('buku-premium*') ? 'active' : '' }}">
+   
+<a href="{{ route('premium.books') }}"
+   class="sidebar-premium {{ request()->routeIs('premium.books') ? 'active' : '' }}">
     <i class="fa-solid fa-crown"></i>
-    Buku Premium
+    <span>Buku Premium</span>
+    <span class="premium-vip-badge">VIP</span>
 </a>
+
 
     <a href="{{ route('favorite.index') }}">
         <i class="fa-regular fa-heart"></i> Buku Favorit

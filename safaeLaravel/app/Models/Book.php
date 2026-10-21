@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\PremiumRequest;
+use App\Models\FavoriteBook;
 
 class Book extends Model
 {
@@ -68,4 +69,10 @@ class Book extends Model
     {
         return $this->hasMany(Chapter::class, 'book_id');
     }
+
+    public function favorites()
+{
+    return $this->hasMany(FavoriteBook::class, 'book_id');
+}
+
 }

@@ -1,13 +1,11 @@
+
 @extends('layouts.app')
-
 @section('title', $buku->title . ' - Halaman ' . $page)
-
 @section('content')
 
 <style>
-    /* Styling Halaman Baca yang Rapi & Proporsional */
     .reader-page-wrapper {
-        padding: 40px 15px 70px 15px;
+        padding: 40px 15px 70px;
     }
 
     .reader-container {
@@ -33,7 +31,7 @@
         font-size: 1.85rem;
         margin-bottom: 8px;
     }
-    
+
     .meta-info {
         color: #94a3b8;
         font-size: 0.9rem;
@@ -62,7 +60,6 @@
         white-space: pre-line;
     }
 
-    /* Kelompok Tombol Navigasi & Aksi */
     .reader-footer {
         border-top: 1px solid #334155;
         padding-top: 30px;
@@ -127,7 +124,7 @@
 
     .btn-action-card:hover {
         background: #334155;
-        color: #ffffff;
+        color: #fff;
         border-color: #475569;
         transform: translateY(-2px);
     }
@@ -152,7 +149,153 @@
         color: #7dd3fc;
     }
 
-    /* Perbaikan Styling Pop-Up Modal Tamat Membaca */
+    /* TAMPILAN BAB PREMIUM TERKUNCI */
+    .premium-lock {
+        text-align: center;
+        padding: 35px 20px 45px;
+        margin-bottom: 35px;
+        background: #0f172a;
+        border: 1px solid #334155;
+        border-radius: 20px;
+    }
+
+    .premium-lock-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 20px;
+        border-radius: 22px;
+        background: rgba(251, 191, 36, 0.12);
+        color: #fbbf24;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+    }
+
+    .premium-lock h2 {
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    .premium-lock-description {
+        color: #94a3b8;
+        line-height: 1.8;
+        max-width: 500px;
+        margin: 0 auto 25px;
+    }
+
+    .premium-payment-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .premium-payment-card {
+        background: #1e293b;
+        border: 1px solid #334155;
+        border-radius: 16px;
+        padding: 24px 16px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .premium-payment-card > i {
+        font-size: 27px;
+        color: #38bdf8;
+    }
+
+    .premium-payment-card.money > i {
+        color: #fbbf24;
+    }
+
+    .premium-payment-card h3 {
+        color: #fff;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .premium-payment-price {
+        font-size: 1.45rem;
+        font-weight: 800;
+        color: #38bdf8;
+    }
+
+    .premium-payment-card.money .premium-payment-price {
+        color: #fbbf24;
+    }
+
+    .premium-payment-card p {
+        color: #94a3b8;
+        font-size: 0.85rem;
+        margin: 0 0 8px;
+    }
+
+    .premium-payment-card form {
+        width: 100%;
+        margin-top: auto;
+    }
+
+    .premium-payment-button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        background: #38bdf8;
+        color: #0f172a;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .premium-payment-button.money {
+        background: #fbbf24;
+    }
+
+    .premium-payment-button:hover {
+        filter: brightness(1.1);
+        transform: translateY(-2px);
+    }
+
+    .premium-payment-note {
+        color: #64748b;
+        font-size: 0.8rem;
+        margin-top: 22px;
+        line-height: 1.7;
+    }
+
+    .reader-alert {
+        padding: 13px 16px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        font-size: 0.9rem;
+    }
+
+    .reader-alert.success {
+        background: rgba(34, 197, 94, 0.12);
+        border: 1px solid rgba(34, 197, 94, 0.3);
+        color: #86efac;
+    }
+
+    .reader-alert.error {
+        background: rgba(239, 68, 68, 0.12);
+        border: 1px solid rgba(239, 68, 68, 0.3);
+        color: #fca5a5;
+    }
+
+    .reader-alert.info {
+        background: rgba(56, 189, 248, 0.12);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        color: #7dd3fc;
+    }
+
+    /* MODAL TAMAT MEMBACA */
     .modal-backdrop.show {
         background-color: rgba(2, 6, 23, 0.8) !important;
         backdrop-filter: blur(8px);
@@ -170,7 +313,7 @@
     .finish-icon {
         width: 85px;
         height: 85px;
-        margin: 0 auto 20px auto;
+        margin: 0 auto 20px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -180,12 +323,82 @@
         color: white;
         box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
     }
+
+    .fb-choice {
+        flex: 1;
+        border: 0;
+        border-radius: 12px;
+        padding: 12px 8px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    .fb-choice:disabled {
+        opacity: .6;
+        cursor: default;
+    }
+
+    .fb-yes {
+        background: #22c55e;
+        color: #052e16;
+    }
+
+    .fb-yes:hover:not(:disabled) {
+        background: #4ade80;
+    }
+
+    .fb-no {
+        background: #334155;
+        color: #e2e8f0;
+    }
+
+    .fb-no:hover:not(:disabled) {
+        background: #475569;
+    }
+
+    .fb-later {
+        margin-top: 14px;
+        background: none;
+        border: 0;
+        color: #94a3b8;
+        font-size: 0.85rem;
+        cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+        .reader-body {
+            padding: 25px 18px;
+        }
+
+        .reader-header {
+            padding: 25px 15px;
+        }
+
+        .reader-header h1 {
+            font-size: 1.5rem;
+        }
+
+        .premium-payment-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .premium-lock {
+            padding: 30px 15px;
+        }
+
+        .btn-nav-main {
+            padding: 11px 15px;
+            font-size: 0.85rem;
+        }
+    }
 </style>
 
 <div class="reader-page-wrapper">
     <div class="reader-container">
 
-        <!-- HEADER KONTEN -->
+        <!-- HEADER -->
         <div class="reader-header">
             <h1>{{ $buku->title }}</h1>
             <div class="meta-info">
@@ -197,33 +410,127 @@
             </div>
         </div>
 
-        <!-- BODY ISI CERITA & GAMBAR -->
+        <!-- BODY -->
         <div class="reader-body">
-            
-            {{-- Gambar Ilustrasi Bab --}}
-            @if(isset($chapter) && $chapter->image)
-                <div class="text-center mb-4">
-                    <img src="{{ asset('storage/' . $chapter->image) }}" class="img-fluid rounded-4 shadow" style="max-height: 400px; object-fit: cover;" alt="Ilustrasi Bab">
+
+            @if(session('success'))
+                <div class="reader-alert success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    {{ session('success') }}
                 </div>
             @endif
 
-            {{-- Teks Bacaan --}}
-            <div class="reader-content">
-                @if(!empty($halaman))
-                        {!! $halaman !!} 
-                                       @else
-                    <p class="text-center text-muted">Belum ada konten pada bab/halaman ini.</p>
-                @endif
-            </div>
+            @if(session('error'))
+                <div class="reader-alert error">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    {{ session('error') }}
+                </div>
+            @endif
 
-            <!-- FOOTER AREA (NAVIGASI & AKSI) -->
+            @if(session('info'))
+                <div class="reader-alert info">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {{ session('info') }}
+                </div>
+            @endif
+
+            @if($isChapterLocked ?? false)
+
+                <!-- BAB PREMIUM TERKUNCI -->
+                <div class="premium-lock">
+                    <div class="premium-lock-icon">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <h2>Bab Premium Terkunci</h2>
+
+                    <p class="premium-lock-description">
+                        Bab "{{ $chapter->title }}" merupakan bagian dari buku premium.
+                        Pilih salah satu metode berikut untuk membuka akses dan melanjutkan membaca.
+                    </p>
+
+                    <div class="premium-payment-grid">
+
+                        <!-- OPSI 50 POIN -->
+                        <div class="premium-payment-card">
+                            <i class="fa-solid fa-coins"></i>
+                            <h3>Tukar Poin</h3>
+                            <div class="premium-payment-price">50 Poin</div>
+                            <p>Buka bab ini saja</p>
+
+                            <form action="{{ route('premium.chapter.unlock', ['chapter' => $chapter->id]) }}"
+                                method="POST"
+                                onsubmit="return confirm('Gunakan 50 poin untuk membuka bab ini?')">
+                                @csrf
+
+                                <button type="submit" class="premium-payment-button">
+                                    <i class="fa-solid fa-unlock"></i> Buka Bab
+                                </button>
+                            </form>
+                        </div>
+
+                        <!-- OPSI SIMULASI PEMBAYARAN -->
+                        <div class="premium-payment-card money">
+                            <i class="fa-solid fa-wallet"></i>
+                            <h3>Simulasi Pembayaran</h3>
+                            <div class="premium-payment-price">Rp15.000</div>
+                            <p>Buka seluruh bab premium buku ini</p>
+
+                            <form action="{{ route('premium.book.simulate', ['book' => $buku->id]) }}"
+                                  method="POST"
+                                  onsubmit="return confirm('Lakukan simulasi pembayaran Rp15.000 untuk membuka semua bab? Tidak ada uang asli yang ditagihkan.')">
+                                @csrf
+                                <button type="submit" class="premium-payment-button money">
+                                    <i class="fa-solid fa-crown"></i> Buka Semua Bab
+                                </button>
+                            </form>
+                        </div>
+
+                    </div>
+
+                    <p class="premium-payment-note">
+                        <i class="fa-solid fa-circle-info"></i>
+                        Pembayaran Rp15.000 hanya simulasi.
+                        Tidak ada transaksi uang sungguhan.
+                    </p>
+                </div>
+
+            @else
+
+                <!-- ILUSTRASI BAB -->
+                @if(isset($chapter) && $chapter->image)
+                    <div class="text-center mb-4">
+                        <img
+                            src="{{ asset('storage/' . preg_replace('#^(public/|storage/)#', '', $chapter->image)) }}"
+                            class="img-fluid rounded-4 shadow"
+                            style="max-height:400px;object-fit:cover;"
+                            alt="Ilustrasi Bab"
+                        >
+                    </div>
+                @endif
+
+                <!-- ISI CERITA -->
+                <div class="reader-content">
+                    @if(!empty($halaman))
+                        {!! $halaman !!}
+                    @else
+                        <p class="text-center text-muted">
+                            Belum ada konten pada bab/halaman ini.
+                        </p>
+                    @endif
+                </div>
+
+            @endif
+
+            <!-- FOOTER -->
             <div class="reader-footer">
-                
-                <!-- 1. Tombol Navigasi Utama -->
+
+                <!-- NAVIGASI -->
                 <div class="nav-buttons-primary">
                     <div>
                         @if($page > 1)
-                            <a href="{{ route('book.show', ['id' => $buku->id, 'page' => $page - 1]) }}" class="btn-nav-main">
+                            <a href="{{ route('book.show', ['id' => $buku->id, 'page' => $page - 1]) }}"
+                               class="btn-nav-main">
                                 <i class="fa-solid fa-arrow-left"></i> Sebelumnya
                             </a>
                         @endif
@@ -231,159 +538,182 @@
 
                     <div>
                         @if($page < $totalHalaman)
-                            <a href="{{ route('book.show', ['id' => $buku->id, 'page' => $page + 1]) }}" class="btn-nav-main">
+                            <a href="{{ route('book.show', ['id' => $buku->id, 'page' => $page + 1]) }}"
+                               class="btn-nav-main">
                                 Selanjutnya <i class="fa-solid fa-arrow-right"></i>
                             </a>
                         @endif
                     </div>
                 </div>
 
-                <!-- 2. Grid Aksi Tambahan -->
+                <!-- AKSI TAMBAHAN -->
                 <div class="action-grid">
-                    <a href="{{ route('resume.create', $buku->id) }}" class="btn-action-card blue-accent">
-                        <i class="fa-solid fa-pen"></i> Tulis Resume
-                    </a>
 
-                    <a href="{{ route('ulasan.index', ['id' => $buku->id]) }}" class="btn-action-card yellow-accent">
+                    @unless($isChapterLocked ?? false)
+                        <a href="{{ route('resume.create', $buku->id) }}"
+                           class="btn-action-card blue-accent">
+                            <i class="fa-solid fa-pen"></i> Tulis Resume
+                        </a>
+                    @endunless
+
+                    <a href="{{ route('ulasan.index', ['id' => $buku->id]) }}"
+                       class="btn-action-card yellow-accent">
                         <i class="fa-solid fa-star"></i> Beri Ulasan
                     </a>
 
-                    <a href="{{ route('komentar.index', ['bookId' => $buku->id, 'page' => $page]) }}" class="btn-action-card yellow-accent">
-                        <i class="fa-solid fa-comments"></i> Komentar
-                    </a>
+                    @unless($isChapterLocked ?? false)
+                        <a href="{{ route('komentar.index', ['bookId' => $buku->id, 'page' => $page]) }}"
+                           class="btn-action-card yellow-accent">
+                            <i class="fa-solid fa-comments"></i> Komentar
+                        </a>
+                    @endunless
 
-                    <a href="{{ route('genre.index') }}" class="btn-action-card">
+                    <a href="{{ route('genre.index') }}"
+                       class="btn-action-card">
                         <i class="fa-solid fa-list"></i> Daftar Buku
                     </a>
+
                 </div>
 
             </div>
-
         </div>
-
     </div>
 </div>
 
-{{-- MODAL POP-UP TAMAT MEMBACA + FEEDBACK --}}
-@if($page >= $totalHalaman)
-@php
-    $nonfiksi = $buku->jenis_buku === 'nonfiksi';
-    $sudahMenilai = \App\Models\BookFeedback::where('user_id', auth()->id())
-        ->where('book_id', $buku->id)
-        ->exists();
-@endphp
+<!-- MODAL TAMAT MEMBACA -->
+@if($page >= $totalHalaman && !($isChapterLocked ?? false))
+    @php
+        $nonfiksi = $buku->jenis_buku === 'nonfiksi';
+        $sudahMenilai = auth()->check()
+            ? \App\Models\BookFeedback::where('user_id', auth()->id())
+                ->where('book_id', $buku->id)
+                ->exists()
+            : false;
+    @endphp
 
-<style>
-    .fb-choice {
-        flex: 1;
-        border: 0;
-        border-radius: 12px;
-        padding: 12px 8px;
-        font-weight: 700;
-        font-size: 0.95rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-    }
-    .fb-choice:disabled { opacity: .6; cursor: default; }
-    .fb-yes { background: #22c55e; color: #052e16; }
-    .fb-yes:hover:not(:disabled) { background: #4ade80; }
-    .fb-no { background: #334155; color: #e2e8f0; }
-    .fb-no:hover:not(:disabled) { background: #475569; }
-    .fb-later {
-        margin-top: 14px;
-        background: none;
-        border: 0;
-        color: #94a3b8;
-        font-size: 0.85rem;
-        cursor: pointer;
-    }
-</style>
+    <div class="modal fade" id="finishReadModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-content-custom text-center p-3">
+                <div class="modal-body">
 
-<div class="modal fade" id="finishReadModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content modal-content-custom text-center p-3">
-            <div class="modal-body">
-                <div class="finish-icon">🎉</div>
-                <h3 class="fw-bold text-white mb-3">Selamat, Kamu Tamat Membaca!</h3>
+                    <div class="finish-icon">🎉</div>
 
-                @unless($sudahMenilai)
-                    <div id="fb-question">
-                        <p class="text-muted mb-3" style="line-height: 1.6; font-size: 0.95rem;">
-                            {{ $nonfiksi ? 'Apakah buku ini membantu kamu?' : 'Apakah buku ini cocok untukmu?' }}
-                        </p>
-                        <div class="d-flex gap-2">
-                            <button type="button" class="fb-choice fb-yes" data-cocok="1">
-                                {{ $nonfiksi ? 'Membantu' : 'Cocok untukku' }}
-                            </button>
-                            <button type="button" class="fb-choice fb-no" data-cocok="0">
-                                {{ $nonfiksi ? 'Kurang membantu' : 'Belum cocok' }}
-                            </button>
+                    <h3 class="fw-bold text-white mb-3">
+                        Selamat, Kamu Tamat Membaca!
+                    </h3>
+
+                    @unless($sudahMenilai)
+                        <div id="fb-question">
+                            <p class="text-muted mb-3"
+                               style="line-height:1.6;font-size:0.95rem;">
+                                {{ $nonfiksi
+                                    ? 'Apakah buku ini membantu kamu?'
+                                    : 'Apakah buku ini cocok untukmu?' }}
+                            </p>
+
+                            <div class="d-flex gap-2">
+                                <button type="button"
+                                        class="fb-choice fb-yes"
+                                        data-cocok="1">
+                                    {{ $nonfiksi ? 'Membantu' : 'Cocok untukku' }}
+                                </button>
+
+                                <button type="button"
+                                        class="fb-choice fb-no"
+                                        data-cocok="0">
+                                    {{ $nonfiksi ? 'Kurang membantu' : 'Belum cocok' }}
+                                </button>
+                            </div>
                         </div>
+                    @endunless
+
+                    <div id="fb-thanks" class="{{ $sudahMenilai ? '' : 'd-none' }}">
+                        <p class="text-muted mb-3"
+                           style="line-height:1.6;font-size:0.95rem;">
+                            {{ $sudahMenilai
+                                ? 'Terima kasih sudah membaca buku ini sampai selesai.'
+                                : 'Terima kasih atas penilaianmu!' }}
+                        </p>
+
+                        <a href="{{ route('books.finished', $buku->id) }}"
+                           class="btn-nav-main justify-content-center w-100 py-3">
+                            <i class="fa-solid fa-book"></i>
+                            Lihat rekomendasi buku
+                        </a>
                     </div>
-                @endunless
 
-                <div id="fb-thanks" class="{{ $sudahMenilai ? '' : 'd-none' }}">
-                    <p class="text-muted mb-3" style="line-height: 1.6; font-size: 0.95rem;">
-                        {{ $sudahMenilai
-                            ? 'Terima kasih sudah membaca buku ini sampai selesai.'
-                            : 'Terima kasih atas penilaianmu!' }}
-                    </p>
-                    <a href="{{ route('books.finished', $buku->id) }}"
-                       class="btn-nav-main justify-content-center w-100 py-3">
-                        <i class="fa-solid fa-book"></i> Lihat rekomendasi buku
-                    </a>
+                    <button type="button"
+                            class="fb-later"
+                            data-bs-dismiss="modal">
+                        Lanjut berinteraksi
+                    </button>
+
                 </div>
-
-                <button type="button" class="fb-later" data-bs-dismiss="modal">
-                    Lanjut berinteraksi
-                </button>
             </div>
         </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        var finishModal = new bootstrap.Modal(document.getElementById('finishReadModal'));
-        var isModalShown = false;
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modalElement = document.getElementById('finishReadModal');
 
-        // Kirim penilaian
-        var buttons = document.querySelectorAll('#finishReadModal [data-cocok]');
-        buttons.forEach(function (btn) {
-            btn.addEventListener('click', async function () {
-                buttons.forEach(function (b) { b.disabled = true; });
-                try {
-                    await fetch("{{ route('books.feedback', $buku->id) }}", {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'X-CSRF-TOKEN': '{{ csrf_token() }}',
-                            'Accept': 'application/json'
-                        },
-                        body: JSON.stringify({ cocok: btn.dataset.cocok === '1' ? 1 : 0 })
+            if (!modalElement || typeof bootstrap === 'undefined') {
+                return;
+            }
+
+            var finishModal = new bootstrap.Modal(modalElement);
+            var isModalShown = false;
+
+            var buttons = document.querySelectorAll('#finishReadModal [data-cocok]');
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener('click', async function () {
+                    buttons.forEach(function (b) {
+                        b.disabled = true;
                     });
-                } catch (e) {
-                    console.error(e);
-                }
-                document.getElementById('fb-question').classList.add('d-none');
-                document.getElementById('fb-thanks').classList.remove('d-none');
-            });
-        });
 
-        @if($totalHalaman == 1)
-            // 1 halaman: munculkan saat user scroll ke paling bawah
-            window.addEventListener('scroll', function () {
-                if (!isModalShown && (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
-                    finishModal.show();
-                    isModalShown = true;
-                }
+                    try {
+                        await fetch("{{ route('books.feedback', $buku->id) }}", {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                'Accept': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                cocok: btn.dataset.cocok === '1' ? 1 : 0
+                            })
+                        });
+                    } catch (e) {
+                        console.error(e);
+                    }
+
+                    var question = document.getElementById('fb-question');
+                    var thanks = document.getElementById('fb-thanks');
+
+                    if (question) {
+                        question.classList.add('d-none');
+                    }
+
+                    if (thanks) {
+                        thanks.classList.remove('d-none');
+                    }
+                });
             });
-        @else
-            // Lebih dari 1 halaman: langsung muncul di halaman terakhir
-            finishModal.show();
-        @endif
-    });
-</script>
+
+            @if($totalHalaman == 1)
+                window.addEventListener('scroll', function () {
+                    if (!isModalShown &&
+                        (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 150) {
+                        finishModal.show();
+                        isModalShown = true;
+                    }
+                });
+            @else
+                finishModal.show();
+            @endif
+        });
+    </script>
 @endif
 
 @endsection

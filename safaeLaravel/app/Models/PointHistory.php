@@ -8,7 +8,10 @@ class PointHistory extends Model
 {
     protected $fillable = [
         'user_id',
-        'points'
+        'book_id',
+        'points',
+        'type',
+        'description'
     ];
 
     public function user()
@@ -16,5 +19,8 @@ class PointHistory extends Model
         return $this->belongsTo(User::class);
     }
 
-   
+    public function book()
+    {
+        return $this->belongsTo(Book::class);
+    }
 }
