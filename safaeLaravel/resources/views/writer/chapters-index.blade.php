@@ -384,6 +384,54 @@
         background: rgba(56, 189, 248, 0.08);
     }
 
+    /* TOMBOL AKSI BAB */
+.chapter-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.chapter-delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 9px 13px;
+    background: rgba(239, 68, 68, 0.08);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    color: #f87171;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.chapter-delete-btn:hover {
+    background: #ef4444;
+    border-color: #ef4444;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .chapter-actions {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .chapter-actions {
+        width: 100%;
+    }
+
+    .chapter-actions a,
+    .chapter-actions button {
+        flex: 1;
+    }
+}
+
     /* BELUM ADA BAB */
     .chapter-empty {
         padding: 45px 20px;
@@ -568,10 +616,34 @@
                             </div>
                         </div>
 
-                        <!-- TOMBOL EDIT BAB -->
-                        <a href="{{ url('/penulis/buku/'.$book->id.'/chapter/'.$chapter->id.'/edit') }}" class="chapter-edit-btn">
-                            <i class="fa-solid fa-pen-to-square"></i> Edit Bab
-                        </a>
+                      <!-- TOMBOL AKSI BAB -->
+<div class="chapter-actions">
+
+    <!-- TOMBOL EDIT -->
+    <a href="{{ url('/penulis/buku/'.$book->id.'/chapter/'.$chapter->id.'/edit') }}"
+        class="chapter-edit-btn">
+        <i class="fa-solid fa-pen-to-square"></i> Edit Bab
+    </a>
+
+    <!-- TOMBOL HAPUS -->
+    <form action="{{ route('writer.chapters.destroy', [
+        'book' => $book->id,
+        'chapter' => $chapter->id
+    ]) }}"
+    method="POST"
+    class="delete-chapter-form"
+    style="margin: 0;">
+
+    @csrf
+    @method('DELETE')
+
+    <button type="button" class="chapter-delete-btn"
+        onclick="confirmDeleteChapter(this)">
+        <i class="fa-solid fa-trash"></i> Hapus
+    </button>
+</form>
+
+</div>
                     </div>
                 @empty
                     <div class="chapter-empty">
@@ -589,4 +661,36 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+    function confirmDeleteChapter(button) {
+        const form = button.closest('form');
+
+        Swal.fire({
+            title: 'Hapus Bab?',
+            text: 'Bab yang dihapus tidak dapat dikembalikan. Apakah kamu yakin ingin menghapus bab ini?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Ya, Hapus',
+            cancelButtonText: 'Batal',
+            reverseButtons: true,
+            background: '#162033',
+            color: '#f1f5f9',
+            confirmButtonColor: '#ef4444',
+            cancelButtonColor: '#334155',
+            customClass: {
+                popup: 'chapter-delete-popup',
+                confirmButton: 'chapter-confirm-delete',
+                cancelButton: 'chapter-cancel-delete'
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                form.submit();
+            }
+        });
+    }
+</script>
+
 @endsection

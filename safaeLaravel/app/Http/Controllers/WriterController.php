@@ -134,6 +134,33 @@ public function index()
             ->with('success', $message);
     }
 
+// 5. Menghapus bab milik penulis
+public function destroyChapter($bookId, $chapterId)
+{
+    // Pastikan buku merupakan milik penulis yang sedang login
+    $book = Book::where('user_id', Auth::id())
+        ->findOrFail($bookId);
+
+    // Pastikan bab merupakan bagian dari buku tersebut
+    $chapter = Chapter::where('book_id', $book->id)
+        ->findOrFail($chapterId);
+
+    // Hapus ilustrasi bab dari storage jika tersedia
+    if (
+        $chapter->image &&
+        Storage::disk('public')->exists($chapter->image)
+    ) {
+        Storage::disk('public')->delete($chapter->image);
+    }
+
+    // Hapus data bab
+    $chapter->delete();
+
+    return redirect()
+        ->route('writer.chapters.index', ['book' => $book->id])
+        ->with('success', 'Bab berhasil dihapus!');
+}
+
     // =========================================================
     // KELOLA BUKU UTAMA
     // =========================================================

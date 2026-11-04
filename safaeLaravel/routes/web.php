@@ -172,6 +172,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/buku/{book}/chapter/tambah', [WriterController::class, 'editor'])->name('chapter.create');
         Route::get('/buku/{book}/chapter/{chapter}/edit', [WriterController::class, 'editor'])->name('chapter.edit');
         Route::post('/buku/{book}/chapter/simpan/{chapter?}', [WriterController::class, 'saveChapter'])->name('chapter.store');
+      Route::delete('/buku/{book}/chapter/{chapter}', [WriterController::class, 'destroyChapter'])->name('chapters.destroy');
     });
 
     /* NOTIFIKASI USER */
@@ -233,9 +234,10 @@ Route::middleware(['auth', AdminOnly::class])
         Route::delete('/forum/{id}', [AdminForumController::class, 'destroy'])->name('forum.destroy');
 
         /* VALIDASI BUKU */
-        Route::get('/validasi', [BookSubmissionController::class, 'indexAdmin'])->name('validasi.index');
-        Route::post('/validasi/{id}/approve', [BookSubmissionController::class, 'approve'])->name('validasi.approve');
-        Route::post('/validasi/{id}/reject', [BookSubmissionController::class, 'reject'])->name('validasi.reject');
+         Route::get('/validasi', [BookSubmissionController::class, 'indexAdmin'])->name('admin.validasi');
+        Route::post('/validasi/{id}/approve', [BookSubmissionController::class, 'approve']);
+        Route::post('/validasi/{id}/reject', [BookSubmissionController::class, 'reject']);
+
 
         // KELOLA KOMENTAR ADMIN
         Route::get('/komentar', [AdminKomentarController::class, 'index'])->name('komentar.index');

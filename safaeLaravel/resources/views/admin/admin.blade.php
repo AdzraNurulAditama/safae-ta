@@ -135,6 +135,7 @@
         border-radius: 8px;
         transition: all 0.2s ease;
         font-size: 0.9rem;
+        cursor: pointer;
     }
 
     .btn-tool-approve {
@@ -159,6 +160,22 @@
         color: #fff;
     }
 
+    /* Badge Aksi Selesai */
+.action-completed {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399 !important;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
     /* Kotak Alert */
     .alert-admin-success {
         background: rgba(6, 182, 212, 0.04);
@@ -173,7 +190,7 @@
 
 @section('content')
 <div class="admin-container">
-    
+
     {{-- HEADER HALAMAN --}}
     <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary border-opacity-10 pb-3">
         <div>
@@ -211,7 +228,8 @@
     <div class="card table-panel-admin overflow-hidden">
         <div class="panel-header-admin d-flex align-items-center justify-content-between">
             <h6 class="fw-bold text-white mb-0 small tracking-wider d-flex align-items-center gap-2">
-                <i class="fa-solid fa-list-check text-primary"></i> Daftar Antrean Buku Masuk
+                <i class="fa-solid fa-list-check text-primary"></i>
+                Daftar Antrean Buku Masuk
             </h6>
         </div>
 
@@ -232,7 +250,9 @@
                     <tbody>
                     @forelse ($books as $book)
                         <tr>
-                            <td class="text-center text-muted small">[{{ sprintf('%02d', $loop->iteration) }}]</td>
+                            <td class="text-center text-muted small">
+                                [{{ sprintf('%02d', $loop->iteration) }}]
+                            </td>
 
                             {{-- COVER + JUDUL BUKU --}}
                             <td>
@@ -247,63 +267,85 @@
                                             <i class="fas fa-book text-muted" style="font-size: 0.8rem;"></i>
                                         </div>
                                     @endif
-                                    <span class="fw-bold text-white fs-6">{{ $book->title }}</span>
+
+                                    <span class="fw-bold text-white fs-6">
+                                        {{ $book->title }}
+                                    </span>
                                 </div>
                             </td>
 
-                            <td class="fw-semibold text-secondary" style="color: #cbd5e1 !important;">{{ $book->author }}</td>
-
-                            <td>
-                                <span class="status-badge status-genre">{{ $book->genre }}</span>
+                            <td class="fw-semibold text-secondary" style="color: #cbd5e1 !important;">
+                                {{ $book->author }}
                             </td>
 
+                            <td>
+                                <span class="status-badge status-genre">
+                                    {{ $book->genre }}
+                                </span>
+                            </td>
+
+                            {{-- STATUS BUKU --}}
                             <td class="text-center">
-                                @if($book->status === 'approved')
+                                @if(strtolower(trim($book->status ?? '')) == 'approved')
                                     <span class="status-badge status-approved">Approved</span>
-                                @elseif($book->status === 'rejected')
+
+                                @elseif(strtolower(trim($book->status ?? '')) == 'rejected')
                                     <span class="status-badge status-rejected">Rejected</span>
+
                                 @else
                                     <span class="status-badge status-pending">Pending</span>
                                 @endif
                             </td>
 
-                            {{-- SAKELAR EKSEKUSI AKSI --}}
-                            <td class="text-center">
-                                <div class="d-flex justify-content-center gap-2">
+                            {{-- AKSI APPROVE DAN REJECT --}}
+<td class="text-center">
+    <div class="d-flex justify-content-center gap-2">
 
-                                    @if($book->status === 'pending')
+        @php
+            $status = strtolower(trim((string) $book->status));
+        @endphp
 
-                                        {{-- APPROVE --}}
-                                        <form action="{{ url('/admin/validasi/'.$book->id.'/approve') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <button type="submit"
-                                                    class="btn-action-tool btn-tool-approve"
-                                                    title="Setujui Buku"
-                                                    onclick="return confirm('Apakah Anda yakin ingin menyetujui buku ini?')">
-                                                <i class="fas fa-check"></i>
-                                            </button>
-                                        </form>
+        @if(!in_array($status, ['approved', 'rejected']))
 
-                                        {{-- REJECT --}}
-                                        <form action="{{ url('/admin/validasi/'.$book->id.'/reject') }}" method="POST" class="m-0">
-                                            @csrf
-                                            <button type="submit"
-                                                    class="btn-action-tool btn-tool-reject"
-                                                    title="Tolak Buku"
-                                                    onclick="return confirm('Apakah Anda yakin ingin menolak buku ini?')">
-                                                <i class="fas fa-times"></i>
-                                            </button>
-                                        </form>
+            {{-- APPROVE --}}
+            <form action="{{ url('/admin/validasi/'.$book->id.'/approve') }}"
+                  method="POST"
+                  class="m-0">
+                @csrf
+                <button type="submit"
+                        class="btn-action-tool btn-tool-approve"
+                        title="Setujui Buku"
+                        onclick="return confirm('Apakah Anda yakin ingin menyetujui buku ini?')">
+                    <i class="fas fa-check"></i>
+                </button>
+            </form>
 
-                                    @else
-                                        <span class="small text-muted py-1 px-2 rounded-2" style="background: rgba(255,255,255,0.02); font-size: 0.75rem;">
-                                            <i class="fa-solid fa-lock me-1"></i> Selesai
-                                        </span>
-                                    @endif
+            {{-- REJECT --}}
+            <form action="{{ url('/admin/validasi/'.$book->id.'/reject') }}"
+                  method="POST"
+                  class="m-0">
+                @csrf
+                <button type="submit"
+                        class="btn-action-tool btn-tool-reject"
+                        title="Tolak Buku"
+                        onclick="return confirm('Apakah Anda yakin ingin menolak buku ini?')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </form>
 
-                                </div>
+       @else
+    <span class="action-completed">
+        <i class="fas fa-check-circle"></i>
+        Selesai
+    </span>
+@endif
+
+    </div>
+</td>
+                                   
                             </td>
                         </tr>
+
                     @empty
                         <tr>
                             <td colspan="6" class="text-center text-muted py-5 small">

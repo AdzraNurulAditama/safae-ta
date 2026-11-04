@@ -1,291 +1,614 @@
 @extends('layouts.layoutsAdmin')
 
-@section('title', 'Edit Book - ' . $book->title)
+@section('title', 'Edit Buku - ' . $book->title)
 
 @push('styles')
-    <style>
-        /* ================= PREMIUM OBSIDIAN TECH FORM STYLES ================= */
-        .edit-wrapper {
-            background: transparent;
-            color: var(--text);
-            padding: 10px 0;
-        }
+<style>
+    .edit-wrapper {
+        color: #30264a;
+        padding: 8px 0 30px;
+    }
 
-        /* Container Utama Modern Panel */
+    /* Breadcrumb */
+    .edit-navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 25px;
+    }
+
+    .edit-navigation .breadcrumb {
+        margin: 0;
+        font-size: 13px;
+    }
+
+    .edit-navigation .breadcrumb a {
+        color: #75658f;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    .edit-navigation .breadcrumb a:hover {
+        color: #7651bd;
+    }
+
+    .edit-navigation .breadcrumb-item.active {
+        color: #493267;
+        font-weight: 700;
+    }
+
+    .btn-back {
+        background: #fff;
+        border: 1px solid #ded5ed;
+        color: #5b4384 !important;
+        padding: 9px 17px;
+        border-radius: 9px;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .2s;
+    }
+
+    .btn-back:hover {
+        background: #f3edfc;
+        border-color: #c9b7e8;
+    }
+
+    /* Form Container */
+    .form-container-premium {
+        background: #fff;
+        border: 1px solid #e8e0f1;
+        border-radius: 17px;
+        padding: 30px;
+        box-shadow: 0 5px 20px rgba(70, 45, 110, .06);
+    }
+
+    .form-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding-bottom: 23px;
+        margin-bottom: 25px;
+        border-bottom: 1px solid #eee8f5;
+    }
+
+    .form-header-icon {
+        width: 48px;
+        height: 48px;
+        background: #f0eafd;
+        color: #7651bd;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+    }
+
+    .form-header h3 {
+        color: #35234f;
+        font-size: 21px;
+        font-weight: 800;
+        margin: 0 0 5px;
+    }
+
+    .form-header p {
+        color: #82738f;
+        font-size: 13px;
+        margin: 0;
+    }
+
+    /* Form Section */
+    .form-section {
+        background: #fbfaff;
+        border: 1px solid #eee8f5;
+        border-radius: 13px;
+        padding: 22px;
+        margin-bottom: 23px;
+    }
+
+    .form-section-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #493267;
+        font-size: 15px;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+
+    .form-section-title i {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f0eafd;
+        color: #7651bd;
+        border-radius: 8px;
+        font-size: 13px;
+    }
+
+    /* Label */
+    .edit-wrapper .form-label {
+        display: block;
+        color: #493b5e !important;
+        font-size: 13px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        letter-spacing: 0;
+        text-transform: none;
+    }
+
+    .required-mark {
+        color: #dc5260;
+    }
+
+    /* Input */
+    .edit-wrapper .form-control,
+    .edit-wrapper .form-select {
+        background: #fff !important;
+        color: #392b4e !important;
+        border: 1px solid #ded5e9 !important;
+        border-radius: 9px !important;
+        padding: 11px 14px !important;
+        font-size: 13px;
+        font-weight: 500;
+        box-shadow: none !important;
+        transition: .2s;
+    }
+
+    .edit-wrapper .form-control::placeholder {
+        color: #aa9eb9 !important;
+        font-weight: 400;
+    }
+
+    .edit-wrapper .form-control:focus,
+    .edit-wrapper .form-select:focus {
+        background: #fff !important;
+        color: #392b4e !important;
+        border-color: #9673d0 !important;
+        box-shadow: 0 0 0 3px rgba(118, 81, 189, .12) !important;
+    }
+
+    .edit-wrapper textarea.form-control {
+        line-height: 1.7;
+    }
+
+    .edit-wrapper select option {
+        color: #392b4e;
+        background: #fff;
+    }
+
+    .form-help {
+        color: #82738f;
+        font-size: 11px;
+        margin-top: 7px;
+    }
+
+    /* Cover Upload */
+    .cover-upload-zone {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+        padding: 20px;
+        background: #fff;
+        border: 1px dashed #cbbce0;
+        border-radius: 12px;
+    }
+
+    .cover-preview-box {
+        flex-shrink: 0;
+        width: 105px;
+        height: 145px;
+        padding: 5px;
+        background: #f4effb;
+        border: 1px solid #e5dbf1;
+        border-radius: 9px;
+    }
+
+    .cover-preview-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .cover-placeholder {
+        width: 105px;
+        height: 145px;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background: #f4effb;
+        color: #957fb8;
+        border: 1px dashed #cbbce0;
+        border-radius: 9px;
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .cover-upload-info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .cover-upload-info h6 {
+        color: #493267;
+        font-size: 14px;
+        font-weight: 800;
+        margin-bottom: 6px;
+    }
+
+    .cover-upload-info p {
+        color: #82738f;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .cover-upload-info .form-control {
+        background: #fbfaff !important;
+    }
+
+    /* Alert Error */
+    .alert-premium-danger {
+        background: #fff2f3;
+        border: 1px solid #f3cbd0;
+        color: #a62f40;
+        border-radius: 11px;
+        padding: 17px 20px;
+    }
+
+    .alert-premium-danger .alert-heading {
+        color: #a62f40;
+        font-size: 14px;
+        font-weight: 800;
+    }
+
+    .alert-premium-danger li {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    /* Footer */
+    .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        border-top: 1px solid #eee8f5;
+        padding-top: 22px;
+        margin-top: 10px;
+    }
+
+    .footer-note {
+        color: #82738f;
+        font-size: 12px;
+    }
+
+    .footer-actions {
+        display: flex;
+        gap: 10px;
+    }
+
+    .btn-submit-premium {
+        background: #7651bd;
+        color: #fff !important;
+        border: 1px solid #7651bd;
+        font-size: 13px;
+        font-weight: 800;
+        padding: 11px 21px;
+        border-radius: 9px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: .2s;
+    }
+
+    .btn-submit-premium:hover {
+        background: #5e3c9e;
+        border-color: #5e3c9e;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 13px rgba(118, 81, 189, .2);
+    }
+
+    .btn-cancel-premium {
+        background: #fff;
+        color: #68577d !important;
+        border: 1px solid #ded5e9;
+        font-size: 13px;
+        font-weight: 700;
+        padding: 11px 20px;
+        border-radius: 9px;
+        text-decoration: none;
+        transition: .2s;
+    }
+
+    .btn-cancel-premium:hover {
+        background: #f4effb;
+        color: #593b91 !important;
+        border-color: #cbbce0;
+    }
+
+    @media (max-width: 768px) {
         .form-container-premium {
-            background: var(--sidebar-bg);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            padding: 20px;
         }
 
-        /* Garis Aksen Teknologi Atas */
-        .form-container-premium::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent), transparent);
+        .form-section {
+            padding: 16px;
         }
 
-        .section-title-premium {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 35px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            letter-spacing: -0.5px;
+        .form-header h3 {
+            font-size: 18px;
         }
 
-        /* Desain Label Form */
-        .form-label {
-            color: var(--muted);
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        /* Input Box & Control Premium Glass */
-        .form-control, .form-select {
-            background-color: rgba(11, 15, 25, 0.5) !important;
-            border: 1px solid rgba(255, 255, 255, 0.08) !important;
-            color: var(--text) !important;
-            border-radius: 10px !important;
-            padding: 14px 18px !important;
-            font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        }
-
-        /* Efek Glow Cyan Premium Saat Fokus */
-        .form-control:focus, .form-select:focus {
-            border-color: rgba(6, 182, 212, 0.6) !important;
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.15) !important;
-            background-color: rgba(11, 15, 25, 0.8) !important;
-        }
-
-        /* Hilangkan Outline Default Dropdown */
-        .form-select {
-            cursor: pointer;
-        }
-
-        /* Desain Khusus Area Upload & Preview Cover */
         .cover-upload-zone {
-            background: rgba(11, 15, 25, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 24px;
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-        
-        .cover-preview-box {
-            position: relative;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 6px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        
-        .cover-preview-box img {
-            width: 85px;
-            height: 125px;
-            object-fit: cover;
-            border-radius: 6px;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
-        /* Custom Alert Error */
-        .alert-premium-danger {
-            background: rgba(239, 68, 68, 0.06);
-            border: 1px solid rgba(239, 68, 68, 0.2);
-            color: #fca5a5;
-            border-radius: 10px;
-            padding: 18px 24px;
+        .form-footer {
+            align-items: stretch;
+            flex-direction: column;
         }
 
-        .form-text {
-            color: var(--muted) !important;
-            font-size: 0.75rem;
-            margin-top: 8px;
+        .footer-actions {
+            width: 100%;
         }
 
-        /* Tombol Aksi Simpan Kustom */
-        .btn-submit-premium {
-            background: var(--primary);
-            color: #0b0f19;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 12px 28px;
-            border-radius: 10px;
-            border: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.25s ease;
-            cursor: pointer;
+        .footer-actions button,
+        .footer-actions a {
+            flex: 1;
+            justify-content: center;
+            text-align: center;
         }
-        
-        .btn-submit-premium:hover {
-            background: #22d3ee;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.25);
-        }
-
-        .btn-submit-premium:active {
-            transform: translateY(0);
-        }
-
-        /* Tombol Batal Kustom */
-        .btn-cancel-premium {
-            font-size: 0.95rem;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 10px;
-            transition: all 0.25s ease;
-        }
-        
-        .btn-cancel-premium:hover {
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff !important;
-        }
-    </style>
+    }
+</style>
 @endpush
 
 @section('content')
 <div class="container-fluid px-0 edit-wrapper">
-    
-    {{-- ================= NAVIGASI ATAS / BREADCRUMB ================= --}}
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb mb-0" style="font-size: 0.8rem;">
-                    <li class="breadcrumb-item"><a href="{{ url('/admin') }}" style="color: var(--muted); text-decoration: none;">Dashboard</a></li>
-                    <li class="breadcrumb-item"><a href="{{ url('/admin/genre') }}" style="color: var(--muted); text-decoration: none;">Daftar Buku</a></li>
-                    <li class="breadcrumb-item active text-truncate" style="max-width: 200px; color: var(--primary);" aria-current="page">Edit Buku</li>
-                </ol>
-            </nav>
-        </div>
-        <a href="{{ route('admin.genre.index', ['genre' => $book->genre]) }}" class="btn btn-sm btn-outline-secondary text-white border-secondary px-3 rounded-2 fw-semibold">
-            <i class="fas fa-arrow-left me-2"></i> Kembali
+
+    {{-- BREADCRUMB --}}
+    <div class="edit-navigation">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="{{ url('/admin') }}">Dashboard</a>
+                </li>
+                <li class="breadcrumb-item">
+                    <a href="{{ route('admin.genre.index') }}">Daftar Buku</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    Edit Buku
+                </li>
+            </ol>
+        </nav>
+
+        <a href="{{ route('admin.genre.index', ['genre' => $book->genre]) }}" class="btn-back">
+            <i class="fas fa-arrow-left me-2"></i>Kembali
         </a>
     </div>
 
-    {{-- ================= NOTIFIKASI ERROR VALIDASI ================= --}}
+    {{-- ERROR VALIDASI --}}
     @if ($errors->any())
         <div class="alert alert-premium-danger mb-4 shadow-sm">
-            <div class="fw-bold small mb-2 d-flex align-items-center gap-2">
-                <i class="fas fa-exclamation-circle text-danger fs-5"></i> 
-                Terjadi kesalahan pengisian data:
+            <div class="alert-heading mb-2">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                Terdapat kesalahan pada pengisian data
             </div>
-            <ul class="mb-0 ps-3 small opacity-90">
+            <ul class="mb-0 ps-3">
                 @foreach ($errors->all() as $error)
-                    <li class="mb-1">{{ $error }}</li>
+                    <li>{{ $error }}</li>
                 @endforeach
             </ul>
         </div>
     @endif
 
-    {{-- ================= FORM PANEL UTAMA ================= --}}
+    {{-- FORM UTAMA --}}
     <div class="form-container-premium">
-        <h3 class="section-title-premium">
-            <i class="fa-solid fa-pen-to-square text-primary"></i>
-            Edit Data Buku: <span class="text-muted fw-normal ms-1" style="font-size: 1.15rem;">{{ $book->title }}</span>
-        </h3>
 
-        <form method="POST" action="{{ route('admin.books.update', $book->id) }}" enctype="multipart/form-data">
+        <div class="form-header">
+            <div class="form-header-icon">
+                <i class="fas fa-pen-to-square"></i>
+            </div>
+            <div>
+                <h3>Edit Data Buku</h3>
+                <p>Perbarui informasi buku sesuai dengan data terbaru.</p>
+            </div>
+        </div>
+
+        <form method="POST"
+              action="{{ route('admin.books.update', $book->id) }}"
+              enctype="multipart/form-data">
             @csrf
 
-            <div class="row g-4">
-                {{-- BARIS KIRI --}}
-                <div class="col-md-6">
-                    <div class="mb-4">
-                        <label for="title" class="form-label">Judul Buku</label>
-                        <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $book->title) }}" required placeholder="Masukkan judul baru">
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="author" class="form-label">Penulis / Pengarang</label>
-                        <input type="text" class="form-control" id="author" name="author" value="{{ old('author', $book->author) }}" required placeholder="Nama penulis">
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="genre" class="form-label">Kategori Genre</label>
-                        <select class="form-select" id="genre" name="genre" required>
-                            @foreach ($genre_options as $option)
-                                <option value="{{ $option }}" {{ old('genre', $book->genre) == $option ? 'selected' : '' }}>
-                                    {{ $option }}
-                                </option>
-                            @endforeach
-                        </select>
-                    </div>
+            {{-- INFORMASI DASAR --}}
+            <div class="form-section">
+                <div class="form-section-title">
+                    <i class="fas fa-book"></i>
+                    Informasi Dasar Buku
                 </div>
 
-                {{-- BARIS KANAN --}}
-                <div class="col-md-6">
-                    <div class="mb-4">
-                        <label for="year" class="form-label">Tahun Terbit</label>
-                        <input type="number" class="form-control" id="year" name="year" value="{{ old('year', $book->year) }}" required placeholder="Contoh: 2024">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div>
+                            <label for="title" class="form-label">
+                                Judul Buku <span class="required-mark">*</span>
+                            </label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="title"
+                                   name="title"
+                                   value="{{ old('title', $book->title) }}"
+                                   required
+                                   placeholder="Masukkan judul buku">
+                        </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label for="description" class="form-label">Sinopsis / Ringkasan</label>
-                        <textarea class="form-control" id="description" name="description" rows="4" required placeholder="Tulis deskripsi singkat tentang alur cerita buku..." style="resize: none;">{{ old('description', $book->description) }}</textarea>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="author" class="form-label">
+                                Penulis / Pengarang <span class="required-mark">*</span>
+                            </label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="author"
+                                   name="author"
+                                   value="{{ old('author', $book->author) }}"
+                                   required
+                                   placeholder="Masukkan nama penulis">
+                        </div>
                     </div>
-                </div>
 
-                {{-- FULL WIDTH SEKTOR: ISI BUKU & COVER MANAJEMEN --}}
-                <div class="col-12">
-                    <div class="mb-4">
-                        <label for="content" class="form-label">Isi Buku Lengkap (Manuskrip Teks)</label>
-                        <textarea class="form-control" id="content" name="content" rows="10" required placeholder="Tulis atau tempel isi keseluruhan naskah buku disini...">{{ old('content', $book->content) }}</textarea>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="genre" class="form-label">
+                                Kategori Genre <span class="required-mark">*</span>
+                            </label>
+                            <select class="form-select" id="genre" name="genre" required>
+                                @foreach ($genre_options as $option)
+                                    <option value="{{ $option }}"
+                                        {{ old('genre', $book->genre) == $option ? 'selected' : '' }}>
+                                        {{ $option }}
+                                    </option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="mb-4">
-                        <label class="form-label">Perbarui Cover Buku</label>
-                        <div class="cover-upload-zone">
-                            @if ($book->image_path)
-                                <div class="cover-preview-box shadow-sm">
-                                    <img src="{{ asset($book->image_path) }}" alt="Current Cover" onerror="this.src='{{ asset('images/default-book.png') }}'">
-                                </div>
-                            @endif
-                            <div class="flex-grow-1">
-                                <label for="image" class="form-label mb-2 style-select-label" style="color: var(--text); opacity: 0.8; font-weight: 500; text-transform: none; letter-spacing: 0;"><i class="fas fa-cloud-upload-alt text-primary me-2"></i>Pilih Berkas Cover Baru</label>
-                                <input type="file" class="form-control" id="image" name="image" accept="image/*">
-                                <div class="form-text">Biarkan kosong jika Anda tidak ingin mengganti gambar cover saat ini.</div>
+                    <div class="col-md-6">
+                        <div>
+                            <label for="year" class="form-label">
+                                Tahun Terbit <span class="required-mark">*</span>
+                            </label>
+                            <input type="number"
+                                   class="form-control"
+                                   id="year"
+                                   name="year"
+                                   value="{{ old('year', $book->year) }}"
+                                   required
+                                   placeholder="Contoh: 2024">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div>
+                            <label for="description" class="form-label">
+                                Sinopsis / Ringkasan <span class="required-mark">*</span>
+                            </label>
+                            <textarea class="form-control"
+                                      id="description"
+                                      name="description"
+                                      rows="4"
+                                      required
+                                      placeholder="Tuliskan sinopsis atau ringkasan buku..."
+                                      style="resize: vertical;">{{ old('description', $book->description) }}</textarea>
+                            <div class="form-help">
+                                Berikan gambaran singkat mengenai isi atau cerita buku.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            {{-- FOOTER BUTTON ACTIONS --}}
-            <div class="mt-4 pt-4 border-top d-flex align-items-center gap-2" style="border-color: var(--border) !important;">
-                <button type="submit" class="btn-submit-premium shadow-sm">
-                    <i class="fas fa-save"></i> Simpan Perubahan
-                </button>
+            {{-- ISI BUKU --}}
+            <div class="form-section">
+                <div class="form-section-title">
+                    <i class="fas fa-file-lines"></i>
+                    Isi Buku
+                </div>
 
-                <a href="{{ route('admin.genre.index', ['genre' => $book->genre]) }}" class="btn btn-sm btn-outline-secondary text-white border-secondary btn-cancel-premium">
-                    Batal
-                </a>
+                <div>
+                    <label for="content" class="form-label">
+                        Isi Buku Lengkap <span class="required-mark">*</span>
+                    </label>
+                    <textarea class="form-control"
+                              id="content"
+                              name="content"
+                              rows="12"
+                              required
+                              placeholder="Tulis atau tempel isi lengkap buku di sini...">{{ old('content', $book->content) }}</textarea>
+                    <div class="form-help">
+                        Periksa kembali isi buku sebelum menyimpan perubahan.
+                    </div>
+                </div>
             </div>
+
+            {{-- COVER BUKU --}}
+            <div class="form-section">
+                <div class="form-section-title">
+                    <i class="fas fa-image"></i>
+                    Cover Buku
+                </div>
+
+                <div class="cover-upload-zone">
+                    @if ($book->image_path)
+                        <div class="cover-preview-box">
+                            <img src="{{ asset($book->image_path) }}"
+                                 alt="Cover Buku"
+                                 onerror="this.src='{{ asset('images/default-book.png') }}'">
+                        </div>
+                    @else
+                        <div class="cover-placeholder">
+                            <i class="fas fa-image fa-2x"></i>
+                            <span>Belum ada cover</span>
+                        </div>
+                    @endif
+
+                    <div class="cover-upload-info">
+                        <h6>Ganti Cover Buku</h6>
+                        <p>Pilih gambar baru jika ingin memperbarui cover buku.</p>
+
+                        <label for="image" class="form-label">
+                            Pilih File Cover
+                        </label>
+                        <input type="file"
+                               class="form-control"
+                               id="image"
+                               name="image"
+                               accept="image/*">
+
+                        <div class="form-help">
+                            Biarkan kosong jika tidak ingin mengganti cover saat ini.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- TOMBOL AKSI --}}
+            <div class="form-footer">
+                <div class="footer-note">
+                    <i class="fas fa-info-circle me-1"></i>
+                    Pastikan semua informasi sudah benar.
+                </div>
+
+                <div class="footer-actions">
+                    <a href="{{ route('admin.genre.index', ['genre' => $book->genre]) }}"
+                       class="btn-cancel-premium">
+                        Batal
+                    </a>
+
+                    <button type="submit" class="btn-submit-premium">
+                        <i class="fas fa-save"></i>
+                        Simpan Perubahan
+                    </button>
+                </div>
+            </div>
+
         </form>
     </div>
-
 </div>
 @endsection
 
 @push('scripts')
 <script>
-    // Penyelarasan kontrol klik menu sidebar responsif seluler bawaan template
     document.getElementById('toggleBtn')?.addEventListener('click', function() {
         document.getElementById('adminSidebar')?.classList.toggle('show');
     });

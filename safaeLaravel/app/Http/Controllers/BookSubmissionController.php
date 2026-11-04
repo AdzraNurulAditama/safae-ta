@@ -68,15 +68,15 @@ class BookSubmissionController extends Controller
      */
 
     public function indexAdmin()
-    {
-        $semua_buku = Book::where('status', 'pending')
-                        ->orderBy('created_at', 'desc')
-                        ->get();
+{
+    $semua_buku = Book::where('status', 'pending')
+                    ->orderBy('created_at', 'desc')
+                    ->get();
 
-        return view('admin.validasi.index', [
-            'pending_books' => $semua_buku
-        ]);
-    }
+    return view('admin.validasi.index', [
+        'books' => $semua_buku
+    ]);
+}
 
     public function approve($id)
     {

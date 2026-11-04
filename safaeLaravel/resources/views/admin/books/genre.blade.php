@@ -1,458 +1,648 @@
 @extends('layouts.layoutsAdmin')
 
-@section('title', 'Admin Dashboard - Kelola Genre & Buku')
+@section('content')
 
-@push('styles')
 <style>
-    .admin-container {
-        width: 100%;
-        color: #f8fafc;
+    .genre-page {
+        color: #292044;
+        padding: 15px 8px 35px;
+        font-family: inherit;
     }
 
-    /* Tombol Tambah Buku */
-    .btn-admin-primary {
-        background: linear-gradient(135deg, #06b6d4, #3b82f6);
-        color: #fff;
-        font-weight: 700;
-        border: none;
-        padding: 12px 24px;
+    /* HEADER */
+    .genre-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 28px;
+        padding: 22px 24px;
+        background: linear-gradient(120deg, #f0edff, #ffffff);
+        border: 1px solid #e4defd;
+        border-radius: 16px;
+    }
+
+    .genre-header h2 {
+        font-size: 25px;
+        font-weight: 800;
+        margin: 0 0 8px;
+        color: #302052;
+        letter-spacing: -.5px;
+    }
+
+    .genre-header p {
+        color: #62577e;
+        font-size: 13px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .btn-add-book {
+        background: #7053c8;
+        color: #fff !important;
+        padding: 12px 19px;
         border-radius: 10px;
-        transition: all 0.2s ease;
         text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
         display: inline-flex;
         align-items: center;
-        gap: 8px;
-        box-shadow: 0 4px 15px rgba(6, 182, 212, 0.25);
+        gap: 9px;
+        box-shadow: 0 4px 12px rgba(112, 83, 200, .2);
+        transition: .2s;
     }
 
-    .btn-admin-primary:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
-        color: #fff;
+    .btn-add-book:hover {
+        background: #573cae;
+        transform: translateY(-2px);
+        box-shadow: 0 7px 15px rgba(112, 83, 200, .25);
     }
 
-    /* Panel Filter */
-    .filter-panel {
-        background: #111827;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 14px;
-        padding: 20px;
-    }
-
-    .filter-title {
-        font-size: 0.85rem;
-        font-weight: 700;
-        color: #64748b;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .filter-pill {
-        background: rgba(255, 255, 255, 0.02);
-        color: #94a3b8;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 8px 16px;
-        border-radius: 8px;
+    /* ALERT */
+    .genre-alert {
+        padding: 13px 17px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        font-size: 13px;
         font-weight: 600;
-        font-size: 0.88rem;
-        text-decoration: none;
-        transition: all 0.15s ease;
     }
 
-    .filter-pill:hover {
-        background: rgba(255, 255, 255, 0.05);
-        color: #fff;
+    .genre-alert.success {
+        background: #e6f8ed;
+        color: #176b3c;
+        border: 1px solid #b8e8c9;
     }
 
-    .filter-pill.active {
-        background: rgba(6, 182, 212, 0.08) !important;
-        color: #06b6d4 !important;
-        border-color: #06b6d4 !important;
-        font-weight: 700;
+    .genre-alert.error {
+        background: #fff0f0;
+        color: #b52e38;
+        border: 1px solid #f5caca;
     }
 
-    /* Heading Section */
-    .genre-section-header {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        padding-bottom: 12px;
-    }
-
-    .btn-view-all {
-        color: #06b6d4;
-        font-weight: 700;
-        font-size: 0.85rem;
-        text-decoration: none;
-        transition: color 0.15s;
-    }
-
-    .btn-view-all:hover {
-        color: #22d3ee;
-        text-decoration: underline;
-    }
-
-    /* Grid Buku */
-    .books-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-        gap: 1.5rem;
-    }
-
-    /* Kartu Buku */
-    .book-admin-card {
-        background: #111827;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 14px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-        transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .book-admin-card:hover {
-        transform: translateY(-3px);
-        border-color: rgba(6, 182, 212, 0.25);
-    }
-
-    .book-cover-wrapper {
-        height: 260px;
-        background: #1e293b;
+    /* FILTER GENRE */
+    .genre-filter {
         display: flex;
         align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
     }
 
-    .book-cover-wrapper img {
+    .genre-filter a {
+        padding: 9px 17px;
+        border: 1px solid #ded7f2;
+        border-radius: 9px;
+        text-decoration: none;
+        color: #49396d;
+        font-size: 12px;
+        font-weight: 700;
+        background: #fff;
+        transition: .2s;
+    }
+
+    .genre-filter a:hover {
+        background: #f0edff;
+        color: #6346bb;
+        border-color: #a998e5;
+    }
+
+    .genre-filter a.active {
+        background: #7053c8;
+        color: #fff;
+        border-color: #7053c8;
+        box-shadow: 0 3px 9px rgba(112, 83, 200, .2);
+    }
+
+    /* SECTION GENRE */
+    .genre-section {
+        margin-bottom: 32px;
+        padding: 20px;
+        background: #fff;
+        border: 1px solid #e9e4f5;
+        border-radius: 15px;
+        box-shadow: 0 3px 12px rgba(48, 32, 82, .04);
+    }
+
+    .genre-section-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 19px;
+        gap: 10px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid #eeeaf7;
+    }
+
+    .genre-section-header h3 {
+        font-size: 17px;
+        font-weight: 800;
+        margin: 0;
+        color: #302052;
+    }
+
+    .genre-section-header h3 i {
+        color: #7053c8;
+        margin-right: 7px;
+    }
+
+    .genre-section-header h3 span {
+        color: #584878 !important;
+        font-weight: 700 !important;
+    }
+
+    .genre-section-header a {
+        color: #6546bd;
+        font-size: 12px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .genre-section-header a:hover {
+        color: #3e278d;
+    }
+
+    /* BOOK GRID */
+    .genre-book-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+        gap: 18px;
+    }
+
+    .genre-book-card {
+        background: #fff;
+        border: 1px solid #e9e4f5;
+        border-radius: 13px;
+        overflow: hidden;
+        transition: .25s ease;
+    }
+
+    .genre-book-card:hover {
+        transform: translateY(-5px);
+        border-color: #c8b9f0;
+        box-shadow: 0 9px 22px rgba(63, 43, 111, .11);
+    }
+
+    /* BOOK COVER */
+    .genre-book-cover {
+        height: 195px;
+        background: linear-gradient(145deg, #f0edff, #e5defa);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .genre-book-cover img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: .3s;
     }
 
-    .book-details {
-        padding: 18px;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .genre-book-card:hover .genre-book-cover img {
+        transform: scale(1.04);
     }
 
-    .book-card-title {
-        font-size: 1.05rem;
-        font-weight: 700;
-        color: #fff;
-        line-height: 1.4;
-        margin-bottom: 8px;
-        display: -webkit-box;
-        -webkit-line-clamp: 1;
-        -webkit-box-orient: vertical;
+    .genre-book-cover .no-cover {
+        color: #7053c8;
+        font-size: 38px;
+    }
+
+    /* BOOK INFORMATION */
+    .genre-book-info {
+        padding: 15px;
+    }
+
+    .genre-book-info h4 {
+        font-size: 14px;
+        font-weight: 800;
+        margin: 0 0 7px;
+        color: #302052;
+        line-height: 1.5;
         overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
-    .book-card-text {
-        font-size: 0.85rem;
-        color: #64748b;
-        margin-bottom: 4px;
+    .genre-book-info .book-author {
+        color: #594a78;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 13px;
     }
 
-    .book-card-text strong {
-        color: #94a3b8;
-    }
-
-    /* Footer Tombol Aksi */
-    .card-action-footer {
-        padding: 12px 18px 18px;
-        border-top: 1px solid rgba(255, 255, 255, 0.03);
+    .book-meta {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 6px;
+        margin-bottom: 14px;
+        gap: 5px;
     }
 
-    .btn-action-tool {
-        width: 34px;
-        height: 34px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-        font-size: 0.85rem;
+    .book-year {
+        font-size: 11px;
+        color: #594a78;
+        font-weight: 700;
+    }
+
+    .book-status {
+        background: #e4f7eb;
+        color: #176b3c;
+        font-size: 10px;
+        font-weight: 800;
+        padding: 6px 10px;
+        border-radius: 20px;
+    }
+
+    /* ACTION BUTTONS */
+    .book-actions {
+        display: flex;
+        gap: 7px;
+    }
+
+    .book-actions a,
+    .book-actions button {
+        flex: 1;
         border: none;
-        transition: all 0.15s ease;
+        border-radius: 7px;
+        padding: 9px 5px;
+        font-size: 11px;
+        font-weight: 700;
+        text-align: center;
         text-decoration: none;
         cursor: pointer;
+        transition: .2s;
     }
 
-    .tool-view {
-        background: rgba(255, 255, 255, 0.03);
-        color: #94a3b8;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+    .btn-detail {
+        background: #eeeaff;
+        color: #573cae !important;
     }
 
-    .tool-view:hover {
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
+    .btn-edit {
+        background: #fff2dc;
+        color: #9a5a00 !important;
     }
 
-    .tool-edit {
-        background: rgba(59, 130, 246, 0.1);
-        color: #60a5fa;
-        border: 1px solid rgba(59, 130, 246, 0.2);
+    .btn-delete {
+        background: #ffebeb;
+        color: #b52e38 !important;
     }
 
-    .tool-edit:hover {
-        background: #3b82f6;
-        color: #fff;
+    .btn-detail:hover {
+        background: #dcd3ff;
     }
 
-    .tool-delete {
-        background: rgba(239, 68, 68, 0.1);
-        color: #f87171;
-        border: 1px solid rgba(239, 68, 68, 0.2);
+    .btn-edit:hover {
+        background: #ffe3b3;
     }
 
-    .tool-delete:hover {
-        background: #ef4444;
-        color: #fff;
+    .btn-delete:hover {
+        background: #ffd2d2;
     }
 
-    .alert-admin-success {
-        background: rgba(6, 182, 212, 0.04);
-        border: 1px solid rgba(6, 182, 212, 0.25);
-        color: #22d3ee;
+    /* EMPTY STATE */
+    .empty-books {
+        background: #faf9ff;
+        border: 1px dashed #c9bde9;
         border-radius: 12px;
-        padding: 14px 18px;
-        font-size: 0.9rem;
+        padding: 40px 20px;
+        text-align: center;
+        color: #49396d;
+        font-size: 13px;
+        font-weight: 600;
+    }
+
+    .empty-books i {
+        display: block;
+        font-size: 34px;
+        margin-bottom: 12px;
+        color: #7053c8;
+    }
+
+    .empty-books p {
+        margin: 0;
+        color: #49396d;
+    }
+
+    /* PAGINATION */
+    .pagination-wrapper {
+        margin-top: 22px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .pagination-wrapper .pagination {
+        gap: 5px;
+    }
+
+    .pagination-wrapper .page-link {
+        border-radius: 7px !important;
+        border: 1px solid #ded7f2;
+        color: #573cae;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .pagination-wrapper .active .page-link {
+        background: #7053c8;
+        border-color: #7053c8;
+        color: #fff;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+        .genre-header {
+            padding: 18px;
+        }
+
+        .genre-header h2 {
+            font-size: 21px;
+        }
+
+        .genre-section {
+            padding: 14px;
+        }
+
+        .genre-book-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 11px;
+        }
+
+        .genre-book-cover {
+            height: 155px;
+        }
+
+        .genre-book-info {
+            padding: 11px;
+        }
+
+        .book-actions {
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 420px) {
+        .genre-book-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .genre-book-cover {
+            height: 125px;
+        }
+
+        .genre-book-info h4 {
+            font-size: 12px;
+        }
+
+        .genre-book-info .book-author {
+            font-size: 11px;
+        }
     }
 </style>
-@endpush
 
-@section('content')
-<div class="admin-container">
-    
-    {{-- HEADER HALAMAN --}}
-    <div class="d-flex justify-content-between align-items-center mb-4 border-bottom border-secondary border-opacity-10 pb-3">
+<div class="genre-page">
+
+    {{-- HEADER --}}
+    <div class="genre-header">
         <div>
-            <h1 class="h4 fw-bold text-white m-0">Kelola Genre & Buku</h1>
-            <small class="text-muted">Halaman Administrasi Data Buku Utama & Validasi Publikasi</small>
+            <h2>Kelola Genre & Buku</h2>
+            <p>Kelola koleksi buku dan kategori genre yang tersedia di Safae.</p>
         </div>
-    </div>
 
-    {{-- NOTIFIKASI BERHASIL --}}
-    @if (session('success'))
-        <div class="alert alert-admin-success mb-4 shadow-sm d-flex align-items-center gap-2">
-            <i class="fa-solid fa-check-circle text-primary"></i>
-            <span>{{ session('success') }}</span>
-        </div>
-    @endif
-
-    {{-- SECTION KHUSUS BUKU MENUNGGU VALIDASI (PENDING) --}}
-    @if(isset($pendingBooks) && $pendingBooks->count() > 0)
-        <div class="mb-5 p-4 rounded-4" style="background: rgba(234, 179, 8, 0.05); border: 1px solid rgba(234, 179, 8, 0.2);">
-            <div class="d-flex align-items-center gap-2 mb-3">
-                <i class="fa-solid fa-clock-rotate-left text-warning fa-lg"></i>
-                <h3 class="h5 text-warning fw-bold m-0">Menunggu Validasi Publikasi ({{ $pendingBooks->count() }})</h3>
-            </div>
-            
-            <div class="books-grid">
-                @foreach($pendingBooks as $pending)
-                <div class="book-admin-card">
-                    <div class="book-cover-wrapper">
-                        @if ($pending->image_path)
-                            <img src="{{ asset('storage/'.$pending->image_path) }}" alt="Cover">
-                        @else
-                            <i class="fas fa-book fa-2x text-muted"></i>
-                        @endif
-                    </div>
-
-                    <div class="book-details">
-                        <h5 class="book-card-title">{{ $pending->title }}</h5>
-                        <div>
-                            <div class="book-card-text"><strong>Penulis:</strong> {{ $pending->author }}</div>
-                            <div class="book-card-text"><strong>Genre:</strong> {{ $pending->genre }}</div>
-                        </div>
-                    </div>
-
-                    <div class="card-action-footer justify-content-between gap-2">
-                        <!-- Tombol Setujui -->
-                        <form action="{{ url('/admin/buku/'.$pending->id.'/approve') }}" method="POST" class="w-50 m-0">
-                            @csrf
-                            <button type="submit" class="btn btn-sm btn-success w-100 fw-bold rounded-2 py-2">
-                                <i class="fas fa-check me-1"></i> Setujui
-                            </button>
-                        </form>
-                        <!-- Tombol Tolak -->
-                        <form action="{{ url('/admin/buku/'.$pending->id.'/reject') }}" method="POST" class="w-50 m-0">
-                            @csrf
-                            <button type="submit" class="btn btn-sm btn-outline-danger w-100 fw-bold rounded-2 py-2">
-                                <i class="fas fa-xmark me-1"></i> Tolak
-                            </button>
-                        </form>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    @endif
-
-    {{-- TOMBOL TAMBAH BUKU --}}
-    <div class="mb-4">
-        <a href="{{ route('admin.books.create') }}" class="btn-admin-primary">
-            <i class="fas fa-plus"></i> Tambah Buku Baru
+        <a href="{{ route('admin.books.create') }}" class="btn-add-book">
+            <i class="fa-solid fa-plus"></i>
+            Tambah Buku
         </a>
     </div>
 
-    {{-- PANEL FILTER BERDASARKAN GENRE --}}
-    <div class="filter-panel mb-5">
-        <div class="filter-title mb-3">
-            <i class="fas fa-filter me-1 text-primary"></i> Filter Berdasarkan Genre
+    {{-- NOTIFIKASI --}}
+    @if(session('success'))
+        <div class="genre-alert success">
+            <i class="fa-solid fa-circle-check"></i>
+            {{ session('success') }}
         </div>
-        <div class="d-flex flex-wrap gap-2">
-            <a href="{{ route('admin.genre.index') }}"
-               class="filter-pill {{ empty($current_genre) ? 'active' : '' }}">
-                Semua Buku
-            </a>
+    @endif
 
-            @foreach($all_genres as $g)
-                <a href="{{ route('admin.genre.index', ['genre' => $g]) }}"
-                   class="filter-pill {{ ($current_genre == $g) ? 'active' : '' }}">
-                    {{ $g }}
-                </a>
-            @endforeach
+    @if(session('error'))
+        <div class="genre-alert error">
+            <i class="fa-solid fa-circle-exclamation"></i>
+            {{ session('error') }}
         </div>
+    @endif
+
+    {{-- FILTER GENRE --}}
+    <div class="genre-filter">
+        <a href="{{ route('admin.genre.index') }}"
+           class="{{ empty($current_genre) ? 'active' : '' }}">
+            Semua Genre
+        </a>
+
+        @foreach($all_genres as $genre)
+            <a href="{{ route('admin.genre.index', ['genre' => $genre]) }}"
+               class="{{ $current_genre == $genre ? 'active' : '' }}">
+                {{ $genre }}
+            </a>
+        @endforeach
     </div>
 
-    {{-- ================= KONDISI 1: JIKA GENRE DIPILIH ================= --}}
+    {{-- JIKA GENRE DIPILIH --}}
     @if(!empty($current_genre))
-        <div class="mb-5">
-            <div class="genre-section-header d-flex align-items-center mb-4">
-                <h3 class="h5 text-white m-0 fw-bold">
-                    <i class="fa-solid fa-folder-open text-primary me-2"></i>Genre: {{ $current_genre }}
+
+        <div class="genre-section">
+            <div class="genre-section-header">
+                <h3>
+                    <i class="fa-solid fa-book-open"></i>
+                    Genre {{ $current_genre }}
                 </h3>
             </div>
 
-            <div class="books-grid mb-4">
-                @forelse($books_to_show as $book)
-                <div class="book-admin-card">
-                    <div class="book-cover-wrapper">
-                        @if ($book->image_path)
-                            <img src="{{ asset('storage/'.$book->image_path) }}" alt="Cover">
-                        @else
-                            <i class="fas fa-book fa-2x text-muted"></i>
-                        @endif
-                    </div>
+            @if($books_to_show->count() > 0)
 
-                    <div class="book-details">
-                        <h5 class="book-card-title">{{ $book->title }}</h5>
-                        <div>
-                            <div class="book-card-text"><strong>Penulis:</strong> {{ $book->author }}</div>
-                            <div class="book-card-text"><strong>Tahun:</strong> {{ $book->year }}</div>
-                        </div>
-                    </div>
+                <div class="genre-book-grid">
+                    @foreach($books_to_show as $book)
 
-                    <div class="card-action-footer">
-                        <a href="{{ route('admin.books.show', $book->id) }}" class="btn-action-tool tool-view" title="Lihat Detail">
-                            <i class="fas fa-eye"></i>
-                        </a>
-                        <a href="{{ route('admin.books.edit', $book->id) }}" class="btn-action-tool tool-edit" title="Edit Buku">
-                            <i class="fas fa-edit"></i>
-                        </a>
-                        <form method="POST" action="{{ url('/books/delete') }}" class="m-0">
-                            @csrf
-                            <input type="hidden" name="id" value="{{ $book->id }}">
-                            <input type="hidden" name="genre_filter" value="{{ $current_genre }}"> 
-                            <button type="submit" class="btn-action-tool tool-delete" title="Hapus Buku" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">
-                                <i class="fas fa-trash"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
+                        <div class="genre-book-card">
 
-                @include('partials.view-modal', ['book' => $book])
-
-                @empty
-                <div class="col-12">
-                    <div class="alert alert-secondary border-0 rounded-3 opacity-75" style="background: rgba(255,255,255,0.02); color: #94a3b8;">
-                        Belum ada data buku untuk genre "{{ $current_genre }}".
-                    </div>
-                </div>
-                @endforelse
-            </div>
-
-            <div class="mt-4">
-                {{ $books_to_show->links() }}
-            </div>
-        </div>
-
-    {{-- ================= KONDISI 2: SEMUA REKOR GENRE LENGKAP ================= --}}
-    @else
-        @if($grouped_books->isNotEmpty())
-            @foreach($grouped_books as $genreName => $booksInGenre)
-            <div class="mb-5">
-                <div class="genre-section-header d-flex justify-content-between align-items-center mb-4">
-                    <h3 class="h5 text-white m-0 fw-bold">
-                        <i class="fa-solid fa-folder text-muted me-2"></i>{{ $genreName }}
-                    </h3>
-                    <a href="{{ url('/genre', ['genre' => $genreName]) }}" class="btn-view-all">
-                        Lihat Semua <i class="fa-solid fa-arrow-right-long ms-1 small"></i>
-                    </a>
-                </div>
-
-                <div class="books-grid">
-                    @foreach($booksInGenre->take(4) as $book)
-                    <div class="book-admin-card">
-                        <div class="book-cover-wrapper">
-                            @if ($book->image_path)
-                                <img src="{{ asset('storage/'.$book->image_path) }}" alt="Cover">
-                            @else
-                                <i class="fas fa-book fa-2x text-muted"></i>
-                            @endif
-                        </div>
-
-                        <div class="book-details">
-                            <h5 class="book-card-title">{{ $book->title }}</h5>
-                            <div>
-                                <div class="book-card-text"><strong>Penulis:</strong> {{ $book->author }}</div>
-                                <div class="book-card-text"><strong>Tahun:</strong> {{ $book->year }}</div>
+                            <div class="genre-book-cover">
+                                @if($book->image_path)
+                                    <img src="{{ $book->image_path }}"
+                                         alt="{{ $book->title }}">
+                                @else
+                                    <i class="fa-solid fa-book-open no-cover"></i>
+                                @endif
                             </div>
-                        </div>
 
-                        <div class="card-action-footer">
-                            <a href="{{ route('admin.books.show', $book->id) }}" class="btn-action-tool tool-view" title="Lihat Detail">
-                                <i class="fas fa-eye"></i>
-                            </a>
-                            <a href="{{ route('admin.books.edit', $book->id) }}" class="btn-action-tool tool-edit" title="Edit Buku">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <form method="POST" action="{{ route('admin.books.delete') }}" class="m-0">
-                                @csrf
-                                <input type="hidden" name="id" value="{{ $book->id }}">
-                                <input type="hidden" name="genre_filter" value="{{ $current_genre }}">
-                                <button type="submit" class="btn-action-tool tool-delete" title="Hapus Buku" onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                            <div class="genre-book-info">
+                                <h4 title="{{ $book->title }}">
+                                    {{ $book->title }}
+                                </h4>
 
-                    @include('partials.view-modal', ['book' => $book])
+                                <div class="book-author">
+                                    {{ $book->author }}
+                                </div>
+
+                                <div class="book-meta">
+                                    <span class="book-year">
+                                        {{ $book->year }}
+                                    </span>
+
+                                    <span class="book-status">
+                                        Disetujui
+                                    </span>
+                                </div>
+
+                                <div class="book-actions">
+
+                                    <a href="{{ route('admin.books.show', $book->id) }}"
+                                       class="btn-detail">
+                                        Detail
+                                    </a>
+
+                                    <a href="{{ route('admin.books.edit', $book->id) }}"
+                                       class="btn-edit">
+                                        Edit
+                                    </a>
+
+                                    <form action="{{ route('admin.books.delete') }}"
+                                          method="POST"
+                                          style="flex:1;"
+                                          onsubmit="return confirm('Yakin ingin menghapus buku ini?')">
+                                        @csrf
+
+                                        <input type="hidden" name="id" value="{{ $book->id }}">
+
+                                        <button type="submit" class="btn-delete" style="width:100%;">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
 
                     @endforeach
                 </div>
+
+                <div class="pagination-wrapper">
+                    {{ $books_to_show->appends(request()->query())->links() }}
+                </div>
+
+            @else
+
+                <div class="empty-books">
+                    <i class="fa-solid fa-book-open"></i>
+                    <p>Belum ada buku pada genre ini.</p>
+                </div>
+
+            @endif
+        </div>
+
+    {{-- JIKA SEMUA GENRE DITAMPILKAN --}}
+    @else
+
+        @forelse($grouped_books as $genre => $books)
+
+            <div class="genre-section">
+
+                <div class="genre-section-header">
+                    <h3>
+                        <i class="fa-solid fa-bookmark"></i>
+                        {{ $genre }}
+
+                        <span style="font-size:11px; color:#9995a9; font-weight:400;">
+                            ({{ $books->count() }} buku)
+                        </span>
+                    </h3>
+
+                    <a href="{{ route('admin.genre.index', ['genre' => $genre]) }}">
+                        Lihat Semua <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="genre-book-grid">
+
+                    @foreach($books->take(4) as $book)
+
+                        <div class="genre-book-card">
+
+                            <div class="genre-book-cover">
+                                @if($book->image_path)
+                                    <img src="{{ $book->image_path }}"
+                                         alt="{{ $book->title }}">
+                                @else
+                                    <i class="fa-solid fa-book-open no-cover"></i>
+                                @endif
+                            </div>
+
+                            <div class="genre-book-info">
+                                <h4 title="{{ $book->title }}">
+                                    {{ $book->title }}
+                                </h4>
+
+                                <div class="book-author">
+                                    {{ $book->author }}
+                                </div>
+
+                                <div class="book-meta">
+                                    <span class="book-year">
+                                        {{ $book->year }}
+                                    </span>
+
+                                    <span class="book-status">
+                                        Disetujui
+                                    </span>
+                                </div>
+
+                                <div class="book-actions">
+
+                                    <a href="{{ route('admin.books.show', $book->id) }}"
+                                       class="btn-detail">
+                                        Detail
+                                    </a>
+
+                                    <a href="{{ route('admin.books.edit', $book->id) }}"
+                                       class="btn-edit">
+                                        Edit
+                                    </a>
+
+                                    <form action="{{ route('admin.books.delete') }}"
+                                          method="POST"
+                                          style="flex:1;"
+                                          onsubmit="return confirm('Yakin ingin menghapus buku ini?')">
+                                        @csrf
+
+                                        <input type="hidden" name="id" value="{{ $book->id }}">
+
+                                        <button type="submit" class="btn-delete" style="width:100%;">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    @endforeach
+
+                </div>
+
             </div>
-            @endforeach
-        @else
-            <div class="text-center py-5" style="color: #64748b;">
-                <i class="fas fa-book-open fa-3x mb-3 opacity-50"></i>
-                <h4 class="text-white h5">Belum Ada Data Buku</h4>
-                <p class="small mb-3">Silakan tambahkan data buku pertama kamu di sistem ini.</p>
-                <a href="{{ route('admin.books.create') }}" class="btn-admin-primary py-2 px-3 fs-7">
-                    <i class="fas fa-plus"></i> Tambah Buku Baru
-                </a>
+
+        @empty
+
+            <div class="empty-books">
+                <i class="fa-solid fa-book-open"></i>
+                <p>Belum ada buku yang tersedia.</p>
             </div>
-        @endif
+
+        @endforelse
+
     @endif
 
 </div>
+
 @endsection
