@@ -1,0 +1,10 @@
+user_id,book_id,jenis_buku,kategori_topik,umpan_balik,prediksi,keterangan,sumber_data
+1,55,nonfiksi,Hobi,1,0,Salah,asli
+1,58,nonfiksi,Hobi,0,0,Benar,asli
+1,103,nonfiksi,Jaringan,1,0,Salah,asli
+1,76,nonfiksi,Basis Data,1,0,Salah,asli
+1,115,nonfiksi,Kecerdasan Buatan,1,0,Salah,asli
+1,86,nonfiksi,Pemrograman,1,1,Benar,asli
+1,51,fiksi,Romance,1,0,Salah,asli
+1,100,nonfiksi,Basis Data,1,1,Benar,asli
+1,117,nonfiksi,Sistem Informasi,1,0,Salah,asli

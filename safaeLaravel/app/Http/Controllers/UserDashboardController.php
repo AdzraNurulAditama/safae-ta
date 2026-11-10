@@ -42,8 +42,24 @@ class UserDashboardController extends Controller
             ->get();
 
         // Buku terpopuler
-        $popularBooks = Book::where('status', 'approved')
-            ->withCount('readingHistories')
+
+        // Buku populer berdasarkan genre favorit pengguna
+        $genreFavorit = DB::table('user_genres')
+            ->where('user_id', $user->id)
+            ->pluck('genre')
+            ->toArray();
+
+        $punyaRiwayatBaca = ReadingHistory::where('user_id', $user->id)
+            ->exists();
+
+        $popularBooksQuery = Book::where('status', 'approved')
+            ->withCount('readingHistories');
+
+        if (!$punyaRiwayatBaca && !empty($genreFavorit)) {
+            $popularBooksQuery->whereIn('genre', $genreFavorit);
+        }
+
+        $popularBooks = $popularBooksQuery
             ->orderBy('reading_histories_count', 'desc')
             ->take(5)
             ->get();

@@ -1,0 +1,210 @@
+user_id,book_id,jenis_buku,kategori_topik,umpan_balik,prediksi,keterangan,sumber_data
+1,55,nonfiksi,Hobi,1,0,Salah,asli
+1,58,nonfiksi,Hobi,0,0,Benar,asli
+1,103,nonfiksi,Jaringan,1,0,Salah,asli
+1,76,nonfiksi,Basis Data,1,1,Benar,asli
+1,115,nonfiksi,Kecerdasan Buatan,1,1,Benar,asli
+1,86,nonfiksi,Pemrograman,1,1,Benar,asli
+1,51,fiksi,Romance,1,1,Benar,asli
+1,100,nonfiksi,Basis Data,1,1,Benar,asli
+1,117,nonfiksi,Sistem Informasi,1,1,Benar,asli
+-3,-21,nonfiksi,Pendidikan,0,0,Benar,dummy
+-3,-22,fiksi,Romance,1,0,Salah,dummy
+-3,-23,fiksi,Science Fiction,0,1,Salah,dummy
+-3,-24,fiksi,Horror,0,0,Benar,dummy
+-3,-25,fiksi,Fantasy,0,1,Salah,dummy
+-3,-26,fiksi,Horror,0,1,Salah,dummy
+-3,-27,nonfiksi,Teknologi,0,0,Benar,dummy
+-3,-28,fiksi,Mystery,0,1,Salah,dummy
+-3,-29,fiksi,Romance,1,0,Salah,dummy
+-3,-30,fiksi,Mystery,1,0,Salah,dummy
+-10,-91,nonfiksi,Bisnis,0,0,Benar,dummy
+-10,-92,fiksi,Romance,1,1,Benar,dummy
+-10,-93,fiksi,Mystery,0,1,Salah,dummy
+-10,-94,fiksi,Mystery,1,1,Benar,dummy
+-10,-95,nonfiksi,Teknologi,0,0,Benar,dummy
+-10,-96,fiksi,Mystery,1,0,Salah,dummy
+-10,-97,nonfiksi,Teknologi,0,0,Benar,dummy
+-10,-98,fiksi,Fantasy,1,1,Benar,dummy
+-10,-99,fiksi,Thriller,0,1,Salah,dummy
+-10,-100,nonfiksi,Teknologi,0,0,Benar,dummy
+-15,-141,fiksi,Thriller,1,0,Salah,dummy
+-15,-142,nonfiksi,Bisnis,1,0,Salah,dummy
+-15,-143,nonfiksi,Self Improvement,0,0,Benar,dummy
+-15,-144,nonfiksi,Self Improvement,0,0,Benar,dummy
+-15,-145,fiksi,Mystery,1,0,Salah,dummy
+-15,-146,fiksi,Mystery,0,0,Benar,dummy
+-15,-147,nonfiksi,Sains,0,1,Salah,dummy
+-15,-148,fiksi,Fantasy,1,1,Benar,dummy
+-15,-149,fiksi,Romance,1,0,Salah,dummy
+-15,-150,nonfiksi,Teknologi,0,0,Benar,dummy
+-21,-201,nonfiksi,Sains,0,0,Benar,dummy
+-21,-202,fiksi,Mystery,1,1,Benar,dummy
+-21,-203,nonfiksi,Self Improvement,0,0,Benar,dummy
+-21,-204,fiksi,Thriller,1,1,Benar,dummy
+-21,-205,nonfiksi,Sains,0,0,Benar,dummy
+-21,-206,nonfiksi,Bisnis,1,1,Benar,dummy
+-21,-207,fiksi,Horror,1,0,Salah,dummy
+-21,-208,fiksi,Fantasy,1,1,Benar,dummy
+-21,-209,fiksi,Horror,0,1,Salah,dummy
+-21,-210,nonfiksi,Bisnis,0,0,Benar,dummy
+-24,-231,nonfiksi,Sejarah,1,1,Benar,dummy
+-24,-232,fiksi,Horror,0,0,Benar,dummy
+-24,-233,nonfiksi,Bisnis,0,1,Salah,dummy
+-24,-234,nonfiksi,Self Improvement,1,0,Salah,dummy
+-24,-235,fiksi,Science Fiction,0,0,Benar,dummy
+-24,-236,nonfiksi,Sains,1,1,Benar,dummy
+-24,-237,nonfiksi,Bisnis,1,1,Benar,dummy
+-24,-238,fiksi,Horror,0,1,Salah,dummy
+-24,-239,fiksi,Mystery,0,0,Benar,dummy
+-24,-240,nonfiksi,Sains,0,0,Benar,dummy
+-33,-321,fiksi,Science Fiction,0,0,Benar,dummy
+-33,-322,nonfiksi,Self Improvement,0,0,Benar,dummy
+-33,-323,nonfiksi,Sejarah,1,1,Benar,dummy
+-33,-324,fiksi,Horror,0,1,Salah,dummy
+-33,-325,nonfiksi,Teknologi,1,0,Salah,dummy
+-33,-326,nonfiksi,Bisnis,0,0,Benar,dummy
+-33,-327,nonfiksi,Sains,0,0,Benar,dummy
+-33,-328,fiksi,Mystery,0,0,Benar,dummy
+-33,-329,fiksi,Thriller,1,0,Salah,dummy
+-33,-330,fiksi,Science Fiction,0,1,Salah,dummy
+-38,-371,fiksi,Mystery,1,0,Salah,dummy
+-38,-372,nonfiksi,Sejarah,0,0,Benar,dummy
+-38,-373,nonfiksi,Sejarah,0,0,Benar,dummy
+-38,-374,nonfiksi,Pendidikan,0,0,Benar,dummy
+-38,-375,nonfiksi,Bisnis,0,1,Salah,dummy
+-38,-376,fiksi,Romance,1,0,Salah,dummy
+-38,-377,fiksi,Mystery,1,0,Salah,dummy
+-38,-378,fiksi,Fantasy,1,1,Benar,dummy
+-38,-379,nonfiksi,Bisnis,1,0,Salah,dummy
+-38,-380,nonfiksi,Sains,1,1,Benar,dummy
+-53,-521,nonfiksi,Teknologi,0,0,Benar,dummy
+-53,-522,fiksi,Romance,0,1,Salah,dummy
+-53,-523,fiksi,Fantasy,0,1,Salah,dummy
+-53,-524,fiksi,Fantasy,1,1,Benar,dummy
+-53,-525,nonfiksi,Bisnis,0,1,Salah,dummy
+-53,-526,nonfiksi,Sains,0,1,Salah,dummy
+-53,-527,fiksi,Fantasy,1,1,Benar,dummy
+-53,-528,nonfiksi,Sejarah,0,1,Salah,dummy
+-53,-529,nonfiksi,Sains,0,1,Salah,dummy
+-53,-530,nonfiksi,Self Improvement,1,0,Salah,dummy
+-55,-541,nonfiksi,Self Improvement,1,1,Benar,dummy
+-55,-542,fiksi,Fantasy,0,0,Benar,dummy
+-55,-543,nonfiksi,Self Improvement,1,1,Benar,dummy
+-55,-544,nonfiksi,Teknologi,1,1,Benar,dummy
+-55,-545,fiksi,Romance,0,0,Benar,dummy
+-55,-546,nonfiksi,Bisnis,1,1,Benar,dummy
+-55,-547,nonfiksi,Bisnis,0,1,Salah,dummy
+-55,-548,nonfiksi,Teknologi,1,1,Benar,dummy
+-55,-549,nonfiksi,Self Improvement,0,1,Salah,dummy
+-55,-550,fiksi,Romance,0,0,Benar,dummy
+-58,-571,fiksi,Science Fiction,0,0,Benar,dummy
+-58,-572,fiksi,Horror,1,1,Benar,dummy
+-58,-573,nonfiksi,Teknologi,1,0,Salah,dummy
+-58,-574,fiksi,Mystery,0,0,Benar,dummy
+-58,-575,fiksi,Fantasy,0,1,Salah,dummy
+-58,-576,fiksi,Fantasy,0,0,Benar,dummy
+-58,-577,nonfiksi,Self Improvement,1,0,Salah,dummy
+-58,-578,fiksi,Science Fiction,0,1,Salah,dummy
+-58,-579,fiksi,Science Fiction,0,1,Salah,dummy
+-58,-580,nonfiksi,Sejarah,0,0,Benar,dummy
+-60,-591,nonfiksi,Pendidikan,1,0,Salah,dummy
+-60,-592,nonfiksi,Sains,1,1,Benar,dummy
+-60,-593,fiksi,Fantasy,0,1,Salah,dummy
+-60,-594,fiksi,Fantasy,0,0,Benar,dummy
+-60,-595,fiksi,Mystery,1,1,Benar,dummy
+-60,-596,fiksi,Mystery,0,1,Salah,dummy
+-60,-597,nonfiksi,Teknologi,0,0,Benar,dummy
+-60,-598,fiksi,Science Fiction,1,1,Benar,dummy
+-60,-599,fiksi,Science Fiction,1,0,Salah,dummy
+-60,-600,nonfiksi,Bisnis,1,0,Salah,dummy
+-67,-661,fiksi,Romance,0,0,Benar,dummy
+-67,-662,fiksi,Science Fiction,0,0,Benar,dummy
+-67,-663,nonfiksi,Self Improvement,1,0,Salah,dummy
+-67,-664,nonfiksi,Sains,1,1,Benar,dummy
+-67,-665,nonfiksi,Self Improvement,1,0,Salah,dummy
+-67,-666,fiksi,Horror,0,0,Benar,dummy
+-67,-667,fiksi,Romance,0,0,Benar,dummy
+-67,-668,fiksi,Thriller,1,0,Salah,dummy
+-67,-669,fiksi,Fantasy,0,0,Benar,dummy
+-67,-670,nonfiksi,Sejarah,1,1,Benar,dummy
+-69,-681,nonfiksi,Sains,1,0,Salah,dummy
+-69,-682,fiksi,Horror,0,0,Benar,dummy
+-69,-683,fiksi,Science Fiction,0,0,Benar,dummy
+-69,-684,nonfiksi,Sejarah,0,0,Benar,dummy
+-69,-685,nonfiksi,Bisnis,1,0,Salah,dummy
+-69,-686,fiksi,Fantasy,0,0,Benar,dummy
+-69,-687,fiksi,Mystery,0,0,Benar,dummy
+-69,-688,fiksi,Fantasy,1,0,Salah,dummy
+-69,-689,fiksi,Thriller,0,0,Benar,dummy
+-69,-690,fiksi,Fantasy,0,0,Benar,dummy
+-70,-691,fiksi,Horror,0,0,Benar,dummy
+-70,-692,fiksi,Romance,1,0,Salah,dummy
+-70,-693,nonfiksi,Self Improvement,0,1,Salah,dummy
+-70,-694,nonfiksi,Bisnis,0,1,Salah,dummy
+-70,-695,nonfiksi,Pendidikan,0,0,Benar,dummy
+-70,-696,fiksi,Thriller,0,0,Benar,dummy
+-70,-697,fiksi,Horror,0,0,Benar,dummy
+-70,-698,fiksi,Horror,0,0,Benar,dummy
+-70,-699,fiksi,Thriller,1,0,Salah,dummy
+-70,-700,nonfiksi,Teknologi,1,1,Benar,dummy
+-74,-731,fiksi,Fantasy,1,1,Benar,dummy
+-74,-732,fiksi,Science Fiction,0,0,Benar,dummy
+-74,-733,nonfiksi,Sains,0,0,Benar,dummy
+-74,-734,fiksi,Thriller,1,0,Salah,dummy
+-74,-735,fiksi,Romance,0,1,Salah,dummy
+-74,-736,fiksi,Thriller,1,1,Benar,dummy
+-74,-737,nonfiksi,Sejarah,0,0,Benar,dummy
+-74,-738,nonfiksi,Sejarah,1,0,Salah,dummy
+-74,-739,fiksi,Horror,1,1,Benar,dummy
+-74,-740,fiksi,Fantasy,0,1,Salah,dummy
+-82,-811,nonfiksi,Bisnis,1,1,Benar,dummy
+-82,-812,fiksi,Horror,1,1,Benar,dummy
+-82,-813,fiksi,Science Fiction,1,1,Benar,dummy
+-82,-814,fiksi,Horror,0,1,Salah,dummy
+-82,-815,fiksi,Science Fiction,0,1,Salah,dummy
+-82,-816,fiksi,Science Fiction,0,1,Salah,dummy
+-82,-817,fiksi,Horror,1,1,Benar,dummy
+-82,-818,fiksi,Thriller,1,1,Benar,dummy
+-82,-819,nonfiksi,Teknologi,0,1,Salah,dummy
+-82,-820,fiksi,Fantasy,1,1,Benar,dummy
+-88,-871,fiksi,Fantasy,0,0,Benar,dummy
+-88,-872,fiksi,Horror,0,0,Benar,dummy
+-88,-873,nonfiksi,Pendidikan,0,0,Benar,dummy
+-88,-874,fiksi,Mystery,1,1,Benar,dummy
+-88,-875,nonfiksi,Sains,0,0,Benar,dummy
+-88,-876,fiksi,Mystery,1,1,Benar,dummy
+-88,-877,nonfiksi,Sains,0,0,Benar,dummy
+-88,-878,fiksi,Fantasy,1,0,Salah,dummy
+-88,-879,nonfiksi,Sains,0,0,Benar,dummy
+-88,-880,nonfiksi,Sains,1,0,Salah,dummy
+-90,-891,nonfiksi,Teknologi,1,1,Benar,dummy
+-90,-892,nonfiksi,Bisnis,1,0,Salah,dummy
+-90,-893,nonfiksi,Teknologi,1,1,Benar,dummy
+-90,-894,fiksi,Thriller,1,1,Benar,dummy
+-90,-895,nonfiksi,Teknologi,0,1,Salah,dummy
+-90,-896,nonfiksi,Sejarah,1,0,Salah,dummy
+-90,-897,fiksi,Science Fiction,0,1,Salah,dummy
+-90,-898,nonfiksi,Sains,1,0,Salah,dummy
+-90,-899,nonfiksi,Bisnis,1,1,Benar,dummy
+-90,-900,fiksi,Mystery,0,1,Salah,dummy
+-96,-951,fiksi,Fantasy,1,0,Salah,dummy
+-96,-952,nonfiksi,Teknologi,0,0,Benar,dummy
+-96,-953,nonfiksi,Teknologi,0,0,Benar,dummy
+-96,-954,nonfiksi,Teknologi,0,1,Salah,dummy
+-96,-955,fiksi,Romance,1,0,Salah,dummy
+-96,-956,nonfiksi,Bisnis,0,0,Benar,dummy
+-96,-957,fiksi,Horror,0,0,Benar,dummy
+-96,-958,fiksi,Mystery,0,1,Salah,dummy
+-96,-959,nonfiksi,Bisnis,1,1,Benar,dummy
+-96,-960,nonfiksi,Pendidikan,0,0,Benar,dummy
+-100,-991,fiksi,Mystery,0,0,Benar,dummy
+-100,-992,nonfiksi,Sains,1,1,Benar,dummy
+-100,-993,nonfiksi,Teknologi,0,1,Salah,dummy
+-100,-994,fiksi,Romance,1,0,Salah,dummy
+-100,-995,nonfiksi,Teknologi,0,1,Salah,dummy
+-100,-996,nonfiksi,Self Improvement,1,1,Benar,dummy
+-100,-997,fiksi,Romance,0,0,Benar,dummy
+-100,-998,fiksi,Science Fiction,0,0,Benar,dummy
+-100,-999,nonfiksi,Teknologi,1,1,Benar,dummy
+-100,-1000,nonfiksi,Teknologi,1,1,Benar,dummy

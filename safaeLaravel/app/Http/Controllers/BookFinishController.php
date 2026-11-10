@@ -14,9 +14,9 @@ class BookFinishController extends Controller
     /**
      * Halaman rekomendasi setelah user menilai / selesai membaca.
      * Rekomendasi dibaca dari tabel book_recommendations (hasil batch model),
-     * bukan dihitung saat halaman dibuka.
+     * lalu diprioritaskan berdasarkan genre & jenis buku yang BARU selesai dibaca.
      */
-public function show(Book $book)
+    public function show(Book $book)
     {
         $user = auth()->user();
 
@@ -32,8 +32,8 @@ public function show(Book $book)
             ->where('book_id', $book->id)
             ->exists();
 
-        // 1) Rekomendasi personal dari hasil batch model
-        $recs = $this->fromBatch($user->id, $excludeIds);
+        // 1) Rekomendasi personal dari hasil batch model, diprioritaskan sesuai buku yang baru selesai
+        $recs = $this->fromBatch($user->id, $excludeIds, $book);
         $judul = 'Buku lain yang mungkin kamu suka';
 
         // 2) Kalau belum ada (user baru / batch belum jalan): cari buku SERUPA (genre sama)
@@ -54,6 +54,7 @@ public function show(Book $book)
 
         return view('feedback.finished', compact('book', 'recs', 'sudahMenilai', 'judul'));
     }
+
     /**
      * Simpan label: cocok = 1 (cocok/membantu) atau 0 (belum cocok/kurang membantu).
      * Menutup popup tanpa memilih TIDAK menyimpan apa pun.
@@ -73,25 +74,33 @@ public function show(Book $book)
     }
 
     /**
-     * Ambil N buku dengan skor tertinggi untuk user ini dari book_recommendations.
+     * Ambil N buku dari book_recommendations untuk user ini.
+     * Urutan prioritas:
+     *   1. genre sama dengan buku yang baru selesai
+     *   2. jenis buku (fiksi/nonfiksi) sama
+     *   3. skor model tertinggi
+     * Hanya buku berstatus 'approved' yang ikut.
      */
-    private function fromBatch(int $userId, $excludeIds)
+    private function fromBatch(int $userId, $excludeIds, Book $book)
     {
-        $ids = DB::table('book_recommendations')
-            ->where('user_id', $userId)
-            ->whereNotIn('book_id', $excludeIds)
-            ->orderByDesc('skor')
+        $ids = DB::table('book_recommendations as r')
+            ->join('books as b', 'b.id', '=', 'r.book_id')
+            ->where('r.user_id', $userId)
+            ->where('b.status', 'approved')
+            ->whereNotIn('r.book_id', $excludeIds)
+            ->orderByRaw('(b.genre = ?) DESC', [$book->genre])
+            ->orderByRaw('(b.jenis_buku = ?) DESC', [$book->jenis_buku])
+            ->orderByDesc('r.skor')
             ->limit(self::JUMLAH_REKOMENDASI)
-            ->pluck('book_id');
+            ->pluck('r.book_id');
 
         if ($ids->isEmpty()) {
             return collect();
         }
 
         return Book::whereIn('id', $ids)
-            ->where('status', 'approved')
             ->get()
-            ->sortBy(fn ($b) => $ids->search($b->id)) // pertahankan urutan skor
+            ->sortBy(fn ($b) => $ids->search($b->id)) // pertahankan urutan hasil query
             ->values();
     }
 

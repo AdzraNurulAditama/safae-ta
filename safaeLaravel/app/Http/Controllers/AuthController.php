@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
 
 class AuthController extends Controller
 {
@@ -34,7 +35,7 @@ class AuthController extends Controller
             'email' => $request->email,
             'telepon' => $request->telepon,
             'password' => Hash::make($request->password),
-            'role' => 'user', // DEFAULT USER
+            'role' => 'user',
         ]);
 
         return redirect()->route('login')
@@ -48,37 +49,51 @@ class AuthController extends Controller
     }
 
     // PROSES LOGIN
-    public function login(Request $request)
-    {
-        $request->validate([
-            'username' => 'required|string',
-            'password' => 'required|string',
-        ]);
+public function login(Request $request)
+{
+    $request->validate([
+        'username' => 'required|string',
+        'password' => 'required|string',
+    ]);
 
-        $credentials = [
-            'username' => $request->username,
-            'password' => $request->password,
-        ];
+    $credentials = [
+        'username' => $request->username,
+        'password' => $request->password,
+    ];
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
 
-            // CEK ROLE
-            if (Auth::user()->role === 'admin') {
-                return redirect('/admin');
-            }
+        $user = Auth::user();
 
-            return redirect('/genre'); // USER BIASA
+        if ($user->role === 'admin') {
+            return redirect('/admin');
         }
 
-        return back()->withErrors([
-            'login' => 'Username atau password salah!',
-        ]);
+        $profilBelumLengkap =
+            empty($user->nama_depan) ||
+            empty($user->nama_belakang) ||
+            empty($user->jurusan) ||
+            empty($user->semester);
+
+        if ($profilBelumLengkap) {
+            return redirect()->route('onboarding.index');
+        }
+
+        return redirect()->route('genre.index');
     }
 
+    return back()->withErrors([
+        'login' => 'Username atau password salah!',
+    ]);
+}
+
+
+    // LOGOUT
     public function logout(Request $request)
     {
         Auth::logout();
+
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 

@@ -1,0 +1,1021 @@
+user_id,book_id,jurusan,semester,jenis_buku,kategori_topik,tipe_konten,jumlah_halaman,status_premium,rata_durasi_lain,rasio_favorit_lain,jumlah_buku_lain,porsi_genre_dibaca,porsi_jenis_dibaca,rata_durasi_genre_lain,rasio_selesai,total_menit_dibaca,total_resume,pengguna_baru,umpan_balik,sumber_data
+4,1,Tidak diketahui,,nonfiksi,Romance,karya ilmiah,35,0,0.0,0.0,2,0.0,1.0,0.0,0.0,0.0,0,0,1,asli
+4,58,Tidak diketahui,,nonfiksi,Hobi,buku,397,0,0.0,0.0,1,1.0,1.0,0.0,0.0,0.0,0,0,1,asli
+4,29,Tidak diketahui,,fiksi,Novel,novel,165,0,0.0,0.0,2,0.0,0.0,0.0,0.0,0.0,0,0,1,asli
+4,2,Tidak diketahui,,fiksi,Action,novel,197,0,0.0,0.0,5,0.0,0.2,0.0,0.0,0.0,0,0,0,asli
+4,5,Tidak diketahui,,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,6,0.1666666666666666,0.6666666666666666,0.0,0.0,0.0,0,0,1,asli
+4,55,Tidak diketahui,,nonfiksi,Hobi,buku,237,0,0.0,0.0,7,0.2857142857142857,0.7142857142857143,0.0,0.0,0.0,0,0,1,asli
+1,55,Sistem Informasi,5.0,nonfiksi,Hobi,buku,237,0,0.0,0.1818181818181818,11,0.0,0.1818181818181818,0.0,0.0909090909090909,0.0,0,0,1,asli
+1,58,Sistem Informasi,5.0,nonfiksi,Hobi,buku,397,0,0.0,0.1666666666666666,12,0.0833333333333333,0.25,0.0,0.0833333333333333,0.0,0,0,0,asli
+1,103,Sistem Informasi,5.0,nonfiksi,Jaringan,jurnal,140,0,0.0,0.1538461538461538,13,0.0,0.3076923076923077,0.0,0.0769230769230769,0.0,0,0,1,asli
+1,76,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,116,0,0.0,0.1428571428571428,14,0.0,0.3571428571428571,0.0,0.0714285714285714,0.0,0,0,1,asli
+1,115,Sistem Informasi,5.0,nonfiksi,Kecerdasan Buatan,jurnal,100,0,0.0,0.1333333333333333,15,0.0,0.4,0.0,0.0666666666666666,0.0,0,0,1,asli
+1,86,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.125,16,0.125,0.4375,0.0,0.125,0.0,0,0,1,asli
+1,51,Sistem Informasi,5.0,fiksi,Romance,novel,134,0,0.0,0.1176470588235294,17,0.0588235294117647,0.5294117647058824,0.0,0.1176470588235294,0.0,0,0,1,asli
+1,100,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,70,0,0.0,0.1111111111111111,18,0.0555555555555555,0.4444444444444444,0.0,0.2222222222222222,0.0,0,0,1,asli
+1,117,Sistem Informasi,5.0,nonfiksi,Sistem Informasi,karya ilmiah,133,0,0.0,0.1052631578947368,19,0.0,0.4736842105263157,0.0,0.2631578947368421,0.0,0,0,1,asli
+17,128,Tidak diketahui,,nonfiksi,Ekonomi,tugas akhir,134,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
+17,81,Tidak diketahui,,nonfiksi,Ekonomi,jurnal,100,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
+17,100,Tidak diketahui,,nonfiksi,Basis Data,skripsi,70,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
+17,103,Tidak diketahui,,nonfiksi,Jaringan,jurnal,140,0,0.0,0.0,1,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+17,86,Tidak diketahui,,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,3,0.3333333333333333,1.0,0.0,1.0,0.0,0,0,1,asli
+-1,-1,Manajemen,4.0,fiksi,Mystery,novel,195,0,32.04,0.2718,18,0.3527,0.8557,77.07,0.729,576.77,0,0,0,dummy
+-1,-2,Manajemen,4.0,nonfiksi,Pendidikan,buku,232,0,32.04,0.2718,18,0.0419,0.1443,77.07,0.729,576.77,0,0,1,dummy
+-1,-3,Manajemen,4.0,fiksi,Horror,novel,306,0,32.04,0.2718,18,0.1122,0.8557,77.07,0.729,576.77,0,0,1,dummy
+-1,-4,Manajemen,4.0,fiksi,Thriller,novel,284,1,32.04,0.2718,18,0.1066,0.8557,77.07,0.729,576.77,0,0,1,dummy
+-1,-5,Manajemen,4.0,fiksi,Science Fiction,novel,278,0,32.04,0.2718,18,0.0529,0.8557,77.07,0.729,576.77,0,0,0,dummy
+-1,-6,Manajemen,4.0,fiksi,Fantasy,novel,342,0,32.04,0.2718,18,0.1209,0.8557,77.07,0.729,576.77,0,0,0,dummy
+-1,-7,Manajemen,4.0,fiksi,Fantasy,novel,283,1,32.04,0.2718,18,0.1209,0.8557,77.07,0.729,576.77,0,0,1,dummy
+-1,-8,Manajemen,4.0,nonfiksi,Pendidikan,skripsi,276,0,32.04,0.2718,18,0.0419,0.1443,77.07,0.729,576.77,0,0,0,dummy
+-1,-9,Manajemen,4.0,nonfiksi,Sejarah,buku,81,0,32.04,0.2718,18,0.0221,0.1443,77.07,0.729,576.77,0,0,0,dummy
+-1,-10,Manajemen,4.0,nonfiksi,Sejarah,buku,313,0,32.04,0.2718,18,0.0221,0.1443,77.07,0.729,576.77,0,0,0,dummy
+-2,-11,Teknik Industri,4.0,nonfiksi,Teknologi,skripsi,89,0,76.05,0.1168,9,0.0858,0.8161,21.75,0.7834,684.46,0,0,1,dummy
+-2,-12,Teknik Industri,4.0,fiksi,Thriller,novel,283,0,76.05,0.1168,9,0.0201,0.1839,21.75,0.7834,684.46,0,0,0,dummy
+-2,-13,Teknik Industri,4.0,nonfiksi,Self Improvement,buku,165,0,76.05,0.1168,9,0.1388,0.8161,21.75,0.7834,684.46,0,0,0,dummy
+-2,-14,Teknik Industri,4.0,nonfiksi,Teknologi,jurnal,126,0,76.05,0.1168,9,0.0858,0.8161,21.75,0.7834,684.46,0,0,0,dummy
+-2,-15,Teknik Industri,4.0,nonfiksi,Pendidikan,jurnal,77,1,76.05,0.1168,9,0.1143,0.8161,21.75,0.7834,684.46,0,0,0,dummy
+-2,-16,Teknik Industri,4.0,fiksi,Mystery,novel,143,0,76.05,0.1168,9,0.0477,0.1839,21.75,0.7834,684.46,0,0,1,dummy
+-2,-17,Teknik Industri,4.0,fiksi,Mystery,novel,144,0,76.05,0.1168,9,0.0477,0.1839,21.75,0.7834,684.46,0,0,0,dummy
+-2,-18,Teknik Industri,4.0,nonfiksi,Bisnis,skripsi,321,0,76.05,0.1168,9,0.0604,0.8161,21.75,0.7834,684.46,0,0,1,dummy
+-2,-19,Teknik Industri,4.0,fiksi,Fantasy,novel,152,0,76.05,0.1168,9,0.0297,0.1839,21.75,0.7834,684.46,0,0,1,dummy
+-2,-20,Teknik Industri,4.0,nonfiksi,Sains,jurnal,373,0,76.05,0.1168,9,0.316,0.8161,21.75,0.7834,684.46,0,0,1,dummy
+-3,-21,Informatika,1.0,nonfiksi,Pendidikan,buku,134,0,76.97,0.4085,12,0.0219,0.2403,56.55,0.4151,923.66,0,0,0,dummy
+-3,-22,Informatika,1.0,fiksi,Romance,novel,117,0,76.97,0.4085,12,0.3714,0.7597,56.55,0.4151,923.66,0,0,1,dummy
+-3,-23,Informatika,1.0,fiksi,Science Fiction,novel,167,0,76.97,0.4085,12,0.055,0.7597,56.55,0.4151,923.66,0,0,0,dummy
+-3,-24,Informatika,1.0,fiksi,Horror,novel,365,0,76.97,0.4085,12,0.0934,0.7597,56.55,0.4151,923.66,0,0,0,dummy
+-3,-25,Informatika,1.0,fiksi,Fantasy,novel,91,0,76.97,0.4085,12,0.0926,0.7597,56.55,0.4151,923.66,0,0,0,dummy
+-3,-26,Informatika,1.0,fiksi,Horror,novel,112,0,76.97,0.4085,12,0.0934,0.7597,56.55,0.4151,923.66,0,0,0,dummy
+-3,-27,Informatika,1.0,nonfiksi,Teknologi,jurnal,182,1,76.97,0.4085,12,0.0273,0.2403,56.55,0.4151,923.66,0,0,0,dummy
+-3,-28,Informatika,1.0,fiksi,Mystery,novel,307,1,76.97,0.4085,12,0.093,0.7597,56.55,0.4151,923.66,0,0,0,dummy
+-3,-29,Informatika,1.0,fiksi,Romance,novel,307,0,76.97,0.4085,12,0.3714,0.7597,56.55,0.4151,923.66,0,0,1,dummy
+-3,-30,Informatika,1.0,fiksi,Mystery,novel,354,0,76.97,0.4085,12,0.093,0.7597,56.55,0.4151,923.66,0,0,1,dummy
+-4,-31,Sistem Informasi,6.0,fiksi,Thriller,novel,223,0,24.83,0.0995,13,0.0584,0.8289,44.82,0.5306,322.78,5,0,0,dummy
+-4,-32,Sistem Informasi,6.0,fiksi,Thriller,novel,39,1,24.83,0.0995,13,0.0584,0.8289,44.82,0.5306,322.78,5,0,0,dummy
+-4,-33,Sistem Informasi,6.0,nonfiksi,Bisnis,skripsi,185,0,24.83,0.0995,13,0.0169,0.1711,44.82,0.5306,322.78,5,0,0,dummy
+-4,-34,Sistem Informasi,6.0,nonfiksi,Pendidikan,karya ilmiah,203,1,24.83,0.0995,13,0.0204,0.1711,44.82,0.5306,322.78,5,0,1,dummy
+-4,-35,Sistem Informasi,6.0,fiksi,Mystery,novel,154,0,24.83,0.0995,13,0.0718,0.8289,44.82,0.5306,322.78,5,0,1,dummy
+-4,-36,Sistem Informasi,6.0,nonfiksi,Self Improvement,tugas akhir,74,0,24.83,0.0995,13,0.0479,0.1711,44.82,0.5306,322.78,5,0,0,dummy
+-4,-37,Sistem Informasi,6.0,fiksi,Romance,novel,271,1,24.83,0.0995,13,0.1137,0.8289,44.82,0.5306,322.78,5,0,1,dummy
+-4,-38,Sistem Informasi,6.0,fiksi,Fantasy,novel,385,1,24.83,0.0995,13,0.0732,0.8289,44.82,0.5306,322.78,5,0,0,dummy
+-4,-39,Sistem Informasi,6.0,fiksi,Thriller,novel,250,0,24.83,0.0995,13,0.0584,0.8289,44.82,0.5306,322.78,5,0,0,dummy
+-4,-40,Sistem Informasi,6.0,nonfiksi,Bisnis,tugas akhir,371,1,24.83,0.0995,13,0.0169,0.1711,44.82,0.5306,322.78,5,0,0,dummy
+-5,-41,Ilmu Komunikasi,2.0,nonfiksi,Sejarah,tugas akhir,67,0,33.7,0.2785,20,0.0537,0.3046,18.69,0.5742,674.08,2,0,1,dummy
+-5,-42,Ilmu Komunikasi,2.0,nonfiksi,Bisnis,tugas akhir,342,0,33.7,0.2785,20,0.0307,0.3046,18.69,0.5742,674.08,2,0,0,dummy
+-5,-43,Ilmu Komunikasi,2.0,nonfiksi,Pendidikan,skripsi,268,0,33.7,0.2785,20,0.0526,0.3046,18.69,0.5742,674.08,2,0,1,dummy
+-5,-44,Ilmu Komunikasi,2.0,fiksi,Science Fiction,novel,320,0,33.7,0.2785,20,0.066,0.6954,18.69,0.5742,674.08,2,0,1,dummy
+-5,-45,Ilmu Komunikasi,2.0,fiksi,Fantasy,novel,128,0,33.7,0.2785,20,0.0663,0.6954,18.69,0.5742,674.08,2,0,0,dummy
+-5,-46,Ilmu Komunikasi,2.0,nonfiksi,Sains,jurnal,166,0,33.7,0.2785,20,0.0271,0.3046,18.69,0.5742,674.08,2,0,0,dummy
+-5,-47,Ilmu Komunikasi,2.0,fiksi,Mystery,novel,278,0,33.7,0.2785,20,0.1302,0.6954,18.69,0.5742,674.08,2,0,0,dummy
+-5,-48,Ilmu Komunikasi,2.0,nonfiksi,Pendidikan,jurnal,211,0,33.7,0.2785,20,0.0526,0.3046,18.69,0.5742,674.08,2,0,0,dummy
+-5,-49,Ilmu Komunikasi,2.0,nonfiksi,Sejarah,karya ilmiah,95,1,33.7,0.2785,20,0.0537,0.3046,18.69,0.5742,674.08,2,0,1,dummy
+-5,-50,Ilmu Komunikasi,2.0,nonfiksi,Sejarah,skripsi,383,1,33.7,0.2785,20,0.0537,0.3046,18.69,0.5742,674.08,2,0,1,dummy
+-6,-51,Akuntansi,2.0,nonfiksi,Self Improvement,skripsi,81,1,57.37,0.279,6,0.0562,0.804,49.95,0.6636,344.23,4,0,0,dummy
+-6,-52,Akuntansi,2.0,nonfiksi,Pendidikan,buku,300,0,57.37,0.279,6,0.1029,0.804,49.95,0.6636,344.23,4,0,0,dummy
+-6,-53,Akuntansi,2.0,fiksi,Fantasy,novel,279,0,57.37,0.279,6,0.0448,0.196,49.95,0.6636,344.23,4,0,0,dummy
+-6,-54,Akuntansi,2.0,nonfiksi,Sains,skripsi,165,1,57.37,0.279,6,0.1223,0.804,49.95,0.6636,344.23,4,0,1,dummy
+-6,-55,Akuntansi,2.0,fiksi,Horror,novel,77,0,57.37,0.279,6,0.0319,0.196,49.95,0.6636,344.23,4,0,0,dummy
+-6,-56,Akuntansi,2.0,nonfiksi,Self Improvement,tugas akhir,81,0,57.37,0.279,6,0.0562,0.804,49.95,0.6636,344.23,4,0,1,dummy
+-6,-57,Akuntansi,2.0,fiksi,Romance,novel,296,0,57.37,0.279,6,0.0126,0.196,49.95,0.6636,344.23,4,0,1,dummy
+-6,-58,Akuntansi,2.0,nonfiksi,Sejarah,buku,75,1,57.37,0.279,6,0.2719,0.804,49.95,0.6636,344.23,4,0,0,dummy
+-6,-59,Akuntansi,2.0,fiksi,Thriller,novel,389,0,57.37,0.279,6,0.0146,0.196,49.95,0.6636,344.23,4,0,1,dummy
+-6,-60,Akuntansi,2.0,fiksi,Romance,novel,142,1,57.37,0.279,6,0.0126,0.196,49.95,0.6636,344.23,4,0,0,dummy
+-7,-61,Akuntansi,2.0,nonfiksi,Sejarah,tugas akhir,327,1,83.3,0.3125,19,0.0106,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-62,Akuntansi,2.0,nonfiksi,Pendidikan,tugas akhir,374,0,83.3,0.3125,19,0.0187,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-63,Akuntansi,2.0,fiksi,Romance,novel,288,0,83.3,0.3125,19,0.131,0.8442,15.41,0.381,1582.66,0,0,1,dummy
+-7,-64,Akuntansi,2.0,nonfiksi,Sejarah,skripsi,331,1,83.3,0.3125,19,0.0106,0.1558,15.41,0.381,1582.66,0,0,1,dummy
+-7,-65,Akuntansi,2.0,nonfiksi,Bisnis,jurnal,308,1,83.3,0.3125,19,0.0342,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-66,Akuntansi,2.0,nonfiksi,Bisnis,skripsi,200,1,83.3,0.3125,19,0.0342,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-67,Akuntansi,2.0,nonfiksi,Teknologi,buku,249,0,83.3,0.3125,19,0.0436,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-68,Akuntansi,2.0,fiksi,Fantasy,novel,266,0,83.3,0.3125,19,0.0745,0.8442,15.41,0.381,1582.66,0,0,1,dummy
+-7,-69,Akuntansi,2.0,nonfiksi,Sains,karya ilmiah,244,0,83.3,0.3125,19,0.0129,0.1558,15.41,0.381,1582.66,0,0,0,dummy
+-7,-70,Akuntansi,2.0,fiksi,Romance,novel,368,1,83.3,0.3125,19,0.131,0.8442,15.41,0.381,1582.66,0,0,1,dummy
+-8,-71,Sistem Informasi,2.0,nonfiksi,Sejarah,jurnal,103,0,57.93,0.2763,7,0.0245,0.2315,67.65,0.7388,405.54,3,0,0,dummy
+-8,-72,Sistem Informasi,2.0,fiksi,Science Fiction,novel,163,0,57.93,0.2763,7,0.1199,0.7685,67.65,0.7388,405.54,3,0,0,dummy
+-8,-73,Sistem Informasi,2.0,fiksi,Horror,novel,129,0,57.93,0.2763,7,0.3364,0.7685,67.65,0.7388,405.54,3,0,1,dummy
+-8,-74,Sistem Informasi,2.0,nonfiksi,Sejarah,tugas akhir,50,0,57.93,0.2763,7,0.0245,0.2315,67.65,0.7388,405.54,3,0,1,dummy
+-8,-75,Sistem Informasi,2.0,fiksi,Mystery,novel,50,1,57.93,0.2763,7,0.1224,0.7685,67.65,0.7388,405.54,3,0,1,dummy
+-8,-76,Sistem Informasi,2.0,nonfiksi,Sains,buku,305,0,57.93,0.2763,7,0.0202,0.2315,67.65,0.7388,405.54,3,0,0,dummy
+-8,-77,Sistem Informasi,2.0,fiksi,Thriller,novel,277,0,57.93,0.2763,7,0.1001,0.7685,67.65,0.7388,405.54,3,0,0,dummy
+-8,-78,Sistem Informasi,2.0,fiksi,Science Fiction,novel,385,0,57.93,0.2763,7,0.1199,0.7685,67.65,0.7388,405.54,3,0,0,dummy
+-8,-79,Sistem Informasi,2.0,nonfiksi,Pendidikan,buku,291,1,57.93,0.2763,7,0.0123,0.2315,67.65,0.7388,405.54,3,0,0,dummy
+-8,-80,Sistem Informasi,2.0,nonfiksi,Sains,skripsi,224,0,57.93,0.2763,7,0.0202,0.2315,67.65,0.7388,405.54,3,0,1,dummy
+-9,-81,Ilmu Komunikasi,1.0,fiksi,Romance,novel,346,0,32.46,0.1668,6,0.0354,0.1232,58.98,0.646,194.78,2,0,0,dummy
+-9,-82,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,skripsi,298,0,32.46,0.1668,6,0.1025,0.8768,58.98,0.646,194.78,2,0,1,dummy
+-9,-83,Ilmu Komunikasi,1.0,fiksi,Horror,novel,155,0,32.46,0.1668,6,0.0282,0.1232,58.98,0.646,194.78,2,0,0,dummy
+-9,-84,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,jurnal,217,0,32.46,0.1668,6,0.3043,0.8768,58.98,0.646,194.78,2,0,1,dummy
+-9,-85,Ilmu Komunikasi,1.0,fiksi,Thriller,novel,221,0,32.46,0.1668,6,0.0545,0.1232,58.98,0.646,194.78,2,0,0,dummy
+-9,-86,Ilmu Komunikasi,1.0,fiksi,Horror,novel,370,0,32.46,0.1668,6,0.0282,0.1232,58.98,0.646,194.78,2,0,1,dummy
+-9,-87,Ilmu Komunikasi,1.0,fiksi,Fantasy,novel,286,0,32.46,0.1668,6,0.0478,0.1232,58.98,0.646,194.78,2,0,0,dummy
+-9,-88,Ilmu Komunikasi,1.0,fiksi,Romance,novel,252,0,32.46,0.1668,6,0.0354,0.1232,58.98,0.646,194.78,2,0,0,dummy
+-9,-89,Ilmu Komunikasi,1.0,nonfiksi,Sejarah,skripsi,394,0,32.46,0.1668,6,0.1064,0.8768,58.98,0.646,194.78,2,0,1,dummy
+-9,-90,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,karya ilmiah,297,0,32.46,0.1668,6,0.3043,0.8768,58.98,0.646,194.78,2,0,0,dummy
+-10,-91,Ilmu Komunikasi,4.0,nonfiksi,Bisnis,jurnal,236,0,88.92,0.236,8,0.0192,0.1557,45.87,0.8262,711.32,5,0,0,dummy
+-10,-92,Ilmu Komunikasi,4.0,fiksi,Romance,novel,166,0,88.92,0.236,8,0.3209,0.8443,45.87,0.8262,711.32,5,0,1,dummy
+-10,-93,Ilmu Komunikasi,4.0,fiksi,Mystery,novel,294,0,88.92,0.236,8,0.1311,0.8443,45.87,0.8262,711.32,5,0,0,dummy
+-10,-94,Ilmu Komunikasi,4.0,fiksi,Mystery,novel,67,0,88.92,0.236,8,0.1311,0.8443,45.87,0.8262,711.32,5,0,1,dummy
+-10,-95,Ilmu Komunikasi,4.0,nonfiksi,Teknologi,buku,226,0,88.92,0.236,8,0.0357,0.1557,45.87,0.8262,711.32,5,0,0,dummy
+-10,-96,Ilmu Komunikasi,4.0,fiksi,Mystery,novel,362,0,88.92,0.236,8,0.1311,0.8443,45.87,0.8262,711.32,5,0,1,dummy
+-10,-97,Ilmu Komunikasi,4.0,nonfiksi,Teknologi,skripsi,346,0,88.92,0.236,8,0.0357,0.1557,45.87,0.8262,711.32,5,0,0,dummy
+-10,-98,Ilmu Komunikasi,4.0,fiksi,Fantasy,novel,282,0,88.92,0.236,8,0.0838,0.8443,45.87,0.8262,711.32,5,0,1,dummy
+-10,-99,Ilmu Komunikasi,4.0,fiksi,Thriller,novel,296,0,88.92,0.236,8,0.0939,0.8443,45.87,0.8262,711.32,5,0,0,dummy
+-10,-100,Ilmu Komunikasi,4.0,nonfiksi,Teknologi,karya ilmiah,80,0,88.92,0.236,8,0.0357,0.1557,45.87,0.8262,711.32,5,0,0,dummy
+-11,-101,Ilmu Komunikasi,7.0,nonfiksi,Self Improvement,jurnal,226,0,55.56,0.1638,9,0.103,0.8898,32.63,0.5452,500.08,5,0,0,dummy
+-11,-102,Ilmu Komunikasi,7.0,fiksi,Fantasy,novel,95,0,55.56,0.1638,9,0.0522,0.1102,32.63,0.5452,500.08,5,0,0,dummy
+-11,-103,Ilmu Komunikasi,7.0,fiksi,Romance,novel,135,0,55.56,0.1638,9,0.0288,0.1102,32.63,0.5452,500.08,5,0,0,dummy
+-11,-104,Ilmu Komunikasi,7.0,nonfiksi,Teknologi,tugas akhir,206,0,55.56,0.1638,9,0.1067,0.8898,32.63,0.5452,500.08,5,0,0,dummy
+-11,-105,Ilmu Komunikasi,7.0,nonfiksi,Self Improvement,jurnal,322,1,55.56,0.1638,9,0.103,0.8898,32.63,0.5452,500.08,5,0,0,dummy
+-11,-106,Ilmu Komunikasi,7.0,fiksi,Science Fiction,novel,376,1,55.56,0.1638,9,0.0172,0.1102,32.63,0.5452,500.08,5,0,0,dummy
+-11,-107,Ilmu Komunikasi,7.0,fiksi,Horror,novel,386,1,55.56,0.1638,9,0.0142,0.1102,32.63,0.5452,500.08,5,0,1,dummy
+-11,-108,Ilmu Komunikasi,7.0,nonfiksi,Bisnis,tugas akhir,198,1,55.56,0.1638,9,0.0785,0.8898,32.63,0.5452,500.08,5,0,1,dummy
+-11,-109,Ilmu Komunikasi,7.0,nonfiksi,Bisnis,skripsi,172,1,55.56,0.1638,9,0.0785,0.8898,32.63,0.5452,500.08,5,0,0,dummy
+-11,-110,Ilmu Komunikasi,7.0,nonfiksi,Sains,karya ilmiah,176,1,55.56,0.1638,9,0.0579,0.8898,32.63,0.5452,500.08,5,0,1,dummy
+-12,-111,Akuntansi,3.0,nonfiksi,Bisnis,jurnal,81,1,84.78,0.0694,11,0.0452,0.2929,68.37,0.4403,932.57,2,0,1,dummy
+-12,-112,Akuntansi,3.0,nonfiksi,Bisnis,buku,71,0,84.78,0.0694,11,0.0452,0.2929,68.37,0.4403,932.57,2,0,1,dummy
+-12,-113,Akuntansi,3.0,fiksi,Science Fiction,novel,134,0,84.78,0.0694,11,0.0862,0.7071,68.37,0.4403,932.57,2,0,1,dummy
+-12,-114,Akuntansi,3.0,nonfiksi,Teknologi,buku,138,0,84.78,0.0694,11,0.0237,0.2929,68.37,0.4403,932.57,2,0,0,dummy
+-12,-115,Akuntansi,3.0,fiksi,Science Fiction,novel,198,0,84.78,0.0694,11,0.0862,0.7071,68.37,0.4403,932.57,2,0,0,dummy
+-12,-116,Akuntansi,3.0,nonfiksi,Pendidikan,buku,148,1,84.78,0.0694,11,0.0302,0.2929,68.37,0.4403,932.57,2,0,0,dummy
+-12,-117,Akuntansi,3.0,nonfiksi,Teknologi,skripsi,147,0,84.78,0.0694,11,0.0237,0.2929,68.37,0.4403,932.57,2,0,1,dummy
+-12,-118,Akuntansi,3.0,fiksi,Romance,novel,343,0,84.78,0.0694,11,0.0519,0.7071,68.37,0.4403,932.57,2,0,0,dummy
+-12,-119,Akuntansi,3.0,nonfiksi,Pendidikan,jurnal,117,1,84.78,0.0694,11,0.0302,0.2929,68.37,0.4403,932.57,2,0,0,dummy
+-12,-120,Akuntansi,3.0,fiksi,Mystery,novel,287,0,84.78,0.0694,11,0.0964,0.7071,68.37,0.4403,932.57,2,0,0,dummy
+-13,-121,Ilmu Komunikasi,7.0,nonfiksi,Sejarah,buku,235,0,16.36,0.2883,5,0.012,0.1841,80.54,0.5022,81.81,1,0,0,dummy
+-13,-122,Ilmu Komunikasi,7.0,nonfiksi,Sejarah,jurnal,311,0,16.36,0.2883,5,0.012,0.1841,80.54,0.5022,81.81,1,0,0,dummy
+-13,-123,Ilmu Komunikasi,7.0,nonfiksi,Bisnis,buku,325,1,16.36,0.2883,5,0.0313,0.1841,80.54,0.5022,81.81,1,0,0,dummy
+-13,-124,Ilmu Komunikasi,7.0,nonfiksi,Self Improvement,skripsi,176,0,16.36,0.2883,5,0.0217,0.1841,80.54,0.5022,81.81,1,0,1,dummy
+-13,-125,Ilmu Komunikasi,7.0,fiksi,Fantasy,novel,394,1,16.36,0.2883,5,0.1485,0.8159,80.54,0.5022,81.81,1,0,0,dummy
+-13,-126,Ilmu Komunikasi,7.0,nonfiksi,Teknologi,karya ilmiah,269,0,16.36,0.2883,5,0.0208,0.1841,80.54,0.5022,81.81,1,0,0,dummy
+-13,-127,Ilmu Komunikasi,7.0,fiksi,Romance,novel,305,0,16.36,0.2883,5,0.2511,0.8159,80.54,0.5022,81.81,1,0,0,dummy
+-13,-128,Ilmu Komunikasi,7.0,fiksi,Romance,novel,349,1,16.36,0.2883,5,0.2511,0.8159,80.54,0.5022,81.81,1,0,0,dummy
+-13,-129,Ilmu Komunikasi,7.0,nonfiksi,Bisnis,jurnal,108,0,16.36,0.2883,5,0.0313,0.1841,80.54,0.5022,81.81,1,0,1,dummy
+-13,-130,Ilmu Komunikasi,7.0,nonfiksi,Pendidikan,skripsi,262,0,16.36,0.2883,5,0.0336,0.1841,80.54,0.5022,81.81,1,0,0,dummy
+-14,-131,Manajemen,2.0,fiksi,Thriller,novel,223,1,71.51,0.4024,4,0.1452,0.7109,35.86,0.4713,286.05,5,0,1,dummy
+-14,-132,Manajemen,2.0,fiksi,Thriller,novel,279,1,71.51,0.4024,4,0.1452,0.7109,35.86,0.4713,286.05,5,0,0,dummy
+-14,-133,Manajemen,2.0,fiksi,Fantasy,novel,123,0,71.51,0.4024,4,0.1114,0.7109,35.86,0.4713,286.05,5,0,0,dummy
+-14,-134,Manajemen,2.0,nonfiksi,Self Improvement,buku,395,1,71.51,0.4024,4,0.0487,0.2891,35.86,0.4713,286.05,5,0,0,dummy
+-14,-135,Manajemen,2.0,fiksi,Romance,novel,187,0,71.51,0.4024,4,0.0919,0.7109,35.86,0.4713,286.05,5,0,0,dummy
+-14,-136,Manajemen,2.0,fiksi,Mystery,novel,258,0,71.51,0.4024,4,0.0705,0.7109,35.86,0.4713,286.05,5,0,1,dummy
+-14,-137,Manajemen,2.0,fiksi,Romance,novel,224,0,71.51,0.4024,4,0.0919,0.7109,35.86,0.4713,286.05,5,0,0,dummy
+-14,-138,Manajemen,2.0,nonfiksi,Self Improvement,jurnal,41,1,71.51,0.4024,4,0.0487,0.2891,35.86,0.4713,286.05,5,0,0,dummy
+-14,-139,Manajemen,2.0,nonfiksi,Sejarah,tugas akhir,299,0,71.51,0.4024,4,0.0378,0.2891,35.86,0.4713,286.05,5,0,0,dummy
+-14,-140,Manajemen,2.0,fiksi,Fantasy,novel,344,0,71.51,0.4024,4,0.1114,0.7109,35.86,0.4713,286.05,5,0,1,dummy
+-15,-141,Teknik Industri,5.0,fiksi,Thriller,novel,168,1,55.24,0.2238,9,0.1251,0.7727,24.42,0.9213,497.18,0,0,1,dummy
+-15,-142,Teknik Industri,5.0,nonfiksi,Bisnis,jurnal,88,0,55.24,0.2238,9,0.018,0.2273,24.42,0.9213,497.18,0,0,1,dummy
+-15,-143,Teknik Industri,5.0,nonfiksi,Self Improvement,skripsi,226,1,55.24,0.2238,9,0.0279,0.2273,24.42,0.9213,497.18,0,0,0,dummy
+-15,-144,Teknik Industri,5.0,nonfiksi,Self Improvement,tugas akhir,167,1,55.24,0.2238,9,0.0279,0.2273,24.42,0.9213,497.18,0,0,0,dummy
+-15,-145,Teknik Industri,5.0,fiksi,Mystery,novel,371,0,55.24,0.2238,9,0.0938,0.7727,24.42,0.9213,497.18,0,0,1,dummy
+-15,-146,Teknik Industri,5.0,fiksi,Mystery,novel,266,1,55.24,0.2238,9,0.0938,0.7727,24.42,0.9213,497.18,0,0,0,dummy
+-15,-147,Teknik Industri,5.0,nonfiksi,Sains,tugas akhir,309,0,55.24,0.2238,9,0.015,0.2273,24.42,0.9213,497.18,0,0,0,dummy
+-15,-148,Teknik Industri,5.0,fiksi,Fantasy,novel,134,1,55.24,0.2238,9,0.3436,0.7727,24.42,0.9213,497.18,0,0,1,dummy
+-15,-149,Teknik Industri,5.0,fiksi,Romance,novel,86,0,55.24,0.2238,9,0.1101,0.7727,24.42,0.9213,497.18,0,0,1,dummy
+-15,-150,Teknik Industri,5.0,nonfiksi,Teknologi,skripsi,274,0,55.24,0.2238,9,0.0433,0.2273,24.42,0.9213,497.18,0,0,0,dummy
+-16,-151,Ilmu Komunikasi,6.0,nonfiksi,Pendidikan,tugas akhir,179,0,70.39,0.2113,9,0.1054,0.8869,57.14,0.7819,633.49,3,0,0,dummy
+-16,-152,Ilmu Komunikasi,6.0,fiksi,Thriller,novel,193,0,70.39,0.2113,9,0.0337,0.1131,57.14,0.7819,633.49,3,0,1,dummy
+-16,-153,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,359,1,70.39,0.2113,9,0.0398,0.1131,57.14,0.7819,633.49,3,0,1,dummy
+-16,-154,Ilmu Komunikasi,6.0,fiksi,Romance,novel,318,0,70.39,0.2113,9,0.0215,0.1131,57.14,0.7819,633.49,3,0,1,dummy
+-16,-155,Ilmu Komunikasi,6.0,fiksi,Romance,novel,134,0,70.39,0.2113,9,0.0215,0.1131,57.14,0.7819,633.49,3,0,1,dummy
+-16,-156,Ilmu Komunikasi,6.0,fiksi,Horror,novel,367,0,70.39,0.2113,9,0.0254,0.1131,57.14,0.7819,633.49,3,0,0,dummy
+-16,-157,Ilmu Komunikasi,6.0,nonfiksi,Self Improvement,karya ilmiah,256,0,70.39,0.2113,9,0.0729,0.8869,57.14,0.7819,633.49,3,0,0,dummy
+-16,-158,Ilmu Komunikasi,6.0,nonfiksi,Self Improvement,karya ilmiah,178,0,70.39,0.2113,9,0.0729,0.8869,57.14,0.7819,633.49,3,0,1,dummy
+-16,-159,Ilmu Komunikasi,6.0,nonfiksi,Self Improvement,tugas akhir,256,0,70.39,0.2113,9,0.0729,0.8869,57.14,0.7819,633.49,3,0,0,dummy
+-16,-160,Ilmu Komunikasi,6.0,fiksi,Fantasy,novel,194,0,70.39,0.2113,9,0.0155,0.1131,57.14,0.7819,633.49,3,0,0,dummy
+-17,-161,Informatika,4.0,fiksi,Thriller,novel,32,0,45.75,0.1375,13,0.0403,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-162,Informatika,4.0,fiksi,Romance,novel,72,0,45.75,0.1375,13,0.0428,0.2855,76.2,0.8663,594.73,3,0,1,dummy
+-17,-163,Informatika,4.0,fiksi,Fantasy,novel,101,0,45.75,0.1375,13,0.0432,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-164,Informatika,4.0,nonfiksi,Self Improvement,jurnal,393,0,45.75,0.1375,13,0.0727,0.7145,76.2,0.8663,594.73,3,0,1,dummy
+-17,-165,Informatika,4.0,fiksi,Fantasy,novel,197,0,45.75,0.1375,13,0.0432,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-166,Informatika,4.0,fiksi,Science Fiction,novel,95,0,45.75,0.1375,13,0.0452,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-167,Informatika,4.0,fiksi,Mystery,novel,38,0,45.75,0.1375,13,0.0366,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-168,Informatika,4.0,nonfiksi,Bisnis,buku,148,0,45.75,0.1375,13,0.1162,0.7145,76.2,0.8663,594.73,3,0,0,dummy
+-17,-169,Informatika,4.0,fiksi,Fantasy,novel,187,0,45.75,0.1375,13,0.0432,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-17,-170,Informatika,4.0,fiksi,Mystery,novel,377,0,45.75,0.1375,13,0.0366,0.2855,76.2,0.8663,594.73,3,0,0,dummy
+-18,-171,Akuntansi,1.0,nonfiksi,Sains,tugas akhir,46,0,63.92,0.3793,3,0.0325,0.1563,27.6,0.4381,191.76,0,0,0,dummy
+-18,-172,Akuntansi,1.0,fiksi,Science Fiction,novel,303,0,63.92,0.3793,3,0.0667,0.8437,27.6,0.4381,191.76,0,0,0,dummy
+-18,-173,Akuntansi,1.0,nonfiksi,Pendidikan,skripsi,202,1,63.92,0.3793,3,0.0104,0.1563,27.6,0.4381,191.76,0,0,0,dummy
+-18,-174,Akuntansi,1.0,nonfiksi,Pendidikan,tugas akhir,74,1,63.92,0.3793,3,0.0104,0.1563,27.6,0.4381,191.76,0,0,0,dummy
+-18,-175,Akuntansi,1.0,fiksi,Mystery,novel,346,0,63.92,0.3793,3,0.1429,0.8437,27.6,0.4381,191.76,0,0,0,dummy
+-18,-176,Akuntansi,1.0,fiksi,Fantasy,novel,196,0,63.92,0.3793,3,0.3355,0.8437,27.6,0.4381,191.76,0,0,0,dummy
+-18,-177,Akuntansi,1.0,nonfiksi,Self Improvement,karya ilmiah,101,0,63.92,0.3793,3,0.0285,0.1563,27.6,0.4381,191.76,0,0,0,dummy
+-18,-178,Akuntansi,1.0,fiksi,Mystery,novel,172,0,63.92,0.3793,3,0.1429,0.8437,27.6,0.4381,191.76,0,0,1,dummy
+-18,-179,Akuntansi,1.0,nonfiksi,Teknologi,buku,168,0,63.92,0.3793,3,0.0132,0.1563,27.6,0.4381,191.76,0,0,0,dummy
+-18,-180,Akuntansi,1.0,fiksi,Fantasy,novel,185,0,63.92,0.3793,3,0.3355,0.8437,27.6,0.4381,191.76,0,0,0,dummy
+-19,-181,Akuntansi,4.0,fiksi,Mystery,novel,183,0,85.17,0.0738,9,0.1265,0.7675,58.93,0.4673,766.49,1,0,1,dummy
+-19,-182,Akuntansi,4.0,fiksi,Science Fiction,novel,95,0,85.17,0.0738,9,0.1144,0.7675,58.93,0.4673,766.49,1,0,0,dummy
+-19,-183,Akuntansi,4.0,fiksi,Thriller,novel,156,0,85.17,0.0738,9,0.3196,0.7675,58.93,0.4673,766.49,1,0,1,dummy
+-19,-184,Akuntansi,4.0,fiksi,Thriller,novel,106,1,85.17,0.0738,9,0.3196,0.7675,58.93,0.4673,766.49,1,0,0,dummy
+-19,-185,Akuntansi,4.0,nonfiksi,Bisnis,buku,72,0,85.17,0.0738,9,0.0108,0.2325,58.93,0.4673,766.49,1,0,1,dummy
+-19,-186,Akuntansi,4.0,nonfiksi,Pendidikan,buku,334,1,85.17,0.0738,9,0.0182,0.2325,58.93,0.4673,766.49,1,0,0,dummy
+-19,-187,Akuntansi,4.0,fiksi,Thriller,novel,62,0,85.17,0.0738,9,0.3196,0.7675,58.93,0.4673,766.49,1,0,0,dummy
+-19,-188,Akuntansi,4.0,nonfiksi,Self Improvement,buku,226,0,85.17,0.0738,9,0.0491,0.2325,58.93,0.4673,766.49,1,0,0,dummy
+-19,-189,Akuntansi,4.0,fiksi,Horror,novel,171,1,85.17,0.0738,9,0.0609,0.7675,58.93,0.4673,766.49,1,0,0,dummy
+-19,-190,Akuntansi,4.0,nonfiksi,Sains,jurnal,101,0,85.17,0.0738,9,0.0199,0.2325,58.93,0.4673,766.49,1,0,0,dummy
+-20,-191,Ilmu Komunikasi,3.0,nonfiksi,Sains,skripsi,238,0,43.39,0.0879,8,0.0915,0.7302,69.23,0.5835,347.16,0,0,1,dummy
+-20,-192,Ilmu Komunikasi,3.0,nonfiksi,Self Improvement,buku,251,0,43.39,0.0879,8,0.1014,0.7302,69.23,0.5835,347.16,0,0,1,dummy
+-20,-193,Ilmu Komunikasi,3.0,nonfiksi,Teknologi,buku,372,1,43.39,0.0879,8,0.3224,0.7302,69.23,0.5835,347.16,0,0,1,dummy
+-20,-194,Ilmu Komunikasi,3.0,nonfiksi,Pendidikan,tugas akhir,238,0,43.39,0.0879,8,0.1115,0.7302,69.23,0.5835,347.16,0,0,0,dummy
+-20,-195,Ilmu Komunikasi,3.0,fiksi,Thriller,novel,240,0,43.39,0.0879,8,0.034,0.2698,69.23,0.5835,347.16,0,0,1,dummy
+-20,-196,Ilmu Komunikasi,3.0,nonfiksi,Self Improvement,tugas akhir,51,1,43.39,0.0879,8,0.1014,0.7302,69.23,0.5835,347.16,0,0,0,dummy
+-20,-197,Ilmu Komunikasi,3.0,fiksi,Thriller,novel,317,0,43.39,0.0879,8,0.034,0.2698,69.23,0.5835,347.16,0,0,0,dummy
+-20,-198,Ilmu Komunikasi,3.0,fiksi,Horror,novel,375,0,43.39,0.0879,8,0.0247,0.2698,69.23,0.5835,347.16,0,0,1,dummy
+-20,-199,Ilmu Komunikasi,3.0,nonfiksi,Sejarah,jurnal,217,0,43.39,0.0879,8,0.0925,0.7302,69.23,0.5835,347.16,0,0,0,dummy
+-20,-200,Ilmu Komunikasi,3.0,fiksi,Science Fiction,novel,394,0,43.39,0.0879,8,0.0453,0.2698,69.23,0.5835,347.16,0,0,0,dummy
+-21,-201,Akuntansi,5.0,nonfiksi,Sains,karya ilmiah,157,0,18.01,0.2347,20,0.0301,0.2558,31.07,0.4338,360.14,3,0,0,dummy
+-21,-202,Akuntansi,5.0,fiksi,Mystery,novel,246,0,18.01,0.2347,20,0.0785,0.7442,31.07,0.4338,360.14,3,0,1,dummy
+-21,-203,Akuntansi,5.0,nonfiksi,Self Improvement,skripsi,165,0,18.01,0.2347,20,0.0359,0.2558,31.07,0.4338,360.14,3,0,0,dummy
+-21,-204,Akuntansi,5.0,fiksi,Thriller,novel,398,0,18.01,0.2347,20,0.3667,0.7442,31.07,0.4338,360.14,3,0,1,dummy
+-21,-205,Akuntansi,5.0,nonfiksi,Sains,karya ilmiah,365,0,18.01,0.2347,20,0.0301,0.2558,31.07,0.4338,360.14,3,0,0,dummy
+-21,-206,Akuntansi,5.0,nonfiksi,Bisnis,jurnal,52,0,18.01,0.2347,20,0.0107,0.2558,31.07,0.4338,360.14,3,0,1,dummy
+-21,-207,Akuntansi,5.0,fiksi,Horror,novel,324,1,18.01,0.2347,20,0.1342,0.7442,31.07,0.4338,360.14,3,0,1,dummy
+-21,-208,Akuntansi,5.0,fiksi,Fantasy,novel,389,0,18.01,0.2347,20,0.1264,0.7442,31.07,0.4338,360.14,3,0,1,dummy
+-21,-209,Akuntansi,5.0,fiksi,Horror,novel,77,0,18.01,0.2347,20,0.1342,0.7442,31.07,0.4338,360.14,3,0,0,dummy
+-21,-210,Akuntansi,5.0,nonfiksi,Bisnis,tugas akhir,262,0,18.01,0.2347,20,0.0107,0.2558,31.07,0.4338,360.14,3,0,0,dummy
+-22,-211,Manajemen,2.0,nonfiksi,Pendidikan,jurnal,353,1,60.92,0.0641,19,0.012,0.2385,26.81,0.4735,1157.41,1,0,0,dummy
+-22,-212,Manajemen,2.0,nonfiksi,Sejarah,buku,85,0,60.92,0.0641,19,0.0124,0.2385,26.81,0.4735,1157.41,1,0,1,dummy
+-22,-213,Manajemen,2.0,fiksi,Thriller,novel,368,1,60.92,0.0641,19,0.1345,0.7615,26.81,0.4735,1157.41,1,0,0,dummy
+-22,-214,Manajemen,2.0,nonfiksi,Pendidikan,tugas akhir,259,0,60.92,0.0641,19,0.012,0.2385,26.81,0.4735,1157.41,1,0,0,dummy
+-22,-215,Manajemen,2.0,fiksi,Romance,novel,260,0,60.92,0.0641,19,0.0954,0.7615,26.81,0.4735,1157.41,1,0,1,dummy
+-22,-216,Manajemen,2.0,nonfiksi,Sains,skripsi,258,0,60.92,0.0641,19,0.0224,0.2385,26.81,0.4735,1157.41,1,0,1,dummy
+-22,-217,Manajemen,2.0,fiksi,Fantasy,novel,279,0,60.92,0.0641,19,0.3517,0.7615,26.81,0.4735,1157.41,1,0,1,dummy
+-22,-218,Manajemen,2.0,nonfiksi,Sains,skripsi,377,0,60.92,0.0641,19,0.0224,0.2385,26.81,0.4735,1157.41,1,0,1,dummy
+-22,-219,Manajemen,2.0,nonfiksi,Sejarah,buku,218,0,60.92,0.0641,19,0.0124,0.2385,26.81,0.4735,1157.41,1,0,0,dummy
+-22,-220,Manajemen,2.0,nonfiksi,Teknologi,tugas akhir,186,1,60.92,0.0641,19,0.0235,0.2385,26.81,0.4735,1157.41,1,0,0,dummy
+-23,-221,Informatika,3.0,nonfiksi,Pendidikan,jurnal,217,1,64.69,0.3187,19,0.1019,0.8078,42.82,0.605,1229.1,5,0,1,dummy
+-23,-222,Informatika,3.0,nonfiksi,Pendidikan,jurnal,78,0,64.69,0.3187,19,0.1019,0.8078,42.82,0.605,1229.1,5,0,0,dummy
+-23,-223,Informatika,3.0,fiksi,Horror,novel,67,1,64.69,0.3187,19,0.0111,0.1922,42.82,0.605,1229.1,5,0,1,dummy
+-23,-224,Informatika,3.0,nonfiksi,Sains,buku,100,0,64.69,0.3187,19,0.1029,0.8078,42.82,0.605,1229.1,5,0,0,dummy
+-23,-225,Informatika,3.0,nonfiksi,Sains,skripsi,322,1,64.69,0.3187,19,0.1029,0.8078,42.82,0.605,1229.1,5,0,1,dummy
+-23,-226,Informatika,3.0,fiksi,Thriller,novel,131,0,64.69,0.3187,19,0.0258,0.1922,42.82,0.605,1229.1,5,0,1,dummy
+-23,-227,Informatika,3.0,nonfiksi,Pendidikan,buku,55,0,64.69,0.3187,19,0.1019,0.8078,42.82,0.605,1229.1,5,0,0,dummy
+-23,-228,Informatika,3.0,fiksi,Mystery,novel,132,0,64.69,0.3187,19,0.026,0.1922,42.82,0.605,1229.1,5,0,0,dummy
+-23,-229,Informatika,3.0,fiksi,Fantasy,novel,95,1,64.69,0.3187,19,0.0441,0.1922,42.82,0.605,1229.1,5,0,0,dummy
+-23,-230,Informatika,3.0,nonfiksi,Pendidikan,buku,146,0,64.69,0.3187,19,0.1019,0.8078,42.82,0.605,1229.1,5,0,1,dummy
+-24,-231,Akuntansi,1.0,nonfiksi,Sejarah,skripsi,340,0,16.19,0.2409,11,0.1108,0.7652,45.55,0.6909,178.04,2,0,1,dummy
+-24,-232,Akuntansi,1.0,fiksi,Horror,novel,73,0,16.19,0.2409,11,0.0285,0.2348,45.55,0.6909,178.04,2,0,0,dummy
+-24,-233,Akuntansi,1.0,nonfiksi,Bisnis,karya ilmiah,263,0,16.19,0.2409,11,0.109,0.7652,45.55,0.6909,178.04,2,0,0,dummy
+-24,-234,Akuntansi,1.0,nonfiksi,Self Improvement,karya ilmiah,112,1,16.19,0.2409,11,0.1029,0.7652,45.55,0.6909,178.04,2,0,1,dummy
+-24,-235,Akuntansi,1.0,fiksi,Science Fiction,novel,382,0,16.19,0.2409,11,0.0376,0.2348,45.55,0.6909,178.04,2,0,0,dummy
+-24,-236,Akuntansi,1.0,nonfiksi,Sains,skripsi,95,0,16.19,0.2409,11,0.3187,0.7652,45.55,0.6909,178.04,2,0,1,dummy
+-24,-237,Akuntansi,1.0,nonfiksi,Bisnis,jurnal,281,0,16.19,0.2409,11,0.109,0.7652,45.55,0.6909,178.04,2,0,1,dummy
+-24,-238,Akuntansi,1.0,fiksi,Horror,novel,395,0,16.19,0.2409,11,0.0285,0.2348,45.55,0.6909,178.04,2,0,0,dummy
+-24,-239,Akuntansi,1.0,fiksi,Mystery,novel,317,0,16.19,0.2409,11,0.0238,0.2348,45.55,0.6909,178.04,2,0,0,dummy
+-24,-240,Akuntansi,1.0,nonfiksi,Sains,skripsi,31,1,16.19,0.2409,11,0.3187,0.7652,45.55,0.6909,178.04,2,0,0,dummy
+-25,-241,Sistem Informasi,8.0,fiksi,Mystery,novel,78,1,45.89,0.2113,7,0.1241,0.8226,33.44,0.7879,321.22,5,0,0,dummy
+-25,-242,Sistem Informasi,8.0,fiksi,Thriller,novel,202,0,45.89,0.2113,7,0.0586,0.8226,33.44,0.7879,321.22,5,0,0,dummy
+-25,-243,Sistem Informasi,8.0,nonfiksi,Pendidikan,skripsi,128,1,45.89,0.2113,7,0.0443,0.1774,33.44,0.7879,321.22,5,0,0,dummy
+-25,-244,Sistem Informasi,8.0,fiksi,Horror,novel,179,0,45.89,0.2113,7,0.0867,0.8226,33.44,0.7879,321.22,5,0,1,dummy
+-25,-245,Sistem Informasi,8.0,nonfiksi,Sains,buku,190,1,45.89,0.2113,7,0.0177,0.1774,33.44,0.7879,321.22,5,0,0,dummy
+-25,-246,Sistem Informasi,8.0,nonfiksi,Teknologi,tugas akhir,56,1,45.89,0.2113,7,0.0263,0.1774,33.44,0.7879,321.22,5,0,0,dummy
+-25,-247,Sistem Informasi,8.0,fiksi,Horror,novel,351,0,45.89,0.2113,7,0.0867,0.8226,33.44,0.7879,321.22,5,0,0,dummy
+-25,-248,Sistem Informasi,8.0,nonfiksi,Bisnis,buku,319,0,45.89,0.2113,7,0.0175,0.1774,33.44,0.7879,321.22,5,0,0,dummy
+-25,-249,Sistem Informasi,8.0,fiksi,Horror,novel,47,0,45.89,0.2113,7,0.0867,0.8226,33.44,0.7879,321.22,5,0,0,dummy
+-25,-250,Sistem Informasi,8.0,nonfiksi,Sejarah,jurnal,144,0,45.89,0.2113,7,0.029,0.1774,33.44,0.7879,321.22,5,0,0,dummy
+-26,-251,Manajemen,4.0,fiksi,Science Fiction,novel,354,0,62.87,0.2396,9,0.017,0.104,89.0,0.4063,565.8,3,0,0,dummy
+-26,-252,Manajemen,4.0,nonfiksi,Self Improvement,karya ilmiah,357,0,62.87,0.2396,9,0.1213,0.896,89.0,0.4063,565.8,3,0,0,dummy
+-26,-253,Manajemen,4.0,fiksi,Science Fiction,novel,381,1,62.87,0.2396,9,0.017,0.104,89.0,0.4063,565.8,3,0,0,dummy
+-26,-254,Manajemen,4.0,fiksi,Horror,novel,294,1,62.87,0.2396,9,0.0318,0.104,89.0,0.4063,565.8,3,0,0,dummy
+-26,-255,Manajemen,4.0,fiksi,Thriller,novel,342,0,62.87,0.2396,9,0.0398,0.104,89.0,0.4063,565.8,3,0,1,dummy
+-26,-256,Manajemen,4.0,fiksi,Horror,novel,48,0,62.87,0.2396,9,0.0318,0.104,89.0,0.4063,565.8,3,0,1,dummy
+-26,-257,Manajemen,4.0,fiksi,Mystery,novel,233,0,62.87,0.2396,9,0.0338,0.104,89.0,0.4063,565.8,3,0,1,dummy
+-26,-258,Manajemen,4.0,nonfiksi,Pendidikan,jurnal,156,0,62.87,0.2396,9,0.1045,0.896,89.0,0.4063,565.8,3,0,1,dummy
+-26,-259,Manajemen,4.0,nonfiksi,Bisnis,skripsi,68,0,62.87,0.2396,9,0.0875,0.896,89.0,0.4063,565.8,3,0,1,dummy
+-26,-260,Manajemen,4.0,fiksi,Romance,novel,267,0,62.87,0.2396,9,0.0221,0.104,89.0,0.4063,565.8,3,0,0,dummy
+-27,-261,Sistem Informasi,2.0,fiksi,Science Fiction,novel,183,0,77.04,0.2821,4,0.1324,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-262,Sistem Informasi,2.0,fiksi,Fantasy,novel,203,0,77.04,0.2821,4,0.0605,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-263,Sistem Informasi,2.0,fiksi,Romance,novel,285,0,77.04,0.2821,4,0.1018,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-264,Sistem Informasi,2.0,fiksi,Science Fiction,novel,347,0,77.04,0.2821,4,0.1324,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-265,Sistem Informasi,2.0,nonfiksi,Sains,karya ilmiah,285,0,77.04,0.2821,4,0.0174,0.3315,62.32,0.8793,308.18,4,0,1,dummy
+-27,-266,Sistem Informasi,2.0,fiksi,Fantasy,novel,195,0,77.04,0.2821,4,0.0605,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-267,Sistem Informasi,2.0,nonfiksi,Self Improvement,buku,237,1,77.04,0.2821,4,0.0468,0.3315,62.32,0.8793,308.18,4,0,0,dummy
+-27,-268,Sistem Informasi,2.0,nonfiksi,Pendidikan,karya ilmiah,399,0,77.04,0.2821,4,0.0121,0.3315,62.32,0.8793,308.18,4,0,1,dummy
+-27,-269,Sistem Informasi,2.0,fiksi,Mystery,novel,305,0,77.04,0.2821,4,0.1342,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-27,-270,Sistem Informasi,2.0,fiksi,Mystery,novel,60,0,77.04,0.2821,4,0.1342,0.6685,62.32,0.8793,308.18,4,0,0,dummy
+-28,-271,Teknik Industri,2.0,fiksi,Fantasy,novel,241,1,15.04,0.2228,4,0.033,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-272,Teknik Industri,2.0,fiksi,Science Fiction,novel,144,0,15.04,0.2228,4,0.0124,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-273,Teknik Industri,2.0,fiksi,Romance,novel,115,0,15.04,0.2228,4,0.0301,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-274,Teknik Industri,2.0,fiksi,Horror,novel,299,0,15.04,0.2228,4,0.0283,0.2958,72.69,0.7901,60.17,4,0,1,dummy
+-28,-275,Teknik Industri,2.0,fiksi,Mystery,novel,127,0,15.04,0.2228,4,0.0296,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-276,Teknik Industri,2.0,fiksi,Science Fiction,novel,179,1,15.04,0.2228,4,0.0124,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-277,Teknik Industri,2.0,nonfiksi,Teknologi,karya ilmiah,378,0,15.04,0.2228,4,0.0936,0.7042,72.69,0.7901,60.17,4,0,1,dummy
+-28,-278,Teknik Industri,2.0,fiksi,Thriller,novel,395,0,15.04,0.2228,4,0.0382,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-279,Teknik Industri,2.0,fiksi,Fantasy,novel,94,0,15.04,0.2228,4,0.033,0.2958,72.69,0.7901,60.17,4,0,0,dummy
+-28,-280,Teknik Industri,2.0,nonfiksi,Teknologi,karya ilmiah,187,1,15.04,0.2228,4,0.0936,0.7042,72.69,0.7901,60.17,4,0,1,dummy
+-29,-281,Informatika,7.0,fiksi,Thriller,novel,56,1,78.66,0.1122,3,0.3092,0.7954,60.49,0.6168,235.98,4,0,0,dummy
+-29,-282,Informatika,7.0,nonfiksi,Sains,karya ilmiah,365,1,78.66,0.1122,3,0.0186,0.2046,60.49,0.6168,235.98,4,0,1,dummy
+-29,-283,Informatika,7.0,nonfiksi,Sejarah,buku,298,0,78.66,0.1122,3,0.0229,0.2046,60.49,0.6168,235.98,4,0,0,dummy
+-29,-284,Informatika,7.0,nonfiksi,Sains,tugas akhir,207,1,78.66,0.1122,3,0.0186,0.2046,60.49,0.6168,235.98,4,0,1,dummy
+-29,-285,Informatika,7.0,fiksi,Thriller,novel,150,0,78.66,0.1122,3,0.3092,0.7954,60.49,0.6168,235.98,4,0,1,dummy
+-29,-286,Informatika,7.0,fiksi,Fantasy,novel,256,0,78.66,0.1122,3,0.103,0.7954,60.49,0.6168,235.98,4,0,0,dummy
+-29,-287,Informatika,7.0,fiksi,Romance,novel,287,1,78.66,0.1122,3,0.1469,0.7954,60.49,0.6168,235.98,4,0,0,dummy
+-29,-288,Informatika,7.0,fiksi,Horror,novel,112,1,78.66,0.1122,3,0.0567,0.7954,60.49,0.6168,235.98,4,0,1,dummy
+-29,-289,Informatika,7.0,fiksi,Mystery,novel,255,1,78.66,0.1122,3,0.1147,0.7954,60.49,0.6168,235.98,4,0,1,dummy
+-29,-290,Informatika,7.0,nonfiksi,Sains,tugas akhir,353,0,78.66,0.1122,3,0.0186,0.2046,60.49,0.6168,235.98,4,0,1,dummy
+-30,-291,Ilmu Komunikasi,5.0,fiksi,Horror,novel,94,0,53.24,0.1749,11,0.0344,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-30,-292,Ilmu Komunikasi,5.0,nonfiksi,Pendidikan,buku,109,0,53.24,0.1749,11,0.0572,0.8622,87.71,0.7899,585.61,0,0,1,dummy
+-30,-293,Ilmu Komunikasi,5.0,nonfiksi,Sains,karya ilmiah,259,0,53.24,0.1749,11,0.3343,0.8622,87.71,0.7899,585.61,0,0,1,dummy
+-30,-294,Ilmu Komunikasi,5.0,nonfiksi,Self Improvement,karya ilmiah,85,0,53.24,0.1749,11,0.1224,0.8622,87.71,0.7899,585.61,0,0,0,dummy
+-30,-295,Ilmu Komunikasi,5.0,fiksi,Romance,novel,82,0,53.24,0.1749,11,0.0486,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-30,-296,Ilmu Komunikasi,5.0,fiksi,Romance,novel,343,0,53.24,0.1749,11,0.0486,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-30,-297,Ilmu Komunikasi,5.0,nonfiksi,Self Improvement,jurnal,271,0,53.24,0.1749,11,0.1224,0.8622,87.71,0.7899,585.61,0,0,0,dummy
+-30,-298,Ilmu Komunikasi,5.0,fiksi,Romance,novel,79,0,53.24,0.1749,11,0.0486,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-30,-299,Ilmu Komunikasi,5.0,fiksi,Thriller,novel,81,0,53.24,0.1749,11,0.0131,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-30,-300,Ilmu Komunikasi,5.0,fiksi,Fantasy,novel,143,0,53.24,0.1749,11,0.0319,0.1378,87.71,0.7899,585.61,0,0,0,dummy
+-31,-301,Sistem Informasi,1.0,fiksi,Mystery,novel,322,0,85.68,0.0589,17,0.4005,0.6751,60.1,0.8083,1456.57,5,0,0,dummy
+-31,-302,Sistem Informasi,1.0,nonfiksi,Bisnis,jurnal,195,0,85.68,0.0589,17,0.0337,0.3249,60.1,0.8083,1456.57,5,0,1,dummy
+-31,-303,Sistem Informasi,1.0,fiksi,Horror,novel,68,0,85.68,0.0589,17,0.0946,0.6751,60.1,0.8083,1456.57,5,0,0,dummy
+-31,-304,Sistem Informasi,1.0,nonfiksi,Bisnis,karya ilmiah,36,1,85.68,0.0589,17,0.0337,0.3249,60.1,0.8083,1456.57,5,0,0,dummy
+-31,-305,Sistem Informasi,1.0,fiksi,Mystery,novel,380,1,85.68,0.0589,17,0.4005,0.6751,60.1,0.8083,1456.57,5,0,1,dummy
+-31,-306,Sistem Informasi,1.0,nonfiksi,Teknologi,buku,375,0,85.68,0.0589,17,0.0117,0.3249,60.1,0.8083,1456.57,5,0,0,dummy
+-31,-307,Sistem Informasi,1.0,nonfiksi,Sejarah,skripsi,348,0,85.68,0.0589,17,0.033,0.3249,60.1,0.8083,1456.57,5,0,1,dummy
+-31,-308,Sistem Informasi,1.0,nonfiksi,Teknologi,jurnal,226,0,85.68,0.0589,17,0.0117,0.3249,60.1,0.8083,1456.57,5,0,1,dummy
+-31,-309,Sistem Informasi,1.0,fiksi,Romance,novel,295,1,85.68,0.0589,17,0.0554,0.6751,60.1,0.8083,1456.57,5,0,1,dummy
+-31,-310,Sistem Informasi,1.0,nonfiksi,Sejarah,skripsi,178,0,85.68,0.0589,17,0.033,0.3249,60.1,0.8083,1456.57,5,0,0,dummy
+-32,-311,Teknik Industri,8.0,fiksi,Science Fiction,novel,90,1,60.49,0.3341,19,0.0726,0.8517,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-312,Teknik Industri,8.0,fiksi,Science Fiction,novel,254,1,60.49,0.3341,19,0.0726,0.8517,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-313,Teknik Industri,8.0,fiksi,Horror,novel,70,1,60.49,0.3341,19,0.0857,0.8517,68.52,0.9457,1149.31,2,0,1,dummy
+-32,-314,Teknik Industri,8.0,fiksi,Fantasy,novel,185,0,60.49,0.3341,19,0.1375,0.8517,68.52,0.9457,1149.31,2,0,1,dummy
+-32,-315,Teknik Industri,8.0,fiksi,Thriller,novel,151,1,60.49,0.3341,19,0.3413,0.8517,68.52,0.9457,1149.31,2,0,1,dummy
+-32,-316,Teknik Industri,8.0,fiksi,Mystery,novel,46,0,60.49,0.3341,19,0.1423,0.8517,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-317,Teknik Industri,8.0,nonfiksi,Self Improvement,jurnal,302,0,60.49,0.3341,19,0.0155,0.1483,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-318,Teknik Industri,8.0,nonfiksi,Sains,karya ilmiah,313,0,60.49,0.3341,19,0.0303,0.1483,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-319,Teknik Industri,8.0,fiksi,Thriller,novel,65,1,60.49,0.3341,19,0.3413,0.8517,68.52,0.9457,1149.31,2,0,0,dummy
+-32,-320,Teknik Industri,8.0,fiksi,Science Fiction,novel,304,0,60.49,0.3341,19,0.0726,0.8517,68.52,0.9457,1149.31,2,0,0,dummy
+-33,-321,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,239,0,46.33,0.1529,12,0.0121,0.268,52.7,0.4411,555.97,4,0,0,dummy
+-33,-322,Ilmu Komunikasi,6.0,nonfiksi,Self Improvement,buku,321,1,46.33,0.1529,12,0.0961,0.732,52.7,0.4411,555.97,4,0,0,dummy
+-33,-323,Ilmu Komunikasi,6.0,nonfiksi,Sejarah,karya ilmiah,93,0,46.33,0.1529,12,0.3014,0.732,52.7,0.4411,555.97,4,0,1,dummy
+-33,-324,Ilmu Komunikasi,6.0,fiksi,Horror,novel,172,1,46.33,0.1529,12,0.0214,0.268,52.7,0.4411,555.97,4,0,0,dummy
+-33,-325,Ilmu Komunikasi,6.0,nonfiksi,Teknologi,karya ilmiah,218,0,46.33,0.1529,12,0.1431,0.732,52.7,0.4411,555.97,4,0,1,dummy
+-33,-326,Ilmu Komunikasi,6.0,nonfiksi,Bisnis,skripsi,126,1,46.33,0.1529,12,0.0926,0.732,52.7,0.4411,555.97,4,0,0,dummy
+-33,-327,Ilmu Komunikasi,6.0,nonfiksi,Sains,jurnal,212,1,46.33,0.1529,12,0.096,0.732,52.7,0.4411,555.97,4,0,0,dummy
+-33,-328,Ilmu Komunikasi,6.0,fiksi,Mystery,novel,68,0,46.33,0.1529,12,0.029,0.268,52.7,0.4411,555.97,4,0,0,dummy
+-33,-329,Ilmu Komunikasi,6.0,fiksi,Thriller,novel,363,0,46.33,0.1529,12,0.0276,0.268,52.7,0.4411,555.97,4,0,1,dummy
+-33,-330,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,381,0,46.33,0.1529,12,0.0121,0.268,52.7,0.4411,555.97,4,0,0,dummy
+-34,-331,Teknik Industri,2.0,fiksi,Thriller,novel,99,0,39.01,0.1973,18,0.0197,0.1309,37.27,0.3864,702.22,3,0,0,dummy
+-34,-332,Teknik Industri,2.0,fiksi,Fantasy,novel,262,0,39.01,0.1973,18,0.0449,0.1309,37.27,0.3864,702.22,3,0,0,dummy
+-34,-333,Teknik Industri,2.0,nonfiksi,Pendidikan,buku,170,0,39.01,0.1973,18,0.1417,0.8691,37.27,0.3864,702.22,3,0,0,dummy
+-34,-334,Teknik Industri,2.0,fiksi,Horror,novel,293,0,39.01,0.1973,18,0.0113,0.1309,37.27,0.3864,702.22,3,0,1,dummy
+-34,-335,Teknik Industri,2.0,fiksi,Science Fiction,novel,396,0,39.01,0.1973,18,0.0374,0.1309,37.27,0.3864,702.22,3,0,1,dummy
+-34,-336,Teknik Industri,2.0,fiksi,Romance,novel,60,0,39.01,0.1973,18,0.0172,0.1309,37.27,0.3864,702.22,3,0,0,dummy
+-34,-337,Teknik Industri,2.0,nonfiksi,Sejarah,skripsi,249,0,39.01,0.1973,18,0.0581,0.8691,37.27,0.3864,702.22,3,0,0,dummy
+-34,-338,Teknik Industri,2.0,nonfiksi,Bisnis,buku,87,0,39.01,0.1973,18,0.1128,0.8691,37.27,0.3864,702.22,3,0,1,dummy
+-34,-339,Teknik Industri,2.0,nonfiksi,Teknologi,karya ilmiah,291,1,39.01,0.1973,18,0.3405,0.8691,37.27,0.3864,702.22,3,0,1,dummy
+-34,-340,Teknik Industri,2.0,nonfiksi,Pendidikan,buku,60,0,39.01,0.1973,18,0.1417,0.8691,37.27,0.3864,702.22,3,0,0,dummy
+-35,-341,Ilmu Komunikasi,7.0,nonfiksi,Sejarah,tugas akhir,31,0,39.35,0.2587,10,0.049,0.2285,47.34,0.7089,393.48,3,0,0,dummy
+-35,-342,Ilmu Komunikasi,7.0,fiksi,Romance,novel,136,0,39.35,0.2587,10,0.1235,0.7715,47.34,0.7089,393.48,3,0,0,dummy
+-35,-343,Ilmu Komunikasi,7.0,nonfiksi,Self Improvement,tugas akhir,42,1,39.35,0.2587,10,0.0295,0.2285,47.34,0.7089,393.48,3,0,0,dummy
+-35,-344,Ilmu Komunikasi,7.0,fiksi,Fantasy,novel,75,0,39.35,0.2587,10,0.3492,0.7715,47.34,0.7089,393.48,3,0,1,dummy
+-35,-345,Ilmu Komunikasi,7.0,fiksi,Thriller,novel,214,0,39.35,0.2587,10,0.0826,0.7715,47.34,0.7089,393.48,3,0,1,dummy
+-35,-346,Ilmu Komunikasi,7.0,fiksi,Romance,novel,108,0,39.35,0.2587,10,0.1235,0.7715,47.34,0.7089,393.48,3,0,0,dummy
+-35,-347,Ilmu Komunikasi,7.0,nonfiksi,Sejarah,karya ilmiah,288,0,39.35,0.2587,10,0.049,0.2285,47.34,0.7089,393.48,3,0,1,dummy
+-35,-348,Ilmu Komunikasi,7.0,fiksi,Horror,novel,136,0,39.35,0.2587,10,0.1256,0.7715,47.34,0.7089,393.48,3,0,1,dummy
+-35,-349,Ilmu Komunikasi,7.0,nonfiksi,Self Improvement,buku,62,0,39.35,0.2587,10,0.0295,0.2285,47.34,0.7089,393.48,3,0,1,dummy
+-35,-350,Ilmu Komunikasi,7.0,nonfiksi,Sains,karya ilmiah,233,0,39.35,0.2587,10,0.0104,0.2285,47.34,0.7089,393.48,3,0,0,dummy
+-36,-351,Teknik Industri,3.0,fiksi,Science Fiction,novel,388,1,37.91,0.1503,18,0.2532,0.7656,26.25,0.8733,682.4,2,0,0,dummy
+-36,-352,Teknik Industri,3.0,nonfiksi,Teknologi,buku,139,0,37.91,0.1503,18,0.0202,0.2344,26.25,0.8733,682.4,2,0,1,dummy
+-36,-353,Teknik Industri,3.0,nonfiksi,Sains,buku,345,0,37.91,0.1503,18,0.0367,0.2344,26.25,0.8733,682.4,2,0,1,dummy
+-36,-354,Teknik Industri,3.0,nonfiksi,Self Improvement,jurnal,103,0,37.91,0.1503,18,0.0303,0.2344,26.25,0.8733,682.4,2,0,0,dummy
+-36,-355,Teknik Industri,3.0,nonfiksi,Teknologi,buku,256,0,37.91,0.1503,18,0.0202,0.2344,26.25,0.8733,682.4,2,0,0,dummy
+-36,-356,Teknik Industri,3.0,nonfiksi,Pendidikan,skripsi,105,0,37.91,0.1503,18,0.0242,0.2344,26.25,0.8733,682.4,2,0,0,dummy
+-36,-357,Teknik Industri,3.0,fiksi,Mystery,novel,140,0,37.91,0.1503,18,0.096,0.7656,26.25,0.8733,682.4,2,0,0,dummy
+-36,-358,Teknik Industri,3.0,nonfiksi,Self Improvement,karya ilmiah,184,1,37.91,0.1503,18,0.0303,0.2344,26.25,0.8733,682.4,2,0,0,dummy
+-36,-359,Teknik Industri,3.0,fiksi,Fantasy,novel,345,1,37.91,0.1503,18,0.0639,0.7656,26.25,0.8733,682.4,2,0,1,dummy
+-36,-360,Teknik Industri,3.0,nonfiksi,Bisnis,buku,86,0,37.91,0.1503,18,0.036,0.2344,26.25,0.8733,682.4,2,0,1,dummy
+-37,-361,Sistem Informasi,4.0,nonfiksi,Bisnis,buku,310,0,27.03,0.131,20,0.2685,0.839,55.46,0.6388,540.58,5,0,1,dummy
+-37,-362,Sistem Informasi,4.0,nonfiksi,Sejarah,skripsi,326,0,27.03,0.131,20,0.0979,0.839,55.46,0.6388,540.58,5,0,0,dummy
+-37,-363,Sistem Informasi,4.0,nonfiksi,Bisnis,skripsi,343,0,27.03,0.131,20,0.2685,0.839,55.46,0.6388,540.58,5,0,1,dummy
+-37,-364,Sistem Informasi,4.0,nonfiksi,Sejarah,skripsi,97,0,27.03,0.131,20,0.0979,0.839,55.46,0.6388,540.58,5,0,0,dummy
+-37,-365,Sistem Informasi,4.0,fiksi,Horror,novel,336,0,27.03,0.131,20,0.0301,0.161,55.46,0.6388,540.58,5,0,0,dummy
+-37,-366,Sistem Informasi,4.0,nonfiksi,Teknologi,tugas akhir,350,0,27.03,0.131,20,0.1311,0.839,55.46,0.6388,540.58,5,0,1,dummy
+-37,-367,Sistem Informasi,4.0,fiksi,Romance,novel,89,0,27.03,0.131,20,0.0339,0.161,55.46,0.6388,540.58,5,0,1,dummy
+-37,-368,Sistem Informasi,4.0,fiksi,Thriller,novel,217,0,27.03,0.131,20,0.0363,0.161,55.46,0.6388,540.58,5,0,1,dummy
+-37,-369,Sistem Informasi,4.0,fiksi,Mystery,novel,327,1,27.03,0.131,20,0.0349,0.161,55.46,0.6388,540.58,5,0,0,dummy
+-37,-370,Sistem Informasi,4.0,nonfiksi,Self Improvement,skripsi,101,0,27.03,0.131,20,0.0843,0.839,55.46,0.6388,540.58,5,0,1,dummy
+-38,-371,Ilmu Komunikasi,1.0,fiksi,Mystery,novel,116,1,63.17,0.235,12,0.1024,0.8843,46.48,0.4217,758.09,1,0,1,dummy
+-38,-372,Ilmu Komunikasi,1.0,nonfiksi,Sejarah,tugas akhir,109,0,63.17,0.235,12,0.0216,0.1157,46.48,0.4217,758.09,1,0,0,dummy
+-38,-373,Ilmu Komunikasi,1.0,nonfiksi,Sejarah,jurnal,368,0,63.17,0.235,12,0.0216,0.1157,46.48,0.4217,758.09,1,0,0,dummy
+-38,-374,Ilmu Komunikasi,1.0,nonfiksi,Pendidikan,jurnal,264,0,63.17,0.235,12,0.0124,0.1157,46.48,0.4217,758.09,1,0,0,dummy
+-38,-375,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,buku,385,0,63.17,0.235,12,0.0383,0.1157,46.48,0.4217,758.09,1,0,0,dummy
+-38,-376,Ilmu Komunikasi,1.0,fiksi,Romance,novel,30,0,63.17,0.235,12,0.1049,0.8843,46.48,0.4217,758.09,1,0,1,dummy
+-38,-377,Ilmu Komunikasi,1.0,fiksi,Mystery,novel,122,0,63.17,0.235,12,0.1024,0.8843,46.48,0.4217,758.09,1,0,1,dummy
+-38,-378,Ilmu Komunikasi,1.0,fiksi,Fantasy,novel,234,0,63.17,0.235,12,0.1079,0.8843,46.48,0.4217,758.09,1,0,1,dummy
+-38,-379,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,skripsi,233,1,63.17,0.235,12,0.0383,0.1157,46.48,0.4217,758.09,1,0,1,dummy
+-38,-380,Ilmu Komunikasi,1.0,nonfiksi,Sains,jurnal,332,0,63.17,0.235,12,0.0493,0.1157,46.48,0.4217,758.09,1,0,1,dummy
+-39,-381,Akuntansi,3.0,nonfiksi,Teknologi,buku,253,0,79.42,0.0989,15,0.0987,0.805,84.46,0.3656,1191.34,1,0,1,dummy
+-39,-382,Akuntansi,3.0,fiksi,Fantasy,novel,91,0,79.42,0.0989,15,0.0319,0.195,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-383,Akuntansi,3.0,nonfiksi,Self Improvement,skripsi,272,0,79.42,0.0989,15,0.0975,0.805,84.46,0.3656,1191.34,1,0,1,dummy
+-39,-384,Akuntansi,3.0,fiksi,Romance,novel,240,0,79.42,0.0989,15,0.0286,0.195,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-385,Akuntansi,3.0,nonfiksi,Self Improvement,skripsi,212,1,79.42,0.0989,15,0.0975,0.805,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-386,Akuntansi,3.0,fiksi,Thriller,novel,257,0,79.42,0.0989,15,0.0241,0.195,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-387,Akuntansi,3.0,fiksi,Horror,novel,145,0,79.42,0.0989,15,0.0338,0.195,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-388,Akuntansi,3.0,nonfiksi,Bisnis,karya ilmiah,237,0,79.42,0.0989,15,0.3727,0.805,84.46,0.3656,1191.34,1,0,0,dummy
+-39,-389,Akuntansi,3.0,nonfiksi,Teknologi,tugas akhir,246,0,79.42,0.0989,15,0.0987,0.805,84.46,0.3656,1191.34,1,0,1,dummy
+-39,-390,Akuntansi,3.0,nonfiksi,Bisnis,karya ilmiah,52,1,79.42,0.0989,15,0.3727,0.805,84.46,0.3656,1191.34,1,0,1,dummy
+-40,-391,Sistem Informasi,3.0,nonfiksi,Bisnis,tugas akhir,175,0,81.12,0.3418,8,0.0174,0.1343,74.91,0.7487,648.97,1,0,0,dummy
+-40,-392,Sistem Informasi,3.0,nonfiksi,Self Improvement,tugas akhir,229,1,81.12,0.3418,8,0.0312,0.1343,74.91,0.7487,648.97,1,0,0,dummy
+-40,-393,Sistem Informasi,3.0,fiksi,Fantasy,novel,341,1,81.12,0.3418,8,0.1312,0.8657,74.91,0.7487,648.97,1,0,1,dummy
+-40,-394,Sistem Informasi,3.0,fiksi,Thriller,novel,255,0,81.12,0.3418,8,0.1069,0.8657,74.91,0.7487,648.97,1,0,0,dummy
+-40,-395,Sistem Informasi,3.0,fiksi,Thriller,novel,203,0,81.12,0.3418,8,0.1069,0.8657,74.91,0.7487,648.97,1,0,1,dummy
+-40,-396,Sistem Informasi,3.0,fiksi,Thriller,novel,75,0,81.12,0.3418,8,0.1069,0.8657,74.91,0.7487,648.97,1,0,1,dummy
+-40,-397,Sistem Informasi,3.0,fiksi,Mystery,novel,306,0,81.12,0.3418,8,0.0878,0.8657,74.91,0.7487,648.97,1,0,0,dummy
+-40,-398,Sistem Informasi,3.0,fiksi,Romance,novel,320,1,81.12,0.3418,8,0.0943,0.8657,74.91,0.7487,648.97,1,0,1,dummy
+-40,-399,Sistem Informasi,3.0,nonfiksi,Pendidikan,skripsi,91,0,81.12,0.3418,8,0.0382,0.1343,74.91,0.7487,648.97,1,0,0,dummy
+-40,-400,Sistem Informasi,3.0,nonfiksi,Bisnis,tugas akhir,96,0,81.12,0.3418,8,0.0174,0.1343,74.91,0.7487,648.97,1,0,0,dummy
+-41,-401,Sistem Informasi,1.0,nonfiksi,Sejarah,tugas akhir,221,0,33.73,0.1058,7,0.0178,0.107,79.54,0.4858,236.08,1,0,0,dummy
+-41,-402,Sistem Informasi,1.0,nonfiksi,Sains,jurnal,124,0,33.73,0.1058,7,0.0266,0.107,79.54,0.4858,236.08,1,0,1,dummy
+-41,-403,Sistem Informasi,1.0,nonfiksi,Sains,buku,363,0,33.73,0.1058,7,0.0266,0.107,79.54,0.4858,236.08,1,0,0,dummy
+-41,-404,Sistem Informasi,1.0,fiksi,Fantasy,novel,235,0,33.73,0.1058,7,0.1269,0.893,79.54,0.4858,236.08,1,0,1,dummy
+-41,-405,Sistem Informasi,1.0,nonfiksi,Sains,buku,226,1,33.73,0.1058,7,0.0266,0.107,79.54,0.4858,236.08,1,0,0,dummy
+-41,-406,Sistem Informasi,1.0,fiksi,Horror,novel,349,0,33.73,0.1058,7,0.1215,0.893,79.54,0.4858,236.08,1,0,0,dummy
+-41,-407,Sistem Informasi,1.0,fiksi,Fantasy,novel,106,1,33.73,0.1058,7,0.1269,0.893,79.54,0.4858,236.08,1,0,1,dummy
+-41,-408,Sistem Informasi,1.0,nonfiksi,Sains,buku,298,0,33.73,0.1058,7,0.0266,0.107,79.54,0.4858,236.08,1,0,1,dummy
+-41,-409,Sistem Informasi,1.0,fiksi,Mystery,novel,225,0,33.73,0.1058,7,0.0822,0.893,79.54,0.4858,236.08,1,0,0,dummy
+-41,-410,Sistem Informasi,1.0,nonfiksi,Teknologi,skripsi,247,1,33.73,0.1058,7,0.0423,0.107,79.54,0.4858,236.08,1,0,1,dummy
+-42,-411,Ilmu Komunikasi,5.0,fiksi,Mystery,novel,286,0,23.77,0.0913,5,0.0586,0.7149,62.83,0.5608,118.86,1,0,0,dummy
+-42,-412,Ilmu Komunikasi,5.0,fiksi,Thriller,novel,200,0,23.77,0.0913,5,0.1188,0.7149,62.83,0.5608,118.86,1,0,1,dummy
+-42,-413,Ilmu Komunikasi,5.0,nonfiksi,Pendidikan,tugas akhir,345,0,23.77,0.0913,5,0.0318,0.2851,62.83,0.5608,118.86,1,0,0,dummy
+-42,-414,Ilmu Komunikasi,5.0,fiksi,Mystery,novel,315,1,23.77,0.0913,5,0.0586,0.7149,62.83,0.5608,118.86,1,0,1,dummy
+-42,-415,Ilmu Komunikasi,5.0,fiksi,Science Fiction,novel,267,0,23.77,0.0913,5,0.353,0.7149,62.83,0.5608,118.86,1,0,1,dummy
+-42,-416,Ilmu Komunikasi,5.0,fiksi,Mystery,novel,98,0,23.77,0.0913,5,0.0586,0.7149,62.83,0.5608,118.86,1,0,1,dummy
+-42,-417,Ilmu Komunikasi,5.0,fiksi,Mystery,novel,206,0,23.77,0.0913,5,0.0586,0.7149,62.83,0.5608,118.86,1,0,1,dummy
+-42,-418,Ilmu Komunikasi,5.0,nonfiksi,Pendidikan,karya ilmiah,309,0,23.77,0.0913,5,0.0318,0.2851,62.83,0.5608,118.86,1,0,0,dummy
+-42,-419,Ilmu Komunikasi,5.0,fiksi,Science Fiction,novel,50,0,23.77,0.0913,5,0.353,0.7149,62.83,0.5608,118.86,1,0,0,dummy
+-42,-420,Ilmu Komunikasi,5.0,fiksi,Thriller,novel,223,1,23.77,0.0913,5,0.1188,0.7149,62.83,0.5608,118.86,1,0,0,dummy
+-43,-421,Teknik Industri,3.0,fiksi,Fantasy,novel,190,0,32.44,0.0757,13,0.0455,0.2976,72.56,0.5759,421.74,3,0,1,dummy
+-43,-422,Teknik Industri,3.0,fiksi,Horror,novel,104,0,32.44,0.0757,13,0.022,0.2976,72.56,0.5759,421.74,3,0,0,dummy
+-43,-423,Teknik Industri,3.0,nonfiksi,Self Improvement,karya ilmiah,224,0,32.44,0.0757,13,0.3032,0.7024,72.56,0.5759,421.74,3,0,1,dummy
+-43,-424,Teknik Industri,3.0,fiksi,Horror,novel,75,0,32.44,0.0757,13,0.022,0.2976,72.56,0.5759,421.74,3,0,0,dummy
+-43,-425,Teknik Industri,3.0,fiksi,Romance,novel,36,1,32.44,0.0757,13,0.0301,0.2976,72.56,0.5759,421.74,3,0,0,dummy
+-43,-426,Teknik Industri,3.0,fiksi,Horror,novel,73,0,32.44,0.0757,13,0.022,0.2976,72.56,0.5759,421.74,3,0,0,dummy
+-43,-427,Teknik Industri,3.0,fiksi,Science Fiction,novel,102,0,32.44,0.0757,13,0.0378,0.2976,72.56,0.5759,421.74,3,0,1,dummy
+-43,-428,Teknik Industri,3.0,fiksi,Fantasy,novel,152,1,32.44,0.0757,13,0.0455,0.2976,72.56,0.5759,421.74,3,0,1,dummy
+-43,-429,Teknik Industri,3.0,fiksi,Horror,novel,101,0,32.44,0.0757,13,0.022,0.2976,72.56,0.5759,421.74,3,0,1,dummy
+-43,-430,Teknik Industri,3.0,fiksi,Science Fiction,novel,259,1,32.44,0.0757,13,0.0378,0.2976,72.56,0.5759,421.74,3,0,0,dummy
+-44,-431,Manajemen,6.0,nonfiksi,Sains,jurnal,346,0,26.19,0.2634,5,0.0252,0.208,49.22,0.443,130.94,4,0,0,dummy
+-44,-432,Manajemen,6.0,nonfiksi,Bisnis,tugas akhir,89,0,26.19,0.2634,5,0.05,0.208,49.22,0.443,130.94,4,0,1,dummy
+-44,-433,Manajemen,6.0,fiksi,Mystery,novel,157,0,26.19,0.2634,5,0.1435,0.792,49.22,0.443,130.94,4,0,1,dummy
+-44,-434,Manajemen,6.0,nonfiksi,Sejarah,jurnal,373,0,26.19,0.2634,5,0.0488,0.208,49.22,0.443,130.94,4,0,0,dummy
+-44,-435,Manajemen,6.0,nonfiksi,Pendidikan,jurnal,273,0,26.19,0.2634,5,0.0123,0.208,49.22,0.443,130.94,4,0,0,dummy
+-44,-436,Manajemen,6.0,fiksi,Horror,novel,112,0,26.19,0.2634,5,0.2731,0.792,49.22,0.443,130.94,4,0,1,dummy
+-44,-437,Manajemen,6.0,nonfiksi,Teknologi,buku,150,0,26.19,0.2634,5,0.036,0.208,49.22,0.443,130.94,4,0,0,dummy
+-44,-438,Manajemen,6.0,nonfiksi,Bisnis,buku,318,0,26.19,0.2634,5,0.05,0.208,49.22,0.443,130.94,4,0,0,dummy
+-44,-439,Manajemen,6.0,fiksi,Thriller,novel,150,0,26.19,0.2634,5,0.0922,0.792,49.22,0.443,130.94,4,0,1,dummy
+-44,-440,Manajemen,6.0,fiksi,Romance,novel,325,0,26.19,0.2634,5,0.0706,0.792,49.22,0.443,130.94,4,0,1,dummy
+-45,-441,Informatika,6.0,fiksi,Romance,novel,387,1,80.63,0.2954,17,0.1085,0.8275,22.46,0.7138,1370.75,1,0,1,dummy
+-45,-442,Informatika,6.0,nonfiksi,Sains,skripsi,82,0,80.63,0.2954,17,0.0157,0.1725,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-443,Informatika,6.0,fiksi,Horror,novel,238,1,80.63,0.2954,17,0.1009,0.8275,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-444,Informatika,6.0,nonfiksi,Self Improvement,skripsi,66,1,80.63,0.2954,17,0.0376,0.1725,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-445,Informatika,6.0,fiksi,Mystery,novel,273,1,80.63,0.2954,17,0.0711,0.8275,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-446,Informatika,6.0,nonfiksi,Sains,buku,147,0,80.63,0.2954,17,0.0157,0.1725,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-447,Informatika,6.0,nonfiksi,Teknologi,skripsi,315,1,80.63,0.2954,17,0.0491,0.1725,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-448,Informatika,6.0,nonfiksi,Sejarah,jurnal,160,0,80.63,0.2954,17,0.0315,0.1725,22.46,0.7138,1370.75,1,0,0,dummy
+-45,-449,Informatika,6.0,nonfiksi,Bisnis,karya ilmiah,174,0,80.63,0.2954,17,0.0375,0.1725,22.46,0.7138,1370.75,1,0,1,dummy
+-45,-450,Informatika,6.0,fiksi,Romance,novel,253,1,80.63,0.2954,17,0.1085,0.8275,22.46,0.7138,1370.75,1,0,0,dummy
+-46,-451,Informatika,4.0,nonfiksi,Sejarah,buku,320,0,63.19,0.4175,17,0.0391,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-452,Informatika,4.0,fiksi,Romance,novel,115,0,63.19,0.4175,17,0.0703,0.8939,81.49,0.4085,1074.22,1,0,1,dummy
+-46,-453,Informatika,4.0,nonfiksi,Bisnis,jurnal,56,0,63.19,0.4175,17,0.0341,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-454,Informatika,4.0,fiksi,Science Fiction,novel,97,1,63.19,0.4175,17,0.1077,0.8939,81.49,0.4085,1074.22,1,0,1,dummy
+-46,-455,Informatika,4.0,nonfiksi,Self Improvement,buku,332,0,63.19,0.4175,17,0.0385,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-456,Informatika,4.0,nonfiksi,Teknologi,buku,256,1,63.19,0.4175,17,0.0452,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-457,Informatika,4.0,fiksi,Romance,novel,333,0,63.19,0.4175,17,0.0703,0.8939,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-458,Informatika,4.0,nonfiksi,Self Improvement,jurnal,326,0,63.19,0.4175,17,0.0385,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-459,Informatika,4.0,nonfiksi,Sains,tugas akhir,77,1,63.19,0.4175,17,0.0243,0.1061,81.49,0.4085,1074.22,1,0,0,dummy
+-46,-460,Informatika,4.0,fiksi,Fantasy,novel,61,1,63.19,0.4175,17,0.3832,0.8939,81.49,0.4085,1074.22,1,0,1,dummy
+-47,-461,Sistem Informasi,4.0,nonfiksi,Bisnis,tugas akhir,153,1,62.43,0.1138,16,0.11,0.8141,35.3,0.5137,998.94,4,0,1,dummy
+-47,-462,Sistem Informasi,4.0,nonfiksi,Sains,jurnal,230,0,62.43,0.1138,16,0.0659,0.8141,35.3,0.5137,998.94,4,0,0,dummy
+-47,-463,Sistem Informasi,4.0,fiksi,Thriller,novel,286,0,62.43,0.1138,16,0.0388,0.1859,35.3,0.5137,998.94,4,0,1,dummy
+-47,-464,Sistem Informasi,4.0,fiksi,Science Fiction,novel,312,0,62.43,0.1138,16,0.0342,0.1859,35.3,0.5137,998.94,4,0,1,dummy
+-47,-465,Sistem Informasi,4.0,fiksi,Thriller,novel,202,1,62.43,0.1138,16,0.0388,0.1859,35.3,0.5137,998.94,4,0,1,dummy
+-47,-466,Sistem Informasi,4.0,nonfiksi,Sains,tugas akhir,55,0,62.43,0.1138,16,0.0659,0.8141,35.3,0.5137,998.94,4,0,0,dummy
+-47,-467,Sistem Informasi,4.0,nonfiksi,Sains,buku,141,1,62.43,0.1138,16,0.0659,0.8141,35.3,0.5137,998.94,4,0,0,dummy
+-47,-468,Sistem Informasi,4.0,fiksi,Thriller,novel,99,1,62.43,0.1138,16,0.0388,0.1859,35.3,0.5137,998.94,4,0,1,dummy
+-47,-469,Sistem Informasi,4.0,nonfiksi,Self Improvement,karya ilmiah,145,1,62.43,0.1138,16,0.3423,0.8141,35.3,0.5137,998.94,4,0,0,dummy
+-47,-470,Sistem Informasi,4.0,fiksi,Mystery,novel,115,1,62.43,0.1138,16,0.0355,0.1859,35.3,0.5137,998.94,4,0,0,dummy
+-48,-471,Sistem Informasi,7.0,nonfiksi,Bisnis,buku,255,0,28.03,0.0731,11,0.0099,0.2857,21.04,0.7862,308.37,0,0,1,dummy
+-48,-472,Sistem Informasi,7.0,fiksi,Thriller,novel,289,0,28.03,0.0731,11,0.1003,0.7143,21.04,0.7862,308.37,0,0,1,dummy
+-48,-473,Sistem Informasi,7.0,nonfiksi,Bisnis,karya ilmiah,87,0,28.03,0.0731,11,0.0099,0.2857,21.04,0.7862,308.37,0,0,0,dummy
+-48,-474,Sistem Informasi,7.0,nonfiksi,Self Improvement,skripsi,270,1,28.03,0.0731,11,0.0407,0.2857,21.04,0.7862,308.37,0,0,0,dummy
+-48,-475,Sistem Informasi,7.0,fiksi,Romance,novel,262,0,28.03,0.0731,11,0.0945,0.7143,21.04,0.7862,308.37,0,0,1,dummy
+-48,-476,Sistem Informasi,7.0,fiksi,Horror,novel,323,0,28.03,0.0731,11,0.1009,0.7143,21.04,0.7862,308.37,0,0,1,dummy
+-48,-477,Sistem Informasi,7.0,fiksi,Thriller,novel,57,0,28.03,0.0731,11,0.1003,0.7143,21.04,0.7862,308.37,0,0,1,dummy
+-48,-478,Sistem Informasi,7.0,fiksi,Science Fiction,novel,331,1,28.03,0.0731,11,0.3053,0.7143,21.04,0.7862,308.37,0,0,0,dummy
+-48,-479,Sistem Informasi,7.0,nonfiksi,Pendidikan,tugas akhir,281,0,28.03,0.0731,11,0.0259,0.2857,21.04,0.7862,308.37,0,0,0,dummy
+-48,-480,Sistem Informasi,7.0,fiksi,Thriller,novel,165,1,28.03,0.0731,11,0.1003,0.7143,21.04,0.7862,308.37,0,0,0,dummy
+-49,-481,Sistem Informasi,3.0,fiksi,Fantasy,novel,328,0,87.85,0.2712,11,0.0736,0.8699,35.32,0.6434,966.37,4,0,1,dummy
+-49,-482,Sistem Informasi,3.0,fiksi,Romance,novel,140,0,87.85,0.2712,11,0.3684,0.8699,35.32,0.6434,966.37,4,0,0,dummy
+-49,-483,Sistem Informasi,3.0,fiksi,Horror,novel,155,0,87.85,0.2712,11,0.0996,0.8699,35.32,0.6434,966.37,4,0,1,dummy
+-49,-484,Sistem Informasi,3.0,fiksi,Horror,novel,145,0,87.85,0.2712,11,0.0996,0.8699,35.32,0.6434,966.37,4,0,0,dummy
+-49,-485,Sistem Informasi,3.0,nonfiksi,Pendidikan,skripsi,96,0,87.85,0.2712,11,0.0223,0.1301,35.32,0.6434,966.37,4,0,0,dummy
+-49,-486,Sistem Informasi,3.0,fiksi,Romance,novel,150,1,87.85,0.2712,11,0.3684,0.8699,35.32,0.6434,966.37,4,0,0,dummy
+-49,-487,Sistem Informasi,3.0,fiksi,Fantasy,novel,341,0,87.85,0.2712,11,0.0736,0.8699,35.32,0.6434,966.37,4,0,1,dummy
+-49,-488,Sistem Informasi,3.0,nonfiksi,Bisnis,karya ilmiah,201,0,87.85,0.2712,11,0.0438,0.1301,35.32,0.6434,966.37,4,0,0,dummy
+-49,-489,Sistem Informasi,3.0,fiksi,Mystery,novel,244,0,87.85,0.2712,11,0.1311,0.8699,35.32,0.6434,966.37,4,0,1,dummy
+-49,-490,Sistem Informasi,3.0,fiksi,Mystery,novel,79,0,87.85,0.2712,11,0.1311,0.8699,35.32,0.6434,966.37,4,0,1,dummy
+-50,-491,Informatika,4.0,fiksi,Horror,novel,191,0,70.31,0.0907,4,0.055,0.723,21.42,0.5367,281.24,1,0,0,dummy
+-50,-492,Informatika,4.0,fiksi,Horror,novel,359,1,70.31,0.0907,4,0.055,0.723,21.42,0.5367,281.24,1,0,0,dummy
+-50,-493,Informatika,4.0,nonfiksi,Bisnis,tugas akhir,59,0,70.31,0.0907,4,0.0356,0.277,21.42,0.5367,281.24,1,0,1,dummy
+-50,-494,Informatika,4.0,fiksi,Fantasy,novel,160,0,70.31,0.0907,4,0.157,0.723,21.42,0.5367,281.24,1,0,0,dummy
+-50,-495,Informatika,4.0,nonfiksi,Sejarah,buku,156,1,70.31,0.0907,4,0.0497,0.277,21.42,0.5367,281.24,1,0,1,dummy
+-50,-496,Informatika,4.0,nonfiksi,Sejarah,karya ilmiah,279,0,70.31,0.0907,4,0.0497,0.277,21.42,0.5367,281.24,1,0,0,dummy
+-50,-497,Informatika,4.0,fiksi,Thriller,novel,361,0,70.31,0.0907,4,0.3747,0.723,21.42,0.5367,281.24,1,0,1,dummy
+-50,-498,Informatika,4.0,fiksi,Fantasy,novel,213,0,70.31,0.0907,4,0.157,0.723,21.42,0.5367,281.24,1,0,0,dummy
+-50,-499,Informatika,4.0,nonfiksi,Pendidikan,buku,277,0,70.31,0.0907,4,0.0333,0.277,21.42,0.5367,281.24,1,0,0,dummy
+-50,-500,Informatika,4.0,nonfiksi,Sejarah,buku,146,0,70.31,0.0907,4,0.0497,0.277,21.42,0.5367,281.24,1,0,0,dummy
+-51,-501,Teknik Industri,8.0,nonfiksi,Teknologi,buku,129,0,56.76,0.1311,13,0.0469,0.1334,56.17,0.9167,737.91,4,0,0,dummy
+-51,-502,Teknik Industri,8.0,nonfiksi,Bisnis,jurnal,304,1,56.76,0.1311,13,0.0272,0.1334,56.17,0.9167,737.91,4,0,1,dummy
+-51,-503,Teknik Industri,8.0,fiksi,Mystery,novel,225,0,56.76,0.1311,13,0.0668,0.8666,56.17,0.9167,737.91,4,0,1,dummy
+-51,-504,Teknik Industri,8.0,nonfiksi,Teknologi,tugas akhir,182,0,56.76,0.1311,13,0.0469,0.1334,56.17,0.9167,737.91,4,0,0,dummy
+-51,-505,Teknik Industri,8.0,nonfiksi,Self Improvement,karya ilmiah,400,0,56.76,0.1311,13,0.0216,0.1334,56.17,0.9167,737.91,4,0,0,dummy
+-51,-506,Teknik Industri,8.0,fiksi,Science Fiction,novel,50,0,56.76,0.1311,13,0.1364,0.8666,56.17,0.9167,737.91,4,0,1,dummy
+-51,-507,Teknik Industri,8.0,fiksi,Mystery,novel,135,0,56.76,0.1311,13,0.0668,0.8666,56.17,0.9167,737.91,4,0,0,dummy
+-51,-508,Teknik Industri,8.0,nonfiksi,Sains,skripsi,160,1,56.76,0.1311,13,0.0105,0.1334,56.17,0.9167,737.91,4,0,1,dummy
+-51,-509,Teknik Industri,8.0,nonfiksi,Self Improvement,tugas akhir,299,0,56.76,0.1311,13,0.0216,0.1334,56.17,0.9167,737.91,4,0,0,dummy
+-51,-510,Teknik Industri,8.0,nonfiksi,Self Improvement,tugas akhir,86,0,56.76,0.1311,13,0.0216,0.1334,56.17,0.9167,737.91,4,0,1,dummy
+-52,-511,Informatika,7.0,nonfiksi,Sains,tugas akhir,125,0,15.07,0.064,13,0.081,0.823,89.31,0.8194,195.97,1,0,0,dummy
+-52,-512,Informatika,7.0,fiksi,Thriller,novel,32,0,15.07,0.064,13,0.0199,0.177,89.31,0.8194,195.97,1,0,0,dummy
+-52,-513,Informatika,7.0,fiksi,Science Fiction,novel,324,0,15.07,0.064,13,0.017,0.177,89.31,0.8194,195.97,1,0,0,dummy
+-52,-514,Informatika,7.0,nonfiksi,Sejarah,karya ilmiah,169,0,15.07,0.064,13,0.1217,0.823,89.31,0.8194,195.97,1,0,1,dummy
+-52,-515,Informatika,7.0,nonfiksi,Pendidikan,tugas akhir,139,0,15.07,0.064,13,0.0802,0.823,89.31,0.8194,195.97,1,0,0,dummy
+-52,-516,Informatika,7.0,nonfiksi,Teknologi,skripsi,233,0,15.07,0.064,13,0.3408,0.823,89.31,0.8194,195.97,1,0,1,dummy
+-52,-517,Informatika,7.0,nonfiksi,Sains,skripsi,259,0,15.07,0.064,13,0.081,0.823,89.31,0.8194,195.97,1,0,1,dummy
+-52,-518,Informatika,7.0,fiksi,Horror,novel,30,1,15.07,0.064,13,0.0238,0.177,89.31,0.8194,195.97,1,0,0,dummy
+-52,-519,Informatika,7.0,nonfiksi,Pendidikan,jurnal,296,0,15.07,0.064,13,0.0802,0.823,89.31,0.8194,195.97,1,0,1,dummy
+-52,-520,Informatika,7.0,nonfiksi,Teknologi,tugas akhir,241,0,15.07,0.064,13,0.3408,0.823,89.31,0.8194,195.97,1,0,0,dummy
+-53,-521,Akuntansi,7.0,nonfiksi,Teknologi,skripsi,70,0,54.06,0.3973,18,0.0409,0.2142,43.57,0.6536,973.16,0,0,0,dummy
+-53,-522,Akuntansi,7.0,fiksi,Romance,novel,31,0,54.06,0.3973,18,0.0871,0.7858,43.57,0.6536,973.16,0,0,0,dummy
+-53,-523,Akuntansi,7.0,fiksi,Fantasy,novel,325,1,54.06,0.3973,18,0.1145,0.7858,43.57,0.6536,973.16,0,0,0,dummy
+-53,-524,Akuntansi,7.0,fiksi,Fantasy,novel,230,1,54.06,0.3973,18,0.1145,0.7858,43.57,0.6536,973.16,0,0,1,dummy
+-53,-525,Akuntansi,7.0,nonfiksi,Bisnis,jurnal,391,1,54.06,0.3973,18,0.0433,0.2142,43.57,0.6536,973.16,0,0,0,dummy
+-53,-526,Akuntansi,7.0,nonfiksi,Sains,tugas akhir,134,0,54.06,0.3973,18,0.0427,0.2142,43.57,0.6536,973.16,0,0,0,dummy
+-53,-527,Akuntansi,7.0,fiksi,Fantasy,novel,138,0,54.06,0.3973,18,0.1145,0.7858,43.57,0.6536,973.16,0,0,1,dummy
+-53,-528,Akuntansi,7.0,nonfiksi,Sejarah,karya ilmiah,220,0,54.06,0.3973,18,0.0352,0.2142,43.57,0.6536,973.16,0,0,0,dummy
+-53,-529,Akuntansi,7.0,nonfiksi,Sains,jurnal,391,0,54.06,0.3973,18,0.0427,0.2142,43.57,0.6536,973.16,0,0,0,dummy
+-53,-530,Akuntansi,7.0,nonfiksi,Self Improvement,jurnal,143,0,54.06,0.3973,18,0.0148,0.2142,43.57,0.6536,973.16,0,0,1,dummy
+-54,-531,Sistem Informasi,4.0,fiksi,Romance,novel,240,0,73.45,0.167,11,0.0204,0.2524,39.61,0.8336,807.97,4,0,0,dummy
+-54,-532,Sistem Informasi,4.0,nonfiksi,Sains,tugas akhir,128,0,73.45,0.167,11,0.1149,0.7476,39.61,0.8336,807.97,4,0,1,dummy
+-54,-533,Sistem Informasi,4.0,fiksi,Horror,novel,111,1,73.45,0.167,11,0.0115,0.2524,39.61,0.8336,807.97,4,0,1,dummy
+-54,-534,Sistem Informasi,4.0,fiksi,Fantasy,novel,162,0,73.45,0.167,11,0.0227,0.2524,39.61,0.8336,807.97,4,0,1,dummy
+-54,-535,Sistem Informasi,4.0,nonfiksi,Sejarah,skripsi,243,0,73.45,0.167,11,0.1088,0.7476,39.61,0.8336,807.97,4,0,0,dummy
+-54,-536,Sistem Informasi,4.0,nonfiksi,Teknologi,buku,217,0,73.45,0.167,11,0.276,0.7476,39.61,0.8336,807.97,4,0,0,dummy
+-54,-537,Sistem Informasi,4.0,nonfiksi,Pendidikan,karya ilmiah,156,0,73.45,0.167,11,0.1259,0.7476,39.61,0.8336,807.97,4,0,0,dummy
+-54,-538,Sistem Informasi,4.0,nonfiksi,Sains,skripsi,105,0,73.45,0.167,11,0.1149,0.7476,39.61,0.8336,807.97,4,0,1,dummy
+-54,-539,Sistem Informasi,4.0,fiksi,Science Fiction,novel,252,1,73.45,0.167,11,0.018,0.2524,39.61,0.8336,807.97,4,0,0,dummy
+-54,-540,Sistem Informasi,4.0,nonfiksi,Pendidikan,buku,110,0,73.45,0.167,11,0.1259,0.7476,39.61,0.8336,807.97,4,0,1,dummy
+-55,-541,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,karya ilmiah,360,0,26.89,0.2168,15,0.0793,0.7294,19.3,0.4776,403.35,5,0,1,dummy
+-55,-542,Ilmu Komunikasi,1.0,fiksi,Fantasy,novel,69,0,26.89,0.2168,15,0.0192,0.2706,19.3,0.4776,403.35,5,0,0,dummy
+-55,-543,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,skripsi,372,0,26.89,0.2168,15,0.0793,0.7294,19.3,0.4776,403.35,5,0,1,dummy
+-55,-544,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,jurnal,355,0,26.89,0.2168,15,0.0899,0.7294,19.3,0.4776,403.35,5,0,1,dummy
+-55,-545,Ilmu Komunikasi,1.0,fiksi,Romance,novel,93,1,26.89,0.2168,15,0.0481,0.2706,19.3,0.4776,403.35,5,0,0,dummy
+-55,-546,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,karya ilmiah,159,0,26.89,0.2168,15,0.3238,0.7294,19.3,0.4776,403.35,5,0,1,dummy
+-55,-547,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,jurnal,252,0,26.89,0.2168,15,0.3238,0.7294,19.3,0.4776,403.35,5,0,0,dummy
+-55,-548,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,jurnal,141,0,26.89,0.2168,15,0.0899,0.7294,19.3,0.4776,403.35,5,0,1,dummy
+-55,-549,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,buku,120,1,26.89,0.2168,15,0.0793,0.7294,19.3,0.4776,403.35,5,0,0,dummy
+-55,-550,Ilmu Komunikasi,1.0,fiksi,Romance,novel,332,0,26.89,0.2168,15,0.0481,0.2706,19.3,0.4776,403.35,5,0,0,dummy
+-56,-551,Ilmu Komunikasi,6.0,nonfiksi,Sejarah,tugas akhir,274,1,74.95,0.4348,17,0.0281,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-552,Ilmu Komunikasi,6.0,nonfiksi,Pendidikan,tugas akhir,385,0,74.95,0.4348,17,0.0242,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-553,Ilmu Komunikasi,6.0,nonfiksi,Sejarah,jurnal,328,1,74.95,0.4348,17,0.0281,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-554,Ilmu Komunikasi,6.0,nonfiksi,Bisnis,skripsi,313,1,74.95,0.4348,17,0.0333,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-555,Ilmu Komunikasi,6.0,fiksi,Horror,novel,61,0,74.95,0.4348,17,0.0975,0.7578,33.67,0.7758,1274.18,0,0,1,dummy
+-56,-556,Ilmu Komunikasi,6.0,nonfiksi,Teknologi,jurnal,157,0,74.95,0.4348,17,0.023,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-557,Ilmu Komunikasi,6.0,fiksi,Romance,novel,179,1,74.95,0.4348,17,0.0997,0.7578,33.67,0.7758,1274.18,0,0,1,dummy
+-56,-558,Ilmu Komunikasi,6.0,fiksi,Mystery,novel,51,0,74.95,0.4348,17,0.297,0.7578,33.67,0.7758,1274.18,0,0,1,dummy
+-56,-559,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,167,0,74.95,0.4348,17,0.1071,0.7578,33.67,0.7758,1274.18,0,0,0,dummy
+-56,-560,Ilmu Komunikasi,6.0,nonfiksi,Sejarah,tugas akhir,215,1,74.95,0.4348,17,0.0281,0.2422,33.67,0.7758,1274.18,0,0,0,dummy
+-57,-561,Akuntansi,1.0,nonfiksi,Sejarah,karya ilmiah,131,0,26.51,0.2749,3,0.0796,0.7312,63.98,0.7393,79.54,2,0,1,dummy
+-57,-562,Akuntansi,1.0,fiksi,Science Fiction,novel,96,0,26.51,0.2749,3,0.0444,0.2688,63.98,0.7393,79.54,2,0,1,dummy
+-57,-563,Akuntansi,1.0,nonfiksi,Sejarah,skripsi,377,1,26.51,0.2749,3,0.0796,0.7312,63.98,0.7393,79.54,2,0,0,dummy
+-57,-564,Akuntansi,1.0,nonfiksi,Sejarah,jurnal,52,0,26.51,0.2749,3,0.0796,0.7312,63.98,0.7393,79.54,2,0,1,dummy
+-57,-565,Akuntansi,1.0,fiksi,Fantasy,novel,264,0,26.51,0.2749,3,0.0126,0.2688,63.98,0.7393,79.54,2,0,0,dummy
+-57,-566,Akuntansi,1.0,nonfiksi,Bisnis,karya ilmiah,166,0,26.51,0.2749,3,0.1339,0.7312,63.98,0.7393,79.54,2,0,0,dummy
+-57,-567,Akuntansi,1.0,nonfiksi,Bisnis,jurnal,257,0,26.51,0.2749,3,0.1339,0.7312,63.98,0.7393,79.54,2,0,0,dummy
+-57,-568,Akuntansi,1.0,fiksi,Mystery,novel,183,0,26.51,0.2749,3,0.0179,0.2688,63.98,0.7393,79.54,2,0,0,dummy
+-57,-569,Akuntansi,1.0,nonfiksi,Pendidikan,tugas akhir,44,0,26.51,0.2749,3,0.3327,0.7312,63.98,0.7393,79.54,2,0,1,dummy
+-57,-570,Akuntansi,1.0,nonfiksi,Sejarah,karya ilmiah,272,0,26.51,0.2749,3,0.0796,0.7312,63.98,0.7393,79.54,2,0,0,dummy
+-58,-571,Sistem Informasi,4.0,fiksi,Science Fiction,novel,278,0,17.12,0.3204,3,0.0994,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-572,Sistem Informasi,4.0,fiksi,Horror,novel,105,0,17.12,0.3204,3,0.0932,0.6704,86.19,0.5445,51.35,2,0,1,dummy
+-58,-573,Sistem Informasi,4.0,nonfiksi,Teknologi,jurnal,30,0,17.12,0.3204,3,0.0202,0.3296,86.19,0.5445,51.35,2,0,1,dummy
+-58,-574,Sistem Informasi,4.0,fiksi,Mystery,novel,356,0,17.12,0.3204,3,0.3137,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-575,Sistem Informasi,4.0,fiksi,Fantasy,novel,44,0,17.12,0.3204,3,0.0792,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-576,Sistem Informasi,4.0,fiksi,Fantasy,novel,209,0,17.12,0.3204,3,0.0792,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-577,Sistem Informasi,4.0,nonfiksi,Self Improvement,tugas akhir,44,1,17.12,0.3204,3,0.0411,0.3296,86.19,0.5445,51.35,2,0,1,dummy
+-58,-578,Sistem Informasi,4.0,fiksi,Science Fiction,novel,101,0,17.12,0.3204,3,0.0994,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-579,Sistem Informasi,4.0,fiksi,Science Fiction,novel,65,0,17.12,0.3204,3,0.0994,0.6704,86.19,0.5445,51.35,2,0,0,dummy
+-58,-580,Sistem Informasi,4.0,nonfiksi,Sejarah,karya ilmiah,41,0,17.12,0.3204,3,0.0454,0.3296,86.19,0.5445,51.35,2,0,0,dummy
+-59,-581,Teknik Industri,6.0,nonfiksi,Pendidikan,buku,196,0,25.41,0.414,17,0.0186,0.2158,54.86,0.7017,432.04,1,0,0,dummy
+-59,-582,Teknik Industri,6.0,fiksi,Thriller,novel,214,1,25.41,0.414,17,0.1034,0.7842,54.86,0.7017,432.04,1,0,1,dummy
+-59,-583,Teknik Industri,6.0,nonfiksi,Sains,jurnal,255,1,25.41,0.414,17,0.0453,0.2158,54.86,0.7017,432.04,1,0,0,dummy
+-59,-584,Teknik Industri,6.0,nonfiksi,Bisnis,tugas akhir,354,0,25.41,0.414,17,0.019,0.2158,54.86,0.7017,432.04,1,0,0,dummy
+-59,-585,Teknik Industri,6.0,nonfiksi,Self Improvement,skripsi,295,0,25.41,0.414,17,0.0329,0.2158,54.86,0.7017,432.04,1,0,0,dummy
+-59,-586,Teknik Industri,6.0,fiksi,Horror,novel,155,1,25.41,0.414,17,0.0944,0.7842,54.86,0.7017,432.04,1,0,1,dummy
+-59,-587,Teknik Industri,6.0,fiksi,Romance,novel,287,1,25.41,0.414,17,0.0909,0.7842,54.86,0.7017,432.04,1,0,1,dummy
+-59,-588,Teknik Industri,6.0,fiksi,Thriller,novel,55,0,25.41,0.414,17,0.1034,0.7842,54.86,0.7017,432.04,1,0,1,dummy
+-59,-589,Teknik Industri,6.0,fiksi,Science Fiction,novel,83,1,25.41,0.414,17,0.106,0.7842,54.86,0.7017,432.04,1,0,1,dummy
+-59,-590,Teknik Industri,6.0,nonfiksi,Sains,tugas akhir,50,0,25.41,0.414,17,0.0453,0.2158,54.86,0.7017,432.04,1,0,0,dummy
+-60,-591,Sistem Informasi,2.0,nonfiksi,Pendidikan,jurnal,162,0,16.06,0.0881,18,0.0289,0.2691,40.47,0.4582,289.07,2,0,1,dummy
+-60,-592,Sistem Informasi,2.0,nonfiksi,Sains,buku,213,0,16.06,0.0881,18,0.0533,0.2691,40.47,0.4582,289.07,2,0,1,dummy
+-60,-593,Sistem Informasi,2.0,fiksi,Fantasy,novel,234,0,16.06,0.0881,18,0.1161,0.7309,40.47,0.4582,289.07,2,0,0,dummy
+-60,-594,Sistem Informasi,2.0,fiksi,Fantasy,novel,233,1,16.06,0.0881,18,0.1161,0.7309,40.47,0.4582,289.07,2,0,0,dummy
+-60,-595,Sistem Informasi,2.0,fiksi,Mystery,novel,184,0,16.06,0.0881,18,0.0614,0.7309,40.47,0.4582,289.07,2,0,1,dummy
+-60,-596,Sistem Informasi,2.0,fiksi,Mystery,novel,325,0,16.06,0.0881,18,0.0614,0.7309,40.47,0.4582,289.07,2,0,0,dummy
+-60,-597,Sistem Informasi,2.0,nonfiksi,Teknologi,skripsi,365,0,16.06,0.0881,18,0.0535,0.2691,40.47,0.4582,289.07,2,0,0,dummy
+-60,-598,Sistem Informasi,2.0,fiksi,Science Fiction,novel,273,0,16.06,0.0881,18,0.0936,0.7309,40.47,0.4582,289.07,2,0,1,dummy
+-60,-599,Sistem Informasi,2.0,fiksi,Science Fiction,novel,170,0,16.06,0.0881,18,0.0936,0.7309,40.47,0.4582,289.07,2,0,1,dummy
+-60,-600,Sistem Informasi,2.0,nonfiksi,Bisnis,skripsi,373,1,16.06,0.0881,18,0.0308,0.2691,40.47,0.4582,289.07,2,0,1,dummy
+-61,-601,Akuntansi,6.0,nonfiksi,Pendidikan,tugas akhir,367,0,27.12,0.2845,6,0.0228,0.1083,74.19,0.5188,162.7,0,0,0,dummy
+-61,-602,Akuntansi,6.0,nonfiksi,Teknologi,tugas akhir,94,0,27.12,0.2845,6,0.0192,0.1083,74.19,0.5188,162.7,0,0,0,dummy
+-61,-603,Akuntansi,6.0,fiksi,Science Fiction,novel,92,0,27.12,0.2845,6,0.1034,0.8917,74.19,0.5188,162.7,0,0,1,dummy
+-61,-604,Akuntansi,6.0,fiksi,Fantasy,novel,300,0,27.12,0.2845,6,0.3163,0.8917,74.19,0.5188,162.7,0,0,1,dummy
+-61,-605,Akuntansi,6.0,fiksi,Science Fiction,novel,279,1,27.12,0.2845,6,0.1034,0.8917,74.19,0.5188,162.7,0,0,1,dummy
+-61,-606,Akuntansi,6.0,fiksi,Mystery,novel,313,1,27.12,0.2845,6,0.0926,0.8917,74.19,0.5188,162.7,0,0,1,dummy
+-61,-607,Akuntansi,6.0,fiksi,Fantasy,novel,153,0,27.12,0.2845,6,0.3163,0.8917,74.19,0.5188,162.7,0,0,1,dummy
+-61,-608,Akuntansi,6.0,nonfiksi,Teknologi,jurnal,204,0,27.12,0.2845,6,0.0192,0.1083,74.19,0.5188,162.7,0,0,0,dummy
+-61,-609,Akuntansi,6.0,fiksi,Mystery,novel,65,0,27.12,0.2845,6,0.0926,0.8917,74.19,0.5188,162.7,0,0,0,dummy
+-61,-610,Akuntansi,6.0,fiksi,Science Fiction,novel,360,0,27.12,0.2845,6,0.1034,0.8917,74.19,0.5188,162.7,0,0,0,dummy
+-62,-611,Akuntansi,5.0,nonfiksi,Bisnis,karya ilmiah,59,0,83.15,0.3425,17,0.1189,0.7698,62.01,0.6065,1413.49,0,0,0,dummy
+-62,-612,Akuntansi,5.0,nonfiksi,Sains,skripsi,325,0,83.15,0.3425,17,0.127,0.7698,62.01,0.6065,1413.49,0,0,0,dummy
+-62,-613,Akuntansi,5.0,fiksi,Science Fiction,novel,206,0,83.15,0.3425,17,0.0208,0.2302,62.01,0.6065,1413.49,0,0,1,dummy
+-62,-614,Akuntansi,5.0,nonfiksi,Teknologi,buku,184,0,83.15,0.3425,17,0.2818,0.7698,62.01,0.6065,1413.49,0,0,1,dummy
+-62,-615,Akuntansi,5.0,fiksi,Thriller,novel,182,1,83.15,0.3425,17,0.0408,0.2302,62.01,0.6065,1413.49,0,0,1,dummy
+-62,-616,Akuntansi,5.0,nonfiksi,Pendidikan,karya ilmiah,266,0,83.15,0.3425,17,0.0598,0.7698,62.01,0.6065,1413.49,0,0,0,dummy
+-62,-617,Akuntansi,5.0,fiksi,Fantasy,novel,177,1,83.15,0.3425,17,0.0307,0.2302,62.01,0.6065,1413.49,0,0,1,dummy
+-62,-618,Akuntansi,5.0,nonfiksi,Teknologi,jurnal,229,0,83.15,0.3425,17,0.2818,0.7698,62.01,0.6065,1413.49,0,0,0,dummy
+-62,-619,Akuntansi,5.0,fiksi,Horror,novel,77,0,83.15,0.3425,17,0.044,0.2302,62.01,0.6065,1413.49,0,0,0,dummy
+-62,-620,Akuntansi,5.0,nonfiksi,Sejarah,tugas akhir,98,1,83.15,0.3425,17,0.137,0.7698,62.01,0.6065,1413.49,0,0,0,dummy
+-63,-621,Akuntansi,8.0,nonfiksi,Self Improvement,buku,369,1,81.35,0.12,5,0.3006,0.7798,22.68,0.473,406.73,0,0,0,dummy
+-63,-622,Akuntansi,8.0,nonfiksi,Pendidikan,buku,312,0,81.35,0.12,5,0.1375,0.7798,22.68,0.473,406.73,0,0,1,dummy
+-63,-623,Akuntansi,8.0,nonfiksi,Bisnis,karya ilmiah,61,0,81.35,0.12,5,0.1023,0.7798,22.68,0.473,406.73,0,0,0,dummy
+-63,-624,Akuntansi,8.0,fiksi,Thriller,novel,56,1,81.35,0.12,5,0.0435,0.2202,22.68,0.473,406.73,0,0,0,dummy
+-63,-625,Akuntansi,8.0,fiksi,Romance,novel,335,0,81.35,0.12,5,0.0302,0.2202,22.68,0.473,406.73,0,0,1,dummy
+-63,-626,Akuntansi,8.0,fiksi,Mystery,novel,253,0,81.35,0.12,5,0.0158,0.2202,22.68,0.473,406.73,0,0,0,dummy
+-63,-627,Akuntansi,8.0,nonfiksi,Self Improvement,skripsi,42,1,81.35,0.12,5,0.3006,0.7798,22.68,0.473,406.73,0,0,0,dummy
+-63,-628,Akuntansi,8.0,nonfiksi,Sains,karya ilmiah,172,0,81.35,0.12,5,0.0598,0.7798,22.68,0.473,406.73,0,0,0,dummy
+-63,-629,Akuntansi,8.0,nonfiksi,Pendidikan,tugas akhir,337,0,81.35,0.12,5,0.1375,0.7798,22.68,0.473,406.73,0,0,1,dummy
+-63,-630,Akuntansi,8.0,fiksi,Fantasy,novel,392,0,81.35,0.12,5,0.0481,0.2202,22.68,0.473,406.73,0,0,1,dummy
+-64,-631,Teknik Industri,8.0,nonfiksi,Sejarah,tugas akhir,290,1,53.39,0.2192,15,0.0535,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-64,-632,Teknik Industri,8.0,nonfiksi,Self Improvement,buku,362,0,53.39,0.2192,15,0.0236,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-64,-633,Teknik Industri,8.0,fiksi,Horror,novel,32,1,53.39,0.2192,15,0.0587,0.8542,76.16,0.8258,800.8,0,0,0,dummy
+-64,-634,Teknik Industri,8.0,fiksi,Horror,novel,400,0,53.39,0.2192,15,0.0587,0.8542,76.16,0.8258,800.8,0,0,0,dummy
+-64,-635,Teknik Industri,8.0,fiksi,Horror,novel,254,1,53.39,0.2192,15,0.0587,0.8542,76.16,0.8258,800.8,0,0,1,dummy
+-64,-636,Teknik Industri,8.0,nonfiksi,Sejarah,karya ilmiah,330,0,53.39,0.2192,15,0.0535,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-64,-637,Teknik Industri,8.0,nonfiksi,Sejarah,jurnal,285,0,53.39,0.2192,15,0.0535,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-64,-638,Teknik Industri,8.0,fiksi,Thriller,novel,175,0,53.39,0.2192,15,0.114,0.8542,76.16,0.8258,800.8,0,0,1,dummy
+-64,-639,Teknik Industri,8.0,nonfiksi,Pendidikan,tugas akhir,356,0,53.39,0.2192,15,0.0503,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-64,-640,Teknik Industri,8.0,nonfiksi,Pendidikan,tugas akhir,194,0,53.39,0.2192,15,0.0503,0.1458,76.16,0.8258,800.8,0,0,0,dummy
+-65,-641,Ilmu Komunikasi,3.0,fiksi,Mystery,novel,219,1,50.55,0.3861,4,0.0122,0.1151,20.27,0.3609,202.22,5,0,1,dummy
+-65,-642,Ilmu Komunikasi,3.0,nonfiksi,Sejarah,buku,116,0,50.55,0.3861,4,0.132,0.8849,20.27,0.3609,202.22,5,0,0,dummy
+-65,-643,Ilmu Komunikasi,3.0,fiksi,Horror,novel,236,1,50.55,0.3861,4,0.0178,0.1151,20.27,0.3609,202.22,5,0,0,dummy
+-65,-644,Ilmu Komunikasi,3.0,fiksi,Mystery,novel,273,0,50.55,0.3861,4,0.0122,0.1151,20.27,0.3609,202.22,5,0,0,dummy
+-65,-645,Ilmu Komunikasi,3.0,nonfiksi,Self Improvement,karya ilmiah,146,1,50.55,0.3861,4,0.0593,0.8849,20.27,0.3609,202.22,5,0,0,dummy
+-65,-646,Ilmu Komunikasi,3.0,nonfiksi,Sejarah,tugas akhir,274,1,50.55,0.3861,4,0.132,0.8849,20.27,0.3609,202.22,5,0,0,dummy
+-65,-647,Ilmu Komunikasi,3.0,fiksi,Thriller,novel,295,0,50.55,0.3861,4,0.0316,0.1151,20.27,0.3609,202.22,5,0,1,dummy
+-65,-648,Ilmu Komunikasi,3.0,fiksi,Horror,novel,74,0,50.55,0.3861,4,0.0178,0.1151,20.27,0.3609,202.22,5,0,1,dummy
+-65,-649,Ilmu Komunikasi,3.0,fiksi,Fantasy,novel,299,1,50.55,0.3861,4,0.0423,0.1151,20.27,0.3609,202.22,5,0,1,dummy
+-65,-650,Ilmu Komunikasi,3.0,nonfiksi,Self Improvement,karya ilmiah,110,0,50.55,0.3861,4,0.0593,0.8849,20.27,0.3609,202.22,5,0,1,dummy
+-66,-651,Ilmu Komunikasi,7.0,fiksi,Horror,novel,250,0,74.85,0.3486,17,0.1289,0.6893,16.46,0.5139,1272.46,4,0,1,dummy
+-66,-652,Ilmu Komunikasi,7.0,nonfiksi,Bisnis,karya ilmiah,167,1,74.85,0.3486,17,0.0315,0.3107,16.46,0.5139,1272.46,4,0,0,dummy
+-66,-653,Ilmu Komunikasi,7.0,nonfiksi,Sains,tugas akhir,317,1,74.85,0.3486,17,0.037,0.3107,16.46,0.5139,1272.46,4,0,1,dummy
+-66,-654,Ilmu Komunikasi,7.0,nonfiksi,Sejarah,jurnal,143,1,74.85,0.3486,17,0.0282,0.3107,16.46,0.5139,1272.46,4,0,0,dummy
+-66,-655,Ilmu Komunikasi,7.0,fiksi,Science Fiction,novel,241,1,74.85,0.3486,17,0.3451,0.6893,16.46,0.5139,1272.46,4,0,1,dummy
+-66,-656,Ilmu Komunikasi,7.0,fiksi,Fantasy,novel,41,0,74.85,0.3486,17,0.0669,0.6893,16.46,0.5139,1272.46,4,0,0,dummy
+-66,-657,Ilmu Komunikasi,7.0,fiksi,Thriller,novel,328,1,74.85,0.3486,17,0.1248,0.6893,16.46,0.5139,1272.46,4,0,0,dummy
+-66,-658,Ilmu Komunikasi,7.0,nonfiksi,Sains,jurnal,132,0,74.85,0.3486,17,0.037,0.3107,16.46,0.5139,1272.46,4,0,1,dummy
+-66,-659,Ilmu Komunikasi,7.0,fiksi,Mystery,novel,368,0,74.85,0.3486,17,0.0717,0.6893,16.46,0.5139,1272.46,4,0,0,dummy
+-66,-660,Ilmu Komunikasi,7.0,fiksi,Thriller,novel,78,0,74.85,0.3486,17,0.1248,0.6893,16.46,0.5139,1272.46,4,0,1,dummy
+-67,-661,Manajemen,5.0,fiksi,Romance,novel,270,0,64.39,0.4468,5,0.0371,0.3122,32.66,0.8934,321.95,5,0,0,dummy
+-67,-662,Manajemen,5.0,fiksi,Science Fiction,novel,187,0,64.39,0.4468,5,0.0163,0.3122,32.66,0.8934,321.95,5,0,0,dummy
+-67,-663,Manajemen,5.0,nonfiksi,Self Improvement,skripsi,177,0,64.39,0.4468,5,0.0688,0.6878,32.66,0.8934,321.95,5,0,1,dummy
+-67,-664,Manajemen,5.0,nonfiksi,Sains,skripsi,313,0,64.39,0.4468,5,0.0938,0.6878,32.66,0.8934,321.95,5,0,1,dummy
+-67,-665,Manajemen,5.0,nonfiksi,Self Improvement,tugas akhir,32,0,64.39,0.4468,5,0.0688,0.6878,32.66,0.8934,321.95,5,0,1,dummy
+-67,-666,Manajemen,5.0,fiksi,Horror,novel,207,0,64.39,0.4468,5,0.012,0.3122,32.66,0.8934,321.95,5,0,0,dummy
+-67,-667,Manajemen,5.0,fiksi,Romance,novel,322,1,64.39,0.4468,5,0.0371,0.3122,32.66,0.8934,321.95,5,0,0,dummy
+-67,-668,Manajemen,5.0,fiksi,Thriller,novel,177,0,64.39,0.4468,5,0.0238,0.3122,32.66,0.8934,321.95,5,0,1,dummy
+-67,-669,Manajemen,5.0,fiksi,Fantasy,novel,348,1,64.39,0.4468,5,0.0317,0.3122,32.66,0.8934,321.95,5,0,0,dummy
+-67,-670,Manajemen,5.0,nonfiksi,Sejarah,buku,350,0,64.39,0.4468,5,0.3047,0.6878,32.66,0.8934,321.95,5,0,1,dummy
+-68,-671,Informatika,7.0,fiksi,Romance,novel,165,0,52.74,0.086,11,0.0551,0.8135,64.97,0.8694,580.11,4,0,1,dummy
+-68,-672,Informatika,7.0,nonfiksi,Teknologi,buku,161,0,52.74,0.086,11,0.0183,0.1865,64.97,0.8694,580.11,4,0,0,dummy
+-68,-673,Informatika,7.0,fiksi,Mystery,novel,206,1,52.74,0.086,11,0.1163,0.8135,64.97,0.8694,580.11,4,0,1,dummy
+-68,-674,Informatika,7.0,nonfiksi,Teknologi,skripsi,349,0,52.74,0.086,11,0.0183,0.1865,64.97,0.8694,580.11,4,0,0,dummy
+-68,-675,Informatika,7.0,nonfiksi,Teknologi,buku,400,0,52.74,0.086,11,0.0183,0.1865,64.97,0.8694,580.11,4,0,0,dummy
+-68,-676,Informatika,7.0,fiksi,Horror,novel,331,0,52.74,0.086,11,0.3147,0.8135,64.97,0.8694,580.11,4,0,0,dummy
+-68,-677,Informatika,7.0,fiksi,Romance,novel,215,0,52.74,0.086,11,0.0551,0.8135,64.97,0.8694,580.11,4,0,0,dummy
+-68,-678,Informatika,7.0,fiksi,Mystery,novel,90,1,52.74,0.086,11,0.1163,0.8135,64.97,0.8694,580.11,4,0,0,dummy
+-68,-679,Informatika,7.0,fiksi,Mystery,novel,249,0,52.74,0.086,11,0.1163,0.8135,64.97,0.8694,580.11,4,0,0,dummy
+-68,-680,Informatika,7.0,fiksi,Science Fiction,novel,323,0,52.74,0.086,11,0.1274,0.8135,64.97,0.8694,580.11,4,0,0,dummy
+-69,-681,Sistem Informasi,4.0,nonfiksi,Sains,tugas akhir,348,0,61.73,0.4192,14,0.0701,0.7329,63.88,0.77,864.24,5,0,1,dummy
+-69,-682,Sistem Informasi,4.0,fiksi,Horror,novel,297,0,61.73,0.4192,14,0.0298,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-69,-683,Sistem Informasi,4.0,fiksi,Science Fiction,novel,136,0,61.73,0.4192,14,0.0452,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-69,-684,Sistem Informasi,4.0,nonfiksi,Sejarah,jurnal,109,0,61.73,0.4192,14,0.1474,0.7329,63.88,0.77,864.24,5,0,0,dummy
+-69,-685,Sistem Informasi,4.0,nonfiksi,Bisnis,skripsi,261,1,61.73,0.4192,14,0.1227,0.7329,63.88,0.77,864.24,5,0,1,dummy
+-69,-686,Sistem Informasi,4.0,fiksi,Fantasy,novel,261,0,61.73,0.4192,14,0.0464,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-69,-687,Sistem Informasi,4.0,fiksi,Mystery,novel,270,0,61.73,0.4192,14,0.0194,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-69,-688,Sistem Informasi,4.0,fiksi,Fantasy,novel,76,0,61.73,0.4192,14,0.0464,0.2671,63.88,0.77,864.24,5,0,1,dummy
+-69,-689,Sistem Informasi,4.0,fiksi,Thriller,novel,44,0,61.73,0.4192,14,0.0357,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-69,-690,Sistem Informasi,4.0,fiksi,Fantasy,novel,104,0,61.73,0.4192,14,0.0464,0.2671,63.88,0.77,864.24,5,0,0,dummy
+-70,-691,Sistem Informasi,6.0,fiksi,Horror,novel,42,1,40.53,0.4,17,0.0326,0.2479,35.53,0.4445,688.94,2,0,0,dummy
+-70,-692,Sistem Informasi,6.0,fiksi,Romance,novel,322,0,40.53,0.4,17,0.0148,0.2479,35.53,0.4445,688.94,2,0,1,dummy
+-70,-693,Sistem Informasi,6.0,nonfiksi,Self Improvement,buku,317,0,40.53,0.4,17,0.1066,0.7521,35.53,0.4445,688.94,2,0,0,dummy
+-70,-694,Sistem Informasi,6.0,nonfiksi,Bisnis,jurnal,317,0,40.53,0.4,17,0.0648,0.7521,35.53,0.4445,688.94,2,0,0,dummy
+-70,-695,Sistem Informasi,6.0,nonfiksi,Pendidikan,jurnal,189,0,40.53,0.4,17,0.0576,0.7521,35.53,0.4445,688.94,2,0,0,dummy
+-70,-696,Sistem Informasi,6.0,fiksi,Thriller,novel,178,0,40.53,0.4,17,0.0443,0.2479,35.53,0.4445,688.94,2,0,0,dummy
+-70,-697,Sistem Informasi,6.0,fiksi,Horror,novel,355,1,40.53,0.4,17,0.0326,0.2479,35.53,0.4445,688.94,2,0,0,dummy
+-70,-698,Sistem Informasi,6.0,fiksi,Horror,novel,140,1,40.53,0.4,17,0.0326,0.2479,35.53,0.4445,688.94,2,0,0,dummy
+-70,-699,Sistem Informasi,6.0,fiksi,Thriller,novel,127,0,40.53,0.4,17,0.0443,0.2479,35.53,0.4445,688.94,2,0,1,dummy
+-70,-700,Sistem Informasi,6.0,nonfiksi,Teknologi,karya ilmiah,186,0,40.53,0.4,17,0.3827,0.7521,35.53,0.4445,688.94,2,0,1,dummy
+-71,-701,Sistem Informasi,6.0,fiksi,Fantasy,novel,266,0,83.2,0.3484,7,0.0313,0.2642,66.13,0.3797,582.38,2,0,1,dummy
+-71,-702,Sistem Informasi,6.0,fiksi,Fantasy,novel,225,0,83.2,0.3484,7,0.0313,0.2642,66.13,0.3797,582.38,2,0,1,dummy
+-71,-703,Sistem Informasi,6.0,fiksi,Thriller,novel,352,0,83.2,0.3484,7,0.0204,0.2642,66.13,0.3797,582.38,2,0,1,dummy
+-71,-704,Sistem Informasi,6.0,fiksi,Thriller,novel,108,0,83.2,0.3484,7,0.0204,0.2642,66.13,0.3797,582.38,2,0,0,dummy
+-71,-705,Sistem Informasi,6.0,nonfiksi,Sejarah,tugas akhir,149,0,83.2,0.3484,7,0.0899,0.7358,66.13,0.3797,582.38,2,0,0,dummy
+-71,-706,Sistem Informasi,6.0,nonfiksi,Teknologi,tugas akhir,280,0,83.2,0.3484,7,0.3366,0.7358,66.13,0.3797,582.38,2,0,1,dummy
+-71,-707,Sistem Informasi,6.0,fiksi,Romance,novel,241,0,83.2,0.3484,7,0.0275,0.2642,66.13,0.3797,582.38,2,0,0,dummy
+-71,-708,Sistem Informasi,6.0,fiksi,Thriller,novel,382,1,83.2,0.3484,7,0.0204,0.2642,66.13,0.3797,582.38,2,0,0,dummy
+-71,-709,Sistem Informasi,6.0,fiksi,Thriller,novel,189,0,83.2,0.3484,7,0.0204,0.2642,66.13,0.3797,582.38,2,0,0,dummy
+-71,-710,Sistem Informasi,6.0,nonfiksi,Sains,skripsi,400,0,83.2,0.3484,7,0.075,0.7358,66.13,0.3797,582.38,2,0,0,dummy
+-72,-711,Manajemen,7.0,nonfiksi,Pendidikan,buku,181,0,47.76,0.1335,10,0.0748,0.8607,49.7,0.8389,477.64,0,0,1,dummy
+-72,-712,Manajemen,7.0,fiksi,Science Fiction,novel,173,0,47.76,0.1335,10,0.0407,0.1393,49.7,0.8389,477.64,0,0,0,dummy
+-72,-713,Manajemen,7.0,nonfiksi,Bisnis,buku,400,0,47.76,0.1335,10,0.0842,0.8607,49.7,0.8389,477.64,0,0,0,dummy
+-72,-714,Manajemen,7.0,nonfiksi,Teknologi,skripsi,169,0,47.76,0.1335,10,0.0888,0.8607,49.7,0.8389,477.64,0,0,0,dummy
+-72,-715,Manajemen,7.0,nonfiksi,Sains,karya ilmiah,342,0,47.76,0.1335,10,0.1583,0.8607,49.7,0.8389,477.64,0,0,1,dummy
+-72,-716,Manajemen,7.0,nonfiksi,Sains,karya ilmiah,255,0,47.76,0.1335,10,0.1583,0.8607,49.7,0.8389,477.64,0,0,0,dummy
+-72,-717,Manajemen,7.0,nonfiksi,Pendidikan,tugas akhir,333,1,47.76,0.1335,10,0.0748,0.8607,49.7,0.8389,477.64,0,0,1,dummy
+-72,-718,Manajemen,7.0,fiksi,Romance,novel,356,0,47.76,0.1335,10,0.0248,0.1393,49.7,0.8389,477.64,0,0,0,dummy
+-72,-719,Manajemen,7.0,fiksi,Thriller,novel,73,1,47.76,0.1335,10,0.0168,0.1393,49.7,0.8389,477.64,0,0,1,dummy
+-72,-720,Manajemen,7.0,nonfiksi,Pendidikan,skripsi,57,1,47.76,0.1335,10,0.0748,0.8607,49.7,0.8389,477.64,0,0,0,dummy
+-73,-721,Sistem Informasi,2.0,nonfiksi,Pendidikan,karya ilmiah,243,0,62.65,0.2234,10,0.0622,0.7095,33.34,0.7675,626.5,1,0,1,dummy
+-73,-722,Sistem Informasi,2.0,nonfiksi,Self Improvement,jurnal,312,0,62.65,0.2234,10,0.2973,0.7095,33.34,0.7675,626.5,1,0,0,dummy
+-73,-723,Sistem Informasi,2.0,nonfiksi,Pendidikan,tugas akhir,70,0,62.65,0.2234,10,0.0622,0.7095,33.34,0.7675,626.5,1,0,1,dummy
+-73,-724,Sistem Informasi,2.0,nonfiksi,Sejarah,tugas akhir,205,0,62.65,0.2234,10,0.1175,0.7095,33.34,0.7675,626.5,1,0,1,dummy
+-73,-725,Sistem Informasi,2.0,fiksi,Mystery,novel,286,0,62.65,0.2234,10,0.0214,0.2905,33.34,0.7675,626.5,1,0,1,dummy
+-73,-726,Sistem Informasi,2.0,nonfiksi,Self Improvement,skripsi,323,1,62.65,0.2234,10,0.2973,0.7095,33.34,0.7675,626.5,1,0,1,dummy
+-73,-727,Sistem Informasi,2.0,nonfiksi,Self Improvement,buku,293,1,62.65,0.2234,10,0.2973,0.7095,33.34,0.7675,626.5,1,0,0,dummy
+-73,-728,Sistem Informasi,2.0,fiksi,Mystery,novel,111,0,62.65,0.2234,10,0.0214,0.2905,33.34,0.7675,626.5,1,0,1,dummy
+-73,-729,Sistem Informasi,2.0,fiksi,Horror,novel,379,0,62.65,0.2234,10,0.0306,0.2905,33.34,0.7675,626.5,1,0,0,dummy
+-73,-730,Sistem Informasi,2.0,fiksi,Mystery,novel,397,1,62.65,0.2234,10,0.0214,0.2905,33.34,0.7675,626.5,1,0,0,dummy
+-74,-731,Informatika,7.0,fiksi,Fantasy,novel,250,0,69.33,0.3027,9,0.0947,0.6884,29.09,0.865,623.94,2,0,1,dummy
+-74,-732,Informatika,7.0,fiksi,Science Fiction,novel,273,1,69.33,0.3027,9,0.0696,0.6884,29.09,0.865,623.94,2,0,0,dummy
+-74,-733,Informatika,7.0,nonfiksi,Sains,skripsi,262,1,69.33,0.3027,9,0.0392,0.3116,29.09,0.865,623.94,2,0,0,dummy
+-74,-734,Informatika,7.0,fiksi,Thriller,novel,348,0,69.33,0.3027,9,0.0817,0.6884,29.09,0.865,623.94,2,0,1,dummy
+-74,-735,Informatika,7.0,fiksi,Romance,novel,241,1,69.33,0.3027,9,0.134,0.6884,29.09,0.865,623.94,2,0,0,dummy
+-74,-736,Informatika,7.0,fiksi,Thriller,novel,33,1,69.33,0.3027,9,0.0817,0.6884,29.09,0.865,623.94,2,0,1,dummy
+-74,-737,Informatika,7.0,nonfiksi,Sejarah,karya ilmiah,262,0,69.33,0.3027,9,0.0403,0.3116,29.09,0.865,623.94,2,0,0,dummy
+-74,-738,Informatika,7.0,nonfiksi,Sejarah,karya ilmiah,182,0,69.33,0.3027,9,0.0403,0.3116,29.09,0.865,623.94,2,0,1,dummy
+-74,-739,Informatika,7.0,fiksi,Horror,novel,271,1,69.33,0.3027,9,0.1182,0.6884,29.09,0.865,623.94,2,0,1,dummy
+-74,-740,Informatika,7.0,fiksi,Fantasy,novel,143,1,69.33,0.3027,9,0.0947,0.6884,29.09,0.865,623.94,2,0,0,dummy
+-75,-741,Informatika,7.0,nonfiksi,Pendidikan,tugas akhir,179,1,27.5,0.0675,14,0.0371,0.1843,73.05,0.7405,384.97,2,0,0,dummy
+-75,-742,Informatika,7.0,nonfiksi,Pendidikan,skripsi,103,0,27.5,0.0675,14,0.0371,0.1843,73.05,0.7405,384.97,2,0,0,dummy
+-75,-743,Informatika,7.0,fiksi,Science Fiction,novel,168,0,27.5,0.0675,14,0.1289,0.8157,73.05,0.7405,384.97,2,0,0,dummy
+-75,-744,Informatika,7.0,nonfiksi,Teknologi,skripsi,322,0,27.5,0.0675,14,0.0309,0.1843,73.05,0.7405,384.97,2,0,0,dummy
+-75,-745,Informatika,7.0,fiksi,Mystery,novel,249,0,27.5,0.0675,14,0.0916,0.8157,73.05,0.7405,384.97,2,0,1,dummy
+-75,-746,Informatika,7.0,fiksi,Romance,novel,117,0,27.5,0.0675,14,0.0646,0.8157,73.05,0.7405,384.97,2,0,0,dummy
+-75,-747,Informatika,7.0,fiksi,Mystery,novel,100,1,27.5,0.0675,14,0.0916,0.8157,73.05,0.7405,384.97,2,0,0,dummy
+-75,-748,Informatika,7.0,fiksi,Romance,novel,186,0,27.5,0.0675,14,0.0646,0.8157,73.05,0.7405,384.97,2,0,1,dummy
+-75,-749,Informatika,7.0,fiksi,Science Fiction,novel,115,0,27.5,0.0675,14,0.1289,0.8157,73.05,0.7405,384.97,2,0,1,dummy
+-75,-750,Informatika,7.0,nonfiksi,Sains,tugas akhir,186,0,27.5,0.0675,14,0.0179,0.1843,73.05,0.7405,384.97,2,0,1,dummy
+-76,-751,Informatika,5.0,nonfiksi,Sains,jurnal,211,0,37.07,0.1875,7,0.29,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-76,-752,Informatika,5.0,nonfiksi,Sains,karya ilmiah,245,0,37.07,0.1875,7,0.29,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-76,-753,Informatika,5.0,fiksi,Thriller,novel,307,0,37.07,0.1875,7,0.0364,0.2809,52.93,0.9406,259.52,2,0,0,dummy
+-76,-754,Informatika,5.0,nonfiksi,Pendidikan,karya ilmiah,197,0,37.07,0.1875,7,0.1199,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-76,-755,Informatika,5.0,fiksi,Romance,novel,236,0,37.07,0.1875,7,0.0341,0.2809,52.93,0.9406,259.52,2,0,0,dummy
+-76,-756,Informatika,5.0,nonfiksi,Self Improvement,jurnal,238,0,37.07,0.1875,7,0.0915,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-76,-757,Informatika,5.0,nonfiksi,Pendidikan,jurnal,197,0,37.07,0.1875,7,0.1199,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-76,-758,Informatika,5.0,nonfiksi,Self Improvement,jurnal,93,0,37.07,0.1875,7,0.0915,0.7191,52.93,0.9406,259.52,2,0,0,dummy
+-76,-759,Informatika,5.0,fiksi,Romance,novel,331,1,37.07,0.1875,7,0.0341,0.2809,52.93,0.9406,259.52,2,0,0,dummy
+-76,-760,Informatika,5.0,nonfiksi,Teknologi,karya ilmiah,69,0,37.07,0.1875,7,0.1518,0.7191,52.93,0.9406,259.52,2,0,1,dummy
+-77,-761,Manajemen,7.0,nonfiksi,Sains,jurnal,317,0,78.21,0.2986,7,0.019,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-77,-762,Manajemen,7.0,fiksi,Mystery,novel,132,0,78.21,0.2986,7,0.4006,0.66,57.22,0.5414,547.45,4,0,1,dummy
+-77,-763,Manajemen,7.0,nonfiksi,Sains,buku,53,0,78.21,0.2986,7,0.019,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-77,-764,Manajemen,7.0,fiksi,Thriller,novel,210,1,78.21,0.2986,7,0.0721,0.66,57.22,0.5414,547.45,4,0,0,dummy
+-77,-765,Manajemen,7.0,nonfiksi,Self Improvement,karya ilmiah,215,0,78.21,0.2986,7,0.0123,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-77,-766,Manajemen,7.0,fiksi,Fantasy,novel,76,0,78.21,0.2986,7,0.0949,0.66,57.22,0.5414,547.45,4,0,0,dummy
+-77,-767,Manajemen,7.0,nonfiksi,Self Improvement,tugas akhir,47,1,78.21,0.2986,7,0.0123,0.34,57.22,0.5414,547.45,4,0,1,dummy
+-77,-768,Manajemen,7.0,nonfiksi,Bisnis,buku,217,0,78.21,0.2986,7,0.0172,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-77,-769,Manajemen,7.0,nonfiksi,Bisnis,jurnal,280,1,78.21,0.2986,7,0.0172,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-77,-770,Manajemen,7.0,nonfiksi,Sejarah,karya ilmiah,362,0,78.21,0.2986,7,0.0454,0.34,57.22,0.5414,547.45,4,0,0,dummy
+-78,-771,Ilmu Komunikasi,1.0,fiksi,Horror,novel,244,0,84.74,0.0792,16,0.0433,0.3451,48.84,0.4971,1355.86,0,0,0,dummy
+-78,-772,Ilmu Komunikasi,1.0,fiksi,Science Fiction,novel,44,1,84.74,0.0792,16,0.0299,0.3451,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-773,Ilmu Komunikasi,1.0,fiksi,Science Fiction,novel,189,0,84.74,0.0792,16,0.0299,0.3451,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-774,Ilmu Komunikasi,1.0,fiksi,Horror,novel,81,1,84.74,0.0792,16,0.0433,0.3451,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-775,Ilmu Komunikasi,1.0,nonfiksi,Pendidikan,buku,369,0,84.74,0.0792,16,0.1035,0.6549,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-776,Ilmu Komunikasi,1.0,nonfiksi,Sejarah,skripsi,98,0,84.74,0.0792,16,0.0723,0.6549,48.84,0.4971,1355.86,0,0,0,dummy
+-78,-777,Ilmu Komunikasi,1.0,fiksi,Romance,novel,364,0,84.74,0.0792,16,0.0399,0.3451,48.84,0.4971,1355.86,0,0,0,dummy
+-78,-778,Ilmu Komunikasi,1.0,fiksi,Horror,novel,272,1,84.74,0.0792,16,0.0433,0.3451,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-779,Ilmu Komunikasi,1.0,nonfiksi,Pendidikan,buku,207,0,84.74,0.0792,16,0.1035,0.6549,48.84,0.4971,1355.86,0,0,1,dummy
+-78,-780,Ilmu Komunikasi,1.0,fiksi,Mystery,novel,160,0,84.74,0.0792,16,0.0256,0.3451,48.84,0.4971,1355.86,0,0,0,dummy
+-79,-781,Informatika,7.0,fiksi,Science Fiction,novel,301,0,43.64,0.3526,18,0.3642,0.8563,58.3,0.7818,785.53,4,0,1,dummy
+-79,-782,Informatika,7.0,fiksi,Thriller,novel,96,0,43.64,0.3526,18,0.0623,0.8563,58.3,0.7818,785.53,4,0,1,dummy
+-79,-783,Informatika,7.0,nonfiksi,Self Improvement,jurnal,265,0,43.64,0.3526,18,0.0428,0.1437,58.3,0.7818,785.53,4,0,0,dummy
+-79,-784,Informatika,7.0,fiksi,Thriller,novel,277,0,43.64,0.3526,18,0.0623,0.8563,58.3,0.7818,785.53,4,0,0,dummy
+-79,-785,Informatika,7.0,nonfiksi,Sains,jurnal,127,0,43.64,0.3526,18,0.0426,0.1437,58.3,0.7818,785.53,4,0,0,dummy
+-79,-786,Informatika,7.0,nonfiksi,Pendidikan,karya ilmiah,154,0,43.64,0.3526,18,0.0459,0.1437,58.3,0.7818,785.53,4,0,0,dummy
+-79,-787,Informatika,7.0,nonfiksi,Sains,tugas akhir,98,0,43.64,0.3526,18,0.0426,0.1437,58.3,0.7818,785.53,4,0,0,dummy
+-79,-788,Informatika,7.0,nonfiksi,Teknologi,jurnal,266,1,43.64,0.3526,18,0.0444,0.1437,58.3,0.7818,785.53,4,0,0,dummy
+-79,-789,Informatika,7.0,fiksi,Horror,novel,213,0,43.64,0.3526,18,0.0523,0.8563,58.3,0.7818,785.53,4,0,1,dummy
+-79,-790,Informatika,7.0,fiksi,Horror,novel,350,1,43.64,0.3526,18,0.0523,0.8563,58.3,0.7818,785.53,4,0,1,dummy
+-80,-791,Ilmu Komunikasi,3.0,nonfiksi,Pendidikan,skripsi,307,0,18.18,0.3975,15,0.1078,0.7193,37.36,0.3916,272.63,3,0,1,dummy
+-80,-792,Ilmu Komunikasi,3.0,fiksi,Mystery,novel,319,0,18.18,0.3975,15,0.0367,0.2807,37.36,0.3916,272.63,3,0,0,dummy
+-80,-793,Ilmu Komunikasi,3.0,nonfiksi,Sejarah,karya ilmiah,136,0,18.18,0.3975,15,0.3276,0.7193,37.36,0.3916,272.63,3,0,1,dummy
+-80,-794,Ilmu Komunikasi,3.0,nonfiksi,Bisnis,buku,208,0,18.18,0.3975,15,0.0611,0.7193,37.36,0.3916,272.63,3,0,0,dummy
+-80,-795,Ilmu Komunikasi,3.0,nonfiksi,Sains,karya ilmiah,38,1,18.18,0.3975,15,0.0793,0.7193,37.36,0.3916,272.63,3,0,0,dummy
+-80,-796,Ilmu Komunikasi,3.0,fiksi,Thriller,novel,399,0,18.18,0.3975,15,0.022,0.2807,37.36,0.3916,272.63,3,0,0,dummy
+-80,-797,Ilmu Komunikasi,3.0,nonfiksi,Pendidikan,jurnal,124,0,18.18,0.3975,15,0.1078,0.7193,37.36,0.3916,272.63,3,0,1,dummy
+-80,-798,Ilmu Komunikasi,3.0,fiksi,Fantasy,novel,383,1,18.18,0.3975,15,0.0254,0.2807,37.36,0.3916,272.63,3,0,0,dummy
+-80,-799,Ilmu Komunikasi,3.0,fiksi,Romance,novel,319,0,18.18,0.3975,15,0.0433,0.2807,37.36,0.3916,272.63,3,0,1,dummy
+-80,-800,Ilmu Komunikasi,3.0,fiksi,Horror,novel,336,0,18.18,0.3975,15,0.0184,0.2807,37.36,0.3916,272.63,3,0,0,dummy
+-81,-801,Teknik Industri,7.0,fiksi,Mystery,novel,299,0,76.36,0.1571,7,0.0128,0.3091,73.1,0.5487,534.51,3,0,1,dummy
+-81,-802,Teknik Industri,7.0,fiksi,Romance,novel,400,0,76.36,0.1571,7,0.0292,0.3091,73.1,0.5487,534.51,3,0,0,dummy
+-81,-803,Teknik Industri,7.0,fiksi,Romance,novel,32,0,76.36,0.1571,7,0.0292,0.3091,73.1,0.5487,534.51,3,0,0,dummy
+-81,-804,Teknik Industri,7.0,fiksi,Mystery,novel,39,0,76.36,0.1571,7,0.0128,0.3091,73.1,0.5487,534.51,3,0,0,dummy
+-81,-805,Teknik Industri,7.0,fiksi,Mystery,novel,274,1,76.36,0.1571,7,0.0128,0.3091,73.1,0.5487,534.51,3,0,0,dummy
+-81,-806,Teknik Industri,7.0,nonfiksi,Pendidikan,karya ilmiah,105,1,76.36,0.1571,7,0.1358,0.6909,73.1,0.5487,534.51,3,0,1,dummy
+-81,-807,Teknik Industri,7.0,fiksi,Mystery,novel,134,0,76.36,0.1571,7,0.0128,0.3091,73.1,0.5487,534.51,3,0,0,dummy
+-81,-808,Teknik Industri,7.0,nonfiksi,Sains,tugas akhir,276,1,76.36,0.1571,7,0.0977,0.6909,73.1,0.5487,534.51,3,0,0,dummy
+-81,-809,Teknik Industri,7.0,fiksi,Romance,novel,243,0,76.36,0.1571,7,0.0292,0.3091,73.1,0.5487,534.51,3,0,1,dummy
+-81,-810,Teknik Industri,7.0,nonfiksi,Sejarah,buku,96,1,76.36,0.1571,7,0.1163,0.6909,73.1,0.5487,534.51,3,0,1,dummy
+-82,-811,Ilmu Komunikasi,6.0,nonfiksi,Bisnis,buku,30,0,24.62,0.1338,4,0.0707,0.7019,57.98,0.9493,98.49,2,0,1,dummy
+-82,-812,Ilmu Komunikasi,6.0,fiksi,Horror,novel,262,0,24.62,0.1338,4,0.0461,0.2981,57.98,0.9493,98.49,2,0,1,dummy
+-82,-813,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,145,0,24.62,0.1338,4,0.0135,0.2981,57.98,0.9493,98.49,2,0,1,dummy
+-82,-814,Ilmu Komunikasi,6.0,fiksi,Horror,novel,145,1,24.62,0.1338,4,0.0461,0.2981,57.98,0.9493,98.49,2,0,0,dummy
+-82,-815,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,124,1,24.62,0.1338,4,0.0135,0.2981,57.98,0.9493,98.49,2,0,0,dummy
+-82,-816,Ilmu Komunikasi,6.0,fiksi,Science Fiction,novel,41,0,24.62,0.1338,4,0.0135,0.2981,57.98,0.9493,98.49,2,0,0,dummy
+-82,-817,Ilmu Komunikasi,6.0,fiksi,Horror,novel,321,0,24.62,0.1338,4,0.0461,0.2981,57.98,0.9493,98.49,2,0,1,dummy
+-82,-818,Ilmu Komunikasi,6.0,fiksi,Thriller,novel,105,1,24.62,0.1338,4,0.0436,0.2981,57.98,0.9493,98.49,2,0,1,dummy
+-82,-819,Ilmu Komunikasi,6.0,nonfiksi,Teknologi,buku,265,1,24.62,0.1338,4,0.0657,0.7019,57.98,0.9493,98.49,2,0,0,dummy
+-82,-820,Ilmu Komunikasi,6.0,fiksi,Fantasy,novel,189,0,24.62,0.1338,4,0.0157,0.2981,57.98,0.9493,98.49,2,0,1,dummy
+-83,-821,Sistem Informasi,8.0,fiksi,Horror,novel,79,0,56.22,0.2894,10,0.0287,0.3497,56.3,0.524,562.22,3,0,0,dummy
+-83,-822,Sistem Informasi,8.0,fiksi,Horror,novel,53,0,56.22,0.2894,10,0.0287,0.3497,56.3,0.524,562.22,3,0,1,dummy
+-83,-823,Sistem Informasi,8.0,fiksi,Horror,novel,157,1,56.22,0.2894,10,0.0287,0.3497,56.3,0.524,562.22,3,0,0,dummy
+-83,-824,Sistem Informasi,8.0,nonfiksi,Sains,tugas akhir,129,0,56.22,0.2894,10,0.3514,0.6503,56.3,0.524,562.22,3,0,1,dummy
+-83,-825,Sistem Informasi,8.0,fiksi,Mystery,novel,121,1,56.22,0.2894,10,0.0408,0.3497,56.3,0.524,562.22,3,0,1,dummy
+-83,-826,Sistem Informasi,8.0,nonfiksi,Self Improvement,buku,84,0,56.22,0.2894,10,0.0813,0.6503,56.3,0.524,562.22,3,0,0,dummy
+-83,-827,Sistem Informasi,8.0,nonfiksi,Sains,buku,77,0,56.22,0.2894,10,0.3514,0.6503,56.3,0.524,562.22,3,0,0,dummy
+-83,-828,Sistem Informasi,8.0,nonfiksi,Pendidikan,karya ilmiah,289,0,56.22,0.2894,10,0.1034,0.6503,56.3,0.524,562.22,3,0,1,dummy
+-83,-829,Sistem Informasi,8.0,nonfiksi,Pendidikan,karya ilmiah,382,0,56.22,0.2894,10,0.1034,0.6503,56.3,0.524,562.22,3,0,1,dummy
+-83,-830,Sistem Informasi,8.0,nonfiksi,Sejarah,karya ilmiah,188,1,56.22,0.2894,10,0.0746,0.6503,56.3,0.524,562.22,3,0,0,dummy
+-84,-831,Manajemen,4.0,fiksi,Science Fiction,novel,61,0,68.18,0.0688,11,0.0319,0.2005,36.52,0.741,749.96,4,0,0,dummy
+-84,-832,Manajemen,4.0,nonfiksi,Self Improvement,buku,232,0,68.18,0.0688,11,0.054,0.7995,36.52,0.741,749.96,4,0,1,dummy
+-84,-833,Manajemen,4.0,nonfiksi,Self Improvement,buku,259,1,68.18,0.0688,11,0.054,0.7995,36.52,0.741,749.96,4,0,0,dummy
+-84,-834,Manajemen,4.0,nonfiksi,Sejarah,jurnal,391,1,68.18,0.0688,11,0.3216,0.7995,36.52,0.741,749.96,4,0,1,dummy
+-84,-835,Manajemen,4.0,fiksi,Horror,novel,72,0,68.18,0.0688,11,0.0303,0.2005,36.52,0.741,749.96,4,0,1,dummy
+-84,-836,Manajemen,4.0,fiksi,Romance,novel,76,0,68.18,0.0688,11,0.0342,0.2005,36.52,0.741,749.96,4,0,0,dummy
+-84,-837,Manajemen,4.0,nonfiksi,Bisnis,jurnal,315,1,68.18,0.0688,11,0.0549,0.7995,36.52,0.741,749.96,4,0,1,dummy
+-84,-838,Manajemen,4.0,nonfiksi,Self Improvement,karya ilmiah,78,0,68.18,0.0688,11,0.054,0.7995,36.52,0.741,749.96,4,0,0,dummy
+-84,-839,Manajemen,4.0,fiksi,Fantasy,novel,163,0,68.18,0.0688,11,0.0451,0.2005,36.52,0.741,749.96,4,0,1,dummy
+-84,-840,Manajemen,4.0,nonfiksi,Pendidikan,buku,79,1,68.18,0.0688,11,0.1023,0.7995,36.52,0.741,749.96,4,0,1,dummy
+-85,-841,Manajemen,2.0,nonfiksi,Sains,skripsi,246,1,58.35,0.3518,9,0.0344,0.1241,80.07,0.5738,525.19,2,0,1,dummy
+-85,-842,Manajemen,2.0,nonfiksi,Sains,tugas akhir,315,1,58.35,0.3518,9,0.0344,0.1241,80.07,0.5738,525.19,2,0,0,dummy
+-85,-843,Manajemen,2.0,fiksi,Science Fiction,novel,32,1,58.35,0.3518,9,0.2866,0.8759,80.07,0.5738,525.19,2,0,0,dummy
+-85,-844,Manajemen,2.0,fiksi,Science Fiction,novel,364,0,58.35,0.3518,9,0.2866,0.8759,80.07,0.5738,525.19,2,0,1,dummy
+-85,-845,Manajemen,2.0,fiksi,Romance,novel,276,0,58.35,0.3518,9,0.0626,0.8759,80.07,0.5738,525.19,2,0,0,dummy
+-85,-846,Manajemen,2.0,nonfiksi,Pendidikan,tugas akhir,260,0,58.35,0.3518,9,0.0317,0.1241,80.07,0.5738,525.19,2,0,1,dummy
+-85,-847,Manajemen,2.0,nonfiksi,Self Improvement,karya ilmiah,267,1,58.35,0.3518,9,0.0304,0.1241,80.07,0.5738,525.19,2,0,0,dummy
+-85,-848,Manajemen,2.0,fiksi,Science Fiction,novel,336,1,58.35,0.3518,9,0.2866,0.8759,80.07,0.5738,525.19,2,0,1,dummy
+-85,-849,Manajemen,2.0,nonfiksi,Pendidikan,jurnal,53,0,58.35,0.3518,9,0.0317,0.1241,80.07,0.5738,525.19,2,0,0,dummy
+-85,-850,Manajemen,2.0,nonfiksi,Self Improvement,skripsi,271,0,58.35,0.3518,9,0.0304,0.1241,80.07,0.5738,525.19,2,0,0,dummy
+-86,-851,Teknik Industri,6.0,fiksi,Romance,novel,153,1,20.07,0.1233,19,0.1178,0.8742,87.65,0.9304,381.39,5,0,0,dummy
+-86,-852,Teknik Industri,6.0,nonfiksi,Sains,skripsi,190,1,20.07,0.1233,19,0.0396,0.1258,87.65,0.9304,381.39,5,0,0,dummy
+-86,-853,Teknik Industri,6.0,fiksi,Mystery,novel,59,0,20.07,0.1233,19,0.1234,0.8742,87.65,0.9304,381.39,5,0,0,dummy
+-86,-854,Teknik Industri,6.0,nonfiksi,Teknologi,skripsi,183,0,20.07,0.1233,19,0.0214,0.1258,87.65,0.9304,381.39,5,0,0,dummy
+-86,-855,Teknik Industri,6.0,nonfiksi,Pendidikan,tugas akhir,327,0,20.07,0.1233,19,0.0303,0.1258,87.65,0.9304,381.39,5,0,1,dummy
+-86,-856,Teknik Industri,6.0,fiksi,Fantasy,novel,277,0,20.07,0.1233,19,0.2992,0.8742,87.65,0.9304,381.39,5,0,0,dummy
+-86,-857,Teknik Industri,6.0,nonfiksi,Self Improvement,buku,98,0,20.07,0.1233,19,0.0353,0.1258,87.65,0.9304,381.39,5,0,0,dummy
+-86,-858,Teknik Industri,6.0,fiksi,Science Fiction,novel,120,0,20.07,0.1233,19,0.0557,0.8742,87.65,0.9304,381.39,5,0,0,dummy
+-86,-859,Teknik Industri,6.0,nonfiksi,Pendidikan,tugas akhir,201,1,20.07,0.1233,19,0.0303,0.1258,87.65,0.9304,381.39,5,0,0,dummy
+-86,-860,Teknik Industri,6.0,fiksi,Romance,novel,275,0,20.07,0.1233,19,0.1178,0.8742,87.65,0.9304,381.39,5,0,0,dummy
+-87,-861,Manajemen,6.0,fiksi,Thriller,novel,160,0,68.74,0.2595,15,0.0325,0.3313,74.53,0.5301,1031.11,2,0,0,dummy
+-87,-862,Manajemen,6.0,fiksi,Mystery,novel,214,0,68.74,0.2595,15,0.031,0.3313,74.53,0.5301,1031.11,2,0,0,dummy
+-87,-863,Manajemen,6.0,fiksi,Mystery,novel,122,0,68.74,0.2595,15,0.031,0.3313,74.53,0.5301,1031.11,2,0,0,dummy
+-87,-864,Manajemen,6.0,nonfiksi,Sains,tugas akhir,153,1,68.74,0.2595,15,0.1145,0.6687,74.53,0.5301,1031.11,2,0,0,dummy
+-87,-865,Manajemen,6.0,nonfiksi,Self Improvement,tugas akhir,220,0,68.74,0.2595,15,0.0963,0.6687,74.53,0.5301,1031.11,2,0,1,dummy
+-87,-866,Manajemen,6.0,nonfiksi,Sains,skripsi,130,0,68.74,0.2595,15,0.1145,0.6687,74.53,0.5301,1031.11,2,0,1,dummy
+-87,-867,Manajemen,6.0,nonfiksi,Self Improvement,tugas akhir,111,0,68.74,0.2595,15,0.0963,0.6687,74.53,0.5301,1031.11,2,0,0,dummy
+-87,-868,Manajemen,6.0,nonfiksi,Self Improvement,buku,38,0,68.74,0.2595,15,0.0963,0.6687,74.53,0.5301,1031.11,2,0,1,dummy
+-87,-869,Manajemen,6.0,nonfiksi,Sejarah,skripsi,220,0,68.74,0.2595,15,0.2465,0.6687,74.53,0.5301,1031.11,2,0,1,dummy
+-87,-870,Manajemen,6.0,nonfiksi,Bisnis,jurnal,269,0,68.74,0.2595,15,0.1166,0.6687,74.53,0.5301,1031.11,2,0,0,dummy
+-88,-871,Informatika,3.0,fiksi,Fantasy,novel,386,0,31.76,0.3641,15,0.0718,0.7203,51.94,0.3752,476.44,5,0,0,dummy
+-88,-872,Informatika,3.0,fiksi,Horror,novel,248,1,31.76,0.3641,15,0.0708,0.7203,51.94,0.3752,476.44,5,0,0,dummy
+-88,-873,Informatika,3.0,nonfiksi,Pendidikan,jurnal,73,1,31.76,0.3641,15,0.0195,0.2797,51.94,0.3752,476.44,5,0,0,dummy
+-88,-874,Informatika,3.0,fiksi,Mystery,novel,320,0,31.76,0.3641,15,0.3354,0.7203,51.94,0.3752,476.44,5,0,1,dummy
+-88,-875,Informatika,3.0,nonfiksi,Sains,tugas akhir,245,1,31.76,0.3641,15,0.019,0.2797,51.94,0.3752,476.44,5,0,0,dummy
+-88,-876,Informatika,3.0,fiksi,Mystery,novel,386,0,31.76,0.3641,15,0.3354,0.7203,51.94,0.3752,476.44,5,0,1,dummy
+-88,-877,Informatika,3.0,nonfiksi,Sains,karya ilmiah,250,0,31.76,0.3641,15,0.019,0.2797,51.94,0.3752,476.44,5,0,0,dummy
+-88,-878,Informatika,3.0,fiksi,Fantasy,novel,81,0,31.76,0.3641,15,0.0718,0.7203,51.94,0.3752,476.44,5,0,1,dummy
+-88,-879,Informatika,3.0,nonfiksi,Sains,karya ilmiah,300,0,31.76,0.3641,15,0.019,0.2797,51.94,0.3752,476.44,5,0,0,dummy
+-88,-880,Informatika,3.0,nonfiksi,Sains,buku,346,1,31.76,0.3641,15,0.019,0.2797,51.94,0.3752,476.44,5,0,1,dummy
+-89,-881,Informatika,5.0,fiksi,Science Fiction,novel,189,1,63.9,0.1888,9,0.1154,0.8169,49.18,0.6248,575.13,4,0,0,dummy
+-89,-882,Informatika,5.0,fiksi,Mystery,novel,59,0,63.9,0.1888,9,0.1334,0.8169,49.18,0.6248,575.13,4,0,1,dummy
+-89,-883,Informatika,5.0,fiksi,Romance,novel,145,0,63.9,0.1888,9,0.3324,0.8169,49.18,0.6248,575.13,4,0,1,dummy
+-89,-884,Informatika,5.0,fiksi,Fantasy,novel,140,1,63.9,0.1888,9,0.0739,0.8169,49.18,0.6248,575.13,4,0,0,dummy
+-89,-885,Informatika,5.0,fiksi,Mystery,novel,228,1,63.9,0.1888,9,0.1334,0.8169,49.18,0.6248,575.13,4,0,0,dummy
+-89,-886,Informatika,5.0,nonfiksi,Pendidikan,jurnal,157,0,63.9,0.1888,9,0.0205,0.1831,49.18,0.6248,575.13,4,0,0,dummy
+-89,-887,Informatika,5.0,fiksi,Science Fiction,novel,261,0,63.9,0.1888,9,0.1154,0.8169,49.18,0.6248,575.13,4,0,1,dummy
+-89,-888,Informatika,5.0,nonfiksi,Sejarah,buku,383,1,63.9,0.1888,9,0.0115,0.1831,49.18,0.6248,575.13,4,0,0,dummy
+-89,-889,Informatika,5.0,fiksi,Thriller,novel,285,0,63.9,0.1888,9,0.0893,0.8169,49.18,0.6248,575.13,4,0,0,dummy
+-89,-890,Informatika,5.0,fiksi,Thriller,novel,53,0,63.9,0.1888,9,0.0893,0.8169,49.18,0.6248,575.13,4,0,0,dummy
+-90,-891,Teknik Industri,5.0,nonfiksi,Teknologi,tugas akhir,268,0,19.4,0.1126,5,0.126,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-892,Teknik Industri,5.0,nonfiksi,Bisnis,tugas akhir,240,1,19.4,0.1126,5,0.1257,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-893,Teknik Industri,5.0,nonfiksi,Teknologi,jurnal,132,0,19.4,0.1126,5,0.126,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-894,Teknik Industri,5.0,fiksi,Thriller,novel,355,1,19.4,0.1126,5,0.0151,0.1935,76.75,0.7963,97.0,4,0,1,dummy
+-90,-895,Teknik Industri,5.0,nonfiksi,Teknologi,karya ilmiah,198,0,19.4,0.1126,5,0.126,0.8065,76.75,0.7963,97.0,4,0,0,dummy
+-90,-896,Teknik Industri,5.0,nonfiksi,Sejarah,karya ilmiah,174,0,19.4,0.1126,5,0.3379,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-897,Teknik Industri,5.0,fiksi,Science Fiction,novel,50,1,19.4,0.1126,5,0.0115,0.1935,76.75,0.7963,97.0,4,0,0,dummy
+-90,-898,Teknik Industri,5.0,nonfiksi,Sains,buku,274,0,19.4,0.1126,5,0.1191,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-899,Teknik Industri,5.0,nonfiksi,Bisnis,tugas akhir,134,0,19.4,0.1126,5,0.1257,0.8065,76.75,0.7963,97.0,4,0,1,dummy
+-90,-900,Teknik Industri,5.0,fiksi,Mystery,novel,153,1,19.4,0.1126,5,0.0278,0.1935,76.75,0.7963,97.0,4,0,0,dummy
+-91,-901,Sistem Informasi,5.0,nonfiksi,Teknologi,buku,300,0,21.25,0.0883,15,0.0264,0.3417,51.87,0.4949,318.7,4,0,1,dummy
+-91,-902,Sistem Informasi,5.0,fiksi,Science Fiction,novel,189,0,21.25,0.0883,15,0.0556,0.6583,51.87,0.4949,318.7,4,0,1,dummy
+-91,-903,Sistem Informasi,5.0,fiksi,Romance,novel,266,1,21.25,0.0883,15,0.069,0.6583,51.87,0.4949,318.7,4,0,0,dummy
+-91,-904,Sistem Informasi,5.0,nonfiksi,Self Improvement,jurnal,339,0,21.25,0.0883,15,0.0192,0.3417,51.87,0.4949,318.7,4,0,0,dummy
+-91,-905,Sistem Informasi,5.0,fiksi,Romance,novel,258,0,21.25,0.0883,15,0.069,0.6583,51.87,0.4949,318.7,4,0,0,dummy
+-91,-906,Sistem Informasi,5.0,fiksi,Thriller,novel,126,0,21.25,0.0883,15,0.0597,0.6583,51.87,0.4949,318.7,4,0,1,dummy
+-91,-907,Sistem Informasi,5.0,fiksi,Thriller,novel,202,1,21.25,0.0883,15,0.0597,0.6583,51.87,0.4949,318.7,4,0,0,dummy
+-91,-908,Sistem Informasi,5.0,fiksi,Science Fiction,novel,165,1,21.25,0.0883,15,0.0556,0.6583,51.87,0.4949,318.7,4,0,1,dummy
+-91,-909,Sistem Informasi,5.0,fiksi,Fantasy,novel,381,1,21.25,0.0883,15,0.4206,0.6583,51.87,0.4949,318.7,4,0,1,dummy
+-91,-910,Sistem Informasi,5.0,nonfiksi,Bisnis,jurnal,138,0,21.25,0.0883,15,0.0336,0.3417,51.87,0.4949,318.7,4,0,0,dummy
+-92,-911,Informatika,7.0,fiksi,Fantasy,novel,65,1,75.35,0.3384,16,0.0764,0.8796,41.88,0.5198,1205.65,5,0,1,dummy
+-92,-912,Informatika,7.0,fiksi,Horror,novel,371,0,75.35,0.3384,16,0.3026,0.8796,41.88,0.5198,1205.65,5,0,1,dummy
+-92,-913,Informatika,7.0,fiksi,Fantasy,novel,360,0,75.35,0.3384,16,0.0764,0.8796,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-914,Informatika,7.0,nonfiksi,Teknologi,buku,289,0,75.35,0.3384,16,0.0381,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-915,Informatika,7.0,nonfiksi,Teknologi,skripsi,187,0,75.35,0.3384,16,0.0381,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-916,Informatika,7.0,nonfiksi,Teknologi,tugas akhir,189,0,75.35,0.3384,16,0.0381,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-917,Informatika,7.0,nonfiksi,Sejarah,skripsi,103,0,75.35,0.3384,16,0.0398,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-918,Informatika,7.0,nonfiksi,Sejarah,skripsi,256,1,75.35,0.3384,16,0.0398,0.1204,41.88,0.5198,1205.65,5,0,1,dummy
+-92,-919,Informatika,7.0,nonfiksi,Teknologi,skripsi,46,1,75.35,0.3384,16,0.0381,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-92,-920,Informatika,7.0,nonfiksi,Teknologi,tugas akhir,397,0,75.35,0.3384,16,0.0381,0.1204,41.88,0.5198,1205.65,5,0,0,dummy
+-93,-921,Teknik Industri,6.0,fiksi,Romance,novel,346,0,29.66,0.2245,10,0.0704,0.7833,31.2,0.689,296.62,2,0,1,dummy
+-93,-922,Teknik Industri,6.0,fiksi,Fantasy,novel,197,0,29.66,0.2245,10,0.3825,0.7833,31.2,0.689,296.62,2,0,0,dummy
+-93,-923,Teknik Industri,6.0,nonfiksi,Pendidikan,tugas akhir,113,0,29.66,0.2245,10,0.0217,0.2167,31.2,0.689,296.62,2,0,1,dummy
+-93,-924,Teknik Industri,6.0,nonfiksi,Pendidikan,buku,340,1,29.66,0.2245,10,0.0217,0.2167,31.2,0.689,296.62,2,0,0,dummy
+-93,-925,Teknik Industri,6.0,fiksi,Romance,novel,217,0,29.66,0.2245,10,0.0704,0.7833,31.2,0.689,296.62,2,0,1,dummy
+-93,-926,Teknik Industri,6.0,fiksi,Science Fiction,novel,387,0,29.66,0.2245,10,0.0859,0.7833,31.2,0.689,296.62,2,0,1,dummy
+-93,-927,Teknik Industri,6.0,fiksi,Fantasy,novel,139,0,29.66,0.2245,10,0.3825,0.7833,31.2,0.689,296.62,2,0,1,dummy
+-93,-928,Teknik Industri,6.0,nonfiksi,Self Improvement,skripsi,294,0,29.66,0.2245,10,0.0176,0.2167,31.2,0.689,296.62,2,0,0,dummy
+-93,-929,Teknik Industri,6.0,fiksi,Thriller,novel,81,0,29.66,0.2245,10,0.0974,0.7833,31.2,0.689,296.62,2,0,0,dummy
+-93,-930,Teknik Industri,6.0,fiksi,Horror,novel,204,1,29.66,0.2245,10,0.1464,0.7833,31.2,0.689,296.62,2,0,0,dummy
+-94,-931,Teknik Industri,8.0,nonfiksi,Sejarah,skripsi,381,1,57.05,0.2519,18,0.0457,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-932,Teknik Industri,8.0,nonfiksi,Bisnis,skripsi,313,0,57.05,0.2519,18,0.0406,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-933,Teknik Industri,8.0,fiksi,Mystery,novel,105,1,57.05,0.2519,18,0.4019,0.6717,87.64,0.5507,1026.98,2,0,1,dummy
+-94,-934,Teknik Industri,8.0,fiksi,Mystery,novel,195,0,57.05,0.2519,18,0.4019,0.6717,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-935,Teknik Industri,8.0,nonfiksi,Bisnis,skripsi,45,1,57.05,0.2519,18,0.0406,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-936,Teknik Industri,8.0,nonfiksi,Bisnis,skripsi,159,0,57.05,0.2519,18,0.0406,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-937,Teknik Industri,8.0,nonfiksi,Sejarah,skripsi,303,1,57.05,0.2519,18,0.0457,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-938,Teknik Industri,8.0,nonfiksi,Sejarah,karya ilmiah,307,0,57.05,0.2519,18,0.0457,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-939,Teknik Industri,8.0,nonfiksi,Bisnis,jurnal,129,0,57.05,0.2519,18,0.0406,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-94,-940,Teknik Industri,8.0,nonfiksi,Self Improvement,skripsi,238,1,57.05,0.2519,18,0.0286,0.3283,87.64,0.5507,1026.98,2,0,0,dummy
+-95,-941,Akuntansi,4.0,nonfiksi,Self Improvement,karya ilmiah,371,1,35.52,0.25,10,0.04,0.1592,39.61,0.9157,355.2,0,0,0,dummy
+-95,-942,Akuntansi,4.0,nonfiksi,Self Improvement,tugas akhir,117,0,35.52,0.25,10,0.04,0.1592,39.61,0.9157,355.2,0,0,0,dummy
+-95,-943,Akuntansi,4.0,fiksi,Romance,novel,290,0,35.52,0.25,10,0.1175,0.8408,39.61,0.9157,355.2,0,0,1,dummy
+-95,-944,Akuntansi,4.0,fiksi,Mystery,novel,164,0,35.52,0.25,10,0.0671,0.8408,39.61,0.9157,355.2,0,0,1,dummy
+-95,-945,Akuntansi,4.0,fiksi,Fantasy,novel,138,0,35.52,0.25,10,0.1203,0.8408,39.61,0.9157,355.2,0,0,0,dummy
+-95,-946,Akuntansi,4.0,fiksi,Science Fiction,novel,99,0,35.52,0.25,10,0.272,0.8408,39.61,0.9157,355.2,0,0,1,dummy
+-95,-947,Akuntansi,4.0,nonfiksi,Bisnis,buku,185,0,35.52,0.25,10,0.0413,0.1592,39.61,0.9157,355.2,0,0,1,dummy
+-95,-948,Akuntansi,4.0,fiksi,Horror,novel,148,0,35.52,0.25,10,0.0974,0.8408,39.61,0.9157,355.2,0,0,0,dummy
+-95,-949,Akuntansi,4.0,fiksi,Mystery,novel,230,1,35.52,0.25,10,0.0671,0.8408,39.61,0.9157,355.2,0,0,0,dummy
+-95,-950,Akuntansi,4.0,nonfiksi,Sains,jurnal,86,0,35.52,0.25,10,0.0335,0.1592,39.61,0.9157,355.2,0,0,0,dummy
+-96,-951,Ilmu Komunikasi,1.0,fiksi,Fantasy,novel,72,1,54.59,0.3178,9,0.1255,0.8227,73.71,0.3981,491.28,5,0,1,dummy
+-96,-952,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,karya ilmiah,193,0,54.59,0.3178,9,0.0178,0.1773,73.71,0.3981,491.28,5,0,0,dummy
+-96,-953,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,buku,218,0,54.59,0.3178,9,0.0178,0.1773,73.71,0.3981,491.28,5,0,0,dummy
+-96,-954,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,skripsi,367,1,54.59,0.3178,9,0.0178,0.1773,73.71,0.3981,491.28,5,0,0,dummy
+-96,-955,Ilmu Komunikasi,1.0,fiksi,Romance,novel,33,0,54.59,0.3178,9,0.0774,0.8227,73.71,0.3981,491.28,5,0,1,dummy
+-96,-956,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,jurnal,193,0,54.59,0.3178,9,0.0523,0.1773,73.71,0.3981,491.28,5,0,0,dummy
+-96,-957,Ilmu Komunikasi,1.0,fiksi,Horror,novel,307,0,54.59,0.3178,9,0.102,0.8227,73.71,0.3981,491.28,5,0,0,dummy
+-96,-958,Ilmu Komunikasi,1.0,fiksi,Mystery,novel,153,0,54.59,0.3178,9,0.1374,0.8227,73.71,0.3981,491.28,5,0,0,dummy
+-96,-959,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,karya ilmiah,349,0,54.59,0.3178,9,0.0523,0.1773,73.71,0.3981,491.28,5,0,1,dummy
+-96,-960,Ilmu Komunikasi,1.0,nonfiksi,Pendidikan,tugas akhir,313,0,54.59,0.3178,9,0.0198,0.1773,73.71,0.3981,491.28,5,0,0,dummy
+-97,-961,Sistem Informasi,4.0,fiksi,Fantasy,novel,344,0,89.33,0.1544,3,0.0368,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-962,Sistem Informasi,4.0,fiksi,Thriller,novel,55,0,89.33,0.1544,3,0.0238,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-963,Sistem Informasi,4.0,fiksi,Science Fiction,novel,355,0,89.33,0.1544,3,0.0176,0.1852,64.86,0.8595,268.0,3,0,1,dummy
+-97,-964,Sistem Informasi,4.0,fiksi,Romance,novel,312,1,89.33,0.1544,3,0.0104,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-965,Sistem Informasi,4.0,nonfiksi,Pendidikan,buku,35,0,89.33,0.1544,3,0.1227,0.8148,64.86,0.8595,268.0,3,0,1,dummy
+-97,-966,Sistem Informasi,4.0,fiksi,Horror,novel,271,0,89.33,0.1544,3,0.0356,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-967,Sistem Informasi,4.0,fiksi,Thriller,novel,67,0,89.33,0.1544,3,0.0238,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-968,Sistem Informasi,4.0,fiksi,Fantasy,novel,142,1,89.33,0.1544,3,0.0368,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-969,Sistem Informasi,4.0,fiksi,Fantasy,novel,315,0,89.33,0.1544,3,0.0368,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-97,-970,Sistem Informasi,4.0,fiksi,Science Fiction,novel,93,0,89.33,0.1544,3,0.0176,0.1852,64.86,0.8595,268.0,3,0,0,dummy
+-98,-971,Ilmu Komunikasi,1.0,nonfiksi,Sains,buku,197,0,26.99,0.2024,10,0.1038,0.86,25.84,0.8753,269.95,5,0,1,dummy
+-98,-972,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,tugas akhir,286,0,26.99,0.2024,10,0.1197,0.86,25.84,0.8753,269.95,5,0,1,dummy
+-98,-973,Ilmu Komunikasi,1.0,nonfiksi,Self Improvement,jurnal,289,0,26.99,0.2024,10,0.0725,0.86,25.84,0.8753,269.95,5,0,0,dummy
+-98,-974,Ilmu Komunikasi,1.0,fiksi,Thriller,novel,378,0,26.99,0.2024,10,0.046,0.14,25.84,0.8753,269.95,5,0,0,dummy
+-98,-975,Ilmu Komunikasi,1.0,nonfiksi,Bisnis,tugas akhir,256,1,26.99,0.2024,10,0.0525,0.86,25.84,0.8753,269.95,5,0,0,dummy
+-98,-976,Ilmu Komunikasi,1.0,nonfiksi,Teknologi,karya ilmiah,41,0,26.99,0.2024,10,0.1197,0.86,25.84,0.8753,269.95,5,0,1,dummy
+-98,-977,Ilmu Komunikasi,1.0,nonfiksi,Sains,karya ilmiah,181,0,26.99,0.2024,10,0.1038,0.86,25.84,0.8753,269.95,5,0,0,dummy
+-98,-978,Ilmu Komunikasi,1.0,fiksi,Horror,novel,400,0,26.99,0.2024,10,0.0429,0.14,25.84,0.8753,269.95,5,0,0,dummy
+-98,-979,Ilmu Komunikasi,1.0,fiksi,Romance,novel,343,0,26.99,0.2024,10,0.0448,0.14,25.84,0.8753,269.95,5,0,1,dummy
+-98,-980,Ilmu Komunikasi,1.0,fiksi,Thriller,novel,89,0,26.99,0.2024,10,0.046,0.14,25.84,0.8753,269.95,5,0,1,dummy
+-99,-981,Teknik Industri,3.0,nonfiksi,Sejarah,jurnal,104,1,15.22,0.2212,14,0.052,0.1479,83.23,0.7351,213.01,0,0,0,dummy
+-99,-982,Teknik Industri,3.0,nonfiksi,Self Improvement,skripsi,244,1,15.22,0.2212,14,0.0244,0.1479,83.23,0.7351,213.01,0,0,1,dummy
+-99,-983,Teknik Industri,3.0,nonfiksi,Pendidikan,jurnal,324,0,15.22,0.2212,14,0.0234,0.1479,83.23,0.7351,213.01,0,0,1,dummy
+-99,-984,Teknik Industri,3.0,nonfiksi,Sains,skripsi,155,1,15.22,0.2212,14,0.0177,0.1479,83.23,0.7351,213.01,0,0,1,dummy
+-99,-985,Teknik Industri,3.0,fiksi,Romance,novel,305,0,15.22,0.2212,14,0.0718,0.8521,83.23,0.7351,213.01,0,0,1,dummy
+-99,-986,Teknik Industri,3.0,nonfiksi,Sejarah,skripsi,370,0,15.22,0.2212,14,0.052,0.1479,83.23,0.7351,213.01,0,0,0,dummy
+-99,-987,Teknik Industri,3.0,fiksi,Mystery,novel,385,0,15.22,0.2212,14,0.1192,0.8521,83.23,0.7351,213.01,0,0,1,dummy
+-99,-988,Teknik Industri,3.0,nonfiksi,Self Improvement,jurnal,80,0,15.22,0.2212,14,0.0244,0.1479,83.23,0.7351,213.01,0,0,1,dummy
+-99,-989,Teknik Industri,3.0,nonfiksi,Pendidikan,tugas akhir,206,0,15.22,0.2212,14,0.0234,0.1479,83.23,0.7351,213.01,0,0,0,dummy
+-99,-990,Teknik Industri,3.0,fiksi,Fantasy,novel,268,1,15.22,0.2212,14,0.2969,0.8521,83.23,0.7351,213.01,0,0,1,dummy
+-100,-991,Teknik Industri,5.0,fiksi,Mystery,novel,157,0,19.41,0.407,11,0.0415,0.2311,76.36,0.6238,213.5,0,0,0,dummy
+-100,-992,Teknik Industri,5.0,nonfiksi,Sains,jurnal,261,0,19.41,0.407,11,0.0659,0.7689,76.36,0.6238,213.5,0,0,1,dummy
+-100,-993,Teknik Industri,5.0,nonfiksi,Teknologi,karya ilmiah,91,1,19.41,0.407,11,0.2761,0.7689,76.36,0.6238,213.5,0,0,0,dummy
+-100,-994,Teknik Industri,5.0,fiksi,Romance,novel,59,0,19.41,0.407,11,0.0416,0.2311,76.36,0.6238,213.5,0,0,1,dummy
+-100,-995,Teknik Industri,5.0,nonfiksi,Teknologi,tugas akhir,224,0,19.41,0.407,11,0.2761,0.7689,76.36,0.6238,213.5,0,0,0,dummy
+-100,-996,Teknik Industri,5.0,nonfiksi,Self Improvement,jurnal,56,0,19.41,0.407,11,0.0964,0.7689,76.36,0.6238,213.5,0,0,1,dummy
+-100,-997,Teknik Industri,5.0,fiksi,Romance,novel,174,0,19.41,0.407,11,0.0416,0.2311,76.36,0.6238,213.5,0,0,0,dummy
+-100,-998,Teknik Industri,5.0,fiksi,Science Fiction,novel,312,0,19.41,0.407,11,0.0332,0.2311,76.36,0.6238,213.5,0,0,0,dummy
+-100,-999,Teknik Industri,5.0,nonfiksi,Teknologi,buku,370,0,19.41,0.407,11,0.2761,0.7689,76.36,0.6238,213.5,0,0,1,dummy
+-100,-1000,Teknik Industri,5.0,nonfiksi,Teknologi,jurnal,143,1,19.41,0.407,11,0.2761,0.7689,76.36,0.6238,213.5,0,0,1,dummy
