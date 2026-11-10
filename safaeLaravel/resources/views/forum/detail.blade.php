@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', $topic->judul . ' - Safae Forum')
@@ -12,7 +13,7 @@
     }
 
     .btn-back {
-        color: #94a3b8;
+        color: #89839f;
         text-decoration: none;
         font-weight: 600;
         display: inline-flex;
@@ -21,20 +22,20 @@
         transition: 0.3s;
         margin-bottom: 20px;
     }
-    .btn-back:hover { color: #f1f5f9; transform: translateX(-5px); }
+    .btn-back:hover { color: #a48bdc; transform: translateX(-5px); }
 
     /* ================= MAIN TOPIC CARD ================= */
     .topic-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 35px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 10px 30px rgba(185, 165, 232, 0.12);
         margin-bottom: 40px;
     }
 
     .topic-title {
-        color: #38bdf8;
+        color: #a48bdc;
         font-weight: 800;
         font-size: 1.75rem;
         margin-bottom: 15px;
@@ -45,16 +46,16 @@
         display: flex;
         align-items: center;
         gap: 15px;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 0.9rem;
         padding-bottom: 20px;
-        border-bottom: 1px solid #334155;
+        border-bottom: 1px solid #e5def5;
         margin-bottom: 25px;
     }
-    .topic-meta i { color: #64748b; }
+    .topic-meta i { color: #b9a5e8; }
 
     .topic-body {
-        color: #e2e8f0;
+        color: #514d69;
         font-size: 1.1rem;
         line-height: 1.8;
         white-space: pre-wrap; /* Menjaga format enter/paragraf */
@@ -66,13 +67,13 @@
         object-fit: cover;
         border-radius: 16px;
         margin-top: 25px;
-        border: 1px solid #334155;
+        border: 1px solid #e5def5;
     }
 
     /* ================= ATTACHMENT BOX ================= */
     .attachment-box {
-        background: rgba(56, 189, 248, 0.05);
-        border: 1px dashed #38bdf8;
+        background: rgba(130, 169, 216, 0.08);
+        border: 1px dashed #82a9d8;
         border-radius: 12px;
         padding: 15px 20px;
         display: flex;
@@ -82,15 +83,15 @@
     }
     
     .btn-download {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #82a9d8;
+        color: #ffffff;
         font-weight: 600;
         padding: 8px 16px;
         border-radius: 10px;
         text-decoration: none;
         transition: 0.3s;
     }
-    .btn-download:hover { background: #7dd3fc; }
+    .btn-download:hover { background: #6e98ca; }
 
     /* ================= ACTION BUTTONS ================= */
     .action-bar {
@@ -98,7 +99,7 @@
         gap: 10px;
         margin-top: 30px;
         padding-top: 20px;
-        border-top: 1px solid #334155;
+        border-top: 1px solid #e5def5;
     }
 
     .btn-action {
@@ -112,15 +113,24 @@
         align-items: center;
         gap: 8px;
     }
-    .btn-edit { background: rgba(251, 191, 36, 0.1); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3); }
-    .btn-edit:hover { background: #fbbf24; color: #0f172a; }
+
+    .btn-edit {
+        background: #fff4d9;
+        color: #b58a32;
+        border: 1px solid #f0dcae;
+    }
+    .btn-edit:hover { background: #d5a64d; color: #ffffff; }
     
-    .btn-delete { background: rgba(248, 113, 113, 0.1); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.3); }
-    .btn-delete:hover { background: #ef4444; color: #fff; }
+    .btn-delete {
+        background: #fff1f4;
+        color: #cf8297;
+        border: 1px solid #f2d2dc;
+    }
+    .btn-delete:hover { background: #cf8297; color: #ffffff; }
 
     /* ================= COMMENTS SECTION ================= */
     .section-title {
-        color: #f1f5f9;
+        color: #514d69;
         font-weight: 700;
         margin-bottom: 20px;
         display: flex;
@@ -129,61 +139,83 @@
     }
 
     .comment-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #f8f5ff;
+        border: 1px solid #d8c9f2;
+        border-left: 5px solid #b9a5e8;
         border-radius: 16px;
         padding: 20px;
         margin-bottom: 15px;
         display: flex;
         gap: 15px;
+        box-shadow: 0 4px 12px rgba(164, 139, 220, 0.10);
     }
 
     .comment-avatar {
         width: 45px;
         height: 45px;
         border-radius: 50%;
-        background: #334155;
+        background: #e5dcf8;
+        border: 1px solid #d5c7ef;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #f1f5f9;
+        color: #8065b5;
         font-weight: bold;
         flex-shrink: 0;
     }
 
     .comment-content { flex: 1; }
-    .comment-author { color: #f8fafc; font-weight: 700; font-size: 1rem; margin-bottom: 5px; }
-    .comment-text { color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; }
+
+    .comment-author {
+        color: #51416f;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .comment-text {
+        color: #625b78;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 
     .empty-comment {
         text-align: center;
         padding: 30px;
-        color: #64748b;
-        border: 1px dashed #334155;
+        color: #89839f;
+        background: #faf8fe;
+        border: 1px dashed #cbbce9;
         border-radius: 16px;
         margin-bottom: 20px;
     }
 
     /* ================= COMMENT FORM ================= */
     .form-control-modern {
-        background-color: #0f172a;
-        color: #f8fafc;
-        border: 1px solid #334155;
+        background-color: #ffffff;
+        color: #514d69;
+        border: 1px solid #d8c9f2;
         border-radius: 14px;
         padding: 15px;
         width: 100%;
         resize: vertical;
         transition: 0.3s;
     }
+
     .form-control-modern:focus {
-        border-color: #38bdf8;
-        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        background-color: #ffffff;
+        border-color: #a48bdc;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.2);
         outline: none;
+        color: #514d69;
+    }
+
+    .form-control-modern::placeholder {
+        color: #aaa3bc;
     }
 
     .btn-submit {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         border: none;
         border-radius: 12px;
         font-weight: 700;
@@ -191,8 +223,39 @@
         transition: 0.3s ease;
         width: 100%;
     }
-    .btn-submit:hover { background: #7dd3fc; }
+    .btn-submit:hover { background: #a48bdc; }
 
+    /* ================= COMMENT FORM CARD ================= */
+    .topic-card[style*="padding: 25px"] {
+        background: #f8f5ff;
+        border: 1px solid #d8c9f2;
+        box-shadow: 0 6px 18px rgba(164, 139, 220, 0.12);
+    }
+
+    .topic-card[style*="padding: 25px"] h5 {
+        color: #51416f !important;
+    }
+
+    /* ================= COLOR UTILITIES ================= */
+    .text-primary {
+        color: #b9a5e8 !important;
+    }
+
+    .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .text-white {
+        color: #514d69 !important;
+    }
+
+    .text-muted {
+        color: #89839f !important;
+    }
+
+    .text-primary:hover {
+        color: #a48bdc !important;
+    }
 </style>
 
 <div class="container-fluid forum-container">

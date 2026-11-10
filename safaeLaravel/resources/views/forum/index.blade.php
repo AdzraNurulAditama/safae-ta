@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Forum Diskusi - Safae')
@@ -7,30 +8,30 @@
 <style>
     /* ================= HEADER & UTILITIES ================= */
     .page-title {
-        color: #f1f5f9;
+        color: #514d69;
         font-weight: 800;
         margin-bottom: 25px;
     }
 
     .alert-custom {
-        background: rgba(34, 197, 94, 0.1);
-        border: 1px solid rgba(34, 197, 94, 0.3);
-        color: #4ade80;
+        background: #e4f4eb;
+        border: 1px solid #ccebd9;
+        color: #579879;
         border-radius: 12px;
     }
 
     .alert-info-custom {
-        background: rgba(56, 189, 248, 0.1);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        color: #38bdf8;
+        background: #e5f1fc;
+        border: 1px solid #c9e1f1;
+        color: #7197c5;
         border-radius: 12px;
     }
 
     /* ================= FORM SELECT ================= */
     .form-select-modern {
-        background-color: #1e293b;
-        color: #f8fafc;
-        border: 1px solid #334155;
+        background-color: #ffffff;
+        color: #514d69;
+        border: 1px solid #ded6ef;
         border-radius: 14px;
         padding: 14px 20px;
         font-weight: 600;
@@ -39,22 +40,27 @@
         width: 100%;
         max-width: 400px;
         appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2394a3b8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2381769f' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 1rem center;
         background-size: 16px 12px;
     }
 
     .form-select-modern:focus {
-        border-color: #38bdf8;
-        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.20);
         outline: none;
+    }
+
+    .form-select-modern option {
+        background: #ffffff;
+        color: #514d69;
     }
 
     /* ================= BUTTONS ================= */
     .btn-create {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         border: none;
         border-radius: 12px;
         font-weight: 700;
@@ -66,14 +72,15 @@
     }
 
     .btn-create:hover {
-        background: #7dd3fc;
+        background: #a48bdc;
+        color: #ffffff;
         transform: translateY(-2px);
     }
 
     /* ================= TOPIC CARDS ================= */
     .topic-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 16px;
         padding: 20px;
         margin-bottom: 15px;
@@ -86,8 +93,8 @@
 
     .topic-card:hover {
         transform: translateY(-4px);
-        border-color: #38bdf8;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        border-color: #b9a5e8;
+        box-shadow: 0 10px 25px rgba(130, 110, 170, 0.12);
     }
 
     .topic-icon {
@@ -95,8 +102,8 @@
         height: 55px;
         min-width: 55px;
         border-radius: 14px;
-        background: rgba(56, 189, 248, 0.1);
-        color: #38bdf8;
+        background: #e5f1fc;
+        color: #82a9d8;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -108,7 +115,7 @@
     }
 
     .topic-title {
-        color: #f8fafc;
+        color: #514d69;
         font-size: 1.15rem;
         font-weight: 700;
         margin-bottom: 5px;
@@ -116,11 +123,11 @@
     }
 
     .topic-card:hover .topic-title {
-        color: #38bdf8;
+        color: #9b83d1;
     }
 
     .topic-meta {
-        color: #94a3b8;
+        color: #89839f;
         font-size: 0.85rem;
         display: flex;
         align-items: center;
@@ -128,16 +135,16 @@
     }
 
     .topic-meta i {
-        color: #64748b;
+        color: #aaa3bd;
     }
 
     /* ================= EMPTY STATE ================= */
     .empty-state {
         text-align: center;
         padding: 60px 20px;
-        color: #94a3b8;
-        background: #1e293b;
-        border: 2px dashed #334155;
+        color: #89839f;
+        background: #ffffff;
+        border: 2px dashed #ded6ef;
         border-radius: 20px;
         margin-top: 20px;
     }
@@ -145,7 +152,33 @@
     .empty-state i {
         font-size: 4rem;
         margin-bottom: 20px;
-        color: #475569;
+        color: #c3b4e4;
+    }
+
+    /* ================= COLOR OVERRIDES ================= */
+    .container-fluid .text-white {
+        color: #514d69 !important;
+    }
+
+    .container-fluid .text-primary {
+        color: #9b83d1 !important;
+    }
+
+    .container-fluid .text-muted {
+        color: #89839f !important;
+    }
+
+    .container-fluid .text-secondary {
+        color: #89839f !important;
+    }
+
+    .container-fluid .border-secondary {
+        border-color: #e5def5 !important;
+    }
+
+    .container-fluid .btn-close-white {
+        filter: none;
+        opacity: 0.6;
     }
 </style>
 

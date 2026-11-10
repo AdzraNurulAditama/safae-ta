@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Resume Bacaan Saya - Safae')
@@ -5,323 +6,1053 @@
 @section('content')
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --text: #514d69;
+    --muted: #9290a3;
+    --purple: #a394d0;
+    --purple-dark: #8978b9;
+    --purple-light: #f0ebff;
+    --blue-light: #eaf1ff;
+    --pink-light: #fff0f4;
+    --green-light: #e8f6ef;
+    --border: #eeeaf5;
+}
+
+.resume-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 24px 25px 45px;
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* HEADER */
+.resume-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 23px 26px;
+    margin-bottom: 20px;
+    border: 1px solid #eee7f8;
+    border-radius: 18px;
+    background: linear-gradient(110deg, #eaf1ff, #f0ebff 55%, #fff0f4);
+}
+
+.resume-header-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.resume-header-icon {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(255,255,255,.85);
+    color: var(--purple-dark);
+    font-size: 23px;
+}
+
+.resume-header h2 {
+    margin: 0 0 5px;
+    color: var(--text);
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.resume-header p {
+    margin: 0;
+    color: #858198;
+    font-size: 12px;
+}
+
+.btn-create-resume {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 17px;
+    border: 1px solid rgba(255,255,255,.9);
+    border-radius: 11px;
+    background: rgba(255,255,255,.85);
+    color: var(--purple-dark);
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: .2s;
+}
+
+.btn-create-resume:hover {
+    background: white;
+    color: #7662a9;
+    transform: translateY(-2px);
+}
+
+/* ALERT */
+.resume-alert {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    border: 1px solid #ccebdc;
+    border-radius: 11px;
+    background: var(--green-light);
+    color: #43866c;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* SECTION LABEL */
+.resume-section-label {
+    margin-bottom: 10px;
+    color: #817c96;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: .3px;
+}
+
+/* FILTER */
+.resume-filter-row {
+    margin-bottom: 21px;
+}
+
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(130,125,165,.035);
+}
+
+.filter-box > i {
+    color: var(--purple);
+    font-size: 14px;
+}
+
+.filter-box form {
+    flex: 1;
+    min-width: 0;
+}
+
+.filter-box input,
+.filter-box select {
+    width: 100%;
+    height: 44px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #656078;
+    font-family: inherit;
+    font-size: 11px;
+}
+
+.filter-box input::placeholder {
+    color: #aaa6b8;
+}
+
+.filter-box select {
+    cursor: pointer;
+}
+
+/* STATISTICS */
+.resume-stats {
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    min-height: 88px;
+    padding: 15px 17px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: #fff;
+    box-shadow: 0 4px 13px rgba(130,125,165,.05);
+    transition: .2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(130,125,165,.09);
+}
+
+.stat-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 13px;
+    background: var(--purple-light);
+    color: var(--purple-dark);
+    font-size: 18px;
+}
+
+.stat-icon-blue {
+    background: var(--blue-light);
+    color: #829bd0;
+}
+
+.stat-icon-green {
+    background: var(--green-light);
+    color: #71ae91;
+}
+
+.stat-info small {
+    display: block;
+    margin-bottom: 4px;
+    color: #9692a6;
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.stat-info h4,
+.stat-info h5 {
+    margin: 0;
+    color: var(--text);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+/* LIST */
+.resume-list-section {
+    margin-top: 5px;
+}
+
+.resume-list-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+.resume-list-heading h4 {
+    margin: 0;
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.resume-list-heading p {
+    margin: 4px 0 0;
+    color: #9995a8;
+    font-size: 11px;
+}
+
+.resume-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.resume-item-card {
+    display: flex;
+    align-items: stretch;
+    gap: 18px;
+    padding: 17px;
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 4px 13px rgba(130,125,165,.045);
+    cursor: pointer;
+    transition: .2s;
+}
+
+.resume-item-card:hover {
+    transform: translateY(-2px);
+    border-color: #ded6f1;
+    box-shadow: 0 8px 19px rgba(130,125,165,.09);
+}
+
+.resume-cover {
+    width: 92px;
+    height: 125px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+    background: var(--purple-light);
+    box-shadow: 0 3px 9px rgba(100,90,130,.08);
+}
+
+.resume-item-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.resume-item-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.resume-item-title {
+    margin: 7px 0 3px;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.resume-book-title {
+    color: #8f80bd;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.badge-genre {
+    display: inline-block;
+    padding: 5px 9px;
+    border: 1px solid #e4dcf5;
+    border-radius: 7px;
+    background: var(--purple-light);
+    color: #8d7bb9;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.badge-status {
+    display: inline-block;
+    flex-shrink: 0;
+    padding: 7px 10px;
+    border: 1px solid #dce5fa;
+    border-radius: 20px;
+    background: var(--blue-light);
+    color: #718bbd;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.resume-excerpt {
+    display: -webkit-box;
+    max-width: 750px;
+    overflow: hidden;
+    margin: 10px 0 12px;
+    color: #89869b;
+    font-size: 11px;
+    line-height: 1.7;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.resume-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+.resume-updated {
+    color: #a09caf;
+    font-size: 10px;
+}
+
+.resume-updated i {
+    margin-right: 4px;
+    color: var(--purple);
+}
+
+.btn-detail {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 8px 12px;
+    border: 1px solid #e4dcf5;
+    border-radius: 9px;
+    background: var(--purple-light);
+    color: var(--purple-dark);
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 800;
+    transition: .2s;
+}
+
+.btn-detail:hover {
+    background: #a99bd9;
+    border-color: #a99bd9;
+    color: white;
+}
+
+/* EMPTY STATE */
+.resume-empty {
+    padding: 42px 20px;
+    border: 1px dashed #dcd5ee;
+    border-radius: 17px;
+    background: linear-gradient(135deg, #f5f2ff, #fff3f6);
+    text-align: center;
+}
+
+.resume-empty-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    border-radius: 22px;
+    background: #fff;
+    color: var(--purple);
+    font-size: 30px;
+}
+
+.resume-empty h5 {
+    margin-bottom: 6px;
+    color: var(--text);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.resume-empty p {
+    margin: 0;
+    color: #9290a2;
+    font-size: 11px;
+}
+
+/* DETAIL DRAWER */
+.detail-drawer {
+    width: 480px !important;
+    max-width: 100%;
+    border: none;
+    background: #fcfbff;
+    color: var(--text);
+    box-shadow: -8px 0 25px rgba(100,90,130,.09);
+}
+
+.detail-drawer .offcanvas-header {
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(110deg, #eaf1ff, #f0ebff, #fff0f4);
+}
+
+.detail-drawer .offcanvas-title {
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.detail-drawer .offcanvas-body {
+    padding: 19px 20px;
+}
+
+.drawer-top-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 17px;
+}
+
+.drawer-action-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.drawer-status {
+    padding: 7px 10px;
+    border: 1px solid #dce5fa;
+    border-radius: 20px;
+    background: var(--blue-light);
+    color: #718bbd;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.btn-drawer-edit,
+.btn-drawer-delete {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 8px 10px;
+    border-radius: 9px;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn-drawer-edit {
+    border: 1px solid #ded5f3;
+    background: var(--purple-light);
+    color: var(--purple-dark);
+}
+
+.btn-drawer-delete {
+    border: 1px solid #f4d7e2;
+    background: var(--pink-light);
+    color: #cb819d;
+}
+
+.drawer-book-info {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: #fff;
+}
+
+.drawer-book-cover {
+    width: 65px;
+    height: 88px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--purple-light);
+}
+
+.drawer-book-info h6 {
+    margin: 0 0 6px;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.drawer-book-info small {
+    display: block;
+    margin-bottom: 5px;
+    color: #9692a6;
+    font-size: 10px;
+}
+
+.drawer-book-info .drawer-genre {
+    color: var(--purple-dark);
+    font-weight: 700;
+}
+
+.detail-section {
+    padding: 15px;
+    margin-bottom: 12px;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    background: #fff;
+}
+
+.detail-section h6 {
+    margin-bottom: 10px;
+    color: #8172b0;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.drawer-progress-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 9px;
+    color: #89859d;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.drawer-progress {
+    height: 8px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #eeeaf5;
+}
+
+.drawer-progress-bar {
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #b5a5df, #8fa5d9);
+}
+
+.drawer-content {
+    color: #77738b;
+    font-size: 11px;
+    line-height: 1.8;
+    white-space: pre-line;
+    overflow-wrap: anywhere;
+}
+
+.drawer-dates {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 14px;
+    margin-top: 16px;
+    border-top: 1px solid var(--border);
+    color: #9995a8;
+    font-size: 9px;
+}
+
+.drawer-dates span {
+    color: #625c7b;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
     .resume-container {
-        padding: 10px 0 50px 0;
-        color: #f1f5f9;
+        padding: 18px 14px 35px;
     }
 
-    /* Top Stats Bar */
-    .stat-card-dark {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 18px;
-        padding: 18px 22px;
-        display: flex;
-        align-items: center;
-        gap: 16px;
+    .resume-header {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 19px;
     }
 
-    .stat-icon-wrapper {
-        width: 48px;
-        height: 48px;
-        border-radius: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-        background: rgba(56, 189, 248, 0.12);
-        color: #38bdf8;
+    .resume-header-icon {
+        width: 47px;
+        height: 47px;
+        font-size: 20px;
     }
 
-    /* Fix Warna Dropdown Option agar Kelihatan */
-    .filter-box select option {
-        background-color: #1e293b !important;
-        color: #f8fafc !important;
-        padding: 10px;
-    }
-    /* Filter & Search Bar */
-    .filter-box {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 14px;
-        padding: 6px 14px;
-        color: white;
+    .resume-header h2 {
+        font-size: 19px;
     }
 
-    .filter-box input, .filter-box select {
-        background: transparent;
-        border: none;
-        color: white;
-        outline: none;
+    .resume-header p {
+        font-size: 10px;
+        line-height: 1.6;
     }
 
-    /* Resume List Card */
     .resume-item-card {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 20px;
-        padding: 20px;
-        display: flex;
-        gap: 20px;
-        position: relative;
-        transition: 0.2s ease;
-        cursor: pointer;
-    }
-
-    .resume-item-card:hover, .resume-item-card.active {
-        border-color: #38bdf8;
-        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.12);
+        gap: 13px;
+        padding: 13px;
     }
 
     .resume-cover {
-        width: 90px;
-        height: 125px;
-        object-fit: cover;
-        border-radius: 12px;
-        flex-shrink: 0;
+        width: 78px;
+        height: 110px;
     }
 
-    .badge-genre {
-        background: rgba(168, 85, 247, 0.2);
-        color: #c084fc;
-        border: 1px solid rgba(168, 85, 247, 0.3);
-        border-radius: 8px;
-        padding: 3px 10px;
-        font-size: 0.75rem;
-        font-weight: 600;
+    .resume-item-title {
+        font-size: 13px;
     }
 
-    .badge-status {
-        background: rgba(56, 189, 248, 0.15);
-        color: #38bdf8;
-        border-radius: 6px;
-        padding: 2px 8px;
-        font-size: 0.72rem;
-        font-weight: 700;
+    .resume-item-top {
+        flex-wrap: wrap;
+    }
+
+    .resume-item-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .detail-drawer {
+        width: 100% !important;
+    }
+}
+
+@media(max-width: 480px) {
+    .resume-header {
+        gap: 13px;
+    }
+
+    .resume-header-content {
+        gap: 10px;
+    }
+
+    .resume-header h2 {
+        font-size: 17px;
+    }
+
+    .resume-item-card {
+        gap: 10px;
+        padding: 11px;
+    }
+
+    .resume-cover {
+        width: 65px;
+        height: 95px;
+    }
+
+    .resume-item-title {
+        font-size: 12px;
+    }
+
+    .resume-book-title {
+        font-size: 10px;
+    }
+
+    .resume-excerpt {
+        font-size: 10px;
     }
 
     .btn-detail {
-        background: #0f172a;
-        color: #f8fafc;
-        border: 1px solid #334155;
-        border-radius: 10px;
-        padding: 6px 14px;
-        font-size: 0.82rem;
-        font-weight: 600;
-        transition: 0.2s;
+        padding: 7px 10px;
+        font-size: 9px;
     }
 
-    .btn-detail:hover {
-        background: #38bdf8;
-        color: #0f172a;
-        border-color: #38bdf8;
+    .drawer-top-actions {
+        align-items: flex-start;
+        flex-direction: column;
     }
-
-    /* Side Detail Panel (Drawer / Offcanvas) */
-    .detail-drawer {
-        background: #1e293b;
-        border-left: 1px solid #334155;
-        color: white;
-    }
-
-    .detail-section {
-        background: #0f172a;
-        border: 1px solid #334155;
-        border-radius: 16px;
-        padding: 18px;
-        margin-bottom: 16px;
-    }
+}
 </style>
 
 <div class="resume-container">
-    <div class="container-fluid">
+    <div class="container-fluid px-0">
 
-        <!-- HEADER & TOMBOL TAMBAH -->
-        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
-            <div>
-                <h2 class="fw-bold text-white mb-1"><i class="fa-solid fa-file-lines text-info me-2"></i> Resume Bacaan Saya</h2>
-                <p class="text-secondary small mb-0">Catatan, pemahaman, dan poin penting dari buku yang kamu baca.</p>
+        {{-- HEADER --}}
+        <div class="resume-header">
+            <div class="resume-header-content">
+                <div class="resume-header-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                </div>
+
+                <div>
+                    <h2>Resume Bacaan Saya</h2>
+                    <p>Catatan, pemahaman, dan poin penting dari buku yang kamu baca.</p>
+                </div>
             </div>
-            <a href="{{ route('genre.index') }}" class="btn btn-info text-dark fw-bold rounded-3 px-4 py-2">
-                <i class="fa-solid fa-plus me-1"></i> Buat Resume
+
+            <a href="{{ route('genre.index') }}" class="btn-create-resume">
+                <i class="fa-solid fa-plus"></i>
+                Buat Resume
             </a>
         </div>
 
+        {{-- NOTIFIKASI --}}
         @if(session('success'))
-            <div class="alert alert-success bg-opacity-10 border-success text-success mb-4 rounded-3">
-                <i class="fa-solid fa-circle-check me-2"></i> {{ session('success') }}
+            <div class="resume-alert">
+                <i class="fa-solid fa-circle-check"></i>
+                {{ session('success') }}
             </div>
         @endif
 
-        <!-- FILTER & SEARCH BAR -->
-        <div class="row g-3 mb-4">
+        {{-- FILTER & SEARCH --}}
+        <div class="resume-section-label">
+            <i class="fa-solid fa-sliders me-1"></i>
+            Pencarian dan Filter Resume
+        </div>
+
+        <div class="row g-2 resume-filter-row">
             <div class="col-md-6 col-lg-4">
-                <div class="filter-box d-flex align-items-center gap-2">
-                    <i class="fa-solid fa-magnifying-glass text-secondary"></i>
-                    <form action="{{ route('resume.my') }}" method="GET" class="w-100">
-                        <input type="text" name="search" class="w-100" placeholder="Cari judul buku atau topik..." value="{{ request('search') }}">
+                <div class="filter-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <form action="{{ route('resume.my') }}" method="GET">
+                        <input
+                            type="text"
+                            name="search"
+                            placeholder="Cari judul buku atau topik..."
+                            value="{{ request('search') }}"
+                        >
                     </form>
                 </div>
             </div>
+
             <div class="col-md-6 col-lg-3">
                 <div class="filter-box">
-                    <select name="status" class="w-100" onchange="window.location.href='{{ route('resume.my') }}?status=' + this.value">
-                        <option value="Semua" {{ $statusFilter == 'Semua' ? 'selected' : '' }}>Semua status</option>
-                        <option value="Sedang Dibaca" {{ $statusFilter == 'Sedang Dibaca' ? 'selected' : '' }}>Sedang Dibaca</option>
-                        <option value="Selesai Dibaca" {{ $statusFilter == 'Selesai Dibaca' ? 'selected' : '' }}>Selesai Dibaca</option>
+                    <i class="fa-solid fa-filter"></i>
+
+                    <select
+                        name="status"
+                        onchange="window.location.href='{{ route('resume.my') }}?status=' + this.value"
+                    >
+                        <option value="Semua" {{ $statusFilter == 'Semua' ? 'selected' : '' }}>
+                            Semua status
+                        </option>
+
+                        <option value="Sedang Dibaca" {{ $statusFilter == 'Sedang Dibaca' ? 'selected' : '' }}>
+                            Sedang Dibaca
+                        </option>
+
+                        <option value="Selesai Dibaca" {{ $statusFilter == 'Selesai Dibaca' ? 'selected' : '' }}>
+                            Selesai Dibaca
+                        </option>
                     </select>
                 </div>
             </div>
         </div>
 
-        <!-- TOP STATS BAR -->
-        <div class="row g-3 mb-4">
+        {{-- STATISTIK --}}
+        <div class="resume-section-label">
+            <i class="fa-solid fa-chart-simple me-1"></i>
+            Ringkasan Resume
+        </div>
+
+        <div class="row g-2 resume-stats">
             <div class="col-md-4">
-                <div class="stat-card-dark">
-                    <div class="stat-icon-wrapper"><i class="fa-solid fa-file-lines"></i></div>
-                    <div>
-                        <small class="text-secondary d-block">Total Resume</small>
-                        <h4 class="fw-bold mb-0 text-white">{{ $totalResume }}</h4>
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <small>Total Resume</small>
+                        <h4>{{ $totalResume }}</h4>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="stat-card-dark">
-                    <div class="stat-icon-wrapper" style="color: #a855f7; background: rgba(168, 85, 247, 0.12);"><i class="fa-solid fa-calendar-days"></i></div>
-                    <div>
-                        <small class="text-secondary d-block">Terakhir diperbarui</small>
-                        <h5 class="fw-bold mb-0 text-white">{{ $lastUpdated }}</h5>
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper stat-icon-blue">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <small>Terakhir Diperbarui</small>
+                        <h5>{{ $lastUpdated }}</h5>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
-                <div class="stat-card-dark">
-                    <div class="stat-icon-wrapper" style="color: #4ade80; background: rgba(74, 222, 128, 0.12);"><i class="fa-solid fa-book-open"></i></div>
-                    <div>
-                        <small class="text-secondary d-block">Terhubung ke buku</small>
-                        <h4 class="fw-bold mb-0 text-white">{{ $connectedBooks }}</h4>
+                <div class="stat-card">
+                    <div class="stat-icon-wrapper stat-icon-green">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div class="stat-info">
+                        <small>Terhubung ke Buku</small>
+                        <h4>{{ $connectedBooks }}</h4>
                     </div>
                 </div>
             </div>
         </div>
 
-<!-- LIST DAFTAR RESUME -->
-        <div class="row g-3">
-            @forelse($resumes as $resume)
-                @php
-                    $history = $histories->get($resume->book_id);
-                    $status = $history->status ?? 'Sedang Dibaca';
-                    $progressPage = $history->progress ?? 1;
-                    $totalPages = $resume->book->jumlah_halaman ?? 100;
-                    $percent = round(($progressPage / max($totalPages, 1)) * 100);
-                @endphp
-                <div class="col-12">
-                    <div class="resume-item-card" onclick="openResumeDetail({{ json_encode([
-                        'id' => $resume->id,
-                        'title' => $resume->title,
-                        'content' => $resume->content,
-                        'book_title' => $resume->book->title ?? 'Buku',
-                        'author' => $resume->book->author ?? '-',
-                        'genre' => $resume->book->genre ?? 'Umum',
-                        'cover' => asset($resume->book->image_path ?? 'https://via.placeholder.com/150'),
-                        'created_at' => $resume->created_at->isoFormat('D MMM YYYY'),
-                        'updated_at' => $resume->updated_at->isoFormat('D MMM YYYY'),
-                        'status' => $status,
-                        'progress_page' => $progressPage,
-                        'total_pages' => $totalPages,
-                        'percent' => $percent,
-                        'edit_url' => route('bookresume.edit', $resume->id),
-                        'delete_url' => route('bookresume.destroy', $resume->id),
-                    ]) }})">
-                        
-                        <img src="{{ asset($resume->book->image_path ?? 'https://via.placeholder.com/150') }}" class="resume-cover" alt="Cover">
+        {{-- DAFTAR RESUME --}}
+        <div class="resume-list-section">
+            <div class="resume-list-heading">
+                <div>
+                    <h4>Daftar Resume</h4>
+                    <p>Kumpulan catatan dari buku yang sudah kamu baca.</p>
+                </div>
+            </div>
 
-                        <div class="w-100">
-                            <div class="d-flex justify-content-between align-items-start mb-1">
+            <div class="resume-list">
+                @forelse($resumes as $resume)
+
+                    @php
+                        $history = $histories->get($resume->book_id);
+                        $status = $history->status ?? 'Sedang Dibaca';
+                        $progressPage = $history->progress ?? 1;
+                        $totalPages = $resume->book->jumlah_halaman ?? 100;
+                        $percent = round(($progressPage / max($totalPages, 1)) * 100);
+                    @endphp
+
+                    <div
+                        class="resume-item-card"
+                        onclick="openResumeDetail({{ json_encode([
+                            'id' => $resume->id,
+                            'title' => $resume->title,
+                            'content' => $resume->content,
+                            'book_title' => $resume->book->title ?? 'Buku',
+                            'author' => $resume->book->author ?? '-',
+                            'genre' => $resume->book->genre ?? 'Umum',
+                            'cover' => asset($resume->book->image_path ?? 'https://via.placeholder.com/150'),
+                            'created_at' => $resume->created_at->isoFormat('D MMM YYYY'),
+                            'updated_at' => $resume->updated_at->isoFormat('D MMM YYYY'),
+                            'status' => $status,
+                            'progress_page' => $progressPage,
+                            'total_pages' => $totalPages,
+                            'percent' => $percent,
+                            'edit_url' => route('bookresume.edit', $resume->id),
+                            'delete_url' => route('bookresume.destroy', $resume->id),
+                        ]) }})"
+                    >
+
+                        <img
+                            src="{{ asset($resume->book->image_path ?? 'https://via.placeholder.com/150') }}"
+                            class="resume-cover"
+                            alt="Cover"
+                        >
+
+                        <div class="resume-item-content">
+                            <div class="resume-item-top">
                                 <div>
-                                    <span class="badge-genre mb-2 d-inline-block">{{ $resume->book->genre ?? 'Umum' }}</span>
-                                    <h5 class="fw-bold text-white mb-1">{{ $resume->title }}</h5>
-                                    <small class="text-info fw-semibold">{{ $resume->book->title ?? '-' }}</small>
+                                    <span class="badge-genre">
+                                        {{ $resume->book->genre ?? 'Umum' }}
+                                    </span>
+
+                                    <h5 class="resume-item-title">
+                                        {{ $resume->title }}
+                                    </h5>
+
+                                    <div class="resume-book-title">
+                                        {{ $resume->book->title ?? '-' }}
+                                    </div>
                                 </div>
-                                <span class="badge-status">{{ $status }}</span>
+
+                                <span class="badge-status">
+                                    {{ $status }}
+                                </span>
                             </div>
 
-                            <p class="text-secondary small text-truncate-2 mt-2 mb-3" style="max-width: 600px;">
+                            <p class="resume-excerpt">
                                 {{ Str::limit(strip_tags($resume->content), 120) }}
                             </p>
 
-                            <div class="d-flex justify-content-between align-items-center mt-auto text-secondary small">
-                                <div>
-                                    <i class="fa-regular fa-clock me-1"></i> Diperbarui {{ $resume->updated_at->diffForHumans() }}
+                            <div class="resume-item-footer">
+                                <div class="resume-updated">
+                                    <i class="fa-regular fa-clock"></i>
+                                    Diperbarui {{ $resume->updated_at->diffForHumans() }}
                                 </div>
-                                <button class="btn-detail">Lihat Detail <i class="fa-solid fa-chevron-right ms-1"></i></button>
+
+                                <button type="button" class="btn-detail">
+                                    Lihat Detail
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
                             </div>
                         </div>
-
                     </div>
-                </div>
-            @empty
-                <div class="col-12 text-center py-5 rounded-4" style="background: #1e293b; border: 1px dashed #334155;">
-                    <i class="fa-solid fa-file-circle-xmark fa-3x text-muted mb-3"></i>
-                    <h5 class="fw-bold text-white">Belum Ada Resume</h5>
-                    <p class="text-secondary small">Kamu belum menulis resume untuk buku yang dibaca.</p>
-                </div>
-            @endforelse
+
+                @empty
+
+                    <div class="resume-empty">
+                        <div class="resume-empty-icon">
+                            <i class="fa-solid fa-file-circle-xmark"></i>
+                        </div>
+
+                        <h5>Belum Ada Resume</h5>
+
+                        <p>
+                            Kamu belum menulis resume untuk buku yang dibaca.
+                        </p>
+                    </div>
+
+                @endforelse
+            </div>
         </div>
 
-<!-- DRAWER OFFCANVAS UNTUK DETAIL RESUME (SAMPING KANAN) -->
-<div class="offcanvas offcanvas-end detail-drawer w-50" tabindex="-1" id="drawerResumeDetail" style="min-width: 380px;">
-    <div class="offcanvas-header border-bottom border-secondary border-opacity-25">
-        <h5 class="offcanvas-title fw-bold text-white" id="drawerTitle">Detail Resume</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+</div>
+
+{{-- DRAWER DETAIL RESUME --}}
+<div
+    class="offcanvas offcanvas-end detail-drawer"
+    tabindex="-1"
+    id="drawerResumeDetail"
+>
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="drawerTitle">
+            Detail Resume
+        </h5>
+
+        <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+        ></button>
+    </div>
+
     <div class="offcanvas-body">
-        
-        <div class="d-flex justify-content-between align-items-center mb-4">
-            <span class="badge-status fs-6 px-3 py-1" id="drawerStatus">Sedang Dibaca</span>
-            <div class="d-flex gap-2">
-                <a id="drawerEditBtn" href="#" class="btn btn-outline-info btn-sm rounded-2"><i class="fa-solid fa-pen me-1"></i> Edit</a>
-                <form id="drawerDeleteForm" action="" method="POST" onsubmit="return confirm('Hapus resume ini?')">
+
+        {{-- STATUS DAN TOMBOL AKSI --}}
+        <div class="drawer-top-actions">
+            <span class="drawer-status" id="drawerStatus">
+                Sedang Dibaca
+            </span>
+
+            <div class="drawer-action-buttons">
+                <a
+                    id="drawerEditBtn"
+                    href="#"
+                    class="btn-drawer-edit"
+                >
+                    <i class="fa-solid fa-pen"></i>
+                    Edit
+                </a>
+
+                <form
+                    id="drawerDeleteForm"
+                    action=""
+                    method="POST"
+                    onsubmit="return confirm('Hapus resume ini?')"
+                >
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-outline-danger btn-sm rounded-2"><i class="fa-solid fa-trash me-1"></i> Hapus</button>
+
+                    <button type="submit" class="btn-drawer-delete">
+                        <i class="fa-solid fa-trash"></i>
+                        Hapus
+                    </button>
                 </form>
             </div>
         </div>
 
-        <!-- INFO BUKU -->
-        <div class="d-flex gap-3 align-items-center mb-4">
-            <img id="drawerCover" src="" width="65" height="90" class="rounded-2" style="object-fit: cover;">
+        {{-- INFO BUKU --}}
+        <div class="drawer-book-info">
+            <img
+                id="drawerCover"
+                src=""
+                class="drawer-book-cover"
+                alt="Cover Buku"
+            >
+
             <div>
-                <h6 class="fw-bold text-white mb-1" id="drawerBookTitle">Judul Buku</h6>
-                <small class="text-secondary d-block" id="drawerAuthor">Penulis</small>
-                <small class="text-purple fw-semibold" id="drawerGenre">Genre</small>
+                <h6 id="drawerBookTitle">Judul Buku</h6>
+                <small id="drawerAuthor">Penulis</small>
+                <small id="drawerGenre" class="drawer-genre">Genre</small>
             </div>
         </div>
 
-        <!-- PROGRESS BACA -->
+        {{-- PROGRESS BACA --}}
         <div class="detail-section">
-            <div class="d-flex justify-content-between small text-white mb-2">
-                <span>Progress Membaca</span>
-                <span id="drawerProgressText">Halaman 0 dari 0 (0%)</span>
+            <h6>
+                <i class="fa-solid fa-chart-line me-2"></i>
+                Progress Membaca
+            </h6>
+
+            <div class="drawer-progress-info">
+                <span>Progres Buku</span>
+                <span id="drawerProgressText">
+                    Halaman 0 dari 0 (0%)
+                </span>
             </div>
-            <div class="progress" style="height: 8px; background: #1e293b;">
-                <div id="drawerProgressBar" class="progress-bar bg-info" style="width: 0%"></div>
+
+            <div class="drawer-progress">
+                <div
+                    id="drawerProgressBar"
+                    class="drawer-progress-bar"
+                    style="width: 0%"
+                ></div>
             </div>
         </div>
 
-        <!-- ISINYA RESUME -->
+        {{-- ISI RESUME --}}
         <div class="detail-section">
-            <h6 class="fw-bold text-info mb-2"><i class="fa-solid fa-align-left me-2"></i> Ringkasan Isi & Pesan Moral</h6>
-            <div class="text-slate-300 small lh-lg" id="drawerContent" style="white-space: pre-line;"></div>
+            <h6>
+                <i class="fa-solid fa-align-left me-2"></i>
+                Ringkasan Isi & Pesan Moral
+            </h6>
+
+            <div
+                class="drawer-content"
+                id="drawerContent"
+            ></div>
         </div>
 
-        <!-- FOOTER TANGGAL -->
-        <div class="d-flex justify-content-between text-secondary small mt-4 pt-3 border-top border-secondary border-opacity-25">
-            <div>Dibuat: <span id="drawerCreatedAt" class="text-white"></span></div>
-            <div>Diperbarui: <span id="drawerUpdatedAt" class="text-white"></span></div>
-        </div>
+        {{-- TANGGAL --}}
+        <div class="drawer-dates">
+            <div>
+                Dibuat:
+                <span id="drawerCreatedAt"></span>
+            </div>
 
+            <div>
+                Diperbarui:
+                <span id="drawerUpdatedAt"></span>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -334,17 +1065,23 @@
         document.getElementById('drawerGenre').innerText = data.genre;
         document.getElementById('drawerCover').src = data.cover;
         document.getElementById('drawerContent').innerText = data.content;
-        
-        document.getElementById('drawerProgressText').innerText = `Halaman ${data.progress_page} dari ${data.total_pages} (${data.percent}%)`;
-        document.getElementById('drawerProgressBar').style.width = `${data.percent}%`;
-        
+
+        document.getElementById('drawerProgressText').innerText =
+            `Halaman ${data.progress_page} dari ${data.total_pages} (${data.percent}%)`;
+
+        document.getElementById('drawerProgressBar').style.width =
+            `${data.percent}%`;
+
         document.getElementById('drawerCreatedAt').innerText = data.created_at;
         document.getElementById('drawerUpdatedAt').innerText = data.updated_at;
 
         document.getElementById('drawerEditBtn').href = data.edit_url;
         document.getElementById('drawerDeleteForm').action = data.delete_url;
 
-        var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById('drawerResumeDetail'));
+        var bsOffcanvas = new bootstrap.Offcanvas(
+            document.getElementById('drawerResumeDetail')
+        );
+
         bsOffcanvas.show();
     }
 </script>

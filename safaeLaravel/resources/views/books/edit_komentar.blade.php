@@ -6,7 +6,7 @@
     /* HALAMAN EDIT KOMENTAR */
     .edit-comment-page {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #f1f5f9;
+        color: #514d69;
         padding: 30px 20px 60px;
     }
 
@@ -22,10 +22,10 @@
         gap: 8px;
         padding: 9px 15px;
         margin-bottom: 16px;
-        background: #172236;
-        border: 1px solid #2d3b52;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 30px;
-        color: #a8b8ce;
+        color: #81769f;
         font-size: 12px;
         font-weight: 600;
         text-decoration: none;
@@ -33,9 +33,9 @@
     }
 
     .edit-comment-back:hover {
-        color: #38bdf8;
-        border-color: #38bdf8;
-        background: #1e3048;
+        color: #a48bdc;
+        border-color: #b9a5e8;
+        background: #eee8f8;
     }
 
     /* HEADER */
@@ -45,8 +45,8 @@
         gap: 16px;
         padding: 25px;
         margin-bottom: 18px;
-        background: linear-gradient(115deg, #14214a, #0b3a5c 65%, #101a39);
-        border: 1px solid rgba(125, 211, 252, 0.2);
+        background: linear-gradient(115deg, #eee8f8, #e5f1fc 65%, #f5f1fc);
+        border: 1px solid #ded6ef;
         border-radius: 20px;
     }
 
@@ -57,23 +57,23 @@
         width: 55px;
         height: 55px;
         flex-shrink: 0;
-        background: rgba(56, 189, 248, 0.13);
-        border: 1px solid rgba(56, 189, 248, 0.2);
+        background: #e5dcf8;
+        border: 1px solid #d8c9f2;
         border-radius: 16px;
-        color: #38bdf8;
+        color: #a48bdc;
         font-size: 23px;
     }
 
     .edit-comment-header h1 {
         margin: 0 0 5px;
-        color: #fff;
+        color: #51416f;
         font-size: 25px;
         font-weight: 800;
     }
 
     .edit-comment-header p {
         margin: 0;
-        color: #b5c4d8;
+        color: #81769f;
         font-size: 12px;
         line-height: 1.6;
     }
@@ -81,8 +81,8 @@
     /* CARD FORM */
     .edit-comment-card {
         overflow: hidden;
-        background: #162033;
-        border: 1px solid #29374e;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
     }
 
@@ -93,8 +93,8 @@
         flex-wrap: wrap;
         gap: 10px;
         padding: 20px 25px;
-        background: rgba(15, 23, 42, 0.35);
-        border-bottom: 1px solid #29374e;
+        background: #faf8fe;
+        border-bottom: 1px solid #e5def5;
     }
 
     .edit-comment-card-title {
@@ -102,13 +102,13 @@
         align-items: center;
         gap: 9px;
         margin: 0;
-        color: #fff;
+        color: #514d69;
         font-size: 15px;
         font-weight: 700;
     }
 
     .edit-comment-card-title i {
-        color: #38bdf8;
+        color: #a48bdc;
     }
 
     .edit-comment-badge {
@@ -116,10 +116,10 @@
         align-items: center;
         gap: 6px;
         padding: 6px 11px;
-        background: rgba(56, 189, 248, 0.1);
-        border: 1px solid rgba(56, 189, 248, 0.2);
+        background: #eee8f8;
+        border: 1px solid #ded6ef;
         border-radius: 20px;
-        color: #7dd3fc;
+        color: #8065b5;
         font-size: 11px;
         font-weight: 700;
     }
@@ -142,19 +142,19 @@
         align-items: center;
         gap: 7px;
         padding: 8px 12px;
-        background: #0f1a2e;
-        border: 1px solid #29374e;
+        background: #faf8fe;
+        border: 1px solid #e5def5;
         border-radius: 10px;
-        color: #a8b8ce;
+        color: #81769f;
         font-size: 12px;
     }
 
     .edit-comment-info-item i {
-        color: #38bdf8;
+        color: #a48bdc;
     }
 
     .edit-comment-info-item strong {
-        color: #fff;
+        color: #514d69;
         font-weight: 700;
     }
 
@@ -168,17 +168,17 @@
         align-items: center;
         gap: 8px;
         margin-bottom: 10px;
-        color: #e2e8f0;
+        color: #625b78;
         font-size: 13px;
         font-weight: 700;
     }
 
     .edit-comment-label i {
-        color: #38bdf8;
+        color: #a48bdc;
     }
 
     .edit-comment-required {
-        color: #fb7185;
+        color: #cf8297;
     }
 
     /* TEXTAREA */
@@ -187,11 +187,11 @@
         width: 100%;
         min-height: 170px;
         padding: 16px;
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #faf9fd;
+        border: 1px solid #ded6ef;
         border-radius: 13px;
         outline: none;
-        color: #f1f5f9;
+        color: #514d69;
         font-family: inherit;
         font-size: 13px;
         line-height: 1.8;
@@ -200,17 +200,17 @@
     }
 
     .edit-comment-textarea::placeholder {
-        color: #64748b;
+        color: #aaa3bc;
     }
 
     .edit-comment-textarea:focus {
-        border-color: #38bdf8;
-        background: #111e32;
-        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+        border-color: #b9a5e8;
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.15);
     }
 
     .edit-comment-textarea.is-invalid {
-        border-color: #fb7185;
+        border-color: #cf8297;
     }
 
     .edit-comment-help {
@@ -219,21 +219,21 @@
         align-items: center;
         gap: 10px;
         margin-top: 8px;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 11px;
     }
 
     .edit-comment-error {
         margin-top: 7px;
-        color: #fb7185;
+        color: #cf8297;
         font-size: 12px;
     }
 
     /* GAMBAR SAAT INI */
     .edit-comment-image-box {
         padding: 17px;
-        background: #0f1a2e;
-        border: 1px solid #29374e;
+        background: #faf8fe;
+        border: 1px solid #e5def5;
         border-radius: 14px;
     }
 
@@ -242,13 +242,13 @@
         align-items: center;
         gap: 8px;
         margin-bottom: 13px;
-        color: #cbd5e1;
+        color: #625b78;
         font-size: 12px;
         font-weight: 600;
     }
 
     .edit-comment-image-title i {
-        color: #38bdf8;
+        color: #a48bdc;
     }
 
     .edit-comment-current-image {
@@ -257,14 +257,14 @@
         max-height: 260px;
         width: auto;
         height: auto;
-        border: 1px solid #334155;
+        border: 1px solid #e5def5;
         border-radius: 12px;
         object-fit: contain;
     }
 
     .edit-comment-image-note {
         margin: 10px 0 0;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 11px;
         line-height: 1.6;
     }
@@ -278,8 +278,8 @@
         justify-content: center;
         gap: 8px;
         padding: 25px 15px;
-        background: #0f172a;
-        border: 2px dashed #334155;
+        background: #faf9fd;
+        border: 2px dashed #d8c9f2;
         border-radius: 14px;
         text-align: center;
         cursor: pointer;
@@ -287,8 +287,8 @@
     }
 
     .edit-comment-upload:hover {
-        border-color: #38bdf8;
-        background: rgba(56, 189, 248, 0.05);
+        border-color: #b9a5e8;
+        background: #f5f1fc;
     }
 
     .edit-comment-upload-icon {
@@ -297,20 +297,20 @@
         justify-content: center;
         width: 45px;
         height: 45px;
-        background: rgba(56, 189, 248, 0.1);
+        background: #eee8f8;
         border-radius: 13px;
-        color: #38bdf8;
+        color: #a48bdc;
         font-size: 20px;
     }
 
     .edit-comment-upload-title {
-        color: #e2e8f0;
+        color: #625b78;
         font-size: 13px;
         font-weight: 700;
     }
 
     .edit-comment-upload-subtitle {
-        color: #94a3b8;
+        color: #89839f;
         font-size: 11px;
         overflow-wrap: anywhere;
     }
@@ -325,7 +325,7 @@
     }
 
     .edit-comment-file:focus-visible {
-        outline: 2px solid #38bdf8;
+        outline: 2px solid #b9a5e8;
         outline-offset: -3px;
     }
 
@@ -334,8 +334,8 @@
         display: none;
         margin-top: 15px;
         padding: 15px;
-        background: #0f1a2e;
-        border: 1px solid #29374e;
+        background: #faf8fe;
+        border: 1px solid #e5def5;
         border-radius: 13px;
     }
 
@@ -345,7 +345,7 @@
 
     .edit-comment-preview-title {
         margin-bottom: 10px;
-        color: #7dd3fc;
+        color: #8065b5;
         font-size: 12px;
         font-weight: 700;
     }
@@ -365,7 +365,7 @@
         align-items: center;
         gap: 10px;
         padding-top: 20px;
-        border-top: 1px solid #29374e;
+        border-top: 1px solid #e5def5;
     }
 
     .edit-comment-btn {
@@ -386,25 +386,25 @@
 
     .edit-comment-btn.cancel {
         background: transparent;
-        border: 1px solid #334155;
-        color: #cbd5e1;
+        border: 1px solid #ded6ef;
+        color: #81769f;
     }
 
     .edit-comment-btn.cancel:hover {
-        background: #1e293b;
-        border-color: #64748b;
-        color: #fff;
+        background: #f5f1fc;
+        border-color: #c5b5e8;
+        color: #625b78;
     }
 
     .edit-comment-btn.save {
-        background: #38bdf8;
-        border: 1px solid #38bdf8;
-        color: #082f49;
+        background: #b9a5e8;
+        border: 1px solid #b9a5e8;
+        color: #ffffff;
     }
 
     .edit-comment-btn.save:hover {
-        background: #7dd3fc;
-        border-color: #7dd3fc;
+        background: #a48bdc;
+        border-color: #a48bdc;
         transform: translateY(-2px);
     }
 
@@ -532,7 +532,7 @@
                 <div class="edit-comment-group">
                     <label for="commentImageInput" class="edit-comment-label">
                         <i class="fa-solid fa-cloud-arrow-up"></i> Ganti Gambar
-                        <span style="color:#94a3b8;font-weight:400">(Opsional)</span>
+                        <span style="color:#89839f;font-weight:400">(Opsional)</span>
                     </label>
                     <div class="edit-comment-upload">
                         <div class="edit-comment-upload-icon">

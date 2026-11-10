@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Forum Diskusi - Safae')
@@ -7,30 +8,30 @@
 <style>
     /* ================= HEADER & UTILITIES ================= */
     .page-title {
-        color: #f1f5f9;
+        color: #514d69;
         font-weight: 800;
         margin-bottom: 0;
     }
 
     .alert-custom {
-        background: rgba(34, 197, 94, 0.1);
-        border: 1px solid rgba(34, 197, 94, 0.3);
-        color: #4ade80;
+        background: #e4f4eb;
+        border: 1px solid #b9e2cc;
+        color: #438b68;
         border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(34, 197, 94, 0.05);
+        box-shadow: 0 4px 15px rgba(101, 169, 140, 0.05);
     }
 
     .alert-info-custom {
-        background: rgba(56, 189, 248, 0.1);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        color: #38bdf8;
+        background: #e5f1fc;
+        border: 1px solid #c7def5;
+        color: #638bb8;
         border-radius: 12px;
     }
 
     /* ================= TOOLBAR & SELECT ================= */
     .forum-toolbar {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 18px;
         padding: 20px;
         margin-bottom: 30px;
@@ -42,9 +43,9 @@
     }
 
     .form-select-modern {
-        background-color: #0f172a;
-        color: #f8fafc;
-        border: 1px solid #334155;
+        background-color: #faf9fd;
+        color: #514d69;
+        border: 1px solid #ded6ef;
         border-radius: 12px;
         padding: 12px 20px;
         font-weight: 600;
@@ -52,21 +53,21 @@
         transition: 0.3s;
         min-width: 280px;
         appearance: none;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2338bdf8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23b9a5e8' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: right 1rem center;
         background-size: 14px 10px;
     }
 
     .form-select-modern:focus {
-        border-color: #38bdf8;
-        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.15);
         outline: none;
     }
 
     /* ================= BUTTONS ================= */
     .btn-create {
-        background: linear-gradient(135deg, #38bdf8 0%, #0284c7 100%);
+        background: linear-gradient(135deg, #b9a5e8 0%, #a48bdc 100%);
         color: #fff;
         border: none;
         border-radius: 12px;
@@ -76,12 +77,12 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        box-shadow: 0 4px 15px rgba(185, 165, 232, 0.3);
     }
 
     .btn-create:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(56, 189, 248, 0.4);
+        box-shadow: 0 8px 20px rgba(185, 165, 232, 0.4);
         color: #fff;
     }
 
@@ -93,8 +94,8 @@
     }
 
     .topic-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-left: 4px solid transparent; /* Aksen kiri transparan default */
         border-radius: 16px;
         padding: 20px;
@@ -108,10 +109,10 @@
 
     .topic-card:hover {
         transform: translateX(5px); /* Geser sedikit ke kanan ala menu interaktif */
-        border-color: #334155;
-        border-left-color: #38bdf8; /* Muncul aksen biru di kiri */
-        background: #233147;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border-color: #e5def5;
+        border-left-color: #b9a5e8; /* Muncul aksen lavender di kiri */
+        background: #faf8fe;
+        box-shadow: 0 10px 25px rgba(185, 165, 232, 0.15);
     }
 
     .topic-icon {
@@ -119,8 +120,8 @@
         height: 55px;
         min-width: 55px;
         border-radius: 14px;
-        background: rgba(56, 189, 248, 0.1);
-        color: #38bdf8;
+        background: #eee8f8;
+        color: #a48bdc;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -129,8 +130,8 @@
     }
 
     .topic-card:hover .topic-icon {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         transform: scale(1.05);
     }
 
@@ -139,7 +140,7 @@
     }
 
     .topic-title {
-        color: #f8fafc;
+        color: #514d69;
         font-size: 1.15rem;
         font-weight: 700;
         margin-bottom: 6px;
@@ -147,11 +148,11 @@
     }
 
     .topic-card:hover .topic-title {
-        color: #38bdf8;
+        color: #a48bdc;
     }
 
     .topic-meta {
-        color: #94a3b8;
+        color: #89839f;
         font-size: 0.85rem;
         display: flex;
         flex-wrap: wrap;
@@ -160,16 +161,16 @@
     }
 
     .topic-meta i {
-        color: #64748b;
+        color: #b9a5e8;
     }
 
     /* ================= EMPTY STATE ================= */
     .empty-state {
         text-align: center;
         padding: 80px 20px;
-        color: #94a3b8;
-        background: #1e293b;
-        border: 2px dashed #334155;
+        color: #89839f;
+        background: #ffffff;
+        border: 2px dashed #ded6ef;
         border-radius: 20px;
         animation: fadeIn 0.5s ease-out;
     }
@@ -177,7 +178,7 @@
     .empty-state i {
         font-size: 4rem;
         margin-bottom: 25px;
-        color: #475569;
+        color: #c5b5e8;
         display: inline-block;
         animation: float 3s ease-in-out infinite; /* Efek mengambang */
     }
@@ -207,6 +208,24 @@
         .topic-card { padding: 15px; gap: 15px; border-radius: 12px; }
         .topic-icon { width: 45px; height: 45px; min-width: 45px; font-size: 1.2rem; }
         .topic-title { font-size: 1.05rem; }
+    }
+
+    /* ================= COLOR UTILITIES ================= */
+    .text-primary {
+        color: #b9a5e8 !important;
+    }
+
+    .text-white {
+        color: #514d69 !important;
+    }
+
+    .text-muted {
+        color: #89839f !important;
+    }
+
+    .btn-close-white {
+        filter: none;
+        opacity: 0.6;
     }
 </style>
 

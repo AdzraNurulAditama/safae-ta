@@ -6,34 +6,35 @@
 <style>
     .reader-page-wrapper {
         padding: 40px 15px 70px;
+        color: #514d69;
     }
 
     .reader-container {
         max-width: 850px;
         margin: 0 auto;
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #fff;
+        border: 1px solid #e9e3f5;
         border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 20px 40px rgba(130, 115, 170, 0.10);
         overflow: hidden;
     }
 
     .reader-header {
-        background: #0f172a;
-        border-bottom: 1px solid #334155;
+        background: linear-gradient(110deg, #eaf1ff, #f0ebff 55%, #fff0f4);
+        border-bottom: 1px solid #e9e3f5;
         padding: 30px;
         text-align: center;
     }
 
     .reader-header h1 {
         font-weight: 800;
-        color: #38bdf8;
+        color: #8978b9;
         font-size: 1.85rem;
         margin-bottom: 8px;
     }
 
     .meta-info {
-        color: #94a3b8;
+        color: #858198;
         font-size: 0.9rem;
         display: flex;
         flex-wrap: wrap;
@@ -43,25 +44,26 @@
     }
 
     .meta-info i {
-        color: #38bdf8;
+        color: #a394d0;
         margin-right: 4px;
     }
 
     .reader-body {
         padding: 45px 50px;
+        background: #fff;
     }
 
     .reader-content {
         font-size: 1.15rem;
         line-height: 2.1;
-        color: #e2e8f0;
+        color: #625d78;
         margin-bottom: 40px;
         text-align: justify;
         white-space: pre-line;
     }
 
     .reader-footer {
-        border-top: 1px solid #334155;
+        border-top: 1px solid #e9e3f5;
         padding-top: 30px;
     }
 
@@ -84,26 +86,26 @@
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: #38bdf8;
-        color: #0f172a;
-        box-shadow: 0 4px 14px rgba(56, 189, 248, 0.2);
+        background: #a99bd9;
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(163, 148, 208, 0.2);
     }
 
     .btn-nav-main:hover {
-        background: #7dd3fc;
-        color: #0f172a;
+        background: #91a9dc;
+        color: #fff;
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(56, 189, 248, 0.35);
+        box-shadow: 0 6px 20px rgba(145, 169, 220, 0.3);
     }
 
     .action-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 12px;
-        background: #0f172a;
+        background: #f5f2fc;
         padding: 16px;
         border-radius: 16px;
-        border: 1px solid #334155;
+        border: 1px solid #e9e3f5;
     }
 
     .btn-action-card {
@@ -117,36 +119,36 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        background: #1e293b;
-        color: #cbd5e1;
-        border: 1px solid #334155;
+        background: #fff;
+        color: #77718e;
+        border: 1px solid #e6e0f0;
     }
 
     .btn-action-card:hover {
-        background: #334155;
-        color: #fff;
-        border-color: #475569;
+        background: #f0ebff;
+        color: #7662a9;
+        border-color: #cfc3e9;
         transform: translateY(-2px);
     }
 
     .btn-action-card.yellow-accent {
-        color: #fbbf24;
-        border-color: rgba(251, 191, 36, 0.3);
+        color: #c28e38;
+        border-color: rgba(220, 173, 91, 0.35);
     }
 
     .btn-action-card.yellow-accent:hover {
-        background: rgba(251, 191, 36, 0.15);
-        color: #fcd34d;
+        background: #fff5df;
+        color: #a97829;
     }
 
     .btn-action-card.blue-accent {
-        color: #38bdf8;
-        border-color: rgba(56, 189, 248, 0.3);
+        color: #829bd0;
+        border-color: rgba(130, 155, 208, 0.35);
     }
 
     .btn-action-card.blue-accent:hover {
-        background: rgba(56, 189, 248, 0.15);
-        color: #7dd3fc;
+        background: #eaf1ff;
+        color: #6e87bd;
     }
 
     /* TAMPILAN BAB PREMIUM TERKUNCI */
@@ -154,8 +156,8 @@
         text-align: center;
         padding: 35px 20px 45px;
         margin-bottom: 35px;
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f8f5ff;
+        border: 1px solid #e5def4;
         border-radius: 20px;
     }
 
@@ -164,8 +166,8 @@
         height: 80px;
         margin: 0 auto 20px;
         border-radius: 22px;
-        background: rgba(251, 191, 36, 0.12);
-        color: #fbbf24;
+        background: #fff2d8;
+        color: #d9a441;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -173,14 +175,14 @@
     }
 
     .premium-lock h2 {
-        color: #fff;
+        color: #514d69;
         font-size: 1.6rem;
         font-weight: 800;
         margin-bottom: 12px;
     }
 
     .premium-lock-description {
-        color: #94a3b8;
+        color: #89859d;
         line-height: 1.8;
         max-width: 500px;
         margin: 0 auto 25px;
@@ -195,8 +197,8 @@
     }
 
     .premium-payment-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #fff;
+        border: 1px solid #e9e3f5;
         border-radius: 16px;
         padding: 24px 16px;
         display: flex;
@@ -207,15 +209,15 @@
 
     .premium-payment-card > i {
         font-size: 27px;
-        color: #38bdf8;
+        color: #91a9dc;
     }
 
     .premium-payment-card.money > i {
-        color: #fbbf24;
+        color: #d9a441;
     }
 
     .premium-payment-card h3 {
-        color: #fff;
+        color: #514d69;
         font-size: 1.05rem;
         font-weight: 700;
         margin: 0;
@@ -224,15 +226,15 @@
     .premium-payment-price {
         font-size: 1.45rem;
         font-weight: 800;
-        color: #38bdf8;
+        color: #829bd0;
     }
 
     .premium-payment-card.money .premium-payment-price {
-        color: #fbbf24;
+        color: #d9a441;
     }
 
     .premium-payment-card p {
-        color: #94a3b8;
+        color: #9290a3;
         font-size: 0.85rem;
         margin: 0 0 8px;
     }
@@ -247,24 +249,25 @@
         padding: 12px;
         border: none;
         border-radius: 10px;
-        background: #38bdf8;
-        color: #0f172a;
+        background: #91a9dc;
+        color: #fff;
         font-weight: 800;
         cursor: pointer;
         transition: 0.2s;
     }
 
     .premium-payment-button.money {
-        background: #fbbf24;
+        background: #e5b454;
+        color: #fff;
     }
 
     .premium-payment-button:hover {
-        filter: brightness(1.1);
+        filter: brightness(1.05);
         transform: translateY(-2px);
     }
 
     .premium-payment-note {
-        color: #64748b;
+        color: #9290a3;
         font-size: 0.8rem;
         margin-top: 22px;
         line-height: 1.7;
@@ -278,35 +281,35 @@
     }
 
     .reader-alert.success {
-        background: rgba(34, 197, 94, 0.12);
-        border: 1px solid rgba(34, 197, 94, 0.3);
-        color: #86efac;
+        background: #e8f6ef;
+        border: 1px solid #ccebdc;
+        color: #43866c;
     }
 
     .reader-alert.error {
-        background: rgba(239, 68, 68, 0.12);
-        border: 1px solid rgba(239, 68, 68, 0.3);
-        color: #fca5a5;
+        background: #fff0f0;
+        border: 1px solid #f3d0d0;
+        color: #c56d75;
     }
 
     .reader-alert.info {
-        background: rgba(56, 189, 248, 0.12);
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        color: #7dd3fc;
+        background: #eaf1ff;
+        border: 1px solid #d5e1fa;
+        color: #718bbd;
     }
 
     /* MODAL TAMAT MEMBACA */
     .modal-backdrop.show {
-        background-color: rgba(2, 6, 23, 0.8) !important;
+        background-color: rgba(65, 57, 91, 0.45) !important;
         backdrop-filter: blur(8px);
     }
 
     .modal-content-custom {
-        background: #0f172a !important;
-        border: 1px solid #334155 !important;
+        background: #fcfbff !important;
+        border: 1px solid #e9e3f5 !important;
         border-radius: 24px !important;
-        color: #f8fafc;
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+        color: #514d69;
+        box-shadow: 0 25px 60px rgba(100, 90, 130, 0.2);
         padding: 20px;
     }
 
@@ -319,9 +322,9 @@
         align-items: center;
         justify-content: center;
         font-size: 2.2rem;
-        background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+        background: linear-gradient(135deg, #b9a9e5, #91a9dc);
         color: white;
-        box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
+        box-shadow: 0 0 30px rgba(163, 148, 208, 0.3);
     }
 
     .fb-choice {
@@ -341,30 +344,39 @@
     }
 
     .fb-yes {
-        background: #22c55e;
-        color: #052e16;
+        background: #d8f0e2;
+        color: #43866c;
     }
 
     .fb-yes:hover:not(:disabled) {
-        background: #4ade80;
+        background: #c4e9d3;
     }
 
     .fb-no {
-        background: #334155;
-        color: #e2e8f0;
+        background: #eee9f7;
+        color: #77718e;
     }
 
     .fb-no:hover:not(:disabled) {
-        background: #475569;
+        background: #e2daf1;
     }
 
     .fb-later {
         margin-top: 14px;
         background: none;
         border: 0;
-        color: #94a3b8;
+        color: #9995a8;
         font-size: 0.85rem;
         cursor: pointer;
+    }
+
+    /* WARNA TEKS PADA MODAL */
+    .modal-content-custom .text-white {
+        color: #514d69 !important;
+    }
+
+    .modal-content-custom .text-muted {
+        color: #89859d !important;
     }
 
     @media (max-width: 600px) {

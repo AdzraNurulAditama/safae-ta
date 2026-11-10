@@ -5,34 +5,34 @@
 <style>
     .comment-page-wrapper {
         padding: 10px 0 50px;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
     .dark-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 24px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(185, 165, 232, 0.12);
     }
 
     .form-dark-control {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: #f8fafc;
+        background: #faf9fd;
+        border: 1px solid #ded6ef;
+        color: #514d69;
         border-radius: 14px;
         padding: 14px;
     }
 
     .form-dark-control:focus {
-        background: #0f172a;
-        border-color: #38bdf8;
-        color: white;
-        box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15);
+        background: #ffffff;
+        border-color: #b9a5e8;
+        color: #514d69;
+        box-shadow: 0 0 0 0.25rem rgba(185, 165, 232, 0.15);
     }
 
     .form-dark-control::placeholder {
-        color: #64748b;
+        color: #aaa3bc;
     }
 
     /* FOTO PROFIL PENGGUNA */
@@ -40,8 +40,8 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
-        color: #0f172a;
+        background: linear-gradient(135deg, #b9a5e8, #82a9d8);
+        color: #ffffff;
         font-weight: 800;
         display: flex;
         align-items: center;
@@ -49,7 +49,7 @@
         font-size: 1rem;
         flex-shrink: 0;
         overflow: hidden;
-        border: 2px solid rgba(56, 189, 248, 0.2);
+        border: 2px solid #e5def5;
     }
 
     .user-avatar-circle img {
@@ -60,8 +60,8 @@
     }
 
     .btn-submit-comment {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         border: none;
         padding: 10px 24px;
@@ -70,14 +70,14 @@
     }
 
     .btn-submit-comment:hover {
-        background: #7dd3fc;
-        color: #0f172a;
+        background: #a48bdc;
+        color: #ffffff;
     }
 
     .btn-upload-img {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: #94a3b8;
+        background: #faf9fd;
+        border: 1px solid #ded6ef;
+        color: #89839f;
         border-radius: 12px;
         padding: 8px 16px;
         cursor: pointer;
@@ -85,14 +85,15 @@
     }
 
     .btn-upload-img:hover {
-        background: #1e293b;
-        color: #38bdf8;
-        border-color: #38bdf8;
+        background: #eee8f8;
+        color: #a48bdc;
+        border-color: #b9a5e8;
     }
 
     .comment-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #f8f5ff;
+        border: 1px solid #e5def5;
+        border-left: 4px solid #b9a5e8;
         border-radius: 18px;
         padding: 20px;
         margin-bottom: 16px;
@@ -100,7 +101,7 @@
     }
 
     .comment-card:hover {
-        border-color: #38bdf8;
+        border-color: #b9a5e8;
         transform: translateY(-2px);
     }
 
@@ -109,7 +110,7 @@
         max-width: 100%;
         max-height: 280px;
         border-radius: 12px;
-        border: 1px solid #334155;
+        border: 1px solid #e5def5;
         object-fit: contain;
     }
 
@@ -126,6 +127,73 @@
             width: 40px;
             height: 40px;
         }
+    }
+
+    /* ================= COLOR UTILITIES ================= */
+    .comment-page-wrapper .text-white {
+        color: #514d69 !important;
+    }
+
+    .comment-page-wrapper .text-secondary {
+        color: #89839f !important;
+    }
+
+    .comment-page-wrapper .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .comment-page-wrapper .text-danger {
+        color: #cf8297 !important;
+    }
+
+    .comment-page-wrapper .text-success {
+        color: #65a98c !important;
+    }
+
+    .comment-page-wrapper .btn-outline-secondary {
+        color: #89839f;
+        border-color: #ded6ef;
+    }
+
+    .comment-page-wrapper .btn-outline-secondary:hover {
+        background: #eee8f8;
+        color: #8065b5;
+        border-color: #b9a5e8;
+    }
+
+    .comment-page-wrapper .btn-outline-info {
+        color: #82a9d8;
+        border-color: #82a9d8;
+    }
+
+    .comment-page-wrapper .btn-outline-info:hover {
+        background: #82a9d8;
+        color: #ffffff;
+    }
+
+    .comment-page-wrapper .btn-outline-danger {
+        color: #cf8297;
+        border-color: #cf8297;
+    }
+
+    .comment-page-wrapper .btn-outline-danger:hover {
+        background: #cf8297;
+        color: #ffffff;
+    }
+
+    .comment-page-wrapper .badge.bg-secondary {
+        background: #eee8f8 !important;
+        color: #8065b5 !important;
+    }
+
+    .comment-page-wrapper .alert-success {
+        background-color: #e4f4eb !important;
+        border-color: #b9e2cc !important;
+        color: #438b68 !important;
+    }
+
+    .comment-page-wrapper .border-secondary {
+        border-color: #e5def5 !important;
     }
 </style>
 
@@ -151,7 +219,7 @@
         <!-- FORM TULIS KOMENTAR BARU -->
         <div class="dark-card mb-5">
             <div class="d-flex align-items-center mb-3">
-                <div class="p-2 rounded-3 me-3 text-info" style="background: rgba(56, 189, 248, 0.12);">
+                <div class="p-2 rounded-3 me-3 text-info" style="background: rgba(185, 165, 232, 0.15);">
                     <i class="fa-solid fa-comments fs-5"></i>
                 </div>
                 <h5 class="fw-bold text-white mb-0">Tulis Komentar Baru</h5>
@@ -264,7 +332,7 @@
 
                     <!-- ISI KOMENTAR -->
                     <div class="ps-md-5">
-                        <p class="mb-3 lh-lg small" style="color: #cbd5e1; white-space: pre-line;">{{ $c->komentar }}</p>
+                        <p class="mb-3 lh-lg small" style="color: #625b78; white-space: pre-line;">{{ $c->komentar }}</p>
 
                         <!-- GAMBAR KOMENTAR STORAGE LINK -->
                         @if($gambarKomentar)

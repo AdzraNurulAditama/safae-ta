@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Ulasan Buku - ' . $book->title)
@@ -7,50 +8,50 @@
 <style>
     .review-page-wrapper {
         padding: 10px 0 50px 0;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
     .dark-panel {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 24px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(185, 165, 232, 0.12);
     }
 
     /* Rating Summary Left Card */
     .rating-score-huge {
         font-size: 3.2rem;
         font-weight: 800;
-        color: #f8fafc;
+        color: #514d69;
         line-height: 1;
     }
 
     .star-gold {
-        color: #f59e0b;
+        color: #d5a64d;
     }
 
     .star-muted {
-        color: #475569;
+        color: #ded6ef;
     }
 
     .progress-bar-rating {
         height: 8px;
-        background: #0f172a;
+        background: #eee8f8;
         border-radius: 10px;
         overflow: hidden;
     }
 
     .progress-bar-fill {
-        background: #f59e0b;
+        background: #d5a64d;
         height: 100%;
         border-radius: 10px;
     }
 
     /* Feedback Cards Right Side */
     .feedback-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 18px;
         padding: 20px;
         margin-bottom: 16px;
@@ -58,7 +59,7 @@
     }
 
     .feedback-card:hover {
-        border-color: #38bdf8;
+        border-color: #b9a5e8;
         transform: translateY(-2px);
     }
 
@@ -66,8 +67,8 @@
         width: 44px;
         height: 44px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
-        color: #0f172a;
+        background: linear-gradient(135deg, #b9a5e8, #82a9d8);
+        color: #ffffff;
         font-weight: 800;
         display: flex;
         align-items: center;
@@ -78,22 +79,28 @@
 
     /* Modal Styling */
     .modal-dark .modal-content {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: white;
+        background: #ffffff;
+        border: 1px solid #e5def5;
+        color: #514d69;
         border-radius: 20px;
     }
 
     .modal-dark .form-control {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: white;
+        background: #faf9fd;
+        border: 1px solid #ded6ef;
+        color: #514d69;
         border-radius: 12px;
     }
 
     .modal-dark .form-control:focus {
-        border-color: #38bdf8;
-        box-shadow: none;
+        background: #ffffff;
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.15);
+        color: #514d69;
+    }
+
+    .modal-dark .form-control::placeholder {
+        color: #aaa3bc;
     }
 
     /* SYSTEM STAR RATING NATIVE CSS (100% WORKS & RESPONSIF) */
@@ -111,7 +118,7 @@
 
     .rate-stars label {
         font-size: 2.5rem;
-        color: #475569;
+        color: #ded6ef;
         cursor: pointer;
         transition: color 0.2s ease, transform 0.1s ease;
     }
@@ -119,7 +126,7 @@
     .rate-stars label:hover,
     .rate-stars label:hover ~ label,
     .rate-stars input:checked ~ label {
-        color: #f59e0b !important;
+        color: #d5a64d !important;
     }
 
     .rate-stars label:hover {
@@ -127,8 +134,8 @@
     }
 
     .btn-submit-review {
-        background: #f59e0b;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         border: none;
         padding: 12px 20px;
@@ -138,7 +145,111 @@
     }
 
     .btn-submit-review:hover {
-        background: #fbbf24;
+        background: #a48bdc;
+    }
+
+    /* ================= COLOR UTILITIES ================= */
+    .review-page-wrapper .text-white {
+        color: #514d69 !important;
+    }
+
+    .review-page-wrapper .text-secondary {
+        color: #89839f !important;
+    }
+
+    .review-page-wrapper .text-warning {
+        color: #d5a64d !important;
+    }
+
+    .review-page-wrapper .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .review-page-wrapper .text-dark {
+        color: #514d69 !important;
+    }
+
+    .review-page-wrapper .text-slate-300 {
+        color: #716b87 !important;
+    }
+
+    .review-page-wrapper .btn-outline-secondary {
+        color: #89839f;
+        border-color: #ded6ef;
+    }
+
+    .review-page-wrapper .btn-outline-secondary:hover {
+        background: #eee8f8;
+        color: #8065b5;
+        border-color: #b9a5e8;
+    }
+
+    .review-page-wrapper .btn-info {
+        background: #b9a5e8;
+        border-color: #b9a5e8;
+        color: #ffffff !important;
+    }
+
+    .review-page-wrapper .btn-info:hover {
+        background: #a48bdc;
+        border-color: #a48bdc;
+    }
+
+    .review-page-wrapper .btn-outline-info {
+        color: #82a9d8;
+        border-color: #82a9d8;
+    }
+
+    .review-page-wrapper .btn-outline-info:hover {
+        background: #82a9d8;
+        color: #ffffff;
+    }
+
+    .review-page-wrapper .badge.bg-secondary {
+        background: #eee8f8 !important;
+        color: #8065b5 !important;
+    }
+
+    .review-page-wrapper .alert-success {
+        background-color: #e4f4eb !important;
+        border-color: #b9e2cc !important;
+        color: #438b68 !important;
+    }
+
+    .review-page-wrapper .alert-danger {
+        background-color: #fff1f4 !important;
+        border-color: #f2d2dc !important;
+        color: #cf8297 !important;
+    }
+
+    .review-page-wrapper .border-secondary {
+        border-color: #e5def5 !important;
+    }
+
+    .review-page-wrapper .bg-dark {
+        background-color: #f5f1fc !important;
+    }
+
+    .review-page-wrapper .border-success {
+        border-color: #b9e2cc !important;
+    }
+
+    .review-page-wrapper .border-danger {
+        border-color: #f2d2dc !important;
+    }
+
+    .modal-dark .modal-header,
+    .modal-dark .modal-footer {
+        border-color: #e5def5 !important;
+    }
+
+    .modal-dark .modal-title {
+        color: #514d69 !important;
+    }
+
+    .modal-dark .btn-close-white {
+        filter: none;
+        opacity: 0.6;
     }
 </style>
 
@@ -261,7 +372,7 @@
                             </div>
                         </div>
 
-                        <p class="text-slate-300 small mb-0 lh-lg" style="color: #cbd5e1;">
+                        <p class="text-slate-300 small mb-0 lh-lg" style="color: #716b87;">
                             {{ $review->komentar }}
                         </p>
                     </div>

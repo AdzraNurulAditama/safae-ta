@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Edit Resume - ' . ($resume->book->title ?? 'Safae'))
@@ -7,20 +8,20 @@
 <style>
     .edit-resume-wrapper {
         padding: 10px 0 50px 0;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
     .edit-panel {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 25px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(130, 110, 170, 0.10);
     }
 
     .book-header-box {
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 16px;
         padding: 20px;
         display: flex;
@@ -37,23 +38,23 @@
     }
 
     .form-dark-control {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: #f8fafc;
+        background: #faf9fe;
+        border: 1px solid #ded6ef;
+        color: #514d69;
         border-radius: 12px;
         padding: 12px 16px;
     }
 
     .form-dark-control:focus {
-        background: #0f172a;
-        border-color: #38bdf8;
-        color: white;
-        box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15);
+        background: #ffffff;
+        border-color: #b9a5e8;
+        color: #514d69;
+        box-shadow: 0 0 0 0.25rem rgba(185, 165, 232, 0.20);
     }
 
     .btn-submit-resume {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         border: none;
         padding: 12px 24px;
@@ -62,7 +63,51 @@
     }
 
     .btn-submit-resume:hover {
-        background: #7dd3fc;
+        background: #a48bdc;
+        color: #ffffff;
+    }
+
+    .edit-resume-wrapper .text-white {
+        color: #514d69 !important;
+    }
+
+    .edit-resume-wrapper .text-secondary {
+        color: #89839f !important;
+    }
+
+    .edit-resume-wrapper .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .edit-resume-wrapper .text-purple {
+        color: #9b83d1 !important;
+    }
+
+    .edit-resume-wrapper .bg-purple.bg-opacity-25 {
+        background-color: #eee8f8 !important;
+    }
+
+    .edit-resume-wrapper .border-danger {
+        border-color: #f0cbd5 !important;
+    }
+
+    .edit-resume-wrapper .bg-danger.bg-opacity-10 {
+        background-color: #fff1f4 !important;
+    }
+
+    .edit-resume-wrapper .text-warning {
+        color: #d5a64d !important;
+    }
+
+    .edit-resume-wrapper .btn-outline-secondary {
+        color: #81769f;
+        border-color: #cfc5e3;
+    }
+
+    .edit-resume-wrapper .btn-outline-secondary:hover {
+        background: #eee8f8;
+        color: #62547f;
+        border-color: #b9a5e8;
     }
 </style>
 

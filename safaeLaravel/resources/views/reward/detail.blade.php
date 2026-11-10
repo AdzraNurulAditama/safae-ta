@@ -4,34 +4,157 @@
 @section('content')
 <link rel="stylesheet" href="{{ asset('css/detail-reward.css') }}">
 
+<style>
+    .dr-container {
+        color: #514d69;
+    }
+
+    .dr-heading h1 {
+        color: #514d69;
+    }
+
+    .dr-heading h1 span {
+        color: #a48bdc;
+    }
+
+    .dr-heading p {
+        color: #89839f;
+    }
+
+    .dr-eyebrow {
+        color: #a48bdc;
+    }
+
+    .btn-back {
+        color: #81769f;
+        border-color: #ded6ef;
+    }
+
+    .btn-back:hover {
+        background: #eee8f8;
+        color: #62547f;
+    }
+
+    .rw-card {
+        background: #ffffff;
+        border-color: #e5def5;
+    }
+
+    .rw-card-title {
+        color: #514d69;
+    }
+
+    .rw-card-heading p {
+        color: #89839f;
+    }
+
+    .rw-count {
+        background: #eee8f8;
+        color: #8170ad;
+        border-color: #ded6ef;
+    }
+
+    .rw-legend {
+        color: #81769f;
+    }
+
+    .rw-item {
+        border-color: #eee8f8;
+    }
+
+    .rw-name {
+        color: #514d69;
+    }
+
+    .rw-description,
+    .rw-date {
+        color: #89839f;
+    }
+
+    .rw-empty-text {
+        color: #514d69;
+    }
+
+    .rw-empty small {
+        color: #89839f;
+    }
+
+    .rw-empty-icon {
+        color: #a48bdc;
+        background: #f5f1fc;
+    }
+
+    .badge-success {
+        background: #e4f4eb;
+        color: #579879;
+        border-color: #ccebd9;
+    }
+
+    .badge-pending {
+        background: #fff4d9;
+        color: #b58b3f;
+        border-color: #f3e1ad;
+    }
+
+    .badge-gagal {
+        background: #fff1f4;
+        color: #cf8297;
+        border-color: #f0cbd5;
+    }
+
+    .points-income {
+        color: #65a98c;
+    }
+
+    .points-expense {
+        color: #cf8297;
+    }
+
+    .points-reward {
+        color: #a48bdc;
+    }
+
+    .legend-income {
+        color: #65b58f;
+    }
+
+    .legend-expense {
+        color: #dc91a5;
+    }
+
+    .legend-reward {
+        color: #b9a5e8;
+    }
+</style>
+
 @php
     $levelColor = match($level) {
         'Diamond' => [
-            'card' => '#533483',
-            'border' => '#3C3489',
-            'icon_bg' => 'rgba(175,169,236,0.18)',
-            'icon' => '#AFA9EC',
-            'label' => '#AFA9EC',
-            'val' => '#EEEDFE',
-            'meta' => '#AFA9EC'
+            'card' => '#eee8f8',
+            'border' => '#d8cbed',
+            'icon_bg' => 'rgba(164,139,220,0.16)',
+            'icon' => '#9b83d1',
+            'label' => '#8170ad',
+            'val' => '#514d69',
+            'meta' => '#81769f'
         ],
         'Silver' => [
-            'card' => '#185FA5',
-            'border' => '#0C447C',
-            'icon_bg' => 'rgba(181,212,244,0.18)',
-            'icon' => '#85B7EB',
-            'label' => '#85B7EB',
-            'val' => '#E6F1FB',
-            'meta' => '#85B7EB'
+            'card' => '#eaf4fb',
+            'border' => '#c9e1f1',
+            'icon_bg' => 'rgba(130,169,216,0.16)',
+            'icon' => '#82a9d8',
+            'label' => '#7197c5',
+            'val' => '#514d69',
+            'meta' => '#8196b1'
         ],
         default => [
-            'card' => '#854F0B',
-            'border' => '#633806',
-            'icon_bg' => 'rgba(250,199,117,0.18)',
-            'icon' => '#FAC775',
-            'label' => '#FAC775',
-            'val' => '#FAEEDA',
-            'meta' => '#FAC775'
+            'card' => '#fff4df',
+            'border' => '#f0dfb9',
+            'icon_bg' => 'rgba(213,166,77,0.16)',
+            'icon' => '#c69b4c',
+            'label' => '#b58b3f',
+            'val' => '#514d69',
+            'meta' => '#a58b5d'
         ],
     };
 

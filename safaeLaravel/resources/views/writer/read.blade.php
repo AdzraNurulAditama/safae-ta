@@ -2,12 +2,16 @@
 @extends('layouts.app')
 @section('title', 'Pratinjau Buku - ' . $book->title)
 @section('content')
+
 <style>
     /* HALAMAN PRATINJAU */
     .writer-reader-page {
         font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #f1f5f9;
+        color: #475569;
         padding: 24px 0 50px;
+        background:
+            radial-gradient(circle at 5% 5%, rgba(186, 230, 253, .25), transparent 28%),
+            radial-gradient(circle at 95% 15%, rgba(221, 214, 254, .25), transparent 28%);
     }
 
     .writer-reader-container {
@@ -23,20 +27,22 @@
         gap: 8px;
         padding: 9px 15px;
         margin-bottom: 12px;
-        background: #172236;
-        border: 1px solid #2d3b52;
+        background: rgba(255, 255, 255, .85);
+        border: 1px solid #dbeafe;
         border-radius: 30px;
-        color: #a8b8ce;
+        color: #64748b;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 700;
         text-decoration: none;
-        transition: 0.3s;
+        transition: .3s;
+        box-shadow: 0 3px 10px rgba(148, 163, 184, .08);
     }
 
     .reader-back:hover {
-        color: #38bdf8;
-        border-color: #38bdf8;
-        background: #1e3048;
+        color: #6366f1;
+        border-color: #c4b5fd;
+        background: #f5f3ff;
+        transform: translateX(-3px);
     }
 
     /* HEADER INFORMASI BUKU */
@@ -47,9 +53,10 @@
         gap: 20px;
         padding: 22px;
         margin-bottom: 16px;
-        background: linear-gradient(115deg, #14214a, #0b3a5c 65%, #101a39);
-        border: 1px solid rgba(125, 211, 252, 0.2);
+        background: linear-gradient(115deg, #e0f2fe, #ede9fe 60%, #fce7f3);
+        border: 1px solid #dbeafe;
         border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(148, 163, 184, .10);
     }
 
     .reader-book-info {
@@ -65,7 +72,8 @@
         flex-shrink: 0;
         object-fit: cover;
         border-radius: 10px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
+        border: 2px solid rgba(255, 255, 255, .9);
+        box-shadow: 0 5px 14px rgba(100, 116, 139, .15);
     }
 
     .reader-cover-empty {
@@ -76,8 +84,8 @@
         height: 105px;
         flex-shrink: 0;
         border-radius: 10px;
-        background: #1e3a5f;
-        color: #38bdf8;
+        background: #dbeafe;
+        color: #60a5fa;
         font-size: 28px;
     }
 
@@ -91,17 +99,17 @@
         gap: 6px;
         padding: 5px 10px;
         margin-bottom: 7px;
-        background: rgba(56, 189, 248, 0.12);
-        border: 1px solid rgba(56, 189, 248, 0.2);
+        background: rgba(255, 255, 255, .7);
+        border: 1px solid #c4b5fd;
         border-radius: 20px;
-        color: #7dd3fc;
+        color: #7c3aed;
         font-size: 11px;
-        font-weight: 700;
+        font-weight: 800;
     }
 
     .reader-book-title {
         margin: 0 0 5px;
-        color: #fff;
+        color: #334155;
         font-size: 23px;
         font-weight: 800;
         overflow-wrap: anywhere;
@@ -109,7 +117,7 @@
 
     .reader-book-author {
         margin: 0 0 7px;
-        color: #b5c4d8;
+        color: #64748b;
         font-size: 12px;
     }
 
@@ -118,12 +126,12 @@
         align-items: center;
         flex-wrap: wrap;
         gap: 12px;
-        color: #cbd5e1;
+        color: #64748b;
         font-size: 12px;
     }
 
     .reader-book-meta i {
-        color: #38bdf8;
+        color: #8b5cf6;
         margin-right: 4px;
     }
 
@@ -134,20 +142,23 @@
         justify-content: center;
         gap: 8px;
         padding: 11px 17px;
-        background: #38bdf8;
+        background: linear-gradient(135deg, #93c5fd, #c4b5fd);
+        border: 1px solid rgba(255, 255, 255, .7);
         border-radius: 11px;
-        color: #082f49;
+        color: #3730a3;
         font-size: 13px;
         font-weight: 800;
         text-decoration: none;
         white-space: nowrap;
-        transition: 0.3s;
+        transition: .3s;
+        box-shadow: 0 4px 12px rgba(139, 92, 246, .12);
     }
 
     .reader-manage-btn:hover {
-        background: #7dd3fc;
-        color: #082f49;
+        background: linear-gradient(135deg, #bfdbfe, #ddd6fe);
+        color: #4338ca;
         transform: translateY(-2px);
+        box-shadow: 0 7px 16px rgba(139, 92, 246, .18);
     }
 
     /* RINGKASAN STATISTIK BAB */
@@ -163,9 +174,16 @@
         align-items: center;
         gap: 12px;
         padding: 13px 15px;
-        background: #162033;
-        border: 1px solid #29374e;
+        background: rgba(255, 255, 255, .9);
+        border: 1px solid #e2e8f0;
         border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(148, 163, 184, .07);
+        transition: .3s;
+    }
+
+    .reader-overview-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 18px rgba(148, 163, 184, .13);
     }
 
     .reader-overview-icon {
@@ -180,27 +198,27 @@
     }
 
     .reader-overview-icon.blue {
-        color: #38bdf8;
-        background: rgba(56, 189, 248, 0.13);
+        color: #3b82f6;
+        background: #dbeafe;
     }
 
     .reader-overview-icon.green {
-        color: #4ade80;
-        background: rgba(34, 197, 94, 0.13);
+        color: #16a34a;
+        background: #dcfce7;
     }
 
     .reader-overview-icon.yellow {
-        color: #facc15;
-        background: rgba(234, 179, 8, 0.13);
+        color: #d97706;
+        background: #fef3c7;
     }
 
     .reader-overview-icon.gold {
-        color: #fbbf24;
-        background: rgba(251, 191, 36, 0.13);
+        color: #b45309;
+        background: #ffedd5;
     }
 
     .reader-overview-number {
-        color: #fff;
+        color: #334155;
         font-size: 20px;
         font-weight: 800;
         line-height: 1.2;
@@ -226,21 +244,21 @@
         align-items: center;
         gap: 9px;
         margin: 0;
-        color: #fff;
+        color: #334155;
         font-size: 19px;
         font-weight: 800;
     }
 
     .reader-section-title i {
-        color: #38bdf8;
+        color: #8b5cf6;
     }
 
     .reader-section-count {
         padding: 5px 12px;
-        background: rgba(56, 189, 248, 0.1);
-        border: 1px solid rgba(56, 189, 248, 0.2);
+        background: #ede9fe;
+        border: 1px solid #ddd6fe;
         border-radius: 20px;
-        color: #7dd3fc;
+        color: #7c3aed;
         font-size: 12px;
         font-weight: 700;
     }
@@ -254,15 +272,16 @@
 
     .reader-chapter-card {
         overflow: hidden;
-        background: #162033;
-        border: 1px solid #29374e;
+        background: rgba(255, 255, 255, .95);
+        border: 1px solid #e2e8f0;
         border-radius: 19px;
-        transition: 0.3s;
+        transition: .3s;
+        box-shadow: 0 5px 16px rgba(148, 163, 184, .07);
     }
 
     .reader-chapter-card:hover {
-        border-color: rgba(56, 189, 248, 0.4);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        border-color: #c4b5fd;
+        box-shadow: 0 12px 28px rgba(148, 163, 184, .14);
     }
 
     /* HEADER SETIAP BAB */
@@ -272,8 +291,8 @@
         align-items: center;
         gap: 15px;
         padding: 20px 24px;
-        border-bottom: 1px solid #29374e;
-        background: rgba(15, 23, 42, 0.35);
+        border-bottom: 1px solid #e9e5f5;
+        background: linear-gradient(110deg, #f0f9ff, #f5f3ff);
     }
 
     .reader-chapter-heading {
@@ -285,16 +304,16 @@
         align-items: center;
         gap: 6px;
         margin-bottom: 7px;
-        color: #38bdf8;
+        color: #818cf8;
         font-size: 11px;
         font-weight: 800;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
+        letter-spacing: .5px;
     }
 
     .reader-chapter-title {
         margin: 0 0 10px;
-        color: #fff;
+        color: #334155;
         font-size: 20px;
         font-weight: 800;
         overflow-wrap: anywhere;
@@ -319,15 +338,15 @@
     }
 
     .reader-status.published {
-        color: #4ade80;
-        background: rgba(34, 197, 94, 0.12);
-        border: 1px solid rgba(34, 197, 94, 0.2);
+        color: #15803d;
+        background: #dcfce7;
+        border: 1px solid #bbf7d0;
     }
 
     .reader-status.draft {
-        color: #facc15;
-        background: rgba(234, 179, 8, 0.12);
-        border: 1px solid rgba(234, 179, 8, 0.2);
+        color: #b45309;
+        background: #fef3c7;
+        border: 1px solid #fde68a;
     }
 
     /* STATUS GRATIS DAN PREMIUM */
@@ -342,15 +361,15 @@
     }
 
     .reader-access.free {
-        color: #86efac;
-        background: rgba(34, 197, 94, 0.1);
-        border: 1px solid rgba(34, 197, 94, 0.2);
+        color: #15803d;
+        background: #dcfce7;
+        border: 1px solid #bbf7d0;
     }
 
     .reader-access.premium {
-        color: #fbbf24;
-        background: rgba(251, 191, 36, 0.1);
-        border: 1px solid rgba(251, 191, 36, 0.25);
+        color: #b45309;
+        background: #ffedd5;
+        border: 1px solid #fed7aa;
     }
 
     /* TOMBOL EDIT BAB */
@@ -360,21 +379,21 @@
         justify-content: center;
         gap: 7px;
         padding: 9px 14px;
-        background: transparent;
-        border: 1px solid #334155;
+        background: #fff;
+        border: 1px solid #cbd5e1;
         border-radius: 10px;
-        color: #cbd5e1;
+        color: #64748b;
         font-size: 12px;
-        font-weight: 600;
+        font-weight: 700;
         text-decoration: none;
         white-space: nowrap;
-        transition: 0.3s;
+        transition: .3s;
     }
 
     .reader-edit-btn:hover {
-        color: #38bdf8;
-        border-color: #38bdf8;
-        background: rgba(56, 189, 248, 0.08);
+        color: #7c3aed;
+        border-color: #c4b5fd;
+        background: #f5f3ff;
     }
 
     /* KONTEN CERITA */
@@ -395,13 +414,13 @@
         height: auto;
         margin: 0 auto;
         object-fit: contain;
-        border: 1px solid #334155;
+        border: 1px solid #e2e8f0;
         border-radius: 13px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 20px rgba(148, 163, 184, .13);
     }
 
     .reader-chapter-content {
-        color: #dce5f2;
+        color: #475569;
         font-size: 15px;
         font-weight: 400;
         line-height: 2;
@@ -417,21 +436,21 @@
         gap: 10px;
         margin-top: 28px;
         padding-top: 16px;
-        border-top: 1px solid #29374e;
+        border-top: 1px solid #e9e5f5;
         color: #94a3b8;
         font-size: 11px;
     }
 
     .reader-chapter-footer i {
-        color: #38bdf8;
+        color: #a78bfa;
         margin-right: 5px;
     }
 
     /* BELUM ADA BAB */
     .reader-empty {
         padding: 50px 20px;
-        background: #162033;
-        border: 1px dashed #334155;
+        background: rgba(255, 255, 255, .9);
+        border: 1px dashed #c4b5fd;
         border-radius: 20px;
         text-align: center;
     }
@@ -443,17 +462,17 @@
         width: 70px;
         height: 70px;
         margin: 0 auto 15px;
-        background: rgba(56, 189, 248, 0.1);
+        background: #ede9fe;
         border-radius: 20px;
-        color: #38bdf8;
+        color: #8b5cf6;
         font-size: 30px;
     }
 
     .reader-empty h3 {
         margin-bottom: 8px;
-        color: #fff;
+        color: #334155;
         font-size: 19px;
-        font-weight: 700;
+        font-weight: 800;
     }
 
     .reader-empty p {

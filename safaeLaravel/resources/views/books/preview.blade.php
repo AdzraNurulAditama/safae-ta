@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', $book->title . ' - Detail Buku')
@@ -5,249 +6,350 @@
 @section('content')
 
 <style>
-    .wattpad-preview-wrapper {
-        padding: 20px 0 60px 0;
-        color: #f1f5f9;
-        max-width: 1000px;
-        margin: 0 auto;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
-    /* Cover & Header Details */
-    .book-cover-wattpad {
-        width: 180px;
-        height: 270px;
-        object-fit: cover;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    }
+.wattpad-preview-wrapper {
+    padding: 20px 0 60px 0;
+    color: #514d69;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
 
-    .author-avatar {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
-        color: #0f172a;
-        font-weight: 700;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.85rem;
-    }
+/* Cover & Header Details */
+.book-cover-wattpad {
+    width: 180px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(130, 115, 170, .16);
+}
 
-    .stat-badge {
-        color: #94a3b8;
-        font-size: 0.9rem;
-    }
+.author-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c7b9eb, #a9bce9);
+    color: #fff;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
 
-    /* Buttons */
-    .btn-read-main {
-        background: #f8fafc;
-        color: #0f172a;
-        font-weight: 700;
-        padding: 12px 40px;
-        border-radius: 999px;
-        border: none;
-        font-size: 1rem;
-        transition: 0.2s ease;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-    }
+.stat-badge {
+    color: #9290a3;
+    font-size: 0.9rem;
+}
 
-    .btn-read-main:hover {
-        background: #38bdf8;
-        color: #0f172a;
-        transform: translateY(-2px);
-    }
+/* Buttons */
+.btn-read-main {
+    background: #a99bd9;
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 999px;
+    border: none;
+    font-size: 1rem;
+    transition: 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    /* Nav Tabs */
-    .wattpad-tabs {
-        border-bottom: 1px solid #334155;
-        margin-top: 30px;
-        margin-bottom: 25px;
-    }
+.btn-read-main:hover {
+    background: #91a9dc;
+    color: #fff;
+    transform: translateY(-2px);
+}
 
-    .wattpad-tab-btn {
-        background: transparent;
-        border: none;
-        color: #94a3b8;
-        font-weight: 700;
-        padding: 12px 24px;
-        font-size: 1rem;
-        position: relative;
-        cursor: pointer;
-        transition: 0.2s;
-    }
+/* Nav Tabs */
+.wattpad-tabs {
+    border-bottom: 1px solid #e8e2f2;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
 
-    .wattpad-tab-btn.active {
-        color: #38bdf8;
-    }
+.wattpad-tab-btn {
+    background: transparent;
+    border: none;
+    color: #9995a8;
+    font-weight: 700;
+    padding: 12px 24px;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    transition: 0.2s;
+}
 
-    .wattpad-tab-btn.active::after {
-        content: '';
-        position: absolute;
-        bottom: -1px;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: #38bdf8;
-        border-radius: 3px 3px 0 0;
-    }
+.wattpad-tab-btn.active {
+    color: #8978b9;
+}
 
-    /* Tags Pill */
-    .tag-pill {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: #cbd5e1;
-        padding: 5px 14px;
-        border-radius: 8px;
-        font-size: 0.82rem;
-        display: inline-block;
-        margin-bottom: 8px;
-        margin-right: 6px;
-    }
+.wattpad-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: #a394d0;
+    border-radius: 3px 3px 0 0;
+}
 
-    /* Recommended Book Card */
-    .rec-card {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 16px;
-        padding: 12px;
-        display: flex;
-        gap: 12px;
-        transition: 0.2s;
-        text-decoration: none;
-        color: white;
-        height: 100%;
-    }
+/* Tags Pill */
+.tag-pill {
+    background: #f0ebff;
+    border: 1px solid #e4dcf5;
+    color: #8978b9;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    display: inline-block;
+    margin-bottom: 8px;
+    margin-right: 6px;
+}
 
-    .rec-card:hover {
-        border-color: #38bdf8;
-        transform: translateY(-3px);
-        color: white;
-    }
+/* Recommended Book Card */
+.rec-card {
+    background: #fff;
+    border: 1px solid #eeeaf5;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    gap: 12px;
+    transition: 0.2s;
+    text-decoration: none;
+    color: #514d69;
+    height: 100%;
+}
 
-    .rec-cover {
-        width: 70px;
-        height: 105px;
-        object-fit: cover;
-        border-radius: 8px;
-        flex-shrink: 0;
-    }
+.rec-card:hover {
+    border-color: #cfc3e9;
+    transform: translateY(-3px);
+    color: #514d69;
+}
 
-    .rec-title {
-        font-weight: 700;
-        font-size: 0.95rem;
-        margin-bottom: 4px;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+.rec-cover {
+    width: 70px;
+    height: 105px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
 
-    /* Review / Ulasan Styling */
-    .dark-panel {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 20px;
-        padding: 24px;
-    }
+.rec-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #514d69;
+}
 
-    .rating-score-huge {
-        font-size: 3rem;
-        font-weight: 800;
-        color: #f8fafc;
-        line-height: 1;
-    }
+/* Review / Ulasan Styling */
+.dark-panel {
+    background: #f3f0ff;
+    border: 1px solid #e7e0f2;
+    border-radius: 20px;
+    padding: 24px;
+}
 
-    .star-gold { color: #f59e0b; }
-    .star-muted { color: #475569; }
+.rating-score-huge {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #655a88;
+    line-height: 1;
+}
 
-    .progress-bar-rating {
-        height: 8px;
-        background: #0f172a;
-        border-radius: 10px;
-        overflow: hidden;
-    }
+.star-gold {
+    color: #f0b45f;
+}
 
-    .progress-bar-fill {
-        background: #f59e0b;
-        height: 100%;
-        border-radius: 10px;
-    }
+.star-muted {
+    color: #d8d3e2;
+}
 
-    .feedback-card {
-        background: #1e293b;
-        border: 1px solid #334155;
-        border-radius: 18px;
-        padding: 20px;
-        margin-bottom: 16px;
-    }
+.progress-bar-rating {
+    height: 8px;
+    background: #e5e0ee;
+    border-radius: 10px;
+    overflow: hidden;
+}
 
-    .user-avatar-circle {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
-        color: #0f172a;
-        font-weight: 800;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 0.95rem;
-        flex-shrink: 0;
-    }
+.progress-bar-fill {
+    background: #f0b45f;
+    height: 100%;
+    border-radius: 10px;
+}
 
-    /* Modal Dark & Star Rating Native */
-    .modal-dark .modal-content {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: white;
-        border-radius: 20px;
-    }
+.feedback-card {
+    background: #fff;
+    border: 1px solid #eeeaf5;
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 16px;
+}
 
-    .modal-dark .form-control {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: white;
-        border-radius: 12px;
-    }
+.user-avatar-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #c7b9eb, #a9bce9);
+    color: #fff;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+}
 
-    .rate-stars {
-        display: inline-flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 10px;
-        margin: 10px 0;
-    }
+/* Modal & Star Rating */
+.modal-dark .modal-content {
+    background: #fcfbff;
+    border: 1px solid #e9e3f5;
+    color: #514d69;
+    border-radius: 20px;
+}
 
-    .rate-stars input { display: none; }
+.modal-dark .modal-header,
+.modal-dark .modal-footer {
+    border-color: #eeeaf5 !important;
+}
 
-    .rate-stars label {
-        font-size: 2.5rem;
-        color: #475569;
-        cursor: pointer;
-        transition: color 0.2s ease, transform 0.1s ease;
-    }
+.modal-dark .modal-title {
+    color: #514d69;
+}
 
-    .rate-stars label:hover,
-    .rate-stars label:hover ~ label,
-    .rate-stars input:checked ~ label {
-        color: #f59e0b !important;
-    }
+.modal-dark .form-control {
+    background: #fff;
+    border: 1px solid #e5def0;
+    color: #514d69;
+    border-radius: 12px;
+}
 
-    .rate-stars label:hover { transform: scale(1.2); }
+.modal-dark .form-control::placeholder {
+    color: #aaa6b8;
+}
 
-    .btn-submit-review {
-        background: #f59e0b;
-        color: #0f172a;
-        font-weight: 700;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 12px;
-        width: 100%;
-    }
+.modal-dark .form-control:focus {
+    border-color: #b6a8df;
+    box-shadow: 0 0 0 3px rgba(163,148,208,.13);
+}
+
+.rate-stars {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.rate-stars input {
+    display: none;
+}
+
+.rate-stars label {
+    font-size: 2.5rem;
+    color: #d8d3e2;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.1s ease;
+}
+
+.rate-stars label:hover,
+.rate-stars label:hover ~ label,
+.rate-stars input:checked ~ label {
+    color: #f0b45f !important;
+}
+
+.rate-stars label:hover {
+    transform: scale(1.2);
+}
+
+.btn-submit-review {
+    background: #a99bd9;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.btn-submit-review:hover {
+    background: #91a9dc;
+}
+
+/* Bootstrap color overrides */
+.wattpad-preview-wrapper .text-white {
+    color: #514d69 !important;
+}
+
+.wattpad-preview-wrapper .text-secondary {
+    color: #9290a3 !important;
+}
+
+.wattpad-preview-wrapper .text-info {
+    color: #8978b9 !important;
+}
+
+.wattpad-preview-wrapper .text-slate-300 {
+    color: #77738b !important;
+}
+
+.wattpad-preview-wrapper .bg-dark {
+    background-color: #f5f2fc !important;
+}
+
+.wattpad-preview-wrapper .border-secondary {
+    border-color: #e8e2f2 !important;
+}
+
+.wattpad-preview-wrapper .bg-success {
+    background-color: #e8f6ef !important;
+}
+
+.wattpad-preview-wrapper .text-success {
+    color: #559477 !important;
+}
+
+.wattpad-preview-wrapper .btn-info {
+    background-color: #a99bd9 !important;
+    border-color: #a99bd9 !important;
+    color: #fff !important;
+}
+
+.wattpad-preview-wrapper .btn-outline-info {
+    color: #8978b9 !important;
+    border-color: #cfc3e9 !important;
+}
+
+.wattpad-preview-wrapper .btn-outline-info:hover {
+    background: #f0ebff !important;
+    color: #7662a9 !important;
+}
+
+.wattpad-preview-wrapper .alert-success {
+    background-color: #e8f6ef !important;
+    border-color: #ccebdc !important;
+    color: #43866c !important;
+}
+
+.wattpad-preview-wrapper .btn-outline-secondary {
+    color: #8978b9;
+    border-color: #dcd4ed;
+}
+
+.wattpad-preview-wrapper .btn-outline-secondary:hover {
+    background: #f0ebff;
+    color: #7662a9;
+    border-color: #cfc3e9;
+}
 </style>
 
 <div class="wattpad-preview-wrapper">
@@ -347,7 +449,7 @@
         </div>
     </div>
 
-    <!-- KONTEN TAB 2: ULASAN PEMBACA (LANGSUNG TAMPIL DI BAWAH) -->
+    <!-- KONTEN TAB 2: ULASAN PEMBACA -->
     <div id="contentUlasan" style="display: none;">
         <div class="row g-4 mb-5">
             <!-- RATING SUMMARY KIRI -->
@@ -413,7 +515,7 @@
                                 @endfor
                             </div>
                         </div>
-                        <p class="small mb-0" style="color: #cbd5e1;">{{ $review->komentar }}</p>
+                        <p class="small mb-0" style="color: #77738b;">{{ $review->komentar }}</p>
                     </div>
                 @empty
                     <div class="dark-panel text-center py-4">
@@ -466,7 +568,7 @@
                 <h5 class="modal-title fw-bold text-white">
                     <i class="fa-solid fa-star text-warning me-2"></i> Tulis Ulasan
                 </h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('ulasan.store', $book->id) }}" method="POST">
                 @csrf

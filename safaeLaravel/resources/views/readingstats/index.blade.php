@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Statistik Membaca Saya - Safae')
@@ -7,28 +8,28 @@
 <style>
     .stats-page-wrapper {
         padding: 10px 0 50px 0;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
     .dark-panel {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 22px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(130, 110, 170, 0.10);
         height: 100%;
     }
 
     .header-title {
         font-size: 1.8rem;
         font-weight: 800;
-        color: #f8fafc;
+        color: #514d69;
     }
 
     /* Top Metric Cards */
     .metric-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 18px;
         padding: 20px;
         display: flex;
@@ -39,7 +40,7 @@
 
     .metric-card:hover {
         transform: translateY(-3px);
-        border-color: #38bdf8;
+        border-color: #b9a5e8;
     }
 
     .metric-icon {
@@ -53,10 +54,10 @@
         flex-shrink: 0;
     }
 
-    .icon-blue { background: rgba(56, 189, 248, 0.15); color: #38bdf8; }
-    .icon-green { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
-    .icon-cyan { background: rgba(6, 182, 212, 0.15); color: #22d3ee; }
-    .icon-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+    .icon-blue { background: #e5f1fc; color: #82a9d8; }
+    .icon-green { background: #e4f4eb; color: #65a98c; }
+    .icon-cyan { background: #e3f4f8; color: #75b9ca; }
+    .icon-purple { background: #eee8f8; color: #a48bdc; }
 
     /* Calendar Styling */
     .cal-grid {
@@ -68,14 +69,14 @@
     }
     .cal-day-header {
         font-size: 0.75rem;
-        color: #64748b;
+        color: #aaa3bd;
         font-weight: 700;
     }
     .cal-date {
         padding: 8px 4px;
         font-size: 0.85rem;
         border-radius: 10px;
-        color: #94a3b8;
+        color: #89839f;
         position: relative;
     }
     .cal-date.active-read::after {
@@ -86,7 +87,7 @@
         transform: translateX(-50%);
         width: 4px;
         height: 4px;
-        background: #38bdf8;
+        background: #82a9d8;
         border-radius: 50%;
     }
     .cal-date.active-resume::after {
@@ -97,12 +98,12 @@
         transform: translateX(-50%);
         width: 4px;
         height: 4px;
-        background: #a855f7;
+        background: #a48bdc;
         border-radius: 50%;
     }
     .cal-date.today {
-        border: 1px solid #38bdf8;
-        color: #38bdf8;
+        border: 1px solid #82a9d8;
+        color: #7197c5;
         font-weight: 800;
     }
 
@@ -120,44 +121,160 @@
         transform: translate(-50%, -50%);
         font-weight: 800;
         font-size: 1.25rem;
-        color: #ffffff;
+        color: #514d69;
     }
 
     .quote-box {
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 14px;
         padding: 12px 16px;
         text-align: center;
         font-style: italic;
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: #81769f;
     }
 
     /* Modal Styling */
     .modal-dark .modal-content {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: white;
+        background: #ffffff;
+        border: 1px solid #e5def5;
+        color: #514d69;
         border-radius: 20px;
     }
     .modal-dark .form-control, .modal-dark .form-select {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: white;
+        background: #faf9fe;
+        border: 1px solid #ded6ef;
+        color: #514d69;
         border-radius: 12px;
     }
 
+    .modal-dark .form-control:focus,
+    .modal-dark .form-select:focus {
+        background: #ffffff;
+        border-color: #b9a5e8;
+        color: #514d69;
+        box-shadow: 0 0 0 0.25rem rgba(185, 165, 232, 0.20);
+    }
+
+    .modal-dark .form-select option {
+        background: #ffffff;
+        color: #514d69;
+    }
+
+    .modal-dark .form-control::placeholder {
+        color: #aaa3bd;
+    }
+
     .btn-catat {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         padding: 10px 20px;
         border-radius: 14px;
         border: none;
         transition: 0.3s;
     }
-    .btn-catat:hover { background: #7dd3fc; }
+    .btn-catat:hover { 
+        background: #a48bdc;
+        color: #ffffff;
+    }
+
+    .stats-page-wrapper .text-white {
+        color: #514d69 !important;
+    }
+
+    .stats-page-wrapper .text-secondary {
+        color: #89839f !important;
+    }
+
+    .stats-page-wrapper .text-white-50 {
+        color: #89839f !important;
+    }
+
+    .stats-page-wrapper .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .stats-page-wrapper .text-success {
+        color: #65a98c !important;
+    }
+
+    .stats-page-wrapper .text-warning {
+        color: #d5a64d !important;
+    }
+
+    .stats-page-wrapper .text-purple {
+        color: #a48bdc !important;
+    }
+
+    .stats-page-wrapper .bg-secondary.bg-opacity-25 {
+        background-color: #eee8f8 !important;
+    }
+
+    .stats-page-wrapper .bg-dark.bg-opacity-50 {
+        background-color: #f7f4fc !important;
+    }
+
+    .stats-page-wrapper .border-secondary {
+        border-color: #e5def5 !important;
+    }
+
+    .stats-page-wrapper .border-success {
+        border-color: #ccebd9 !important;
+    }
+
+    .stats-page-wrapper .alert-success {
+        background-color: #e4f4eb !important;
+        color: #579879 !important;
+        border-color: #ccebd9 !important;
+    }
+
+    .stats-page-wrapper .btn-outline-info {
+        color: #7197c5;
+        border-color: #a9c9e8;
+    }
+
+    .stats-page-wrapper .btn-outline-info:hover {
+        background: #e5f1fc;
+        color: #5e83b0;
+        border-color: #82a9d8;
+    }
+
+    .stats-page-wrapper .badge.bg-warning.bg-opacity-25 {
+        background-color: #fff4d9 !important;
+        color: #b58b3f !important;
+    }
+
+    .stats-page-wrapper .progress {
+        background-color: #eee8f8 !important;
+    }
+
+    .stats-page-wrapper .progress-bar.bg-info {
+        background-color: #a9c9e8 !important;
+    }
+
+    .stats-page-wrapper .progress-bar.bg-success {
+        background-color: #9bd5b5 !important;
+    }
+
+    .modal-dark .modal-header,
+    .modal-dark .modal-footer {
+        border-color: #e5def5 !important;
+    }
+
+    .modal-dark .text-white {
+        color: #514d69 !important;
+    }
+
+    .modal-dark .text-secondary {
+        color: #89839f !important;
+    }
+
+    .modal-dark .btn-close-white {
+        filter: none;
+        opacity: 0.6;
+    }
 </style>
 
 <div class="stats-page-wrapper">
@@ -275,7 +392,7 @@
                     <canvas id="consistencyChart" style="max-height: 200px;"></canvas>
                     <div class="mt-3">
                         <small class="text-secondary d-block mb-1">Target {{ $activeDaysThisWeek }}/5 hari/minggu</small>
-                        <div class="progress" style="height: 8px; background: #0f172a;">
+                        <div class="progress" style="height: 8px; background: #eee8f8;">
                             <div class="progress-bar bg-info" style="width: {{ min(($activeDaysThisWeek/5)*100, 100) }}%"></div>
                         </div>
                     </div>
@@ -348,8 +465,8 @@
                     <!-- CIRCLE PROGRESS -->
                     <div class="target-circle-wrapper">
                         <svg width="120" height="120">
-                            <circle cx="60" cy="60" r="50" stroke="#0f172a" stroke-width="10" fill="none"/>
-                            <circle cx="60" cy="60" r="50" stroke="#38bdf8" stroke-width="10" fill="none"
+                            <circle cx="60" cy="60" r="50" stroke="#eee8f8" stroke-width="10" fill="none"/>
+                            <circle cx="60" cy="60" r="50" stroke="#a9c9e8" stroke-width="10" fill="none"
                                     stroke-dasharray="314" stroke-dashoffset="{{ 314 - (314 * $persenTarget / 100) }}"
                                     stroke-linecap="round" transform="rotate(-90 60 60)"/>
                         </svg>
@@ -360,7 +477,7 @@
 
                     <p class="text-white small fw-bold mb-2">{{ $progressTarget }} dari {{ $targetBuku }} buku selesai</p>
 
-                    <div class="progress mb-3" style="height: 8px; background: #0f172a;">
+                    <div class="progress mb-3" style="height: 8px; background: #eee8f8;">
                         <div class="progress-bar bg-info" style="width: {{ $persenTarget }}%"></div>
                     </div>
 
@@ -386,7 +503,7 @@
         <div class="modal-content">
             <div class="modal-header border-secondary border-opacity-25">
                 <h5 class="modal-title fw-bold text-white"><i class="fa-solid fa-flag text-info me-2"></i> Atur Target Membaca Bulanan</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('reading.statistics.target') }}" method="POST">
                 @csrf
@@ -410,7 +527,7 @@
         <div class="modal-content">
             <div class="modal-header border-secondary border-opacity-25">
                 <h5 class="modal-title fw-bold text-white"><i class="fa-solid fa-plus-circle text-info me-2"></i> Catat Sesi Membaca</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <form action="{{ route('reading.statistics.store') }}" method="POST">
                 @csrf
@@ -457,7 +574,7 @@
                 datasets: [{
                     label: 'Sesi Membaca',
                     data: {!! json_encode($last7DaysData) !!},
-                    backgroundColor: '#38bdf8',
+                    backgroundColor: '#a9c9e8',
                     borderRadius: 8
                 }]
             },
@@ -465,8 +582,8 @@
                 responsive: true,
                 plugins: { legend: { display: false } },
                 scales: {
-                    x: { ticks: { color: '#94a3b8' }, grid: { display: false } },
-                    y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } }
+                    x: { ticks: { color: '#89839f' }, grid: { display: false } },
+                    y: { ticks: { color: '#89839f' }, grid: { color: '#e5def5' } }
                 }
             }
         });

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -9,351 +10,632 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
+        /* ==================================================
+           SAFae - PASTEL MESH GRADIENT LIGHT MODE
+        ================================================== */
+
         :root {
-            --bg: #0f172a;
-            --sidebar: #1e293b;
-            --primary: #38bdf8;
-            --text: #f1f5f9;
-            --muted: #64748b;
-            --border: #334155;
+            --bg: #f5f8ff;
+            --white: #ffffff;
+
+            --primary: #7189cf;
+            --primary-dark: #5875b8;
+            --blue: #78bde8;
+
+            --text: #30364b;
+            --text-secondary: #66728a;
+            --muted: #929db2;
+
+            --border: #e8edf8;
+
+            --baby-blue: #a5d8f3;
+            --lavender: #e8c9f0;
+            --baby-pink: #f5cde5;
+            --mint: #b8e5d8;
         }
 
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:'Space Grotesk', sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        body{
-            background:var(--bg);
-            color:var(--text);
-            overflow-x:hidden;
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* ================= NAVBAR ================= */
+        body {
+            background:
+                radial-gradient(
+                    ellipse at 10% 10%,
+                    rgba(157, 211, 245, 0.65),
+                    transparent 45%
+                ),
+                radial-gradient(
+                    ellipse at 90% 15%,
+                    rgba(245, 190, 224, 0.55),
+                    transparent 45%
+                ),
+                radial-gradient(
+                    ellipse at 55% 50%,
+                    rgba(207, 197, 245, 0.35),
+                    transparent 50%
+                ),
+                radial-gradient(
+                    ellipse at 5% 95%,
+                    rgba(174, 224, 211, 0.45),
+                    transparent 40%
+                ),
+                linear-gradient(
+                    135deg,
+                    #eaf6ff 0%,
+                    #f5edff 50%,
+                    #fff0f7 100%
+                );
 
-        .navbar-custom{
-            position:fixed;
-            top:0;
-            left:0;
-            width:100%;
-            height:75px;
-            background:rgba(15, 23, 42, 0.88);
-            backdrop-filter:blur(14px);
-            border-bottom:1px solid var(--border);
-            z-index:1000;
-            padding:0 28px;
-            display:flex;
-            align-items:center;
-            justify-content:space-between;
+            background-attachment: fixed;
+            color: var(--text);
+            overflow-x: hidden;
+            min-height: 100vh;
         }
 
-        .navbar-brand{
-            font-size:1.8rem;
-            font-weight:800;
-            color:var(--primary);
-            text-decoration:none;
-            letter-spacing:-1px;
-            flex-shrink:0;
+        a {
+            transition: all .25s ease;
         }
 
-        /* SEARCH */
+        /* ==================================================
+           NAVBAR
+        ================================================== */
 
-        .navbar-search{
-            flex:1;
-            display:flex;
-            justify-content:center;
-            margin:0 30px;
+        .navbar-custom {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 75px;
+
+            background: rgba(255, 255, 255, 0.72);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 25px rgba(140, 160, 200, 0.08);
+
+            z-index: 1000;
+            padding: 0 28px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .search-wrapper{
-            width:420px;
-            max-width:100%;
-            position:relative;
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+
+            background: linear-gradient(
+                135deg,
+                #7189cf,
+                #65b8e8,
+                #c69bdc
+            );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            text-decoration: none;
+            letter-spacing: -1px;
+            flex-shrink: 0;
         }
 
-        .search-input{
-            width:100%;
-            border:none;
-            background:#1e293b;
-            color:#fff;
-            padding:14px 50px 14px 18px;
-            border-radius:16px;
-            outline:none;
-            transition:.2s;
+        .navbar-brand:hover {
+            opacity: .8;
         }
 
-        .search-input::placeholder{
-            color:#94a3b8;
+        /* ==================================================
+           SEARCH
+        ================================================== */
+
+        .navbar-search {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            margin: 0 30px;
         }
 
-        .search-input:focus{
-            background:#334155;
-            box-shadow:0 0 0 3px rgba(56,189,248,.15);
+        .search-wrapper {
+            width: 420px;
+            max-width: 100%;
+            position: relative;
         }
 
-        .search-icon{
-            position:absolute;
-            right:18px;
-            top:50%;
-            transform:translateY(-50%);
-            color:#94a3b8;
+        .search-input {
+            width: 100%;
+
+            border: 1px solid rgba(255, 255, 255, .9);
+
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,.85),
+                rgba(235,245,255,.85)
+            );
+
+            color: var(--text);
+
+            padding: 14px 50px 14px 18px;
+            border-radius: 16px;
+
+            outline: none;
+            transition: .25s;
         }
 
-        /* RIGHT NAV */
-
-        .nav-right{
-            display:flex;
-            align-items:center;
-            gap:14px;
-            flex-shrink:0;
+        .search-input::placeholder {
+            color: #a0aabd;
         }
 
-        .nav-icon{
-            width:45px;
-            height:45px;
-            border-radius:14px;
-            background:#1e293b;
-            color:var(--text);
-            display:flex;
-            align-items:center;
-            justify-content:center;
-            text-decoration:none;
-            transition:.2s;
+        .search-input:focus {
+            background: #ffffff;
+            border-color: #a5d8f3;
+
+            box-shadow: 0 0 0 4px rgba(114, 183, 245, .15);
         }
 
-        .nav-icon:hover{
-            background:#334155;
-            color:var(--primary);
+        .search-icon {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #8da8d5;
         }
 
-        /* PROFILE */
+        /* ==================================================
+           RIGHT NAVIGATION
+        ================================================== */
 
-        .profile-btn{
-            display:flex;
-            align-items:center;
-            gap:10px;
-            text-decoration:none;
-            color:#fff;
-            font-weight:700;
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-shrink: 0;
         }
 
-        .profile-btn img{
-            width:45px;
-            height:45px;
-            border-radius:50%;
-            border:2px solid #334155;
-            object-fit:cover;
+        .nav-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 14px;
+
+            background: linear-gradient(
+                135deg,
+                #eaf4ff,
+                #f2eaff,
+                #fff0f7
+            );
+
+            color: #7189cf;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-decoration: none;
+            transition: .25s;
+        }
+
+        .nav-icon:hover {
+            background: linear-gradient(
+                135deg,
+                #dceeff,
+                #e9e1ff
+            );
+
+            color: #5875b8;
+            transform: translateY(-2px);
+        }
+
+        /* ==================================================
+           PROFILE
+        ================================================== */
+
+        .profile-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 700;
+        }
+
+        .profile-btn img {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+
+            object-fit: cover;
+
+            box-shadow: 0 2px 10px rgba(120, 150, 200, .15);
         }
 
         .profile-name {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: rgba(56, 189, 248, 0.15);
-        color: #38bdf8;
-        padding: 10px 18px;
-        border-radius: 50px;
-        border: 1px solid rgba(56,189,248,.3);
-        font-size: 16px;
-        font-weight: 700;
-    }
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
 
-        /* ================= SIDEBAR ================= */
+            background: linear-gradient(
+                120deg,
+                #e5f2ff,
+                #eee8ff,
+                #fceafa
+            );
 
-        .sidebar{
-            position:fixed;
-            top:75px;
-            left:0;
-            width:270px;
-            height:calc(100vh - 75px);
-            background:var(--sidebar);
-            border-right:1px solid var(--border);
-            padding:25px 16px;
-            overflow-y:auto;
+            color: #7189cf;
+
+            padding: 10px 18px;
+            border-radius: 50px;
+
+            border: 1px solid rgba(255,255,255,.9);
+
+            font-size: 16px;
+            font-weight: 700;
         }
 
-        .sidebar-title{
-            font-size:.75rem;
-            text-transform:uppercase;
-            color:var(--muted);
-            font-weight:800;
-            margin:22px 14px 12px;
+        /* ==================================================
+           SIDEBAR
+        ================================================== */
+
+        .sidebar {
+            position: fixed;
+            top: 75px;
+            left: 0;
+
+            width: 270px;
+            height: calc(100vh - 75px);
+
+            background: linear-gradient(
+                180deg,
+                rgba(255,255,255,.94),
+                rgba(241,247,255,.91),
+                rgba(250,240,255,.90)
+            );
+
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+
+            border-right: 1px solid rgba(255,255,255,.8);
+
+            padding: 25px 16px;
+            overflow-y: auto;
+            z-index: 900;
         }
 
-        .sidebar a{
-            display:flex;
-            align-items:center;
-            gap:14px;
-            padding:14px 16px;
-            margin-bottom:8px;
-            border-radius:16px;
-            text-decoration:none;
-            color:var(--text);
-            font-weight:700;
-            transition:.2s;
+        .sidebar-title {
+            font-size: .75rem;
+            text-transform: uppercase;
+
+            color: #a0aabd;
+            font-weight: 800;
+
+            margin: 22px 14px 12px;
+            letter-spacing: 1px;
         }
 
-        .sidebar a i{
-            width:18px;
-            font-size:1rem;
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 14px 16px;
+            margin-bottom: 8px;
+
+            border-radius: 14px;
+            text-decoration: none;
+
+            color: #66728a;
+            font-weight: 700;
+
+            transition: all .25s ease;
         }
 
-        .sidebar a:hover{
-            background:#334155;
-            color:var(--primary);
+        .sidebar a i {
+            width: 18px;
+            font-size: 1rem;
         }
 
-        .sidebar a.active{
-            background:rgba(56,189,248,.12);
-            color:var(--primary);
-            border:1px solid rgba(56,189,248,.2);
+        .sidebar a:hover {
+            background: linear-gradient(
+                135deg,
+                #e4f2ff,
+                #eee8ff,
+                #fceafa
+            );
+
+            color: #7189cf;
+            transform: translateX(3px);
         }
 
+        .sidebar a.active {
+            background: linear-gradient(
+                120deg,
+                #e2f1ff,
+                #eee8ff,
+                #fceafa
+            );
 
-        /* SIDEBAR BUKU PREMIUM */
+            color: #7189cf;
+
+            border: 1px solid rgba(255,255,255,.9);
+
+            box-shadow: 0 4px 15px rgba(140, 160, 210, .10);
+        }
+
+        /* ==================================================
+           PREMIUM MENU
+        ================================================== */
+
         .sidebar-premium {
             display: flex;
             align-items: center;
             gap: 12px;
-            color: #fbbf24 !important;
+
+            color: #d99a16 !important;
             font-weight: 700;
-            transition: all 0.3s ease;
+
+            transition: all .3s ease;
         }
 
         .sidebar-premium i {
-            color: #fbbf24 !important;
+            color: #e5a817 !important;
             font-size: 17px;
         }
 
         .sidebar-premium .premium-vip-badge {
             margin-left: auto;
             padding: 3px 9px;
-            background: linear-gradient(135deg, #fbbf24, #f59e0b);
-            color: #422006;
+
+            background: linear-gradient(
+                135deg,
+                #fcd34d,
+                #f59e0b
+            );
+
+            color: #78350f;
             border-radius: 7px;
+
             font-size: 10px;
             font-weight: 800;
-            box-shadow: 0 2px 8px rgba(251, 191, 36, 0.2);
+
+            box-shadow: 0 2px 8px rgba(251, 191, 36, .15);
         }
 
         .sidebar-premium:hover {
-            color: #fde68a !important;
-            background: rgba(251, 191, 36, 0.10);
+            color: #b77908 !important;
+            background: #fff9e8;
         }
 
         .sidebar-premium:hover i {
-            color: #fde68a !important;
+            color: #d99a16 !important;
         }
 
         .sidebar-premium.active {
-            color: #fbbf24 !important;
-            background: rgba(251, 191, 36, 0.12);
-            border: 1px solid rgba(251, 191, 36, 0.25);
+            color: #c58a0c !important;
+
+            background: linear-gradient(
+                135deg,
+                #fff8e6,
+                #fffdf5
+            );
+
+            border: 1px solid #f8e6b5;
             border-radius: 14px;
         }
 
         .sidebar-premium.active i {
-            color: #fbbf24 !important;
+            color: #d99a16 !important;
         }
 
+        /* ==================================================
+           MAIN CONTENT
+        ================================================== */
 
-        /* ================= MAIN ================= */
+        main {
+            margin-left: 270px;
+            margin-top: 75px;
 
-        main{
-            margin-left:270px;
-            margin-top:75px;
-            padding:35px;
-            min-height:100vh;
+            padding: 35px;
+            min-height: 100vh;
+
+            background: transparent;
         }
 
-        /* ================= FOOTER ================= */
+        /* ==================================================
+           CARD GLOBAL
+        ================================================== */
 
-        .footer{
-            margin-left:270px;
-            padding:25px;
-            border-top:1px solid var(--border);
-            background:var(--bg);
-            text-align:center;
-            color:var(--muted);
+        .card {
+            background: rgba(255,255,255,.84);
+
+            border: 1px solid rgba(255,255,255,.95);
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(130, 155, 200, .08);
+
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+
+            transition: all .3s ease;
         }
 
-        /* ================= DROPDOWN ================= */
-
-        .dropdown-menu{
-            background:var(--sidebar);
-            border:1px solid var(--border) !important;
-            border-radius:18px;
-            padding:10px;
-            min-width:220px;
+        .card:hover {
+            box-shadow: 0 12px 30px rgba(130, 155, 200, .15);
         }
 
-        .dropdown-item{
-            color:var(--text);
-            border-radius:12px;
-            font-weight:600;
-            padding:12px 14px;
-            transition:.2s;
+        /* ==================================================
+           BUTTON GLOBAL
+        ================================================== */
+
+        .btn-primary {
+            background: linear-gradient(
+                135deg,
+                #8296ed,
+                #63b9e9,
+                #b69cdd
+            );
+
+            border: none;
+            color: #ffffff;
         }
 
-        .dropdown-item:hover{
-            background:#334155;
-            color:var(--primary);
+        .btn-primary:hover {
+            background: linear-gradient(
+                135deg,
+                #7187e0,
+                #50a8dc,
+                #a78bd1
+            );
+
+            color: #ffffff;
+            transform: translateY(-1px);
         }
 
-        .dropdown-divider{
-            border-color:#334155;
+        /* ==================================================
+           DROPDOWN
+        ================================================== */
+
+        .dropdown-menu {
+            background: rgba(255,255,255,.96);
+
+            border: 1px solid rgba(255,255,255,.95) !important;
+            border-radius: 16px;
+
+            padding: 10px;
+            min-width: 220px;
+
+            box-shadow: 0 12px 30px rgba(88,125,190,.12);
+
+            backdrop-filter: blur(15px);
         }
 
-        /* ================= RESPONSIVE ================= */
+        .dropdown-item {
+            color: #626b80;
 
-        @media(max-width:992px){
-            .sidebar{
-                display:none;
+            border-radius: 12px;
+            font-weight: 600;
+
+            padding: 12px 14px;
+            transition: .2s;
+        }
+
+        .dropdown-item:hover {
+            background: linear-gradient(
+                135deg,
+                #edf2ff,
+                #e5f5ff,
+                #fceafa
+            );
+
+            color: #6388d8;
+        }
+
+        .dropdown-divider {
+            border-color: #e8edf8;
+        }
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        .footer {
+            margin-left: 270px;
+            padding: 25px;
+
+            border-top: 1px solid rgba(255,255,255,.8);
+
+            background: rgba(255,255,255,.72);
+
+            text-align: center;
+            color: #929db2;
+            font-size: 13px;
+        }
+
+        /* ==================================================
+           SCROLLBAR
+        ================================================== */
+
+        .sidebar::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .sidebar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .sidebar::-webkit-scrollbar-thumb {
+            background: linear-gradient(
+                #a9c9f7,
+                #c7b5ed,
+                #f0c6df
+            );
+
+            border-radius: 10px;
+        }
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media(max-width: 992px) {
+
+            .sidebar {
+                display: none;
             }
 
             main,
-            .footer{
-                margin-left:0;
+            .footer {
+                margin-left: 0;
             }
 
-            .navbar-search{
-                display:none;
+            .navbar-search {
+                display: none;
             }
 
-            .navbar-custom{
-                padding:0 18px;
+            .navbar-custom {
+                padding: 0 18px;
             }
         }
 
-        @media(max-width:576px){
-            .navbar-brand{
-                font-size:1.5rem;
+        @media(max-width: 576px) {
+
+            .navbar-brand {
+                font-size: 1.5rem;
             }
 
-            .profile-name{
-                display:none;
+            .profile-name {
+                display: none;
             }
 
-            main{
-                padding:20px 15px;
+            main {
+                padding: 20px 15px;
             }
 
-            .footer{
-                padding:20px 15px;
+            .footer {
+                padding: 20px 15px;
             }
         }
+
     </style>
 
     @guest
         <style>
-            main, .footer {
+            main,
+            .footer {
                 margin-left: 0 !important;
             }
         </style>
@@ -362,6 +644,8 @@
 </head>
 
 <body>
+
+<!-- ================= NAVBAR ================= -->
 
 <nav class="navbar-custom">
 
@@ -376,132 +660,217 @@
         </a>
 
         @auth
+
             <div class="dropdown">
+
                 <a href="#"
                    class="profile-btn"
                    data-bs-toggle="dropdown">
-                   @if(Auth::user()->foto_profil)
-    <img src="{{ asset('storage/' . Auth::user()->foto_profil) }}"
-         alt="Profile">
-@elseif(Auth::user()->profile_image)
-    <img src="{{ asset('storage/' . Auth::user()->profile_image) }}"
-         alt="Profile">
-@else
-    <img src="https://ui-avatars.com/api/?name={{ Auth::user()->username }}&background=38bdf8&color=0f172a"
-         alt="Profile">
-@endif
+
+                    @if(Auth::user()->foto_profil)
+
+                        <img src="{{ asset('storage/' . Auth::user()->foto_profil) }}"
+                             alt="Profile">
+
+                    @elseif(Auth::user()->profile_image)
+
+                        <img src="{{ asset('storage/' . Auth::user()->profile_image) }}"
+                             alt="Profile">
+
+                    @else
+
+                        <img src="https://ui-avatars.com/api/?name={{ urlencode(Auth::user()->username) }}&background=38bdf8&color=ffffff"
+                             alt="Profile">
+
+                    @endif
+
                     <span class="profile-name">
                         {{ Auth::user()->username }}
                     </span>
+
                 </a>
 
                 <ul class="dropdown-menu dropdown-menu-end">
+
                     <li>
                         <a class="dropdown-item" href="{{ url('/profile') }}">
-                            <i class="fa fa-user me-2"></i> Profile
+                            <i class="fa fa-user me-2"></i>
+                            Profile
                         </a>
                     </li>
+
                     <li>
                         <hr class="dropdown-divider">
                     </li>
+
                     <li>
                         <a class="dropdown-item text-danger"
                            href="#"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            <i class="fa fa-right-from-bracket me-2"></i> Logout
+
+                            <i class="fa fa-right-from-bracket me-2"></i>
+                            Logout
+
                         </a>
                     </li>
+
                 </ul>
+
             </div>
+
         @else
-            <a href="{{ route('login') }}" class="btn btn-sm text-white fw-bold px-3 py-2 rounded-3" style="background: linear-gradient(135deg, #8b5cf6, #ec4899); border: none;">
-                <i class="fa-solid fa-right-to-bracket me-2"></i> Masuk
+
+            <a href="{{ route('login') }}"
+               class="btn btn-sm text-white fw-bold px-3 py-2 rounded-3"
+               style="background: linear-gradient(135deg, #8296ed, #63b9e9, #b69cdd); border: none;">
+
+                <i class="fa-solid fa-right-to-bracket me-2"></i>
+                Masuk
+
             </a>
+
         @endauth
 
     </div>
+
 </nav>
 
+<!-- ================= SIDEBAR ================= -->
+
 @auth
+
 <aside class="sidebar">
+
     <div class="sidebar-title">
         Menu Utama
     </div>
 
-    <a href="{{ route('user.dashboard') }}" class="{{ request()->is('user/dashboard') ? 'active' : '' }}">
-        <i class="fa-solid fa-chart-line"></i> Dashboard
+    <a href="{{ route('user.dashboard') }}"
+       class="{{ request()->is('user/dashboard') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-chart-line"></i>
+        Dashboard
+
     </a>
 
-    <!-- DIGANTI KE STUDIO PENULIS (NOVEL PER CHAPTER) -->
-    <a href="{{ route('writer.books.index') }}" class="{{ request()->is('penulis*') ? 'active' : '' }}">
-        <i class="fa-solid fa-feather-pointed"></i> Studio Penulis
-    </a>
+    <a href="{{ route('writer.books.index') }}"
+       class="{{ request()->is('penulis*') ? 'active' : '' }}">
 
+        <i class="fa-solid fa-feather-pointed"></i>
+        Studio Penulis
+
+    </a>
 
     <div class="sidebar-title">
         Koleksi
     </div>
 
-    <a href="{{ route('genre.index') }}">
-        <i class="fa-solid fa-book-bookmark"></i> Genre Buku
+    <a href="{{ route('genre.index') }}"
+       class="{{ request()->routeIs('genre.index') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-book-bookmark"></i>
+        Genre Buku
+
     </a>
 
-   
-<a href="{{ route('premium.books') }}"
-   class="sidebar-premium {{ request()->routeIs('premium.books') ? 'active' : '' }}">
-    <i class="fa-solid fa-crown"></i>
-    <span>Buku Premium</span>
-    <span class="premium-vip-badge">VIP</span>
-</a>
+    <a href="{{ route('premium.books') }}"
+       class="sidebar-premium {{ request()->routeIs('premium.books') ? 'active' : '' }}">
 
+        <i class="fa-solid fa-crown"></i>
 
-    <a href="{{ route('favorite.index') }}">
-        <i class="fa-regular fa-heart"></i> Buku Favorit
+        <span>Buku Premium</span>
+
+        <span class="premium-vip-badge">
+            VIP
+        </span>
+
     </a>
 
-    <a href="{{ route('bookmark.index') }}" class="{{ request()->is('bookmarks*') ? 'active' : '' }}">
-        <i class="fa-solid fa-bookmark"></i> Bookmark Saya
+    <a href="{{ route('favorite.index') }}"
+       class="{{ request()->routeIs('favorite.index') ? 'active' : '' }}">
+
+        <i class="fa-regular fa-heart"></i>
+        Buku Favorit
+
     </a>
 
-    <a href="{{ route('reading.history') }}">
-        <i class="fa-solid fa-clock-rotate-left"></i> Riwayat Baca
+    <a href="{{ route('bookmark.index') }}"
+       class="{{ request()->is('bookmarks*') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-bookmark"></i>
+        Bookmark Saya
+
     </a>
 
-    <a href="{{ route('resume.my') }}" class="{{ request()->is('my-resumes') ? 'active' : '' }}">
-        <i class="fa-solid fa-book-open-reader"></i> Resume Saya
+    <a href="{{ route('reading.history') }}"
+       class="{{ request()->routeIs('reading.history') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-clock-rotate-left"></i>
+        Riwayat Baca
+
+    </a>
+
+    <a href="{{ route('resume.my') }}"
+       class="{{ request()->is('my-resumes') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-book-open-reader"></i>
+        Resume Saya
+
     </a>
 
     <div class="sidebar-title">
         Lainnya
     </div>
 
-    <a href="{{ route('forum.index') }}">
-        <i class="fa-solid fa-comments"></i> Forum
+    <a href="{{ route('forum.index') }}"
+       class="{{ request()->routeIs('forum.index') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-comments"></i>
+        Forum
+
     </a>
 
-    <a href="{{ route('reward.index') }}">
-        <i class="fa-solid fa-gift"></i> Reward
+    <a href="{{ route('reward.index') }}"
+       class="{{ request()->routeIs('reward.index') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-gift"></i>
+        Reward
+
     </a>
 
-    <a href="{{ route('reading.statistics') }}" class="nav-link">
-    <i class="fa-solid fa-chart-line me-2"></i> Statistik Membaca
-</a>
+    <a href="{{ route('reading.statistics') }}"
+       class="{{ request()->routeIs('reading.statistics') ? 'active' : '' }}">
+
+        <i class="fa-solid fa-chart-line"></i>
+        Statistik Membaca
+
+    </a>
+
 </aside>
+
 @endauth
+
+<!-- ================= MAIN CONTENT ================= -->
 
 <main>
     @yield('content')
 </main>
 
+<!-- ================= FOOTER ================= -->
+
 <footer class="footer">
     © {{ date('Y') }} Safae. All rights reserved.
 </footer>
+
+<!-- ================= LOGOUT FORM ================= -->
 
 <form id="logout-form"
       action="{{ route('logout') }}"
       method="POST"
       class="d-none">
+
     @csrf
+
 </form>
 
 </body>

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Tambah Topik Forum - Safae')
@@ -7,7 +8,7 @@
 <style>
     /* ================= HEADER & UTILITIES ================= */
     .page-title {
-        color: #f1f5f9;
+        color: #514d69;
         font-weight: 800;
         margin-bottom: 10px;
     }
@@ -19,16 +20,16 @@
 
     /* ================= CARD ================= */
     .form-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 35px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 10px 30px rgba(185, 165, 232, 0.12);
     }
 
     /* ================= FORM ELEMENTS ================= */
     .form-label-modern {
-        color: #e2e8f0;
+        color: #514d69;
         font-weight: 600;
         font-size: 0.95rem;
         margin-bottom: 8px;
@@ -36,9 +37,9 @@
     }
 
     .form-control-modern {
-        background-color: #0f172a;
-        color: #f8fafc;
-        border: 1px solid #334155;
+        background-color: #faf9fd;
+        color: #514d69;
+        border: 1px solid #ded6ef;
         border-radius: 14px;
         padding: 14px 18px;
         transition: 0.3s;
@@ -46,14 +47,14 @@
     }
 
     .form-control-modern:focus {
-        border-color: #38bdf8;
-        box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 3px rgba(185, 165, 232, 0.15);
         outline: none;
-        color: #fff;
+        color: #514d69;
     }
 
     .form-control-modern::placeholder {
-        color: #64748b;
+        color: #aaa3bc;
     }
 
     /* Custom File Input */
@@ -62,8 +63,8 @@
     }
 
     .form-control-modern::file-selector-button {
-        background: #334155;
-        color: #f1f5f9;
+        background: #eee8f8;
+        color: #514d69;
         border: none;
         padding: 8px 16px;
         border-radius: 10px;
@@ -74,14 +75,14 @@
     }
 
     .form-control-modern::file-selector-button:hover {
-        background: #475569;
-        color: #38bdf8;
+        background: #e5def5;
+        color: #a48bdc;
     }
 
     /* ================= BUTTONS ================= */
     .btn-submit {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         border: none;
         border-radius: 14px;
         font-weight: 700;
@@ -96,13 +97,13 @@
     }
 
     .btn-submit:hover {
-        background: #7dd3fc;
+        background: #a48bdc;
         transform: translateY(-2px);
-        box-shadow: 0 10px 20px rgba(56, 189, 248, 0.2);
+        box-shadow: 0 10px 20px rgba(185, 165, 232, 0.2);
     }
 
     .btn-back {
-        color: #94a3b8;
+        color: #89839f;
         text-decoration: none;
         font-weight: 600;
         display: inline-flex;
@@ -112,7 +113,24 @@
     }
 
     .btn-back:hover {
-        color: #f1f5f9;
+        color: #a48bdc;
+    }
+
+    /* ================= ICON COLORS ================= */
+    .page-title .text-primary {
+        color: #b9a5e8 !important;
+    }
+
+    .form-label-modern .text-info {
+        color: #82a9d8 !important;
+    }
+
+    .form-label-modern .text-success {
+        color: #65a98c !important;
+    }
+
+    .text-muted {
+        color: #89839f !important;
     }
 </style>
 
@@ -170,5 +188,4 @@
     </div>
 
 </div>
-
 @endsection
