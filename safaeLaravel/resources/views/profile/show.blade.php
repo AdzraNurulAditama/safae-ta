@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Profil Saya - Safae')
@@ -9,16 +10,16 @@
         max-width: 1050px;
         margin: 0 auto;
         padding: 20px 0 60px 0;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
-    /* HEADER PROFIL MODERN DARK */
+    /* HEADER PROFIL */
     .profile-header-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 24px;
         padding: 30px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 15px 35px rgba(81, 77, 105, 0.08);
         margin-bottom: 30px;
     }
 
@@ -27,14 +28,14 @@
         height: 120px;
         object-fit: cover;
         border-radius: 50%;
-        border: 4px solid #38bdf8;
-        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.25);
+        border: 4px solid #b9a5e8;
+        box-shadow: 0 10px 25px rgba(185, 165, 232, 0.25);
     }
 
     .point-badge-pill {
-        background: rgba(245, 158, 11, 0.15);
-        border: 1px solid rgba(245, 158, 11, 0.4);
-        color: #fbbf24;
+        background: rgba(213, 166, 77, 0.13);
+        border: 1px solid rgba(213, 166, 77, 0.4);
+        color: #c39436;
         padding: 6px 16px;
         border-radius: 999px;
         font-weight: 700;
@@ -46,8 +47,8 @@
 
     /* STATISTIK COUNTER STRIP */
     .stats-strip {
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 16px;
         padding: 15px 25px;
         display: flex;
@@ -63,13 +64,13 @@
     .stat-number {
         font-size: 1.5rem;
         font-weight: 800;
-        color: #38bdf8;
+        color: #a48bdc;
         line-height: 1.1;
     }
 
     .stat-label {
         font-size: 0.8rem;
-        color: #94a3b8;
+        color: #89839f;
         font-weight: 600;
         text-uppercase: uppercase;
         letter-spacing: 0.5px;
@@ -78,13 +79,13 @@
     .stat-divider {
         width: 1px;
         height: 35px;
-        background: #334155;
+        background: #ded6ef;
     }
 
     /* CARDS SECTION */
     .section-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 20px;
         padding: 25px;
         height: 100%;
@@ -93,7 +94,7 @@
     .section-title {
         font-size: 1.1rem;
         font-weight: 700;
-        color: #f8fafc;
+        color: #514d69;
         margin-bottom: 20px;
         display: flex;
         align-items: center;
@@ -102,8 +103,8 @@
 
     /* PESAN TERAKHIR FORUM */
     .forum-message-box {
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 16px;
         padding: 18px;
     }
@@ -117,20 +118,20 @@
 
     /* DAFTAR BACAAN & KARYA GRID */
     .reading-book-card {
-        background: #0f172a;
-        border: 1px solid #334155;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
         border-radius: 14px;
         padding: 10px;
         transition: 0.2s;
         text-decoration: none;
-        color: white;
+        color: #514d69;
         display: block;
     }
 
     .reading-book-card:hover {
-        border-color: #38bdf8;
+        border-color: #b9a5e8;
         transform: translateY(-3px);
-        color: white;
+        color: #514d69;
     }
 
     .book-cover-mini {
@@ -150,8 +151,8 @@
     }
 
     .btn-edit-profile {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         padding: 8px 20px;
         border-radius: 12px;
@@ -160,8 +161,74 @@
     }
 
     .btn-edit-profile:hover {
-        background: #7dd3fc;
-        color: #0f172a;
+        background: #a48bdc;
+        color: #ffffff;
+    }
+
+    /* Penyesuaian warna utility Bootstrap */
+    .profile-container .text-white {
+        color: #514d69 !important;
+    }
+
+    .profile-container .text-secondary {
+        color: #89839f !important;
+    }
+
+    .profile-container .text-info {
+        color: #a48bdc !important;
+    }
+
+    .profile-container .text-slate-300 {
+        color: #514d69 !important;
+    }
+
+    .profile-container .bg-dark {
+        background-color: #eee8f8 !important;
+    }
+
+    .profile-container .border-secondary {
+        border-color: #ded6ef !important;
+    }
+
+    .profile-container .btn-outline-info {
+        color: #a48bdc !important;
+        border-color: #b9a5e8 !important;
+    }
+
+    .profile-container .btn-outline-info:hover {
+        background-color: #b9a5e8 !important;
+        color: #ffffff !important;
+    }
+
+    .profile-container .btn-info {
+        background-color: #b9a5e8 !important;
+        border-color: #b9a5e8 !important;
+        color: #ffffff !important;
+    }
+
+    .profile-container .btn-info:hover {
+        background-color: #a48bdc !important;
+        border-color: #a48bdc !important;
+    }
+
+    .profile-container .text-warning {
+        color: #c39436 !important;
+    }
+
+    .profile-container .bg-success {
+        background-color: #65a98c !important;
+    }
+
+    .profile-container .bg-warning {
+        background-color: #f3d58b !important;
+    }
+
+    .profile-container .text-dark {
+        color: #514d69 !important;
+    }
+
+    .profile-container .bg-secondary {
+        background-color: #ded6ef !important;
     }
 </style>
 
@@ -264,7 +331,7 @@
                             </span>
                         </div>
 
-                        <p class="text-slate-300 small mb-3" style="color: #cbd5e1; white-space: pre-line;">
+                        <p class="text-slate-300 small mb-3" style="color: #514d69; white-space: pre-line;">
                             "{{ $lastForumComment->isi }}"
                         </p>
 

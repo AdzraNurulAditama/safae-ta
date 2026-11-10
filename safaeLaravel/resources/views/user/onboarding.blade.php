@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Pilih Genre Favorit - Safae')
@@ -10,11 +11,11 @@
         min-height: 100vh;
         padding: 60px 20px;
         background: 
-            radial-gradient(circle at 15% 10%, rgba(14, 165, 233, 0.18) 0%, transparent 45%),
-            radial-gradient(circle at 85% 90%, rgba(37, 99, 235, 0.18) 0%, transparent 45%),
-            #050b14;
+            radial-gradient(circle at 15% 10%, rgba(185, 165, 232, 0.18) 0%, transparent 45%),
+            radial-gradient(circle at 85% 90%, rgba(130, 169, 216, 0.14) 0%, transparent 45%),
+            #f5f1fc;
         font-family: 'Plus Jakarta Sans', sans-serif;
-        color: #f8fafc;
+        color: #514d69;
         position: relative;
         overflow: hidden;
     }
@@ -25,7 +26,7 @@
         position: absolute;
         width: 500px;
         height: 500px;
-        background: rgba(56, 189, 248, 0.05);
+        background: rgba(185, 165, 232, 0.08);
         filter: blur(120px);
         top: 20%;
         left: 50%;
@@ -54,9 +55,9 @@
         justify-content: center;
         margin: 0 auto 24px;
         border-radius: 26px;
-        background: linear-gradient(135deg, rgba(14, 165, 233, 0.2), rgba(37, 99, 235, 0.2));
-        border: 1px solid rgba(56, 189, 248, 0.3);
-        box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+        background: linear-gradient(135deg, rgba(185, 165, 232, 0.20), rgba(130, 169, 216, 0.14));
+        border: 1px solid rgba(185, 165, 232, 0.35);
+        box-shadow: 0 0 30px rgba(185, 165, 232, 0.20);
         animation: floatIcon 4s ease-in-out infinite;
     }
 
@@ -67,13 +68,13 @@
 
     .header-icon i {
         font-size: 32px;
-        background: linear-gradient(135deg, #38bdf8, #818cf8);
+        background: linear-gradient(135deg, #b9a5e8, #82a9d8);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
 
     .onboarding-header h2 {
-        color: #fff;
+        color: #514d69;
         font-size: clamp(28px, 4vw, 38px);
         font-weight: 800;
         letter-spacing: -0.5px;
@@ -83,19 +84,19 @@
     .onboarding-header p {
         max-width: 600px;
         margin: auto;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 15px;
         line-height: 1.7;
     }
 
     .onboarding-card {
-        background: rgba(13, 23, 42, 0.75);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(229, 222, 245, 0.9);
         border-radius: 28px;
         padding: 40px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        box-shadow: 0 30px 60px rgba(81, 77, 105, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.45);
     }
 
     .section-heading {
@@ -107,14 +108,14 @@
     }
 
     .section-heading h5 {
-        color: #f8fafc;
+        color: #514d69;
         font-size: 18px;
         font-weight: 700;
         margin-bottom: 4px;
     }
 
     .section-heading p {
-        color: #94a3b8;
+        color: #89839f;
         font-size: 13px;
         margin: 0;
     }
@@ -126,16 +127,16 @@
         gap: 12px;
         padding: 10px 20px;
         border-radius: 16px;
-        background: rgba(14, 165, 233, 0.08);
-        border: 1px solid rgba(56, 189, 248, 0.2);
-        color: #7dd3fc;
+        background: rgba(185, 165, 232, 0.12);
+        border: 1px solid rgba(185, 165, 232, 0.2);
+        color: #a48bdc;
         transition: all 0.3s ease;
     }
 
     .selection-counter.completed {
-        background: rgba(34, 197, 94, 0.1);
-        border-color: rgba(34, 197, 94, 0.3);
-        color: #4ade80;
+        background: rgba(101, 169, 140, 0.12);
+        border-color: rgba(101, 169, 140, 0.3);
+        color: #65a98c;
     }
 
     .counter-number {
@@ -150,9 +151,9 @@
 
     /* Input & Select Keren */
     .form-control, .form-select {
-        background-color: rgba(5, 11, 20, 0.6) !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        color: #f8fafc !important;
+        background-color: rgba(245, 241, 252, 0.95) !important;
+        border: 1px solid rgba(229, 222, 245, 0.9) !important;
+        color: #514d69 !important;
         border-radius: 14px;
         padding: 14px 18px;
         font-size: 14px;
@@ -160,14 +161,14 @@
     }
 
     .form-control:focus, .form-select:focus {
-        border-color: #38bdf8 !important;
-        box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.15) !important;
-        background-color: rgba(5, 11, 20, 0.9) !important;
+        border-color: #b9a5e8 !important;
+        box-shadow: 0 0 0 4px rgba(185, 165, 232, 0.15) !important;
+        background-color: rgba(245, 241, 252, 1) !important;
     }
 
     .form-select option {
-        background-color: #0d172a;
-        color: #f8fafc;
+        background-color: #ffffff;
+        color: #514d69;
     }
 
     /* Genre Card Grid Styling */
@@ -194,10 +195,10 @@
         align-items: center;
         gap: 14px;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(229, 222, 245, 0.8);
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.015);
-        color: #94a3b8;
+        background: rgba(245, 241, 252, 0.65);
+        color: #89839f;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         overflow: hidden;
@@ -208,7 +209,7 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), transparent 70%);
+        background: linear-gradient(135deg, rgba(185, 165, 232, 0.12), transparent 70%);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
@@ -220,9 +221,9 @@
         justify-content: center;
         align-items: center;
         border-radius: 16px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        color: #38bdf8;
+        background: rgba(238, 232, 248, 0.8);
+        border: 1px solid rgba(229, 222, 245, 0.8);
+        color: #b9a5e8;
         font-size: 22px;
         position: relative;
         z-index: 1;
@@ -247,22 +248,22 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        background: linear-gradient(135deg, #0ea5e9, #2563eb);
+        background: linear-gradient(135deg, #b9a5e8, #a48bdc);
         color: white;
         font-size: 11px;
         opacity: 0;
         transform: scale(0.4);
         transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
         z-index: 2;
-        box-shadow: 0 4px 10px rgba(14, 165, 233, 0.4);
+        box-shadow: 0 4px 10px rgba(185, 165, 232, 0.20);
     }
 
     /* Hover State */
     .genre-option:hover .genre-card {
-        border-color: rgba(56, 189, 248, 0.3);
-        background: rgba(14, 165, 233, 0.03);
+        border-color: rgba(185, 165, 232, 0.35);
+        background: rgba(185, 165, 232, 0.06);
         transform: translateY(-5px);
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 12px 30px rgba(81, 77, 105, 0.08);
     }
 
     .genre-option:hover .genre-card::before {
@@ -270,24 +271,24 @@
     }
 
     .genre-option:hover .genre-icon {
-        background: rgba(56, 189, 248, 0.1);
-        border-color: rgba(56, 189, 248, 0.2);
+        background: rgba(185, 165, 232, 0.12);
+        border-color: rgba(185, 165, 232, 0.2);
     }
 
     /* Checked State */
     .genre-option input:checked + .genre-card {
-        border: 1.5px solid #38bdf8;
-        background: linear-gradient(145deg, rgba(14, 165, 233, 0.12), rgba(37, 99, 235, 0.08));
-        color: #ffffff;
-        box-shadow: 0 0 30px rgba(14, 165, 233, 0.25), inset 0 0 15px rgba(56, 189, 248, 0.05);
+        border: 1.5px solid #b9a5e8;
+        background: linear-gradient(145deg, rgba(185, 165, 232, 0.16), rgba(130, 169, 216, 0.10));
+        color: #514d69;
+        box-shadow: 0 0 30px rgba(185, 165, 232, 0.20), inset 0 0 15px rgba(185, 165, 232, 0.05);
         transform: translateY(-3px);
     }
 
     .genre-option input:checked + .genre-card .genre-icon {
-        background: linear-gradient(135deg, #0284c7, #2563eb);
+        background: linear-gradient(135deg, #a48bdc, #a48bdc);
         color: #ffffff;
         border-color: transparent;
-        box-shadow: 0 8px 20px rgba(2, 132, 199, 0.4);
+        box-shadow: 0 8px 20px rgba(164, 139, 220, 0.25);
     }
 
     .genre-option input:checked + .genre-card .genre-check {
@@ -310,7 +311,7 @@
     .onboarding-divider {
         border: 0;
         height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        background: linear-gradient(90deg, transparent, rgba(229, 222, 245, 0.9), transparent);
         margin: 35px 0;
     }
 
@@ -319,14 +320,14 @@
         align-items: center;
         justify-content: center;
         gap: 8px;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 13px;
         margin-bottom: 25px;
         text-align: center;
     }
 
     .selection-hint i {
-        color: #38bdf8;
+        color: #b9a5e8;
     }
 
     /* Tombol Utama Bergaya Premium */
@@ -335,13 +336,13 @@
         border-radius: 16px;
         padding: 16px 36px;
         min-width: 270px;
-        background: linear-gradient(135deg, #0ea5e9, #2563eb);
+        background: linear-gradient(135deg, #b9a5e8, #a48bdc);
         color: white;
         font-size: 15px;
         font-weight: 700;
         letter-spacing: 0.3px;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 10px 25px rgba(14, 165, 233, 0.35);
+        box-shadow: 0 10px 25px rgba(164, 139, 220, 0.25);
         position: relative;
         overflow: hidden;
     }
@@ -350,14 +351,14 @@
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
+        background: linear-gradient(135deg, rgba(255,255,255,0.45), transparent);
         opacity: 0;
         transition: opacity 0.3s ease;
     }
 
     .btn-onboarding:hover:not(:disabled) {
         transform: translateY(-3px);
-        box-shadow: 0 15px 35px rgba(37, 99, 235, 0.5);
+        box-shadow: 0 15px 35px rgba(164, 139, 220, 0.30);
         color: white;
     }
 
@@ -373,15 +374,15 @@
     }
 
     .onboarding-note {
-        color: #64748b;
+        color: #89839f;
         font-size: 12px;
         margin-top: 10px;
     }
 
     .custom-alert {
-        background: rgba(239, 68, 68, 0.1);
-        border: 1px solid rgba(239, 68, 68, 0.25);
-        color: #fca5a5;
+        background: rgba(207, 130, 151, 0.10);
+        border: 1px solid rgba(207, 130, 151, 0.25);
+        color: #cf8297;
         border-radius: 14px;
         padding: 16px 20px;
         margin-bottom: 30px;
@@ -395,12 +396,12 @@
 
     .empty-state i {
         font-size: 40px;
-        color: #64748b;
+        color: #89839f;
         margin-bottom: 18px;
     }
 
     .empty-state p {
-        color: #e2e8f0;
+        color: #514d69;
         font-weight: 600;
     }
 
@@ -433,6 +434,19 @@
         .btn-onboarding {
             width: 100%;
         }
+    }
+
+    /* Penyesuaian warna utility Bootstrap agar sesuai tema pastel Safae */
+    .onboarding-page .text-white {
+        color: #514d69 !important;
+    }
+
+    .onboarding-page .text-white-50 {
+        color: #89839f !important;
+    }
+
+    .onboarding-page .text-info {
+        color: #a48bdc !important;
     }
 </style>
 

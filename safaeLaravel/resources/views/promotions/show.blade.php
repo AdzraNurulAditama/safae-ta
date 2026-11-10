@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', $promotion->title)
@@ -10,15 +11,15 @@
         width: 100%;
         overflow-x: hidden;
         background:
-            radial-gradient(circle at 10% 10%, rgba(139, 92, 246, 0.2), transparent 40%),
-            radial-gradient(circle at 90% 90%, rgba(236, 72, 153, 0.15), transparent 40%),
-            #020617;
+            radial-gradient(circle at 10% 10%, rgba(185, 165, 232, 0.2), transparent 40%),
+            radial-gradient(circle at 90% 90%, rgba(207, 130, 151, 0.15), transparent 40%),
+            #f8f6fc;
         padding: 40px 20px;
     }
 
-    /* Tombol Kembali dengan Gaya Minimalis Gading */
+    /* Tombol Kembali dengan Gaya Minimalis */
     .btn-back-minimal {
-        color: #94a3b8;
+        color: #89839f;
         font-weight: 700;
         text-decoration: none;
         display: inline-flex;
@@ -27,14 +28,14 @@
         transition: .25s ease;
         padding: 8px 16px;
         border-radius: 999px;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid #e5def5;
     }
 
     .btn-back-minimal:hover {
-        color: #38bdf8;
-        background: rgba(56, 189, 248, 0.08);
-        border-color: rgba(56, 189, 248, 0.2);
+        color: #a48bdc;
+        background: #eee8f8;
+        border-color: #b9a5e8;
         transform: translateX(-4px);
     }
 
@@ -46,10 +47,10 @@
         border-radius: 24px;
         overflow: hidden;
         box-shadow: 
-            0 25px 50px -12px rgba(0, 0, 0, 0.6),
-            0 0 40px rgba(139, 92, 246, 0.15); /* Pijar Ungu Halus */
+            0 25px 50px -12px rgba(81, 77, 105, 0.12),
+            0 0 40px rgba(185, 165, 232, 0.15);
         margin-bottom: 40px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid #e5def5;
     }
 
     .promo-banner-premium {
@@ -58,22 +59,22 @@
         object-fit: cover;
     }
 
-    /* Efek Gradasi Gelap di Bawah Gambar */
+    /* Efek Gradasi di Bawah Gambar */
     .banner-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(2, 6, 23, 0.8) 0%, transparent 60%);
+        background: linear-gradient(to top, rgba(81, 77, 105, 0.4) 0%, transparent 60%);
     }
 
     /* Main Glass Card untuk Tulisan */
     .glass-article-card {
-        background: rgba(15, 23, 42, 0.45);
+        background: rgba(255, 255, 255, 0.85);
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        border: 1px solid #e5def5;
         border-radius: 32px;
         padding: 50px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 30px 60px rgba(81, 77, 105, 0.08);
     }
 
     /* Kapsul Tanggal */
@@ -81,9 +82,9 @@
         display: inline-flex;
         align-items: center;
         gap: 10px;
-        background: linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15));
-        color: #e9d5ff;
-        border: 1px solid rgba(168, 85, 247, 0.25);
+        background: linear-gradient(135deg, #f0eafb, #fff1f4);
+        color: #514d69;
+        border: 1px solid #e5def5;
         padding: 10px 20px;
         border-radius: 999px;
         font-weight: 700;
@@ -97,7 +98,7 @@
         font-size: 2.8rem;
         font-weight: 800;
         line-height: 1.25;
-        background: linear-gradient(135deg, #ffffff 40%, #c084fc 100%);
+        background: linear-gradient(135deg, #514d69 40%, #a48bdc 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         letter-spacing: -1px;
@@ -105,7 +106,7 @@
 
     /* Gaya Paragraf Artikel Modern */
     .promo-body-premium {
-        color: #cbd5e1;
+        color: #6f6987;
         font-size: 1.15rem;
         line-height: 1.9;
         font-weight: 400;
@@ -172,7 +173,7 @@
                         {{ $promotion->title }}
                     </h1>
 
-                    <div class="my-4" style="height: 1px; width: 80px; background: linear-gradient(to right, #8b5cf6, transparent);"></div>
+                    <div class="my-4" style="height: 1px; width: 80px; background: linear-gradient(to right, #b9a5e8, transparent);"></div>
 
                     <div class="promo-body-premium">
                         {!! nl2br(e($promotion->content)) !!}

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Daftar Akun | Safae')
@@ -12,9 +13,9 @@
         width: 100%;
         overflow-x: hidden;
         background:
-            radial-gradient(circle at top left, rgba(139,92,246,0.15), transparent 30%),
-            radial-gradient(circle at bottom right, rgba(56,189,248,0.15), transparent 25%),
-            #020617;
+            radial-gradient(circle at top left, rgba(185, 165, 232, 0.20), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(130, 169, 216, 0.18), transparent 25%),
+            #f5f1fc;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -28,12 +29,12 @@
         max-width: 1150px;
         display: grid;
         grid-template-columns: 1fr 580px;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid #e5def5;
         border-radius: 32px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 30px 60px rgba(81, 77, 105, 0.12);
         overflow: hidden;
         position: relative;
         z-index: 2;
@@ -42,7 +43,7 @@
     /* LEFT PANEL */
     .left-panel {
         background:
-            linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(236, 72, 153, 0.9)),
+            linear-gradient(135deg, rgba(185, 165, 232, 0.88), rgba(130, 169, 216, 0.88)),
             url('https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop');
         background-size: cover;
         background-position: center;
@@ -57,7 +58,7 @@
     .overlay {
         position: absolute;
         inset: 0;
-        background: rgba(2, 6, 23, 0.2);
+        background: rgba(81, 77, 105, 0.12);
     }
 
     .left-content,
@@ -68,10 +69,10 @@
 
     .brand-badge {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.20);
         backdrop-filter: blur(10px);
         color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
         padding: 8px 18px;
         font-weight: 800;
         letter-spacing: 2px;
@@ -91,7 +92,7 @@
         font-size: 1rem;
         line-height: 1.8;
         max-width: 500px;
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(255, 255, 255, 0.92);
     }
 
     .feature-boxes {
@@ -102,10 +103,10 @@
     }
 
     .feature {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.20);
         backdrop-filter: blur(5px);
         color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.30);
         padding: 10px 16px;
         font-weight: 600;
         border-radius: 14px;
@@ -114,7 +115,7 @@
 
     /* RIGHT PANEL */
     .right-panel {
-        background: transparent;
+        background: #ffffff;
         padding: 50px 40px;
         position: relative;
     }
@@ -126,33 +127,33 @@
         letter-spacing: 4px;
         font-size: 1.2rem;
         font-weight: 800;
-        color: rgba(255, 255, 255, 0.2);
+        color: #ded6ef;
     }
 
     .register-title {
         font-size: 2.3rem;
         font-weight: 800;
-        color: #fff;
+        color: #514d69;
         letter-spacing: -1px;
         margin-bottom: 10px;
     }
 
     .register-subtitle {
-        color: #94a3b8;
+        color: #89839f;
         margin-bottom: 35px;
     }
 
     .form-label {
-        color: #e2e8f0;
+        color: #514d69;
         font-weight: 600;
         margin-bottom: 8px;
         font-size: 0.95rem;
     }
 
     .form-control {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: #fff;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
+        color: #514d69;
         border-radius: 16px;
         padding: 14px 16px;
         font-weight: 500;
@@ -160,14 +161,14 @@
     }
 
     .form-control::placeholder {
-        color: #64748b;
+        color: #aaa3bc;
     }
 
     .form-control:focus {
-        border-color: #8b5cf6;
-        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
-        background: #1e293b;
-        color: #fff;
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 4px rgba(185, 165, 232, 0.18);
+        background: #f5f1fc;
+        color: #514d69;
     }
 
     .input-group-custom {
@@ -176,7 +177,7 @@
 
     .btn-register {
         width: 100%;
-        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        background: linear-gradient(135deg, #b9a5e8, #a48bdc);
         border: none;
         color: #fff;
         font-weight: 700;
@@ -184,39 +185,39 @@
         border-radius: 16px;
         transition: .3s ease;
         letter-spacing: 1px;
-        box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        box-shadow: 0 10px 25px rgba(164, 139, 220, 0.25);
     }
 
     .btn-register:hover {
         transform: translateY(-2px);
-        box-shadow: 0 15px 30px rgba(139, 92, 246, 0.45);
+        box-shadow: 0 15px 30px rgba(164, 139, 220, 0.35);
         color: #fff;
     }
 
     .login-link {
         text-align: center;
         margin-top: 25px;
-        color: #94a3b8;
+        color: #89839f;
         font-size: 0.95rem;
     }
 
     .login-link a {
-        color: #c084fc;
+        color: #a48bdc;
         text-decoration: none;
         font-weight: 700;
         transition: .2s;
     }
 
     .login-link a:hover {
-        color: #d8b4fe;
+        color: #8f75ca;
         text-decoration: underline;
     }
 
     /* ERROR BOX ALERT */
     .custom-alert {
-        border: 1px solid rgba(239, 68, 68, 0.3);
-        background: rgba(239, 68, 68, 0.1);
-        color: #fca5a5;
+        border: 1px solid rgba(207, 130, 151, 0.30);
+        background: rgba(207, 130, 151, 0.10);
+        color: #cf8297;
         padding: 15px 20px;
         margin-bottom: 25px;
         border-radius: 16px;

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Login | Safae')
@@ -12,9 +13,9 @@
         width: 100%;
         overflow-x: hidden;
         background:
-            radial-gradient(circle at top left, rgba(139,92,246,0.15), transparent 30%),
-            radial-gradient(circle at bottom right, rgba(56,189,248,0.15), transparent 25%),
-            #020617;
+            radial-gradient(circle at top left, rgba(185, 165, 232, 0.20), transparent 30%),
+            radial-gradient(circle at bottom right, rgba(130, 169, 216, 0.18), transparent 25%),
+            #f5f1fc;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,12 +28,12 @@
         max-width: 1100px;
         display: grid;
         grid-template-columns: 1fr 480px;
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(255, 255, 255, 0.96);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid #e5def5;
         border-radius: 32px;
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 30px 60px rgba(81, 77, 105, 0.12);
         overflow: hidden;
         position: relative;
         z-index: 2;
@@ -41,7 +42,7 @@
     /* LEFT SIDE */
     .left-panel {
         background:
-            linear-gradient(135deg, rgba(139, 92, 246, 0.85), rgba(236, 72, 153, 0.9)),
+            linear-gradient(135deg, rgba(185, 165, 232, 0.88), rgba(130, 169, 216, 0.88)),
             url('https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop');
         background-size: cover;
         background-position: center;
@@ -56,7 +57,7 @@
     .overlay {
         position: absolute;
         inset: 0;
-        background: rgba(2, 6, 23, 0.2);
+        background: rgba(81, 77, 105, 0.12);
     }
 
     .left-content {
@@ -66,10 +67,10 @@
 
     .brand-badge {
         display: inline-block;
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.20);
         backdrop-filter: blur(10px);
         color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.35);
         padding: 8px 18px;
         font-weight: 800;
         letter-spacing: 2px;
@@ -88,7 +89,7 @@
     .left-desc {
         font-size: 1rem;
         max-width: 500px;
-        color: rgba(255, 255, 255, 0.85);
+        color: rgba(255, 255, 255, 0.92);
         line-height: 1.7;
     }
 
@@ -102,10 +103,10 @@
     }
 
     .feature {
-        background: rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.20);
         backdrop-filter: blur(5px);
         color: #fff;
-        border: 1px solid rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.30);
         padding: 10px 16px;
         font-weight: 600;
         border-radius: 14px;
@@ -116,7 +117,7 @@
     .right-panel {
         padding: 55px 45px;
         position: relative;
-        background: transparent;
+        background: #ffffff;
     }
 
     .dots {
@@ -126,32 +127,32 @@
         font-size: 1.2rem;
         letter-spacing: 4px;
         font-weight: 800;
-        color: rgba(255, 255, 255, 0.2);
+        color: #ded6ef;
     }
 
     .login-title {
         font-size: 2.2rem;
         font-weight: 800;
-        color: #fff;
+        color: #514d69;
         margin-bottom: 8px;
         letter-spacing: -1px;
     }
 
     .login-subtitle {
-        color: #94a3b8;
+        color: #89839f;
         margin-bottom: 35px;
     }
 
     .form-label {
-        color: #e2e8f0;
+        color: #514d69;
         font-weight: 600;
         margin-bottom: 8px;
     }
 
     .form-control {
-        background: #1e293b;
-        border: 1px solid #334155;
-        color: #fff;
+        background: #f5f1fc;
+        border: 1px solid #e5def5;
+        color: #514d69;
         border-radius: 16px;
         padding: 14px 16px;
         font-weight: 500;
@@ -159,14 +160,14 @@
     }
 
     .form-control::placeholder {
-        color: #64748b;
+        color: #aaa3bc;
     }
 
     .form-control:focus {
-        border-color: #8b5cf6;
-        box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.25);
-        background: #1e293b;
-        color: #fff;
+        border-color: #b9a5e8;
+        box-shadow: 0 0 0 4px rgba(185, 165, 232, 0.18);
+        background: #f5f1fc;
+        color: #514d69;
     }
 
     .input-group-custom {
@@ -175,7 +176,7 @@
 
     .btn-login {
         width: 100%;
-        background: linear-gradient(135deg, #8b5cf6, #ec4899);
+        background: linear-gradient(135deg, #b9a5e8, #a48bdc);
         border: none;
         color: #fff;
         font-weight: 700;
@@ -183,12 +184,12 @@
         border-radius: 16px;
         transition: .3s ease;
         letter-spacing: 1px;
-        box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        box-shadow: 0 10px 25px rgba(164, 139, 220, 0.25);
     }
 
     .btn-login:hover {
         transform: translateY(-2px);
-        box-shadow: 0 15px 30px rgba(139, 92, 246, 0.45);
+        box-shadow: 0 15px 30px rgba(164, 139, 220, 0.35);
         color: #fff;
     }
 
@@ -200,21 +201,21 @@
     }
 
     .extra-links a {
-        color: #94a3b8;
+        color: #89839f;
         font-weight: 600;
         text-decoration: none;
         transition: .2s;
     }
 
     .extra-links a:hover {
-        color: #c084fc;
+        color: #a48bdc;
     }
 
     .divider {
         display: flex;
         align-items: center;
         margin: 28px 0;
-        color: #64748b;
+        color: #aaa3bc;
         font-size: 0.85rem;
         font-weight: 700;
     }
@@ -224,7 +225,7 @@
         content: '';
         flex: 1;
         height: 1px;
-        background: #334155;
+        background: #e5def5;
     }
 
     .divider span {
@@ -238,19 +239,19 @@
 
     .social-btn {
         flex: 1;
-        border: 1px solid #334155;
+        border: 1px solid #e5def5;
         padding: 12px;
-        background: rgba(255, 255, 255, 0.02);
-        color: #e2e8f0;
+        background: #f5f1fc;
+        color: #514d69;
         font-weight: 600;
         border-radius: 14px;
         transition: .2s;
     }
 
     .social-btn:hover {
-        background: rgba(255, 255, 255, 0.08);
-        color: #fff;
-        border-color: #475569;
+        background: #eee8f8;
+        color: #514d69;
+        border-color: #b9a5e8;
     }
 
     /* RESPONSIVE TABLET */

@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('title', 'Edit Profil - Safae')
@@ -9,30 +10,30 @@
         max-width: 900px;
         margin: 0 auto;
         padding: 20px 0 50px 0;
-        color: #f1f5f9;
+        color: #514d69;
     }
 
     .edit-profile-card {
-        background: #1e293b;
-        border: 1px solid #334155;
+        background: #ffffff;
+        border: 1px solid #e5def5;
         border-radius: 24px;
         padding: 35px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 15px 35px rgba(164, 139, 220, 0.12);
     }
 
     .form-dark-control {
-        background: #0f172a;
-        border: 1px solid #334155;
-        color: #f8fafc;
+        background: #f5f1fc;
+        border: 1px solid #ded6ef;
+        color: #514d69;
         border-radius: 12px;
         padding: 12px 16px;
     }
 
     .form-dark-control:focus {
-        background: #0f172a;
-        border-color: #38bdf8;
-        color: white;
-        box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15);
+        background: #ffffff;
+        border-color: #b9a5e8;
+        color: #514d69;
+        box-shadow: 0 0 0 0.25rem rgba(185, 165, 232, 0.15);
     }
 
     .avatar-preview-img {
@@ -40,12 +41,12 @@
         height: 100px;
         object-fit: cover;
         border-radius: 50%;
-        border: 3px solid #38bdf8;
+        border: 3px solid #b9a5e8;
     }
 
     .btn-save-profile {
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         font-weight: 700;
         border: none;
         padding: 12px 28px;
@@ -54,8 +55,39 @@
     }
 
     .btn-save-profile:hover {
-        background: #7dd3fc;
-        color: #0f172a;
+        background: #a48bdc;
+        color: #ffffff;
+    }
+
+    .edit-profile-wrapper .text-white {
+        color: #514d69 !important;
+    }
+
+    .edit-profile-wrapper .text-secondary {
+        color: #89839f !important;
+    }
+
+    .edit-profile-wrapper .text-info {
+        color: #a48bdc !important;
+    }
+
+    .edit-profile-wrapper .bg-dark {
+        background-color: #f5f1fc !important;
+    }
+
+    .edit-profile-wrapper .border-secondary {
+        border-color: #ded6ef !important;
+    }
+
+    .edit-profile-wrapper .btn-outline-secondary {
+        color: #89839f;
+        border-color: #ded6ef;
+    }
+
+    .edit-profile-wrapper .btn-outline-secondary:hover {
+        background: #eee8f8;
+        color: #514d69;
+        border-color: #b9a5e8;
     }
 </style>
 

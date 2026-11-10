@@ -1,3 +1,4 @@
+
 {{--
     Partial rekomendasi untuk dashboard user.
     Dipakai:  @include('partials.rekomendasi', ['rekomendasi' => $rekomendasi])
@@ -26,19 +27,19 @@
     /* Cover Image Container */
     .rk-cover {
         position: relative;
-        aspect-ratio: 2 / 3; /* Rasio buku standar yang lebih proporsional */
+        aspect-ratio: 2 / 3;
         border-radius: 12px;
         overflow: hidden;
-        background: #1e293b;
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.4);
+        background: #f0eafb;
+        border: 1px solid #e5def5;
+        box-shadow: 0 10px 20px -5px rgba(164, 139, 220, 0.15);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
     .rk-card:hover .rk-cover {
         transform: translateY(-8px);
-        box-shadow: 0 20px 25px -5px rgba(56, 189, 248, 0.15), 0 8px 10px -6px rgba(56, 189, 248, 0.1);
-        border-color: rgba(56, 189, 248, 0.4);
+        box-shadow: 0 20px 25px -5px rgba(185, 165, 232, 0.25), 0 8px 10px -6px rgba(185, 165, 232, 0.15);
+        border-color: #b9a5e8;
     }
 
     /* Image Styling */
@@ -49,6 +50,7 @@
         display: block;
         transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
     .rk-card:hover .rk-cover img { 
         transform: scale(1.08); 
     }
@@ -62,35 +64,38 @@
         justify-content: center;
         font-size: 3.5rem;
         font-weight: 800;
-        color: rgba(255, 255, 255, 0.9);
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #ffffff;
+        background: linear-gradient(135deg, #b9a5e8 0%, #d8c9f2 100%);
         position: relative;
     }
+
     .rk-fallback::after {
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.2));
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(207, 130, 151, 0.15));
     }
 
     /* Hover Overlay & Action Button */
     .rk-overlay {
         position: absolute;
         inset: 0;
-        background: linear-gradient(to top, rgba(15, 23, 42, 0.95) 0%, transparent 60%);
+        background: linear-gradient(to top, rgba(81, 77, 105, 0.75) 0%, transparent 60%);
         opacity: 0;
         transition: opacity 0.3s ease;
         display: flex;
         align-items: flex-end;
         padding: 15px;
     }
+
     .rk-card:hover .rk-overlay {
         opacity: 1;
     }
+
     .rk-read-btn {
         width: 100%;
-        background: #38bdf8;
-        color: #0f172a;
+        background: #b9a5e8;
+        color: #ffffff;
         text-align: center;
         padding: 8px 0;
         border-radius: 8px;
@@ -98,22 +103,23 @@
         font-weight: 700;
         transform: translateY(15px);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        box-shadow: 0 4px 12px rgba(164, 139, 220, 0.3);
     }
+
     .rk-card:hover .rk-read-btn {
         transform: translateY(0);
     }
 
-    /* Premium Badge (Glassmorphism) */
+    /* Premium Badge */
     .rk-premium {
         position: absolute;
         top: 10px;
         right: 10px;
-        background: rgba(15, 23, 42, 0.6);
+        background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
-        border: 1px solid rgba(251, 191, 36, 0.3);
-        color: #fbbf24;
+        border: 1px solid rgba(213, 166, 77, 0.4);
+        color: #c28f36;
         border-radius: 20px;
         padding: 4px 10px;
         font-size: 0.7rem;
@@ -121,7 +127,7 @@
         display: flex;
         align-items: center;
         gap: 4px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(164, 139, 220, 0.08);
         z-index: 2;
     }
 
@@ -132,11 +138,12 @@
         flex-direction: column;
         flex-grow: 1;
     }
+
     .rk-title {
         font-size: 0.95rem;
         font-weight: 700;
         line-height: 1.4;
-        color: #f8fafc;
+        color: #514d69;
         margin-bottom: 4px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -144,12 +151,14 @@
         overflow: hidden;
         transition: color 0.2s ease;
     }
+
     .rk-card:hover .rk-title {
-        color: #38bdf8;
+        color: #a48bdc;
     }
+
     .rk-author {
         font-size: 0.8rem;
-        color: #94a3b8;
+        color: #89839f;
         font-weight: 500;
         white-space: nowrap;
         overflow: hidden;
@@ -161,27 +170,29 @@
     .rk-chip-wrapper {
         margin-top: auto;
     }
+
     .rk-chip {
         display: inline-block;
         padding: 3px 10px;
         border-radius: 6px;
         font-size: 0.7rem;
         font-weight: 600;
-        background: rgba(51, 65, 85, 0.5);
-        color: #cbd5e1;
-        border: 1px solid rgba(71, 85, 105, 0.4);
+        background: #f0eafb;
+        color: #8d75c2;
+        border: 1px solid #ded6ef;
         transition: all 0.2s ease;
     }
+
     .rk-card:hover .rk-chip {
-        background: rgba(56, 189, 248, 0.15);
-        color: #38bdf8;
-        border-color: rgba(56, 189, 248, 0.3);
+        background: #e8def8;
+        color: #8d75c2;
+        border-color: #b9a5e8;
     }
 
     /* Header Subtitle */
     .rk-sub {
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: #89839f;
         margin: 6px 0 0;
         font-weight: 400;
     }
@@ -190,7 +201,7 @@
 <div class="row g-4 mb-4">
     <div class="col-12">
         <div class="card glass-card-premium">
-            <div class="card-header-premium p-4 border-bottom border-secondary" style="border-color: rgba(255,255,255,0.05) !important;">
+            <div class="card-header-premium p-4 border-bottom border-secondary" style="border-color: #e5def5 !important;">
                 <h5 class="section-title-premium mb-0 d-flex align-items-center gap-2">
                     @if ($rekomendasi['sumber'] === 'model')
                         <span class="p-2 rounded-circle bg-info bg-opacity-10">
@@ -255,4 +266,4 @@
         </div>
     </div>
 </div>
-@endif  
+@endif
