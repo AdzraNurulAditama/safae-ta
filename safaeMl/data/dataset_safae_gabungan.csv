@@ -1,24 +1,74 @@
 user_id,book_id,jurusan,semester,jenis_buku,kategori_topik,tipe_konten,jumlah_halaman,status_premium,rata_durasi_lain,rasio_favorit_lain,jumlah_buku_lain,porsi_genre_dibaca,porsi_jenis_dibaca,rata_durasi_genre_lain,rasio_selesai,total_menit_dibaca,total_resume,pengguna_baru,umpan_balik,sumber_data
-4,1,Tidak diketahui,,nonfiksi,Romance,karya ilmiah,35,0,0.0,0.0,2,0.0,1.0,0.0,0.0,0.0,0,0,1,asli
-4,58,Tidak diketahui,,nonfiksi,Hobi,buku,397,0,0.0,0.0,1,1.0,1.0,0.0,0.0,0.0,0,0,1,asli
-4,29,Tidak diketahui,,fiksi,Novel,novel,165,0,0.0,0.0,2,0.0,0.0,0.0,0.0,0.0,0,0,1,asli
-4,2,Tidak diketahui,,fiksi,Action,novel,197,0,0.0,0.0,5,0.0,0.2,0.0,0.0,0.0,0,0,0,asli
-4,5,Tidak diketahui,,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,6,0.1666666666666666,0.6666666666666666,0.0,0.0,0.0,0,0,1,asli
-4,55,Tidak diketahui,,nonfiksi,Hobi,buku,237,0,0.0,0.0,7,0.2857142857142857,0.7142857142857143,0.0,0.0,0.0,0,0,1,asli
-1,55,Sistem Informasi,5.0,nonfiksi,Hobi,buku,237,0,0.0,0.1818181818181818,11,0.0,0.1818181818181818,0.0,0.0909090909090909,0.0,0,0,1,asli
-1,58,Sistem Informasi,5.0,nonfiksi,Hobi,buku,397,0,0.0,0.1666666666666666,12,0.0833333333333333,0.25,0.0,0.0833333333333333,0.0,0,0,0,asli
-1,103,Sistem Informasi,5.0,nonfiksi,Jaringan,jurnal,140,0,0.0,0.1538461538461538,13,0.0,0.3076923076923077,0.0,0.0769230769230769,0.0,0,0,1,asli
-1,76,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,116,0,0.0,0.1428571428571428,14,0.0,0.3571428571428571,0.0,0.0714285714285714,0.0,0,0,1,asli
-1,115,Sistem Informasi,5.0,nonfiksi,Kecerdasan Buatan,jurnal,100,0,0.0,0.1333333333333333,15,0.0,0.4,0.0,0.0666666666666666,0.0,0,0,1,asli
-1,86,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.125,16,0.125,0.4375,0.0,0.125,0.0,0,0,1,asli
-1,51,Sistem Informasi,5.0,fiksi,Romance,novel,134,0,0.0,0.1176470588235294,17,0.0588235294117647,0.5294117647058824,0.0,0.1176470588235294,0.0,0,0,1,asli
-1,100,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,70,0,0.0,0.1111111111111111,18,0.0555555555555555,0.4444444444444444,0.0,0.2222222222222222,0.0,0,0,1,asli
-1,117,Sistem Informasi,5.0,nonfiksi,Sistem Informasi,karya ilmiah,133,0,0.0,0.1052631578947368,19,0.0,0.4736842105263157,0.0,0.2631578947368421,0.0,0,0,1,asli
-17,128,Tidak diketahui,,nonfiksi,Ekonomi,tugas akhir,134,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
-17,81,Tidak diketahui,,nonfiksi,Ekonomi,jurnal,100,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
-17,100,Tidak diketahui,,nonfiksi,Basis Data,skripsi,70,0,0.0,0.0,0,0.0,0.0,0.0,0.0,0.0,0,1,1,asli
-17,103,Tidak diketahui,,nonfiksi,Jaringan,jurnal,140,0,0.0,0.0,1,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
-17,86,Tidak diketahui,,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,3,0.3333333333333333,1.0,0.0,1.0,0.0,0,0,1,asli
+1,51,Sistem Informasi,5.0,fiksi,Romance,novel,134,0,0.0,0.2632,19,0.0526,0.4737,0.0,0.2643,0.0,0,0,1,asli
+1,55,Sistem Informasi,5.0,nonfiksi,Hobi,buku,237,0,0.0,0.2632,19,0.0526,0.4737,0.0,0.3167,0.0,0,0,1,asli
+1,58,Sistem Informasi,5.0,nonfiksi,Hobi,buku,397,0,0.0,0.2632,19,0.0526,0.4737,0.0,0.3168,0.0,0,0,0,asli
+1,76,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,116,0,0.0,0.2632,19,0.0526,0.4737,0.0,0.3165,0.0,0,0,1,asli
+1,86,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.2632,19,0.1053,0.4737,0.0,0.2643,0.0,0,0,1,asli
+1,100,Sistem Informasi,5.0,nonfiksi,Basis Data,skripsi,70,0,0.0,0.2632,19,0.0526,0.4737,0.0,0.2643,0.0,0,0,1,asli
+1,103,Sistem Informasi,5.0,nonfiksi,Jaringan,jurnal,140,0,0.0,0.2632,19,0.0,0.4737,0.0,0.3166,0.0,0,0,1,asli
+1,115,Sistem Informasi,5.0,nonfiksi,Kecerdasan Buatan,jurnal,100,0,0.0,0.2632,19,0.0,0.4737,0.0,0.2643,0.0,0,0,1,asli
+1,117,Sistem Informasi,5.0,nonfiksi,Sistem Informasi,karya ilmiah,133,0,0.0,0.2632,19,0.0,0.4737,0.0,0.2643,0.0,0,0,1,asli
+4,1,Tidak diketahui,,nonfiksi,Romance,karya ilmiah,35,0,0.0,0.0,7,0.0,0.7143,0.0,0.0,0.0,0,0,1,asli
+4,2,Tidak diketahui,,fiksi,Action,novel,197,0,0.0,0.0,7,0.0,0.1429,0.0,0.0,0.0,0,0,0,asli
+4,5,Tidak diketahui,,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,7,0.1429,0.7143,0.0,0.0,0.0,0,0,1,asli
+4,29,Tidak diketahui,,fiksi,Novel,novel,165,0,0.0,0.0,7,0.0,0.1429,0.0,0.0,0.0,0,0,1,asli
+4,55,Tidak diketahui,,nonfiksi,Hobi,buku,237,0,0.0,0.0,7,0.2857,0.7143,0.0,0.0,0.0,0,0,1,asli
+4,58,Tidak diketahui,,nonfiksi,Hobi,buku,397,0,0.0,0.0,7,0.2857,0.7143,0.0,0.0,0.0,0,0,1,asli
+17,81,Tidak diketahui,,nonfiksi,Ekonomi,jurnal,100,0,0.0,0.0,4,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+17,86,Tidak diketahui,,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,3,0.3333,1.0,0.0,1.0,0.0,0,0,1,asli
+17,100,Tidak diketahui,,nonfiksi,Basis Data,skripsi,70,0,0.0,0.0,3,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+17,103,Tidak diketahui,,nonfiksi,Jaringan,jurnal,140,0,0.0,0.0,3,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+17,128,Tidak diketahui,,nonfiksi,Ekonomi,tugas akhir,134,0,0.0,0.0,4,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+28,54,Sistem Informasi,4.0,nonfiksi,Pemrograman,karya ilmiah,65,0,0.0,0.0,4,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+28,73,Sistem Informasi,4.0,nonfiksi,Pemrograman,tugas akhir,60,0,0.0,0.0,4,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+28,74,Sistem Informasi,4.0,nonfiksi,Pemrograman,tugas akhir,142,0,0.0,0.0,4,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+28,76,Sistem Informasi,4.0,nonfiksi,Basis Data,skripsi,116,0,0.0,0.0,4,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+28,103,Sistem Informasi,4.0,nonfiksi,Jaringan,jurnal,140,0,0.0,0.0,4,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+29,2,Administrasi Bisnis,4.0,fiksi,Action,novel,197,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+29,37,Administrasi Bisnis,4.0,nonfiksi,Hobi,buku,216,1,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+29,39,Administrasi Bisnis,4.0,fiksi,Action,novel,245,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+29,44,Administrasi Bisnis,4.0,fiksi,Action,novel,156,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+29,55,Administrasi Bisnis,4.0,nonfiksi,Hobi,buku,237,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+29,56,Administrasi Bisnis,4.0,nonfiksi,Hobi,buku,21,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+30,5,Sistem Informasi,5.0,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,8,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+30,31,Sistem Informasi,5.0,nonfiksi,Pemrograman,karya ilmiah,33,0,0.0,0.0,8,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+30,73,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,60,0,0.0,0.0,8,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+30,74,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,142,0,0.0,0.0,8,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+30,77,Sistem Informasi,5.0,nonfiksi,Jaringan,skripsi,148,0,0.0,0.0,8,0.25,1.0,0.0,1.0,0.0,0,0,1,asli
+30,86,Sistem Informasi,5.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,8,0.5,1.0,0.0,1.0,0.0,0,0,1,asli
+30,103,Sistem Informasi,5.0,nonfiksi,Jaringan,jurnal,140,0,0.0,0.0,8,0.25,1.0,0.0,1.0,0.0,0,0,1,asli
+30,104,Sistem Informasi,5.0,nonfiksi,Jaringan,karya ilmiah,102,0,0.0,0.0,8,0.25,1.0,0.0,1.0,0.0,0,0,1,asli
+30,138,Sistem Informasi,5.0,nonfiksi,Kesehatan,karya ilmiah,116,0,0.0,0.0,8,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
+31,26,Akuntansi,3.0,fiksi,Horror,novel,366,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+31,45,Akuntansi,3.0,fiksi,Horror,novel,121,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+31,46,Akuntansi,3.0,fiksi,Horror,novel,350,0,0.0,0.0,5,0.4,0.4,0.0,1.0,0.0,0,0,1,asli
+31,82,Akuntansi,3.0,nonfiksi,Ekonomi,tugas akhir,128,0,0.0,0.0,5,0.2,0.4,0.0,1.0,0.0,0,0,1,asli
+31,100,Akuntansi,3.0,nonfiksi,Basis Data,skripsi,70,0,0.0,0.0,6,0.0,0.5,0.0,1.0,0.0,0,0,1,asli
+31,115,Akuntansi,3.0,nonfiksi,Kecerdasan Buatan,jurnal,100,0,0.0,0.0,5,0.0,0.4,0.0,1.0,0.0,0,0,1,asli
+31,128,Akuntansi,3.0,nonfiksi,Ekonomi,tugas akhir,134,0,0.0,0.0,5,0.2,0.4,0.0,1.0,0.0,0,0,1,asli
+32,3,Sistem Informasi,4.0,nonfiksi,Pemrograman,karya ilmiah,47,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+32,5,Sistem Informasi,4.0,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+32,54,Sistem Informasi,4.0,nonfiksi,Pemrograman,karya ilmiah,65,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+32,73,Sistem Informasi,4.0,nonfiksi,Pemrograman,tugas akhir,60,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+32,74,Sistem Informasi,4.0,nonfiksi,Pemrograman,tugas akhir,142,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+32,86,Sistem Informasi,4.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,5,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+33,5,Teknik Informatika,3.0,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,4,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+33,31,Teknik Informatika,3.0,nonfiksi,Pemrograman,karya ilmiah,33,0,0.0,0.0,4,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+33,54,Teknik Informatika,3.0,nonfiksi,Pemrograman,karya ilmiah,65,0,0.0,0.0,4,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+33,74,Teknik Informatika,3.0,nonfiksi,Pemrograman,tugas akhir,142,0,0.0,0.0,4,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+33,86,Teknik Informatika,3.0,nonfiksi,Pemrograman,tugas akhir,116,0,0.0,0.0,4,1.0,1.0,0.0,1.0,0.0,0,0,1,asli
+34,37,Public Relations,4.0,nonfiksi,Hobi,buku,216,1,0.0,0.0,6,0.6667,1.0,0.0,1.0,0.0,0,0,1,asli
+34,55,Public Relations,4.0,nonfiksi,Hobi,buku,237,0,0.0,0.0,6,0.6667,1.0,0.0,1.0,0.0,0,0,1,asli
+34,57,Public Relations,4.0,nonfiksi,Hobi,buku,1174,0,0.0,0.0,6,0.6667,1.0,0.0,1.0,0.0,0,0,1,asli
+34,58,Public Relations,4.0,nonfiksi,Hobi,buku,397,0,0.0,0.0,6,0.6667,1.0,0.0,1.0,0.0,0,0,1,asli
+34,59,Public Relations,4.0,nonfiksi,Hobi,buku,896,0,0.0,0.0,6,0.6667,1.0,0.0,1.0,0.0,0,0,1,asli
+34,84,Public Relations,4.0,nonfiksi,Kesehatan,tugas akhir,106,0,0.0,0.0,6,0.1667,1.0,0.0,1.0,0.0,0,0,1,asli
+35,3,Teknik Telekomunikasi,2.0,nonfiksi,Pemrograman,karya ilmiah,47,0,0.0,0.0,5,0.8,1.0,0.0,1.0,0.0,0,0,1,asli
+35,5,Teknik Telekomunikasi,2.0,nonfiksi,Pemrograman,karya ilmiah,51,0,0.0,0.0,5,0.8,1.0,0.0,1.0,0.0,0,0,1,asli
+35,31,Teknik Telekomunikasi,2.0,nonfiksi,Pemrograman,karya ilmiah,33,0,0.0,0.0,5,0.8,1.0,0.0,1.0,0.0,0,0,1,asli
+35,54,Teknik Telekomunikasi,2.0,nonfiksi,Pemrograman,karya ilmiah,65,0,0.0,0.0,5,0.8,1.0,0.0,1.0,0.0,0,0,1,asli
+35,74,Teknik Telekomunikasi,2.0,nonfiksi,Pemrograman,tugas akhir,142,0,0.0,0.0,5,0.8,1.0,0.0,1.0,0.0,0,0,1,asli
+35,76,Teknik Telekomunikasi,2.0,nonfiksi,Basis Data,skripsi,116,0,0.0,0.0,5,0.0,1.0,0.0,1.0,0.0,0,0,1,asli
 -1,-1,Manajemen,4.0,fiksi,Mystery,novel,195,0,32.04,0.2718,18,0.3527,0.8557,77.07,0.729,576.77,0,0,0,dummy
 -1,-2,Manajemen,4.0,nonfiksi,Pendidikan,buku,232,0,32.04,0.2718,18,0.0419,0.1443,77.07,0.729,576.77,0,0,1,dummy
 -1,-3,Manajemen,4.0,fiksi,Horror,novel,306,0,32.04,0.2718,18,0.1122,0.8557,77.07,0.729,576.77,0,0,1,dummy
