@@ -166,14 +166,18 @@ def _kelompok_cadangan(read, user_id, jurusan, semester, min_users):
     return lain
 
 
-def build_candidates(users, books, hist, dur, fav, resume, k=5, min_users=10):
+def build_candidates(users, books, hist, dur, fav, resume, k=5, min_users=10, only_user=None):
     """Satu baris per (pengguna, buku BELUM dibaca), dengan fitur yang sama seperti di dataset training.
-    Pengguna tanpa riwayat juga dinilai: fiturnya diisi rata-rata kelompok/global (lihat _kelompok_cadangan)."""
+    Pengguna tanpa riwayat juga dinilai: fiturnya diisi rata-rata kelompok/global (lihat _kelompok_cadangan).
+
+    only_user: kalau diisi (user_id), hanya pengguna itu yang dihitung. Seluruh riwayat pengguna lain
+    tetap dipakai untuk nilai cadangan, jadi hasilnya sama persis dengan mode semua pengguna."""
     read = _riwayat_baca(users, books, hist, dur, fav)
     n_resume = resume.set_index("user_id").total_resume if len(resume) else pd.Series(dtype=float)
     hasil = []
 
-    for u in users.itertuples(index=False):
+    daftar = users if only_user is None else users[users.user_id == only_user]
+    for u in daftar.itertuples(index=False):
         mine = read[read.user_id == u.user_id]
         n = len(mine)
         pop = _kelompok_cadangan(read, u.user_id, u.jurusan, u.semester, min_users)
@@ -228,7 +232,52 @@ def score(model, X):
         return 1 / (1 + np.exp(-s))
 
 
-# ---------------------------------------------------------------- main
+def peringkat_top(cand, top_n):
+    """Urutkan kandidat per pengguna dan ambil `top_n` teratas, siap ditulis ke book_recommendations.
+    Pemecah ties: skor model -> kedekatan genre dengan bacaan user -> popularitas buku.
+    mergesort = stabil, jadi hasilnya konsisten antar-run."""
+    top = (cand.sort_values(
+                ["user_id", "skor", "porsi_genre_dibaca", "reader_count"],
+                ascending=[True, False, False, False], kind="mergesort")
+               .groupby("user_id").head(top_n)[["user_id", "book_id", "skor"]].copy())
+    top["skor"] = top.skor.round(4)
+    top["urutan"] = top.groupby("user_id").cumcount() + 1
+    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    top["created_at"] = now
+    top["updated_at"] = now
+    return top
+
+
+# ---------------------------------------------------------------- untuk API (dipanggil dari main.py)
+def refresh_pengguna(engine, bundle, user_id, top_n=1000, durasi_bagi=1.0):
+    """Hitung ulang rekomendasi SATU pengguna lalu timpa baris miliknya di book_recommendations.
+    Return: jumlah baris yang ditulis, atau None kalau user_id tidak ada di tabel users.
+    Model (bundle) di-load sekali oleh pemanggil, bukan di sini."""
+    model, cat_cols, num_cols = bundle["model"], bundle["cat_cols"], bundle["num_cols"]
+    k_blend = bundle.get("k_blend", 5)
+    min_users = bundle.get("min_users_group", 10)
+
+    users, books, hist, dur, fav, resume = load_data(engine, durasi_bagi)
+    users, books = clean_inputs(users, books)
+    if int(user_id) not in set(users.user_id.astype(int)):
+        return None
+
+    cand = build_candidates(users, books, hist, dur, fav, resume,
+                            k=k_blend, min_users=min_users, only_user=user_id)
+    top = None
+    if not cand.empty:
+        cand["skor"] = score(model, cand[cat_cols + num_cols])
+        top = peringkat_top(cand, top_n)
+
+    # hapus dan tulis ulang hanya baris pengguna ini, dalam satu transaksi
+    with engine.begin() as conn:
+        conn.execute(text("DELETE FROM book_recommendations WHERE user_id = :u"), {"u": int(user_id)})
+        if top is not None and len(top):
+            top.to_sql("book_recommendations", conn, if_exists="append", index=False, chunksize=1000)
+    return 0 if top is None else len(top)
+
+
+# ---------------------------------------------------------------- main (mode batch, semua pengguna)
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--env", help="path file .env Laravel")
@@ -281,16 +330,7 @@ def main():
     print("Skor paling sering muncul:")
     print(cand.skor.round(4).value_counts().head(5).to_string())
 
-    # Pemecah ties: skor model -> kedekatan genre dengan bacaan user -> popularitas buku.
-    # mergesort = stabil, jadi hasilnya konsisten antar-run.
-    top = (cand.sort_values(
-                ["user_id", "skor", "porsi_genre_dibaca", "reader_count"],
-                ascending=[True, False, False, False], kind="mergesort")
-               .groupby("user_id").head(args.top)[["user_id", "book_id", "skor"]].copy())
-    top["skor"] = top.skor.round(4)
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    top["created_at"] = now
-    top["updated_at"] = now
+    top = peringkat_top(cand, args.top)
 
     if args.dry_run:
         print("\n[dry-run] contoh hasil:")

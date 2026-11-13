@@ -16,7 +16,6 @@ return new class extends Migration
                 $table->foreignId('book_id')->constrained()->cascadeOnDelete();
                 $table->decimal('skor', 6, 4);
                 $table->timestamps();
-
                 $table->unique(['user_id', 'book_id']);
                 $table->index(['user_id', 'skor']);
             });

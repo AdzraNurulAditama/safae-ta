@@ -423,10 +423,10 @@ def main():
             ),
             {
                 "model__max_depth": [
-                    3, 4, 5, 6, 8, None
+                    3, 4, 5, 6
                 ],
                 "model__min_samples_leaf": [
-                    1, 5, 10, 20
+                    10, 20, 40
                 ]
             }
         ),
@@ -497,7 +497,7 @@ def main():
         grid_search = GridSearchCV(
             estimator=pipeline,
             param_grid=parameter_grid,
-            scoring="f1",
+            scoring="roc_auc",
             cv=cv,
             n_jobs=-1,
             error_score="raise"

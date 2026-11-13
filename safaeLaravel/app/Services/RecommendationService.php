@@ -22,14 +22,14 @@ class RecommendationService
         // Menggunakan hasil prediksi model
         if ($memilikiRiwayat) {
             $recs = BookRecommendation::with('book')
-                ->where('user_id', $user->id)
-                ->whereHas('book', function ($query) {
-                    $query->where('status', 'approved');
-                })
-                ->whereNotIn('book_id', $sudahDibaca)
-                ->orderByDesc('skor')
-                ->limit($limit)
-                ->get();
+            ->where('user_id', $user->id)
+            ->whereHas('book', function ($query) {
+                $query->where('status', 'approved');
+            })
+            ->whereNotIn('book_id', $sudahDibaca)
+            ->orderBy('urutan')
+            ->limit($limit)
+            ->get();
 
             if ($recs->isNotEmpty()) {
                 return [
